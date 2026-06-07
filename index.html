@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CellQuest — Descubriendo las Células</title>
+
+<!-- Design tokens (load first) -->
+<link rel="stylesheet" href="css/variables.css?v=21">
+<!-- Base layout & components -->
+<link rel="stylesheet" href="css/screens.css?v=21">
+<link rel="stylesheet" href="css/minigames.css?v=21">
+<link rel="stylesheet" href="css/atlas.css?v=21">
+<link rel="stylesheet" href="css/modals.css?v=21">
+<!-- Organelle animations (CRITICAL for cell visual designs) -->
+<link rel="stylesheet" href="css/animations.css?v=21">
+<link rel="stylesheet" href="css/procesos.css?v=21">
+
+</head>
+<body>
+
+<!-- SPLASH -->
+<div id="splashScreen" class="screen active">
+  <div class="splash-bg"></div>
+  <div class="splash-particles" id="splashParticles"></div>
+  <div class="splash-logo">Biología Celular Interactiva</div>
+  <div class="splash-title">CellQuest</div>
+  <div class="splash-tagline-wrap">
+    <span class="splash-tagline">🔬 Explora · Aprende · Descubre</span>
+  </div>
+  <div class="splash-welcome" id="splashWelcome">Bienvenido, explorador de la ciencia</div>
+  <div class="splash-orbs" id="splashOrbs"></div>
+  <div id="splashReviewBanner" class="splash-review-banner" style="display:none"></div>
+  <div class="splash-quote-wrap">
+    <div class="splash-quote" id="splashQuote"></div>
+    <div class="splash-quote-author" id="splashAuthor"></div>
+  </div>
+  <button class="btn btn-cyan splash-btn" id="splashBtn" onclick="startFromSplash()" style="font-size:1.1rem;padding:.9rem 2.5rem;letter-spacing:1px">
+    ⚗️ Comenzar
+  </button>
+  <div style="margin-top:1.4rem;font-size:.78rem;color:rgba(0,229,255,0.35);letter-spacing:2px;font-family:var(--font2);animation:fadeUp .7s .8s both">✨ Creado por ProfeD.</div>
+</div>
+
+<!-- MENU -->
+<div id="menuScreen" class="screen" style="position:relative">
+  <div class="menu-bg"></div>
+  <!-- Background spinning stickers (faint) -->
+  <div class="menu-dna">🧬</div>
+  <div class="menu-dna">⚗️</div>
+  <!-- Foreground decorative stickers -->
+  <div class="menu-sticker s1">🔬</div>
+  <div class="menu-sticker s2">🧫</div>
+  <div class="menu-sticker s3">🧪</div>
+  <div class="menu-sticker s4">⚗️</div>
+  <div class="menu-sticker s5">🦠</div>
+  <div class="menu-sticker s6">🧬</div>
+  <div class="menu-sticker s7">💊</div>
+  <div class="menu-sticker s8">🔭</div>
+
+  <div class="menu-header">
+    <div class="menu-logo">Biología Celular Interactiva</div>
+    <div class="menu-title-wrap">
+      <div class="menu-title-badge">🔬 Explora · Aprende · Descubre</div>
+      <div class="menu-title">CellQuest</div>
+    </div>
+    <div class="menu-sub">Descubriendo las Células</div>
+    <div class="menu-tagline">Aprende la estructura celular a nivel científico</div>
+  </div>
+
+  <!-- Animal cell preview - detailed SVG -->
+  <div class="menu-cell-preview">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <!-- Glow -->
+      <defs>
+        <radialGradient id="mcg" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="rgba(0,229,255,0.1)"/>
+          <stop offset="100%" stop-color="rgba(0,229,255,0)"/>
+        </radialGradient>
+        <filter id="mglow">
+          <feGaussianBlur stdDeviation="3" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <!-- Outer glow -->
+      <ellipse cx="100" cy="100" rx="92" ry="88" fill="url(#mcg)" opacity=".6"/>
+      <!-- Cell membrane -->
+      <ellipse cx="100" cy="100" rx="88" ry="84" fill="rgba(0,180,220,0.06)" stroke="rgba(0,229,255,0.55)" stroke-width="2.5" stroke-dasharray="3 2"/>
+      <!-- ER network -->
+      <path d="M58 80 Q72 68 90 74 Q108 80 118 68" fill="none" stroke="rgba(0,229,255,0.25)" stroke-width="1.2"/>
+      <path d="M55 110 Q68 118 80 112 Q92 106 108 114 Q118 120 128 112" fill="none" stroke="rgba(0,229,255,0.2)" stroke-width="1.2"/>
+      <!-- Nucleus -->
+      <circle cx="100" cy="96" r="32" fill="rgba(124,58,237,0.22)" stroke="rgba(167,139,250,0.7)" stroke-width="2"/>
+      <!-- Nuclear envelope dots -->
+      <circle cx="84" cy="78" r="2.5" fill="none" stroke="rgba(167,139,250,0.6)" stroke-width="1" class="nucleus-pore"/>
+      <circle cx="100" cy="68" r="2.5" fill="none" stroke="rgba(167,139,250,0.6)" stroke-width="1" class="nucleus-pore"/>
+      <circle cx="116" cy="78" r="2.5" fill="none" stroke="rgba(167,139,250,0.6)" stroke-width="1" class="nucleus-pore"/>
+      <circle cx="118" cy="96" r="2.5" fill="none" stroke="rgba(167,139,250,0.6)" stroke-width="1" class="nucleus-pore"/>
+      <circle cx="116" cy="114" r="2.5" fill="none" stroke="rgba(167,139,250,0.6)" stroke-width="1" class="nucleus-pore"/>
+      <!-- Nucleolus -->
+      <circle cx="100" cy="95" r="11" fill="rgba(167,139,250,0.5)" stroke="rgba(200,180,255,0.7)" stroke-width="1.2"/>
+      <!-- Mitochondria -->
+      <ellipse cx="50" cy="70" rx="14" ry="8" fill="rgba(239,68,68,0.2)" stroke="rgba(239,68,68,0.65)" stroke-width="1.5" class="mito-cresta"/>
+      <path d="M44 70 Q47 65 50 70 Q53 75 56 70" fill="none" stroke="rgba(239,68,68,0.45)" stroke-width="1"/>
+      <ellipse cx="152" cy="80" rx="13" ry="7" fill="rgba(239,68,68,0.2)" stroke="rgba(239,68,68,0.65)" stroke-width="1.5" class="mito-cresta"/>
+      <path d="M147 80 Q150 75 153 80 Q156 85 158 80" fill="none" stroke="rgba(239,68,68,0.45)" stroke-width="1"/>
+      <ellipse cx="60" cy="138" rx="13" ry="7" fill="rgba(239,68,68,0.18)" stroke="rgba(239,68,68,0.55)" stroke-width="1.3" class="mito-cresta"/>
+      <!-- Golgi -->
+      <path d="M118 120 Q138 116 148 124" fill="none" stroke="rgba(245,158,11,0.7)" stroke-width="3" stroke-linecap="round" class="golgi-arc"/>
+      <path d="M116 128 Q138 124 150 132" fill="none" stroke="rgba(245,158,11,0.6)" stroke-width="2.5" stroke-linecap="round" class="golgi-arc"/>
+      <path d="M118 136 Q136 132 146 138" fill="none" stroke="rgba(245,158,11,0.5)" stroke-width="2" stroke-linecap="round" class="golgi-arc"/>
+      <!-- Vesicles -->
+      <circle cx="162" cy="118" r="5.5" fill="rgba(245,158,11,0.3)" stroke="rgba(245,158,11,0.6)" stroke-width="1.2" class="vesicle-float"/>
+      <circle cx="155" cy="148" r="4.5" fill="rgba(245,158,11,0.25)" stroke="rgba(245,158,11,0.55)" stroke-width="1" class="vesicle-float"/>
+      <!-- Lysosomes -->
+      <circle cx="55" cy="110" r="7.5" fill="rgba(236,72,153,0.22)" stroke="rgba(236,72,153,0.6)" stroke-width="1.5"/>
+      <text x="55" y="114" text-anchor="middle" font-size="7" fill="rgba(236,72,153,0.8)">←</text>
+      <circle cx="72" cy="152" r="6" fill="rgba(236,72,153,0.18)" stroke="rgba(236,72,153,0.5)" stroke-width="1.2"/>
+      <!-- Ribosomes -->
+      <circle cx="78" cy="57" r="2.2" fill="rgba(251,191,36,0.8)" class="ribosome-active"/>
+      <circle cx="86" cy="52" r="2.2" fill="rgba(251,191,36,0.8)" class="ribosome-active"/>
+      <circle cx="95" cy="50" r="2.2" fill="rgba(251,191,36,0.8)" class="ribosome-active"/>
+      <circle cx="108" cy="53" r="2.2" fill="rgba(251,191,36,0.8)" class="ribosome-active"/>
+      <circle cx="118" cy="60" r="2.2" fill="rgba(251,191,36,0.7)" class="ribosome-active"/>
+      <circle cx="42" cy="92" r="2" fill="rgba(251,191,36,0.65)"/>
+      <circle cx="39" cy="100" r="2" fill="rgba(251,191,36,0.65)"/>
+      <!-- Peroxisome -->
+      <circle cx="142" cy="54" r="6" fill="rgba(16,185,129,0.2)" stroke="rgba(16,185,129,0.55)" stroke-width="1.2"/>
+      <!-- Vacuole small -->
+      <circle cx="82" cy="140" r="8" fill="rgba(59,130,246,0.18)" stroke="rgba(59,130,246,0.45)" stroke-width="1.2"/>
+      <!-- Centrosome -->
+      <circle cx="130" cy="60" r="4.5" fill="rgba(0,229,255,0.18)" stroke="rgba(0,229,255,0.55)" stroke-width="1.2"/>
+      <circle cx="128" cy="58" r="1.5" fill="rgba(0,229,255,0.7)"/>
+    </svg>
+  </div>
+
+  <div class="menu-btns">
+    <!-- Row 1: primary actions -->
+    <div class="menu-btn-row">
+      <button class="btn btn-primary" onclick="confirmNewGame()">🎮 Nueva Partida</button>
+      <button class="btn btn-primary" id="btnContinue" style="display:none" onclick="continueGame()">▶️ Continuar</button>
+    </div>
+    <!-- Row 2: atlas → hero secondary action -->
+    <button class="btn btn-atlas menu-btn-full" onclick="goAtlas()">🔬 Atlas Celular</button>
+    <!-- Célula en Acción -->
+    <button class="btn btn-procesos menu-btn-full" onclick="goProcesos()">⚡ Célula en Acción</button>
+    <!-- Row 3: tertiary actions in a row -->
+    <div class="menu-btn-row">
+      <button class="btn btn-ghost" onclick="goProgress()">📊 Progreso</button>
+      <button class="btn btn-ghost" onclick="openModal('infoModal')">ℹ️ Info</button>
+    </div>
+  </div>
+  <div class="credits">✨ Creado por ProfeD.</div>
+</div>
+
+<!-- AVATAR SCREEN -->
+<div id="avatarScreen" class="screen" style="flex-direction:column;align-items:center;justify-content:center;gap:.85rem;padding:1.5rem 1.2rem;overflow-y:auto">
+  <div class="menu-logo" style="text-align:center;font-size:1.3rem">🔬 CellQuest</div>
+  <div class="avatar-title">Seleccioná tu dificultad</div>
+  <div class="avatar-subtitle">Elegí el nivel que mejor se adapte a tus conocimientos</div>
+  <input class="name-input" id="playerNameInput" placeholder="Tu nombre (opcional)..." maxlength="20" style="max-width:320px;width:100%"/>
+
+  <div class="diff-grid">
+
+    <div class="diff-card selected" data-diff="easy" data-av="student" onclick="selAvatar(this)">
+      <span class="diff-selected-mark">←</span>
+      <span class="diff-emoji">🎮</span>
+      <div class="diff-card-body">
+        <div class="diff-badge easy" style="margin:0">⭐ Fácil</div>
+        <div class="diff-label">Estudiante</div>
+        <div class="diff-role">Secundaria ÷ Ingresante</div>
+        <ul class="diff-features">
+          <li>Preguntas con pistas</li>
+          <li>Opciones más claras</li>
+          <li>Sin penalización severa</li>
+          <li>Vocabulario accesible</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="diff-card" data-diff="normal" data-av="teacher" onclick="selAvatar(this)">
+      <span class="diff-selected-mark">←</span>
+      <span class="diff-emoji">👨‍🔬</span>
+      <div class="diff-card-body">
+        <div class="diff-badge normal" style="margin:0">⭐⭐ Normal</div>
+        <div class="diff-label">Docente</div>
+        <div class="diff-role">Universitario ÷ Profesor</div>
+        <ul class="diff-features">
+          <li>Preguntas estándar</li>
+          <li>Terminología científica</li>
+          <li>Penalización normal</li>
+          <li>Conceptos completos</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="diff-card" data-diff="hard" data-av="scientist" onclick="selAvatar(this)">
+      <span class="diff-selected-mark">←</span>
+      <span class="diff-emoji">🧑‍🔬</span>
+      <div class="diff-card-body">
+        <div class="diff-badge hard" style="margin:0">⭐⭐⭐ Difícil</div>
+        <div class="diff-label">Científico/a</div>
+        <div class="diff-role">Experto ÷ Investigador</div>
+        <ul class="diff-features">
+          <li>Preguntas técnicas</li>
+          <li>Nomenclatura avanzada</li>
+          <li>Mayor penalización</li>
+          <li>Procesos moleculares</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="btn btn-cyan" onclick="confirmAvatar()" style="margin-top:.2rem;width:100%;max-width:320px">Comenzar ✓</button>
+  <button class="btn btn-ghost btn-sm" onclick="showScreen('menuScreen')">← Volver</button>
+</div>
+
+<!-- GAME SCREEN -->
+<div id="gameScreen" class="screen" style="flex-direction:column;height:100vh">
+  <div class="game-header">
+    <div class="gh-logo">🧬 CellQuest</div>
+    <div class="gh-level">Nivel: <span id="ghLevelName">→</span></div>
+    <div class="progress-wrap">
+      <div class="progress-label"><span id="ghOrgCount">0/0</span><span id="ghPct">0%</span></div>
+      <div class="progress-bar"><div class="progress-fill" id="ghBar"></div></div>
+    </div>
+    <div class="gh-stats">
+      <div class="stat-pill xp-pill">
+        <div class="xp-pill-top">
+          <span id="playerLevelBadge" class="xp-badge">Nv.1 Aprendiz</span>
+          <span id="xpLabel" class="xp-nums">0/150 XP</span>
+        </div>
+        <div class="xp-bar-wrap"><div id="xpBar" class="xp-bar-fill"></div></div>
+      </div>
+      <div class="stat-pill">⭐ <span id="ghScore">0</span></div>
+      <div class="stat-pill">⏱ <span id="ghTimer">0:00</span></div>
+    </div>
+    <div class="avatar-badge" id="ghAvatar">🧑‍🔬<div class="avatar-tooltip" id="ghTip">Jugador</div></div>
+    <button class="btn btn-ghost btn-sm" onclick="goProgress()" title="Progreso" style="padding:.55rem .8rem;font-size:.85rem;flex-shrink:0">💊</button>
+    <button class="btn btn-ghost btn-sm" id="ghMusicBtn" onclick="ghMusicToggle()" title="Música" style="padding:.55rem .8rem;font-size:.85rem">🎵</button>
+    <button class="btn btn-ghost btn-sm" onclick="backToMenu()" style="flex-shrink:0">← Menú</button>
+  </div>
+  <div class="game-body">
+    <div class="cell-panel">
+      <div class="cell-title-bar">
+        <div class="cell-name-tag" id="cellNameTag">Selecciona un nivel →</div>
+      </div>
+      <canvas id="microscopeCanvas"></canvas>
+      <div id="cellSvgWrap">
+        <svg id="cellSvg" viewBox="0 0 540 540" xmlns="http://www.w3.org/2000/svg"></svg>
+        <div id="zoomControls">
+          <button class="zoom-btn" id="zoomIn"  title="Acercar">+</button>
+          <div id="zoomLevel">100%</div>
+          <button class="zoom-btn" id="zoomOut" title="Alejar">−</button>
+          <button class="zoom-btn" id="zoomReset" title="Restablecer" style="font-size:13px">−</button>
+        </div>
+      </div>
+      </div>
+    <!-- Toggle button sits on the seam between cell-panel and info-panel -->
+    <button id="panelToggleBtn" onclick="toggleInfoPanel()" title="Cerrar panel" aria-label="Cerrar panel lateral">&#8249;</button>
+    <div class="info-panel">
+      <div class="panel-tabs">
+        <button class="ptab active" id="ptabLevels" onclick="showPTab('levels')">🗺️ Niveles</button>
+        <button class="ptab" id="ptabOrg" onclick="showPTab('organelle')" style="display:none">🔬 Organela</button>
+      </div>
+      <div class="panel-content" id="tabLevels">
+        <div class="level-grid" id="levelGrid"></div>
+        <div style="margin-top:.9rem;padding:.7rem;background:var(--card);border-radius:10px;font-size:.78rem;color:var(--muted);line-height:1.6">
+          📋 Completa todas las organelas para desbloquear el siguiente nivel.<br>
+          💡 Las células completadas pasan a modo libre.
+        </div>
+      </div>
+      <div class="panel-content" id="tabOrganelle" style="display:none">
+        <div class="org-panel-header">
+          <div class="org-emoji-big" id="opEmoji">🔬</div>
+          <div style="flex:1">
+            <div class="org-name-big" id="opName">Selecciona una organela</div>
+            <div class="org-subtitle" id="opSub">Haz click en la célula</div>
+          </div>
+          <button class="btn btn-amber btn-sm" onclick="openOrgInfo()">ℹ️ Info</button>
+        </div>
+        <div class="org-progress-pills" id="opPills"></div>
+        <div id="mgArea"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MOBILE DRAWER FAB -->
+<button class="drawer-fab" id="drawerFab" onclick="toggleDrawer()">
+  <span id="fabIcon">🗺️</span><span id="fabLabel">Ver Niveles</span>
+</button>
+<div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+
+<!-- ACHIEVEMENTS SCREEN -->
+<!-- ATLAS CELULAR -->
+<div id="atlasScreen" class="screen">
+
+  <!-- Header: floating over cell -->
+  <div class="atlas-header">
+    <div class="atlas-title">🔬</div>
+    <div class="atlas-cell-tabs" id="atlasTabs"></div>
+    <button class="atlas-back-btn" onclick="_backFromMeta()" title="Volver">←</button>
+  </div>
+
+  <!-- SVG: full screen -->
+  <div class="atlas-svg-wrap" id="atlasSvgWrap">
+    <svg id="atlasSvg" viewBox="0 0 540 540" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"></svg>
+  </div>
+
+  <!-- Zoom controls -->
+  <div class="atlas-zoom-controls">
+    <button class="atlas-zoom-btn" id="atlasZoomIn" title="Acercar">+</button>
+    <button class="atlas-zoom-btn" id="atlasZoomOut" title="Alejar">−</button>
+    <button class="atlas-zoom-btn" id="atlasZoomReset" title="Restablecer" style="font-size:11px">−</button>
+  </div>
+
+  <!-- Floating info card (appears when organelle selected) -->
+  <div class="atlas-float-info" id="atlasFloatInfo">
+    <button class="atlas-float-close" onclick="showAtlasHint()">←</button>
+    <div id="atlasOrgInfo"></div>
+  </div>
+
+  <!-- Organelle drawer: collapsed strip at bottom -->
+  <div class="atlas-drawer" id="atlasDrawer">
+    <div class="atlas-drawer-toggle" id="atlasDrawerToggle" onclick="toggleAtlasDrawer()">
+      <div class="atlas-drawer-pill"></div>
+      <div class="atlas-drawer-label">
+        <span>Organelas</span>
+        <span class="dl-count" id="atlasOrgCount">0</span>
+      </div>
+      <span class="atlas-drawer-arrow">↑</span>
+    </div>
+    <div class="atlas-org-list" id="atlasOrgList"></div>
+  </div>
+
+</div>
+
+<div id="procesosScreen" class="screen" style="flex-direction:column;overflow:hidden">
+  <div class="procesos-header">
+    <button class="btn btn-ghost btn-sm" onclick="showScreen('menuScreen')" style="flex-shrink:0">← Volver</button>
+    <div class="procesos-header-title">⚡ Célula en Acción</div>
+    <div style="width:80px"></div>
+  </div>
+  <div class="procesos-tabs">
+    <button class="proc-tab active" id="ptab-cine" onclick="switchProcTab('cine')">🎬 Modo Cine</button>
+    <button class="proc-tab" id="ptab-juego" onclick="switchProcTab('juego')">🎮 Modo Jugador</button>
+  </div>
+  <div class="procesos-body" id="procesosBody"></div>
+</div>
+
+<div id="progressScreen" class="screen" style="flex-direction:column;overflow:hidden">
+  <!-- Header -->
+  <div class="progress-header">
+    <button class="btn btn-ghost btn-sm" onclick="_backFromMeta()" style="padding:.35rem .75rem;font-size:.78rem">← Volver</button>
+    <div class="progress-header-title">💊 Progreso del Jugador</div>
+    <div class="progress-tabs">
+      <button class="prog-tab active" id="ptab-stats"   onclick="switchProgTab('stats')">💊 Estadísticas</button>
+      <button class="prog-tab"        id="ptab-ach"     onclick="switchProgTab('ach')">🏆 Logros</button>
+      <button class="prog-tab"        id="ptab-cells"   onclick="switchProgTab('cells')">🔬 Células</button>
+    </div>
+  </div>
+
+  <!-- Body -->
+  <div class="progress-body" id="progressBody"></div>
+</div>
+
+<!-- MODAL: INFO DIDCTICA -->
+<div class="modal-overlay" id="infoModal">
+  <div class="modal-box" style="max-width:820px">
+    <div class="modal-header"><h2>ℹ️ Información Didáctica</h2><button class="modal-close" onclick="closeModal('infoModal')">←</button></div>
+    <div class="modal-body">
+      <div class="modal-tabs">
+        <button class="mtab active" onclick="switchMTab(this,'mtStudent')">📚 Guía Estudiante</button>
+        <button class="mtab" onclick="switchMTab(this,'mtTeacher')">👨‍🔬 Guía Docente</button>
+      </div>
+      <div id="mtStudent" class="mtab-content active">
+        <div class="info-section"><h3>🎮 Cómo Jugar</h3><p>Selecciona un tipo de célula en el panel derecho. Haz click en cualquier organela de la ilustración para iniciar su mini-juego. Completa todos los puzzles de una organela para desbloquear su información científica y marcarla como descubierta.</p></div>
+        <div class="info-section"><h3>🧩 Mini-juegos</h3><ul>
+          <li><b>Quiz:</b> Elige la respuesta correcta entre 4 opciones.</li>
+          <li><b>Completar texto:</b> Selecciona la palabra correcta para el espacio en blanco.</li>
+          <li><b>Verdadero/Falso:</b> Clasifica 3→5 afirmaciones científicas.</li>
+          <li><b>Secuencia:</b> Arrastra los pasos de un proceso en el orden correcto.</li>
+        </ul></div>
+        <div class="info-section"><h3>⭐ Puntuación</h3><ul>
+          <li>Correcta: +15 a +30 puntos según dificultad</li>
+          <li>Incorrecta: ←?10 puntos + se muestra la respuesta correcta</li>
+          <li>Bonus velocidad: +5 pts si respondes en menos de 20 segundos</li>
+        </ul></div>
+        <div class="info-section"><h3>🔬 Atlas Celular</h3><p>El <b>Atlas Celular</b> es tu enciclopedia interactiva de referencia. Podés acceder a él desde el menú principal pulsando <b>🔬 Atlas Celular</b>.</p><ul>
+          <li>Explorá cada tipo de célula en detalle sin presión de tiempo ni puntuación.</li>
+          <li>Tocá cualquier organela para ver su nombre, función, estructura, localización y dato curioso.</li>
+          <li>Usá el zoom (pellizco en móvil, rueda en PC) para examinar organelas pequeñas.</li>
+          <li>Cambiá entre tipos de célula con las pestañas superiores: Animal, Vegetal, Procariota, Fúngica, Neurona, Glóbulo Rojo y Xilema.</li>
+          <li>El Atlas está siempre disponible, incluso antes de desbloquear un nivel en el juego → es un recurso de estudio libre.</li>
+        </ul><p style="margin-top:.5rem;font-size:.85rem;color:var(--muted)">💡 <i>Tip: usá el Atlas para repasar antes de un examen o para entender mejor una organela que te costó en el juego.</i></p></div>
+        <div class="info-section"><h3>🏆 Logros</h3><ul>
+          <li>🎯 Primer Paso → Completar el primer puzzle</li>
+          <li>🧬 Biólogo Novato → Completar la célula animal</li>
+          <li>🌿 Botánico → Completar la célula vegetal</li>
+          <li>🔬 Microbiólogo → Completar la célula procariota</li>
+          <li>🌟 Experto Celular → Completar 3 niveles</li>
+          <li>⚡ Speed Runner → 5 puzzles en menos de 20s</li>
+          <li>📋 Sin Errores → 10 puzzles sin errores</li>
+          <li>📚 Erudito → Alcanzar 500 puntos</li>
+          <li>🎮 Maestría → Completar todos los niveles disponibles</li>
+          <li>📋 Descubridor Secreto → Desbloquear todos los niveles</li>
+        </ul></div>
+      </div>
+      <div id="mtTeacher" class="mtab-content">
+        <div class="info-section"><h3>📋 Alineación Curricular</h3><p>CellQuest cubre los contenidos de Biología Celular del programa de Educación Secundaria (1.ú→2.ú año). Aborda la estructura y función de organelas, diferencias entre células eucariotas y procariotas, y la teoría de la endosimbiosis.</p></div>
+        <div class="info-section"><h3>🎯 Objetivos de Aprendizaje</h3><ul>
+          <li>Identificar y describir las organelas en células animal, vegetal y procariota</li>
+          <li>Relacionar estructura con función (principio estructura-función)</li>
+          <li>Contrastar diferencias entre tipos celulares</li>
+          <li>Comprender el origen evolutivo de organelas (endosimbiosis)</li>
+        </ul></div>
+        <div class="info-section"><h3>🏫 Integración en Aula</h3><ul>
+          <li><b>Tiempo estimado:</b> 2→3 sesiones de 45 minutos</li>
+          <li><b>Organización:</b> Grupos de 2→3 (uno juega, otros registran observaciones)</li>
+          <li><b>Modalidad:</b> Individual (tarea domiciliaria) o grupal (sala de informática)</li>
+        </ul></div>
+        <div class="info-section"><h3>📚 Actividades Pre-Juego</h3><ul>
+          <li>Lluvia de ideas: ÿQué organelas conocen?</li>
+          <li>Predicción: ÿQué diferencias esperan entre célula animal y vegetal?</li>
+          <li>Lectura breve introductoria sobre teoría celular</li>
+        </ul></div>
+        <div class="info-section"><h3>💊 Evaluación Sugerida</h3><ul>
+          <li>Puntuación + logros = indicador de desempeño</li>
+          <li>Dibujo anatómico con etiquetas y funciones (post-juego)</li>
+          <li>Tabla comparativa: animal vs vegetal vs procariota</li>
+          <li>Investigación: enfermedades por disfunción de organelas</li>
+        </ul></div>
+        <div class="info-section"><h3>🔬 Atlas Celular → Recurso Pedagógico</h3><p>El <b>Atlas Celular</b> es un módulo de exploración libre, independiente del sistema de puntuación, diseñado para uso didáctico directo en el aula.</p><ul>
+          <li><b>Sin presión evaluativa:</b> el alumno puede explorar cualquier célula y organela sin consecuencias en el puntaje → ideal para instancias de repaso o introducción al tema.</li>
+          <li><b>7 tipos celulares disponibles:</b> Animal, Vegetal, Procariota, Fúngica, Neurona, Glóbulo Rojo y Célula del Xilema. Cada una con entre 8 y 15 organelas interactivas.</li>
+          <li><b>Fichas científicas completas:</b> cada organela despliega función, estructura, localización, diferencial con otras células, implicancias patológicas y un dato curioso relevante.</li>
+          <li><b>Uso proyectado:</b> el Atlas puede mostrarse en proyector para trabajar colectivamente la anatomía celular antes de iniciar el juego.</li>
+          <li><b>Uso individual:</b> los alumnos pueden consultarlo como material de referencia durante o después de completar niveles, o como recurso de estudio autónomo.</li>
+        </ul><p style="margin-top:.5rem;font-size:.85rem;color:var(--muted)">💡 <i>Sugerencia: proponé a los alumnos que identifiquen en el Atlas las organelas ausentes en las células procariotas antes de iniciar ese nivel del juego.</i></p></div>
+        <div class="info-section"><h3>📋 Recursos Complementarios</h3><ul>
+          <li>Khan Academy → "La Célula y sus Organelas"</li>
+          <li>TED-Ed → "Inside the Cell"</li>
+          <li>PhET Simulations, Virtual Cell</li>
+          <li>PLOS Biology, Nature Education</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: ORGANELLE INFO -->
+<div class="modal-overlay" id="orgInfoModal">
+  <div class="modal-box">
+    <div class="modal-header"><h2 id="oimTitle">Información</h2><button class="modal-close" onclick="closeModal('orgInfoModal')">←</button></div>
+    <div class="modal-body" id="oimBody"></div>
+  </div>
+</div>
+
+<!-- RESET CONFIRMATION MODAL -->
+<div class="modal-overlay" id="resetModal">
+  <div class="modal-box" style="max-width:380px;text-align:center">
+    <div class="modal-header" style="justify-content:center;border:none;padding-bottom:0"><h2>âš ï¸ Nueva Partida</h2></div>
+    <div class="modal-body" style="padding-top:.5rem">
+      <p style="color:var(--muted);font-size:.93rem;margin-bottom:1.4rem;line-height:1.6">Se perderá todo tu progreso actual:<br>puntos, organelas descubiertas y logros.</p>
+      <div style="display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap">
+        <button class="btn btn-primary" onclick="closeModal('resetModal');startNewGame()">🎮 Confirmar</button>
+        <button class="btn btn-ghost" onclick="closeModal('resetModal')">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="complete-overlay" id="completeOverlay">
+  <div class="complete-box">
+    <span class="complete-emoji" id="cmpEmoji">🏆</span>
+    <div class="complete-title" id="cmpTitle">áNivel Completado!</div>
+    <div class="complete-sub" id="cmpSub">Has descubierto todas las organelas</div>
+    <div style="display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap">
+      <button class="btn btn-cyan" onclick="closeComplete();showPTab('levels')">Ver Niveles</button>
+      <button class="btn btn-ghost btn-sm" onclick="closeComplete()">Seguir explorando</button>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- âââââââââââââââ DATA âââââââââââââââ -->
+<script src="js/data/levels.js?v=21"></script>
+<script src="js/data/organelles.js?v=21"></script>
+<script src="js/data/minigames.js?v=21"></script>
+
+<!-- âââââââââââââââ CORE âââââââââââââââ -->
+<script src="js/core/state.js?v=21"></script>
+<script src="js/core/save.js?v=21"></script>
+<script src="js/core/router.js?v=21"></script>
+
+<!-- âââââââââââââââ SCREENS âââââââââââââââ -->
+<script src="js/screens/atlas.js?v=21"></script>
+<script src="js/screens/game.js?v=21"></script>
+<script src="js/screens/progress.js?v=21"></script>
+<script src="js/screens/procesos.js?v=21"></script>
+
+<!-- âââââââââââââââ COMPONENTS âââââââââââââââ -->
+<!-- Cell renderer BEFORE minigame engine (engine uses drawCell) -->
+<script src="js/components/cell-renderer.js?v=21"></script>
+<!-- Audio engine (loads Tone.js first) -->
+<script src="js/lib/tone.min.js?v=21"></script>
+<script src="js/components/audio.js?v=21"></script>
+<!-- Minigame engine -->
+<script src="js/screens/minigame-engine.js?v=21"></script>
+
+<!-- âââââââââââââââ PATCHES (must load after base functions) âââââââââââââââ -->
+<!-- Microscope patches enterGame + backToMenu -->
+<script src="js/components/microscope.js?v=21"></script>
+<!-- Zoom patches drawCell -->
+<script src="js/components/zoom.js?v=21"></script>
+<!-- Drawer patches selectOrg, startLevel, showPTab, showScreen -->
+<script src="js/components/drawer.js?v=21"></script>
+
+<!-- âââââââââââââââ XP & PLAYER LEVEL SYSTEM âââââââââââââââ -->
+<script src="js/systems/xp.js?v=21"></script>
+
+<!-- âââââââââââââââ TUTORIAL (patches enterGame, first-play only) âââââââââââââââ -->
+<script src="js/screens/tutorial.js?v=21"></script>
+
+<!-- âââââââââââââââ SPLASH (self-executing, reads DOM) âââââââââââââââ -->
+<script src="js/screens/splash.js?v=21"></script>
+
+<!-- Service Worker -->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./cellquest-sw.js')
+      .catch(err => console.warn('[CellQuest] SW no disponible:', err));
+  });
+}
+</script>
+
+</body>
+</html>

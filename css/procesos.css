@@ -1,0 +1,158 @@
+/* CellQuest — Célula en Acción Screen */
+#procesosScreen{flex-direction:column;overflow:hidden}
+.procesos-header{display:flex;align-items:center;gap:.8rem;padding:.6rem .9rem;background:rgba(0,0,0,0.4);border-bottom:1px solid var(--border);flex-shrink:0}
+.procesos-header-title{flex:1;text-align:center;font-size:1rem;font-weight:700;color:var(--text);font-family:var(--font2)}
+.procesos-tabs{display:flex;gap:.5rem;padding:.45rem .9rem;background:rgba(0,0,0,0.2);border-bottom:1px solid var(--border);flex-shrink:0}
+.proc-tab{flex:1;padding:.4rem .8rem;border:1px solid var(--border);background:var(--card);color:var(--muted);border-radius:8px;font-size:.82rem;font-weight:600;cursor:pointer;transition:all .2s;font-family:var(--font)}
+.proc-tab.active{background:rgba(0,229,255,0.12);border-color:var(--accent);color:var(--accent)}
+.procesos-body{flex:1;overflow-y:auto;padding:1rem;display:flex;flex-direction:column;gap:.8rem}
+
+/* ── PLAYER MODE: ocultar chrome externo para maximizar célula ── */
+#procesosScreen.player-active .procesos-header{display:none}
+#procesosScreen.player-active .procesos-tabs{display:none}
+#procesosScreen.player-active .procesos-body{padding:0;gap:0;overflow:hidden}
+
+/* Placeholder */
+.procesos-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;gap:.9rem;padding:2.5rem 1.5rem;text-align:center}
+.proc-placeholder-emoji{font-size:3.5rem}
+.proc-placeholder-title{font-size:1.3rem;font-weight:700;color:var(--text)}
+.proc-placeholder-sub{font-size:.88rem;color:var(--muted);max-width:300px;line-height:1.6}
+.proc-placeholder-soon{display:inline-flex;align-items:center;gap:.4rem;background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.3);color:var(--accent4);border-radius:20px;padding:.3rem .9rem;font-size:.78rem;font-weight:600;letter-spacing:1px}
+
+/* ── MENU BUTTON ── */
+.btn-procesos{background:linear-gradient(135deg,rgba(245,158,11,0.15),rgba(239,68,68,0.15));border:1px solid rgba(245,158,11,0.4);color:var(--accent4)}
+.btn-procesos:hover{background:linear-gradient(135deg,rgba(245,158,11,0.25),rgba(239,68,68,0.25));border-color:rgba(245,158,11,0.6)}
+
+/* ── CINE MENU ── */
+.proc-intro{text-align:center;padding:.5rem 0 .25rem}
+.proc-intro-title{font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:.2rem}
+.proc-intro-sub{font-size:.82rem;color:var(--muted);line-height:1.5}
+.proc-card-grid{display:flex;flex-direction:column;gap:.55rem}
+.proc-card{display:flex;align-items:center;gap:.8rem;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:.7rem .9rem;cursor:pointer;transition:all .2s}
+.proc-card:hover{background:rgba(0,229,255,0.06);border-color:rgba(0,229,255,0.35);transform:translateX(3px)}
+.proc-card-locked{opacity:.5;cursor:default}
+.proc-card-locked:hover{transform:none;background:var(--card);border-color:var(--border)}
+.proc-card-emoji{font-size:1.75rem;flex-shrink:0;width:2rem;text-align:center}
+.proc-card-info{flex:1;min-width:0}
+.proc-card-title{font-size:.9rem;font-weight:700;color:var(--text)}
+.proc-card-sub{font-size:.76rem;color:var(--muted);margin-top:.1rem}
+.proc-card-badge{flex-shrink:0}
+.pcb-xp{display:inline-flex;align-items:center;background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.35);color:#34d399;border-radius:12px;padding:.18rem .6rem;font-size:.73rem;font-weight:700}
+.pcb-done{display:inline-flex;align-items:center;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.25);color:rgba(16,185,129,0.65);border-radius:12px;padding:.18rem .6rem;font-size:.73rem}
+.pcb-lock{display:inline-flex;align-items:center;gap:.3rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:var(--muted);border-radius:12px;padding:.18rem .6rem;font-size:.7rem}
+
+/* ── CINE PLAYER — inmersivo full-height ── */
+.cine-player{display:flex;flex-direction:column;height:100%;min-height:0}
+
+/* Barra superior ultra-compacta */
+.cine-header{display:flex;align-items:center;gap:.4rem;padding:.3rem .7rem;flex-shrink:0;background:rgba(0,0,0,0.55);border-bottom:1px solid rgba(255,255,255,0.07)}
+.cine-back-btn{flex-shrink:0}
+.cine-title{flex:1;text-align:center;font-size:.8rem;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cine-header-right{display:flex;align-items:center;gap:.4rem;flex-shrink:0}
+.cine-stepcount{font-size:.7rem;color:var(--muted)}
+
+/* Stage — SVG llena todo el espacio disponible */
+.cine-stage{flex:1;min-height:0;position:relative;display:flex;flex-direction:column;background:rgba(0,0,0,0.4);overflow:hidden;transition:opacity .2s ease,transform .2s ease}
+.cine-stage.cine-out{opacity:0;transform:translateY(8px)}
+.cine-svg-wrap{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:.3rem .3rem 1.6rem}
+.cine-cell-svg{width:100%;height:100%;max-height:min(62vh,500px)}
+
+/* Título del paso: overlay glass fijo al borde inferior del stage */
+.cine-step-title{position:absolute;bottom:0;left:0;right:0;text-align:center;font-size:.74rem;font-weight:700;color:var(--accent);padding:.22rem .8rem;background:rgba(0,4,20,0.8);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid rgba(0,229,255,0.18);font-family:var(--font2);letter-spacing:.25px;pointer-events:none;z-index:2}
+
+/* Narración compacta */
+.cine-narration-wrap{flex-shrink:0;padding:.42rem .8rem .28rem;display:flex;flex-direction:column;gap:.26rem;border-top:1px solid rgba(255,255,255,0.06);transition:opacity .18s ease}
+.cine-narration-wrap.cine-out{opacity:0}
+.cine-narration{font-size:.8rem;color:var(--text);line-height:1.5;background:rgba(0,229,255,0.05);border-left:2.5px solid rgba(0,229,255,0.4);padding:.4rem .7rem;border-radius:0 7px 7px 0}
+.cine-narration strong{color:var(--accent)}
+.cine-info-btn{align-self:flex-start;background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.3);color:var(--accent4);border-radius:7px;padding:.2rem .6rem;font-size:.73rem;font-weight:600;cursor:pointer;transition:all .2s;font-family:var(--font)}
+.cine-info-btn:hover{background:rgba(245,158,11,0.18);border-color:rgba(245,158,11,0.5)}
+.cine-info-panel{font-size:.76rem;color:var(--muted);line-height:1.55;background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.08);border-radius:7px;padding:.5rem .7rem;margin-top:.12rem}
+.cine-info-panel b{color:var(--text)}
+
+/* Footer compacto */
+.cine-footer{flex-shrink:0;padding:.28rem .8rem .35rem;display:flex;flex-direction:column;gap:.28rem}
+.cine-dots{display:flex;justify-content:center;gap:.45rem}
+.cine-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.15);cursor:pointer;transition:all .2s;padding:0}
+.cine-dot.active{background:var(--accent);border-color:var(--accent);box-shadow:0 0 6px rgba(0,229,255,0.5);transform:scale(1.3)}
+.cine-dot.done{background:rgba(16,185,129,0.55);border-color:rgba(16,185,129,0.7)}
+.cine-controls{display:flex;gap:.4rem;justify-content:center}
+.cine-btn{flex:1;max-width:115px;padding:.42rem .5rem;border:1px solid var(--border);background:var(--card);color:var(--text);border-radius:8px;font-size:.76rem;font-weight:600;cursor:pointer;transition:all .2s;font-family:var(--font)}
+.cine-btn:hover:not(:disabled){background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.25)}
+.cine-btn:disabled{opacity:.3;cursor:default}
+.cine-btn-play{background:rgba(0,229,255,0.12);border-color:var(--accent);color:var(--accent)}
+.cine-btn-play:hover:not(:disabled){background:rgba(0,229,255,0.22)}
+.cine-complete-btn{width:100%;padding:.52rem;font-size:.86rem}
+
+/* Responsive: pantallas muy pequeñas */
+@media(max-height:580px){
+  .cine-cell-svg{max-height:min(44vh,320px)}
+  .cine-narration{font-size:.75rem;padding:.32rem .6rem}
+  .cine-footer{padding:.2rem .7rem .25rem;gap:.2rem}
+}
+
+/* ── MODO JUGADOR ── */
+.juego-player{display:flex;flex-direction:column;height:100%;min-height:0}
+.juego-instruction{flex-shrink:0;padding:.5rem .9rem;font-size:.84rem;color:var(--text);text-align:center;background:rgba(0,0,0,0.3);border-bottom:1px solid rgba(255,255,255,0.07);line-height:1.5}
+.juego-instruction strong{color:var(--accent4)}
+.juego-stage-wrap{flex:1;min-height:0;position:relative;display:flex;align-items:stretch;justify-content:center;background:rgba(0,0,0,0.4);overflow:hidden}
+.juego-stage-wrap .cine-svg-wrap{flex:1}
+.juego-molecule{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:grab;user-select:none;touch-action:none;box-shadow:0 4px 16px rgba(0,0,0,0.45);z-index:10}
+.juego-molecule.dragging{cursor:grabbing;box-shadow:0 8px 28px rgba(0,0,0,0.6);z-index:20}
+.juego-feedback{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);border-radius:20px;padding:.32rem .95rem;font-size:.78rem;font-weight:700;pointer-events:none;white-space:nowrap;z-index:30;transition:opacity .4s}
+.juego-feedback.success{color:#34d399;background:rgba(0,0,0,0.82);border:1px solid rgba(16,185,129,0.5)}
+.juego-feedback.fail{color:#f87171;background:rgba(0,0,0,0.82);border:1px solid rgba(239,68,68,0.45)}
+.juego-feedback.hint{color:#fbbf24;background:rgba(0,0,0,0.82);border:1px solid rgba(245,158,11,0.45)}
+.juego-footer{flex-shrink:0;padding:.38rem .9rem .42rem;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.07)}
+.juego-progress-dots{display:flex;gap:.4rem;align-items:center}
+.juego-dot{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.2);transition:all .2s}
+.juego-dot.done{background:#34d399;border-color:#34d399}
+.juego-dot.current{background:var(--accent4);border-color:var(--accent4);animation:jdotPulse 1s ease-in-out infinite}
+@keyframes jdotPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
+.juego-score-display{font-size:.84rem;font-weight:700;color:var(--accent4)}
+.juego-complete{display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;gap:.9rem;padding:2rem 1.5rem;text-align:center;min-height:300px}
+.juego-complete-emoji{font-size:3.2rem;animation:trophyBounce .7s ease-out both}
+@keyframes trophyBounce{0%{transform:scale(0) rotate(-20deg)}70%{transform:scale(1.15) rotate(4deg)}100%{transform:scale(1) rotate(0)}}
+.juego-complete-title{font-size:1.1rem;font-weight:700;color:var(--text)}
+.juego-complete-score{display:flex;flex-direction:column;align-items:center;gap:.1rem}
+.juego-xp-big{font-size:2rem;font-weight:900;color:#34d399;animation:xpPop .5s .4s ease-out both}
+@keyframes xpPop{0%{transform:scale(.3);opacity:0}80%{transform:scale(1.1)}100%{transform:scale(1);opacity:1}}
+.juego-xp-sub{font-size:.78rem;color:var(--muted)}
+.juego-complete-steps{display:flex;flex-wrap:wrap;gap:.38rem;justify-content:center;margin-top:.2rem}
+.juego-step-badge{display:inline-flex;align-items:center;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);color:#34d399;border-radius:20px;padding:.2rem .6rem;font-size:.72rem;font-weight:600}
+.juego-complete-btns{display:flex;flex-direction:column;gap:.5rem;width:100%;max-width:280px;margin-top:.4rem}
+.juego-award-btn{width:100%;padding:.6rem;font-size:.88rem}
+
+/* ── JUEGO INTRO ── */
+.juego-intro{display:flex;flex-direction:column;height:100%;min-height:0}
+.juego-intro-header{display:flex;align-items:center;gap:.4rem;padding:.3rem .7rem;flex-shrink:0;background:rgba(0,0,0,0.55);border-bottom:1px solid rgba(255,255,255,0.07)}
+.juego-intro-body{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1.4rem 1.5rem;gap:.9rem;overflow-y:auto;text-align:center}
+.juego-intro-icon{font-size:2.8rem}
+.juego-intro-title{font-size:1.05rem;font-weight:700;color:var(--text)}
+.juego-intro-steps{display:flex;flex-direction:column;gap:.65rem;width:100%;max-width:310px;margin-top:.2rem}
+.juego-intro-step{display:flex;align-items:flex-start;gap:.75rem;text-align:left;font-size:.84rem;color:var(--text);line-height:1.5;background:rgba(255,255,255,0.04);border-radius:10px;padding:.55rem .75rem;border:1px solid rgba(255,255,255,0.07)}
+.juego-intro-step strong{color:var(--accent)}
+.jis-num{display:flex;align-items:center;justify-content:center;min-width:22px;height:22px;border-radius:50%;background:var(--accent);color:#000;font-weight:900;font-size:.75rem;flex-shrink:0;margin-top:.15rem}
+.juego-intro-meta{display:flex;gap:1.2rem;font-size:.82rem;font-weight:700;color:var(--muted);margin-top:.1rem}
+.juego-intro-btn{padding:.62rem 2.2rem;font-size:.9rem;font-weight:700;margin-top:.2rem}
+
+/* ── MODAL REFUERZO EDUCATIVO ── */
+.juego-modal-overlay{position:absolute;inset:0;z-index:40;display:flex;align-items:center;justify-content:center;padding:1rem;background:rgba(0,4,18,0.84);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);opacity:0;transition:opacity .25s ease;pointer-events:none}
+.juego-modal-overlay.visible{opacity:1;pointer-events:auto}
+.juego-modal{background:rgba(6,14,36,0.97);border:1px solid rgba(0,229,255,0.22);border-radius:18px;padding:1.4rem 1.3rem;max-width:300px;width:100%;display:flex;flex-direction:column;align-items:center;gap:.65rem;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,0.65);animation:mPop .3s ease-out both}
+@keyframes mPop{0%{transform:scale(0.86) translateY(16px)}100%{transform:scale(1) translateY(0)}}
+.jm-check{font-size:2rem}
+.jm-title{font-size:1rem;font-weight:700;color:var(--text)}
+.jm-xp{display:inline-flex;align-items:center;background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.4);color:#34d399;border-radius:20px;padding:.2rem .85rem;font-size:.8rem;font-weight:700}
+.jm-divider{width:100%;height:1px;background:rgba(255,255,255,0.08)}
+.jm-text{font-size:.82rem;color:var(--muted);line-height:1.65;text-align:left;width:100%}
+.jm-text strong{color:var(--text)}
+.jm-btn{padding:.55rem 1.6rem;font-size:.88rem;font-weight:700;width:100%;margin-top:.1rem}
+
+/* Juego: entrada suave de la celula entre rondas */
+.juego-svg-entering{animation:jSvgIn 1.1s cubic-bezier(0.22,1,0.36,1) both}
+@keyframes jSvgIn{
+  0%  {opacity:0;transform:scale(0.97) translateY(6px);filter:blur(4px)}
+  40% {opacity:0.7}
+  100%{opacity:1;transform:scale(1) translateY(0);filter:blur(0px)}
+}
