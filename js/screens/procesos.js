@@ -515,7 +515,7 @@
     style="animation:outerGlowPulse${uid} 4s ease-in-out infinite"/>
 
   <!-- ══ BREATHING WRAPPER — whole cell, gentle organic deformation ══ -->
-  <g style="transform-origin:160px 158px;transform-box:fill-box;animation:cellBreathe${uid} 4s ease-in-out infinite">
+  <g style="transform-origin:160px 158px;animation:cellBreathe${uid} 4s ease-in-out infinite">
 
   <!-- ─── CELL MEMBRANE ─── -->
   <ellipse cx="160" cy="158" rx="148" ry="128"
@@ -774,7 +774,7 @@
         svg: _cell('s4',`
           <!-- Krebs wheel inside mito1 — ROTATES -->
           <g transform="rotate(20 208 168)">
-            <g style="animation:krebsSpin 5s linear infinite;transform-origin:208px 168px;transform-box:fill-box">
+            <g style="animation:krebsSpin 5s linear infinite;transform-origin:208px 168px">
               <circle cx="208" cy="155" r="4" fill="rgba(251,191,36,0.85)"/>
               <circle cx="218" cy="158" r="4" fill="rgba(251,191,36,0.8)"/>
               <circle cx="222" cy="168" r="4" fill="rgba(251,191,36,0.75)"/>
@@ -919,7 +919,7 @@
           <text x="148" y="52" text-anchor="middle" font-size="9.5" fill="rgba(96,165,250,0.9)" font-family="sans-serif" font-weight="bold">CADENA RESPIRATORIA</text>
         `, 'NADH/FADH₂ + O₂  →  H₂O + 28-34 ATP (fosforilación oxidativa)',
         `@keyframes compBlink1{0%,100%{opacity:0.65}50%{opacity:1;filter:drop-shadow(0 0 3px rgba(96,165,250,0.8))}}
-         @keyframes atpSynth{0%{transform:rotate(0deg);transform-origin:228px 168px;transform-box:fill-box}100%{transform:rotate(360deg)}}
+         @keyframes atpSynth{0%{transform:rotate(0deg);transform-origin:228px 168px}100%{transform:rotate(360deg)}}
          @keyframes hplusRise{
            0%  {transform:translateY(0);opacity:0}
            15% {opacity:1}
@@ -2465,7 +2465,6 @@
           <path d="M90 163 L230 163" fill="none" stroke="rgba(6,182,212,0.55)" stroke-width="1.8" stroke-dasharray="4 2"/>
           <!-- New AA incoming -->
           <circle cx="195" cy="143" r="5.5" fill="rgba(239,68,68,0.45)" stroke="rgba(239,68,68,0.9)" stroke-width="1.8" style="animation:chainGrow 1.6s 0.4s ease-in-out infinite"/>
-          <path d="M192" fill="none"/>
           <line x1="193" y1="148" x2="186" y2="155" stroke="rgba(239,68,68,0.7)" stroke-width="1.5" stroke-dasharray="3 2" style="animation:chainGrow 1.6s 0.4s ease-in-out infinite"/>
           <!-- Labels -->
           <text x="100" y="178" text-anchor="middle" font-size="7" fill="rgba(96,165,250,0.8)" font-family="sans-serif">N-terminal</text>

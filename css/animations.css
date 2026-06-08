@@ -84,7 +84,7 @@
 .mt-grow{stroke-dasharray:60;animation:microtubuleGrow 3s ease-in-out infinite alternate}
 .pili-line{animation:piliPulse 2.2s ease-in-out infinite}
 .adhesin{animation:adhesinGlow 1.8s ease-in-out infinite}
-.plasmid-spin{animation:plasmidSpin 8s linear infinite;transform-box:fill-box;transform-origin:center}
+.plasmid-spin{animation:plasmidSpin 8s linear infinite;transform-box:fill-box;-webkit-transform-box:fill-box;transform-origin:center;-webkit-transform-origin:center}
 .gene-flash{animation:geneFlash 2s ease-in-out infinite}
 .dna-coil{stroke-dasharray:10 5;animation:dnaCoil 3s linear infinite}
 .supercoil{animation:supercoilPulse 4s ease-in-out infinite}
