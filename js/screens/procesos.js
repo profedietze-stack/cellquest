@@ -2110,8 +2110,8 @@
         narration:'Un patógeno (bacteria o virus) ha ingresado al organismo. Las células centinela del sistema inmune innato están patrullando los tejidos.',
         info:'La <strong>inmunidad innata</strong> es la primera línea de defensa: responde en minutos-horas sin necesidad de aprender. Los <strong>macrófagos y neutrófilos</strong> patrullan constantemente en busca de señales de peligro.',
         annotations:[
-          {tx:255,ty:38,text:'🦠 Patógeno',color:'#ef4444'},
-          {tx:30,ty:68,text:'🛡️ Macrófago',color:'#f59e0b'},
+          {text:['🦠 Patógeno','detectado'],      bx:195, by:55,  tx:255, ty:38},
+          {text:['🛡️ Macrófago','patrullando'],   bx:95,  by:55,  tx:30,  ty:68},
         ],
         svg:_cell('d0',
           `<ellipse cx="290" cy="55" rx="18" ry="14" fill="rgba(239,68,68,0.18)" stroke="rgba(239,68,68,0.9)" stroke-width="2"/>
@@ -2133,9 +2133,8 @@
         narration:'Los receptores TLR (Toll-like Receptors) de la membrana del macrófago detectan los PAMPs del patógeno. ¡Alarma activada!',
         info:'Los <strong>Toll-like Receptors (TLR)</strong> son proteínas de la membrana que reconocen patrones moleculares asociados a patógenos (<strong>PAMPs</strong>): lipopolisacáridos bacterianos, flagelinas, ARN viral doble cadena. Activarlos dispara la cascada inflamatoria y fagocítica.',
         annotations:[
-          {tx:248,ty:95,text:'🔑 TLR',color:'#f59e0b'},
-          {tx:246,ty:107,text:'🔍 receptor',color:'#f59e0b'},
-          {tx:252,ty:45,text:'🦠 PAMP',color:'#ef4444'},
+          {text:['🔑 TLR','receptor activo'],    bx:165, by:95,  tx:248, ty:101},
+          {text:['🦠 PAMP','del patógeno'],      bx:165, by:45,  tx:252, ty:45},
         ],
         svg:_cell('d1',
           `<ellipse cx="290" cy="55" rx="18" ry="14" fill="rgba(239,68,68,0.18)" stroke="rgba(239,68,68,0.7)" stroke-width="1.5"/>
@@ -2154,8 +2153,8 @@
         narration:'El macrófago extiende pseudópodos alrededor del patógeno y lo engulle, formando un fagosoma en el citoplasma.',
         info:'La <strong>fagocitosis</strong> es un proceso activo (requiere ATP y reorganización del citoesqueleto de actina). El macrófago rodea al patógeno con extensiones de membrana (<strong>pseudópodos</strong>) hasta encerrarlo en una vesícula llamada <strong>fagosoma</strong>.',
         annotations:[
-          {tx:170,ty:58,text:'🌀 Pseudópodo',color:'#f59e0b'},
-          {tx:148,ty:118,text:'📦 Fagosoma',color:'#00e5ff'},
+          {text:['🌀 Pseudópodo','rodea patógeno'],  bx:68,  by:58,  tx:170, ty:58},
+          {text:['📦 Fagosoma','formándose'],         bx:60,  by:118, tx:148, ty:118},
         ],
         svg:_cell('d2',
           `<ellipse cx="175" cy="88" rx="28" ry="22" fill="rgba(245,158,11,0.12)" stroke="rgba(245,158,11,0.8)" stroke-width="2" stroke-dasharray="6 3" style="animation:fagGrow 1.4s ease-in-out infinite"/>
@@ -2173,8 +2172,8 @@
         narration:'El fagosoma se fusiona con un lisosoma formando el fagolisosoma. Enzimas hidrolíticas degradan al patógeno en fragmentos pequeños.',
         info:'El <strong>fagolisosoma</strong> es altamente ácido (pH ~4.5) y contiene más de 50 tipos de enzimas: proteasas, lipasas, nucleasas. Además, la <strong>NADPH oxidasa</strong> genera radicales libres de oxígeno (burst oxidativo) que destruyen las membranas bacterianas.',
         annotations:[
-          {tx:95,ty:198,text:'🧫 Lisosoma',color:'#ec4899'},
-          {tx:68,ty:155,text:'💥 Fagolisosoma',color:'#f59e0b'},
+          {text:['🧫 Lisosoma','enzimas ácidas'],   bx:210, by:198, tx:95,  ty:198},
+          {text:['💥 Fagolisosoma','pH 4.5'],       bx:210, by:155, tx:68,  ty:155},
         ],
         svg:_cell('d3',
           `<circle cx="128" cy="215" r="16" fill="rgba(236,72,153,0.2)" stroke="rgba(236,72,153,0.95)" stroke-width="2.5" style="animation:lysoGlow 1.2s ease-in-out infinite"/>
@@ -2182,7 +2181,7 @@
            <ellipse cx="110" cy="175" rx="24" ry="20" fill="rgba(245,158,11,0.15)" stroke="rgba(245,158,11,0.8)" stroke-width="2" style="animation:lysoGlow 1.2s 0.3s ease-in-out infinite"/>
            <text x="110" y="179" text-anchor="middle" font-size="7" fill="rgba(245,158,11,0.9)">fago+</text>
            <text x="110" y="188" text-anchor="middle" font-size="7" fill="rgba(245,158,11,0.9)">liso</text>
-           <path d="M128 199 Q119 192 110 195" fill="none" stroke="rgba(245,158,11,0.7)" stroke-width="2" marker-end="url(#arr)"/>
+           <path d="M128 199 Q119 192 110 195" fill="none" stroke="rgba(245,158,11,0.7)" stroke-width="2" marker-end="url(#aWd3)"/>
            <line x1="98" y1="163" x2="95" y2="156" stroke="rgba(245,158,11,0.6)" stroke-width="1.5"/>
            <text x="88" y="154" font-size="8" fill="rgba(245,158,11,0.8)">💥</text>`,
           'Tras la digestión, los péptidos resultantes son transportados al retículo endoplásmico para unirse a las moléculas MHC-II, preparando la siguiente fase: la presentación antigénica.',
@@ -2195,9 +2194,8 @@
         narration:'El macrófago presenta los fragmentos del patógeno (antígenos) en su membrana usando proteínas MHC-II. Es la señal para activar los linfocitos T.',
         info:'Las proteínas del <strong>Complejo Mayor de Histocompatibilidad II (MHC-II)</strong> son el "tablero de exhibición" de las células presentadoras de antígeno. Transportan péptidos del fagolisosoma a la superficie celular para ser reconocidos por los linfocitos T CD4+ (helper).',
         annotations:[
-          {tx:10,ty:98,text:'🔑 MHC-II',color:'#f59e0b'},
-          {tx:8,ty:110,text:'🦠 +antígeno',color:'#f59e0b'},
-          {tx:20,ty:60,text:'🔬 Linfocito T',color:'#00e5ff'},
+          {text:['🔑 MHC-II','presenta antígeno'],  bx:135, by:100, tx:10,  ty:100},
+          {text:['🔬 Linfocito T','CD4+ helper'],   bx:135, by:58,  tx:20,  ty:58},
         ],
         svg:_cell('d4',
           `<rect x="8" y="115" width="16" height="38" rx="8" fill="rgba(245,158,11,0.3)" stroke="rgba(245,158,11,0.95)" stroke-width="2.5" style="animation:mhcGlow 1.1s ease-in-out infinite"/>
@@ -2216,8 +2214,8 @@
         narration:'El linfocito T helper libera citocinas que activan los linfocitos B. Estos se diferencian en células plasmáticas y producen anticuerpos (inmunoglobulinas).',
         info:'Los <strong>anticuerpos (IgG, IgM, IgA, IgE, IgD)</strong> son proteínas en forma de Y que se unen con alta especificidad al antígeno. Actúan neutralizando patógenos, marcándolos para fagocitosis (<strong>opsonización</strong>) o activando el sistema del complemento.',
         annotations:[
-          {tx:72,ty:32,text:'🛡️ Anticuerpo IgG',color:'#f59e0b'},
-          {tx:185,ty:32,text:'💉 Linfocito B',color:'#10b981'},
+          {text:['🛡️ Anticuerpo IgG','secretado'],        bx:72,  by:72,  tx:72,  ty:32},
+          {text:['💉 Linfocito B','→ célula plasmática'], bx:216, by:72,  tx:216, ty:32},
         ],
         svg:_cell('d5',
           `<ellipse cx="240" cy="55" rx="22" ry="18" fill="rgba(16,185,129,0.15)" stroke="rgba(16,185,129,0.85)" stroke-width="2" style="animation:bGlow 1.3s ease-in-out infinite"/>
@@ -2241,10 +2239,8 @@
         narration:'Una vez eliminado el patógeno, algunas células B y T de memoria quedan en circulación durante años, listas para responder mucho más rápido ante una reinfección.',
         info:'Las <strong>células de memoria</strong> (B y T) son la base de las vacunas. En una segunda exposición, la respuesta es 100–1000× más rápida y potente que la primera vez. Las células de memoria pueden sobrevivir décadas, proporcionando <strong>inmunidad duradera</strong>.',
         annotations:[
-          {tx:54,ty:30,text:'🔬 Célula T',color:'#00e5ff'},
-          {tx:52,ty:42,text:'🧠 memoria',color:'#00e5ff'},
-          {tx:188,ty:30,text:'💉 Célula B',color:'#10b981'},
-          {tx:186,ty:42,text:'🧠 memoria',color:'#10b981'},
+          {text:['🔬 Célula T memoria','CD4+/CD8+'],  bx:80,  by:78,  tx:80,  ty:36},
+          {text:['💉 Célula B memoria','IgG/IgA'],    bx:216, by:78,  tx:216, ty:36},
         ],
         svg:_cell('d6',
           `<ellipse cx="80" cy="52" rx="20" ry="16" fill="rgba(0,229,255,0.15)" stroke="rgba(0,229,255,0.85)" stroke-width="2" style="animation:memGlow 2s ease-in-out infinite"/>
@@ -2272,10 +2268,10 @@
 
       // Ronda 1 — TLR reconoce patógeno en membrana
       { step:1,
-        mol:{emoji:'🦠', label:'🦠 Patógeno'},
-        targetLabel:'🔍 Receptor TLR',
-        hint:'Los TLR están en la membrana exterior de la célula.',
-        target:{x:273, y:126, r:24},
+        instruction:'Un patógeno está en la membrana. <strong>Arrastrá el patógeno</strong> al receptor TLR para activar la defensa.',
+        molecule:{sym:'Pat', label:'🦠 Patógeno', color:'rgba(239,68,68,0.92)', border:'#ef4444', r:24},
+        molSvgX:160, molSvgY:36,
+        target:{x:273, y:126, r:30}, targetLabel:'🔍 Receptor TLR',
         xp:10, feedback:'¡Reconocimiento activado!',
         explain:{
           title:'¡Receptor TLR activado!',
@@ -2284,10 +2280,10 @@
 
       // Ronda 2 — Fagosoma se forma en citoplasma
       { step:2,
-        mol:{emoji:'🎯', label:'🎯 Fagosoma'},
-        targetLabel:'💧 Citoplasma',
-        hint:'El fagosoma se forma en el interior de la célula, en el citoplasma.',
-        target:{x:180, y:138, r:36},
+        instruction:'El patógeno fue engullido. <strong>Arrastrá el fagosoma</strong> al citoplasma para iniciar la digestión.',
+        molecule:{sym:'Fag', label:'🎯 Fagosoma', color:'rgba(245,158,11,0.92)', border:'#f59e0b', r:22},
+        molSvgX:285, molSvgY:60,
+        target:{x:180, y:138, r:36}, targetLabel:'💧 Citoplasma',
         xp:10, feedback:'¡Fagocitosis completa!',
         explain:{
           title:'¡Fagosoma formado!',
@@ -2296,10 +2292,10 @@
 
       // Ronda 3 — Enzimas lisosómicas degradan patógeno
       { step:3,
-        mol:{emoji:'⚗️', label:'⚗️ Enzima'},
-        targetLabel:'🧫 Lisosoma',
-        hint:'El lisosoma es el orgánulo digestivo de la célula, en la parte inferior izquierda.',
-        target:{x:128, y:215, r:26},
+        instruction:'Las enzimas lisosómicas deben degradar el patógeno. <strong>Arrastrá la enzima</strong> al lisosoma.',
+        molecule:{sym:'Enz', label:'⚗️ Enzima', color:'rgba(236,72,153,0.92)', border:'#ec4899', r:22},
+        molSvgX:62, molSvgY:58,
+        target:{x:128, y:215, r:30}, targetLabel:'🧫 Lisosoma',
         xp:10, feedback:'¡Digestión enzimática!',
         explain:{
           title:'¡Fagolisosoma activo!',
@@ -2308,10 +2304,10 @@
 
       // Ronda 4 — Complejo MHC-II presenta antígeno en membrana
       { step:4,
-        mol:{emoji:'🔑', label:'🔑 Péptido antígeno'},
-        targetLabel:'🧬 Núcleo (MHC-II)',
-        hint:'Las proteínas MHC-II se sintetizan a partir del núcleo y se presentan en la membrana.',
-        target:{x:122, y:108, r:36},
+        instruction:'El péptido debe unirse al MHC-II. <strong>Arrastrá el péptido</strong> al núcleo para la presentación antigénica.',
+        molecule:{sym:'Pep', label:'🔑 Péptido', color:'rgba(245,158,11,0.92)', border:'#f59e0b', r:22},
+        molSvgX:256, molSvgY:240,
+        target:{x:122, y:108, r:36}, targetLabel:'🧬 Núcleo (MHC-II)',
         xp:10, feedback:'¡Antígeno presentado!',
         explain:{
           title:'¡Presentación antigénica lista!',
@@ -2320,10 +2316,10 @@
 
       // Ronda 5 — Anticuerpos secretados por membrana izquierda
       { step:5,
-        mol:{emoji:'🛡️', label:'🛡️ Anticuerpo IgG'},
-        targetLabel:'📤 Membrana (exocitosis)',
-        hint:'Los anticuerpos se secretan al exterior a través de la membrana.',
-        target:{x:15, y:135, r:26},
+        instruction:'Los anticuerpos están listos. <strong>Arrastrá el anticuerpo IgG</strong> a la membrana para secretarlo por exocitosis.',
+        molecule:{sym:'IgG', label:'🛡️ Anticuerpo', color:'rgba(245,158,11,0.92)', border:'#f59e0b', r:22},
+        molSvgX:278, molSvgY:138,
+        target:{x:15, y:135, r:30}, targetLabel:'📤 Membrana (exocitosis)',
         xp:10, feedback:'¡Defensa inmune completa!',
         explain:{
           title:'¡Anticuerpos secretados!',

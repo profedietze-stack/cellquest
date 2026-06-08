@@ -1,5 +1,5 @@
 // CellQuest Service Worker — offline cache
-const CACHE = 'cellquest-v25';
+const CACHE = 'cellquest-v26';
 const ASSETS = [
   './',
   './index.html',
@@ -46,7 +46,8 @@ self.addEventListener('activate', e => {
 
 self.addEventListener('fetch', e => {
   e.respondWith(
-    caches.match(e.request).then(cached => cached || fetch(e.request))
+    // ignoreSearch: true so versioned ?v=XX requests match cached bare URLs
+    caches.match(e.request, {ignoreSearch: true}).then(cached => cached || fetch(e.request))
   );
 });
 
