@@ -2,8 +2,20 @@
 // ═══════════════ SAVE / LOAD ═══════════════
 // IMP-02: debounce writes so rapid consecutive calls (e.g. per-puzzle) collapse into one
 let _saveTimer=null;
+let _saveErrorShown=false;
+function _showSaveError(){
+  if(_saveErrorShown)return;
+  _saveErrorShown=true;
+  const t=document.createElement('div');
+  t.className='ach-toast';
+  t.style.cssText='background:rgba(239,68,68,0.15);border-color:rgba(239,68,68,0.4)';
+  t.innerHTML='<div class="toast-inner"><div class="toast-emoji">⚠️</div><div class="toast-text"><h4>Progreso no disponible</h4><p>Modo privado no permite guardar datos</p></div></div>';
+  document.body.appendChild(t);
+  requestAnimationFrame(()=>t.classList.add('show'));
+  setTimeout(()=>{t.classList.remove('show');setTimeout(()=>t.remove(),400);},4000);
+}
 function _doSave(){
-  try{localStorage.setItem('cq3',JSON.stringify({name:GS.name,avatar:GS.avatar,difficulty:GS.difficulty||'normal',score:GS.score,xp:GS.xp||0,totalTime:GS.totalTime,levels:GS.levels,completed:GS.completed,achievements:GS.achievements,speedRuns:GS.speedRuns,perfectRuns:GS.perfectRuns,totalDone:GS.totalDone,completedAt:GS.completedAt||{},lastSession:Date.now()}));}catch(e){}
+  try{localStorage.setItem('cq3',JSON.stringify({name:GS.name,avatar:GS.avatar,difficulty:GS.difficulty||'normal',score:GS.score,xp:GS.xp||0,totalTime:GS.totalTime,levels:GS.levels,completed:GS.completed,achievements:GS.achievements,speedRuns:GS.speedRuns,perfectRuns:GS.perfectRuns,totalDone:GS.totalDone,completedAt:GS.completedAt||{},lastSession:Date.now()}));}catch(e){_showSaveError();}
 }
 function saveGame(immediate){
   clearTimeout(_saveTimer);

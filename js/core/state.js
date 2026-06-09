@@ -23,6 +23,7 @@ let GS={
     {id:'scholar',name:'Erudito',emoji:'🌟',desc:'Alcanza 500 puntos',unlocked:false},
     {id:'mastery',name:'Maestría Celular',emoji:'🎓',desc:'Completa todos los niveles disponibles',unlocked:false},
     {id:'secret',name:'Descubridor Secreto',emoji:'🔐',desc:'Desbloquea todos los niveles',unlocked:false},
+    {id:'all_procesos',name:'Biólogo Completo',emoji:'🧫',desc:'Completa todos los procesos en Cine y Jugador',unlocked:false},
   ],
 };
 const AV_EMOJI={scientist:'🧑‍🔬',student:'🎓',teacher:'👨‍🏫'};

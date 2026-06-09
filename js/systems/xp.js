@@ -56,7 +56,27 @@ function addXP(amount){
   updateXPDisplay();
   if(typeof saveGame === 'function') saveGame();
 
+  _showXPGain(amount);
   if(curr.level > prev.level) _showLevelUpToast(curr);
+}
+
+// ─────────────────────────────────────────
+function _showXPGain(amount){
+  const el = document.createElement('div');
+  el.className = 'xp-gain-pop';
+  el.textContent = '+' + amount + ' XP';
+  // anchor to XP bar if visible, else top-right
+  const bar = document.getElementById('xpBar');
+  const anchor = bar ? bar.closest('.xp-track') || bar.parentElement : null;
+  if(anchor){
+    const rect = anchor.getBoundingClientRect();
+    el.style.cssText = 'position:fixed;left:' + (rect.left + rect.width/2) + 'px;top:' + (rect.top - 4) + 'px;transform:translate(-50%,0)';
+  } else {
+    el.style.cssText = 'position:fixed;right:18px;top:70px';
+  }
+  document.body.appendChild(el);
+  requestAnimationFrame(()=>el.classList.add('xp-gain-pop--run'));
+  setTimeout(()=>el.remove(), 1100);
 }
 
 // ─────────────────────────────────────────

@@ -116,6 +116,8 @@ function drawOrg(svg,org,levelId,atlasMode){
   const done=atlasMode?true:(GS.completed[levelId]||{})[org.id];
   const g=svgEl('g');g.style.cursor='pointer';
   g.dataset.orgId=org.id;
+  g.setAttribute('role','img');
+  g.setAttribute('aria-label',org.name+(done?' (completada)':''));
   const isLarge=org.rx>80;
   const shape=svgEl('ellipse',{
     cx:org.cx,cy:org.cy,rx:org.rx,ry:org.ry,

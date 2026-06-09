@@ -14,6 +14,12 @@ function checkAch(){
   const avail=GS.levels.filter(l=>ORGANELLES[l.id]?.length);
   if(avail.length&&avail.every(l=>done3.find(d=>d.id===l.id)))u('mastery');
   if(GS.levels.every(l=>l.unlocked))u('secret');
+  // all_procesos: all 5 Cine + all 5 Jugador seen
+  try{
+    const proc_ids=['respiracion','alimentacion','reproduccion','defensa','sintesis'];
+    const seen=JSON.parse(localStorage.getItem('cq3_proc_seen')||'{}');
+    if(proc_ids.every(id=>seen[id])&&proc_ids.every(id=>seen['j_'+id]))u('all_procesos');
+  }catch(e){};
 }
 function showToast(a){
   const t=document.createElement('div');t.className='ach-toast';

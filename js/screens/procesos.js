@@ -293,6 +293,7 @@
             const s2=_getSeen(); s2[p.id]=Date.now();
             localStorage.setItem('cq3_proc_seen',JSON.stringify(s2));
             if(typeof addXP==='function') addXP(p.xp);
+            if(typeof checkAch==='function') checkAch();
           }
           document.getElementById('procesosScreen')?.classList.remove('player-active');
           _anim.proceso=null; _renderBody();
@@ -1577,7 +1578,7 @@
                failCount:0,molX:0,molY:0};
 
   function _openJuego(id){
-    _game.id=id; _game.round=0; _game.score=0; _game.failCount=0; _game.dragging=false;
+    _game.id=id; _game.round=0; _game.score=0; _game.failCount=0; _game.totalFails=0; _game.dragging=false;
     if(id==='respiracion') _game.rounds=_juegoRoundsRespiracion();
     if(id==='alimentacion') _game.rounds=_juegoRoundsAlimentacion();
     if(id==='reproduccion') _game.rounds=_juegoRoundsReproduccion();
@@ -1798,7 +1799,7 @@
     const round=_game.rounds[_game.round];
     const svg=document.querySelector('#juegoSvgWrap .cine-cell-svg'); if(!svg) return;
     if(_hitTest(e.clientX, e.clientY, round.target, svg)){_roundOK(round);}
-    else{_game.failCount++;_roundFail(round);}
+    else{_game.failCount++;_game.totalFails++;_roundFail(round);}
   }
   function _cleanDrag(){
     const mol=document.getElementById('juegoMol');
@@ -1907,6 +1908,7 @@
         <div class="juego-complete-score">
           <span class="juego-xp-big">+${totalXp} XP</span>
           <span class="juego-xp-sub">¡Excelente trabajo!</span>
+          <span class="juego-xp-sub" style="color:${_game.totalFails===0?'#10b981':'#f59e0b'}">${_game.totalFails===0?'Sin errores 💯':_game.totalFails+' error'+(_game.totalFails===1?'':' es')}</span>
         </div>
         <div class="juego-complete-steps">
           ${_game.rounds.map(r=>`<div class="juego-step-badge">✅ ${r.targetLabel}</div>`).join('')}
@@ -1923,6 +1925,7 @@
         const s2=_getSeen(); s2['j_'+_game.id]=Date.now();
         localStorage.setItem('cq3_proc_seen',JSON.stringify(s2));
         if(typeof addXP==='function') addXP(totalXp);
+        if(typeof checkAch==='function') checkAch();
       }
       document.getElementById('procesosScreen')?.classList.remove('player-active');
       _tab='juego'; _renderTabs(); _renderBody();

@@ -154,6 +154,10 @@
 .levelup-toast .toast-text h4{color:var(--accent)}
 .unlock-toast{border-color:var(--accent3);background:linear-gradient(135deg,#0f1f17,#142b1e)}
 .unlock-toast .toast-text h4{color:var(--accent3)}
+/* XP gain pop (+35 XP floating label) */
+.xp-gain-pop{position:fixed;z-index:1000;font-family:var(--font2);font-weight:800;font-size:.95rem;color:#fbbf24;text-shadow:0 0 8px rgba(251,191,36,.7);pointer-events:none;opacity:0;transition:none}
+.xp-gain-pop--run{animation:xpPop 1s ease-out forwards}
+@keyframes xpPop{0%{opacity:1;transform:translate(-50%,0)}80%{opacity:1;transform:translate(-50%,-28px)}100%{opacity:0;transform:translate(-50%,-38px)}}
 /* COMPLETED CARD */
 .org-done-card{background:rgba(16,185,129,0.07);border:1px solid var(--accent3);border-radius:10px;padding:1.2rem;text-align:center}
 .org-done-card p{font-size:.85rem;color:var(--accent3);margin-top:.4rem;font-weight:600}
