@@ -145,7 +145,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);height:100vh
 .name-input::placeholder{color:var(--muted)}
 /* GAME SCREEN */
 #gameScreen{flex-direction:column;height:100vh;overflow:hidden}
-.game-header{background:rgba(6,11,26,0.95);border-bottom:1px solid var(--border);padding:.65rem 1.2rem;display:flex;align-items:center;gap:1.2rem;flex-shrink:0;backdrop-filter:blur(10px)}
+.game-header{background:rgba(6,11,26,0.95);border-bottom:1px solid var(--border);padding:.65rem 1.2rem;display:flex;align-items:center;gap:1.2rem;flex-shrink:0;backdrop-filter:blur(10px);position:relative;z-index:2}
 .gh-logo{font-size:1.1rem;font-weight:900;color:var(--accent);font-family:var(--font2);white-space:nowrap}
 .gh-level{font-size:.85rem;color:var(--muted);padding-left:1rem;border-left:1px solid var(--border)}
 .gh-level span{color:var(--accent);font-weight:700}

@@ -44,7 +44,7 @@
 /* Zoom controls */
 .atlas-zoom-controls{
   position:absolute;bottom:16px;right:12px;
-  display:flex;flex-direction:column;gap:4px;z-index:20;
+  display:flex;flex-direction:column;gap:4px;z-index:29;
 }
 .atlas-zoom-btn{
   width:32px;height:32px;border-radius:50%;

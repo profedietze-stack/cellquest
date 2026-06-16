@@ -428,6 +428,7 @@
      {id:'reproduccion',title:'Reproducción',emoji:'🔁',sub:'Mitosis · Huso mitótico · Citocinesis',color:'#7c3aed',xp:50},
      {id:'defensa',title:'Defensa Inmune',emoji:'🛡️',sub:'Macrófagos · Anticuerpos · Memoria',color:'#f59e0b',xp:50},
      {id:'sintesis',title:'Síntesis de Proteínas',emoji:'🧬',sub:'ADN · ARNm · Ribosoma · Golgi',color:'#06b6d4',xp:50},
+     {id:'fotosintesis',title:'Fotosíntesis',emoji:'🌿',sub:'Luz solar · Tilacoides · Ciclo Calvin',color:'#22c55e',xp:50},
     ].forEach(j=>{
       const done=seen['j_'+j.id];
       const card=document.createElement('div');

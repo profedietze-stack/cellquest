@@ -169,7 +169,7 @@
   <div class="menu-logo" style="text-align:center;font-size:1.3rem">🔬 CellQuest</div>
   <div class="avatar-title">Seleccioná tu dificultad</div>
   <div class="avatar-subtitle">Elegí el nivel que mejor se adapte a tus conocimientos</div>
-  <input class="name-input" id="playerNameInput" placeholder="Tu nombre (opcional)..." maxlength="20" style="max-width:320px;width:100%"/>
+  <input class="name-input" id="playerNameInput" placeholder="Tu nombre (mín. 4 caracteres)" maxlength="20" style="max-width:320px;width:100%"/>
 
   <div class="diff-grid">
 
@@ -472,7 +472,7 @@
 <!-- RESET CONFIRMATION MODAL -->
 <div class="modal-overlay" id="resetModal">
   <div class="modal-box" style="max-width:380px;text-align:center">
-    <div class="modal-header" style="justify-content:center;border:none;padding-bottom:0"><h2>âš ï¸ Nueva Partida</h2></div>
+    <div class="modal-header" style="justify-content:center;border:none;padding-bottom:0"><h2>⚠️ Nueva Partida</h2></div>
     <div class="modal-body" style="padding-top:.5rem">
       <p style="color:var(--muted);font-size:.93rem;margin-bottom:1.4rem;line-height:1.6">Se perderá todo tu progreso actual:<br>puntos, organelas descubiertas y logros.</p>
       <div style="display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap">
@@ -485,7 +485,7 @@
 <div class="complete-overlay" id="completeOverlay">
   <div class="complete-box">
     <span class="complete-emoji" id="cmpEmoji">🏆</span>
-    <div class="complete-title" id="cmpTitle">áNivel Completado!</div>
+    <div class="complete-title" id="cmpTitle">¡Nivel Completado!</div>
     <div class="complete-sub" id="cmpSub">Has descubierto todas las organelas</div>
     <div style="display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap">
       <button class="btn btn-cyan" onclick="closeComplete();showPTab('levels')">Ver Niveles</button>

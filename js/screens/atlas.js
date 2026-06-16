@@ -264,7 +264,7 @@
     window._atlasSelectOrg=null;
     document.getElementById('atlasModal')?.remove();
     if(_origBack)_origBack();
-    else{if(window.GS&&GS.currentLevel)showScreen('gameScreen');else showScreen('menuScreen');}
+    else showScreen('menuScreen');
   };
 
 })(); // end Atlas IIFE
@@ -286,11 +286,18 @@ function backToMenu(){stopTimer();saveGame(true);showScreen('menuScreen');}
 function selAvatar(el){document.querySelectorAll('.diff-card,.avatar-card').forEach(c=>c.classList.remove('selected'));el.classList.add('selected');}
 function confirmAvatar(){
   const n=document.getElementById('playerNameInput').value.trim();
+  if(!n||n.length<4){
+    const inp=document.getElementById('playerNameInput');
+    inp.style.borderColor='#ef4444';
+    inp.placeholder='Mínimo 4 caracteres';
+    inp.focus();
+    setTimeout(()=>{inp.style.borderColor='';},1800);
+    return;
+  }
   const sel=document.querySelector('.diff-card.selected,.avatar-card.selected');
   GS.difficulty=sel?.dataset.diff||'normal';
   GS.avatar=sel?.dataset.av||'teacher';
-  const defaults={easy:'Estudiante',normal:'Docente',hard:'Científico/a'};
-  GS.name=n||(defaults[GS.difficulty]||'Explorador');
+  GS.name=n;
   enterGame();
 }
 function enterGame(){
