@@ -75,7 +75,7 @@
     PROCESOS_META.forEach(p=>{
       const done=seen[p.id];
       const card=document.createElement('div');
-      card.className='proc-card'+(p.locked?' proc-card-locked':'');card.style.setProperty('--proc-rgb',_hexToRgb(p.color));
+      card.className='proc-card'+(p.locked?' proc-card-locked':'');card.dataset.procId=p.id;card.style.setProperty('--proc-rgb',_hexToRgb(p.color));
       card.innerHTML=`
         <div class="proc-card-emoji" style="color:${p.color}">${p.emoji}</div>
         <div class="proc-card-info">
