@@ -84,6 +84,20 @@ Completion tracked in `localStorage['cq3_proc_seen']`: keys like `'respiracion'`
 
 Key `cq3` in localStorage. `saveGame(immediate?)` debounces 800ms by default. iOS private mode silently fails `setItem` — caught and shown as error toast (once per session).
 
+## Debug & testing tools
+
+`js/dev/debug.js` loads on every page. Use URL params to set up test state instantly:
+
+| Param | Effect |
+|-------|--------|
+| `?debug=1` | Side panel: live GS snapshot + buttons (reset / +XP / unlock all / mark procesos seen) |
+| `?xp=5000` | Sets `GS.xp` on load — use to test cell unlocks |
+| `?proc=fotosintesis` | Navigates directly to that proceso in Cine mode |
+| `?reset=1` | Clears `cq3` + `cq3_proc_seen` from localStorage, reloads clean |
+| `?unlock=all` | Unlocks all cell types immediately |
+
+`window.onerror` and `unhandledrejection` always surface as red toasts on screen — no DevTools needed to see JS errors.
+
 ## Critical encoding rule
 
 **NEVER use PowerShell `Set-Content` or `Out-File` on JS files that contain emojis or non-ASCII characters.** Always use Python binary write:
