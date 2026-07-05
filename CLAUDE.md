@@ -98,6 +98,20 @@ Key `cq3` in localStorage. `saveGame(immediate?)` debounces 800ms by default. iO
 
 `window.onerror` and `unhandledrejection` always surface as red toasts on screen — no DevTools needed to see JS errors.
 
+## Automated test suite (Node/npm — separate from runtime, no build step for the game itself)
+
+```
+npm install
+npm test          # unit + data-integrity (Vitest)
+npm run test:e2e  # Chromium E2E (Playwright, run `npx playwright install chromium` once)
+npm run test:all
+```
+
+- `tests/helpers/load-game.js` — loads the window-global scripts into a jsdom instance (single `dom.window.eval()` call, since `const`/`let` bindings don't survive across separate eval calls in jsdom). Add new globals to `EXPOSE_NAMES` if a test needs them.
+- `tests/unit/` — pure logic: XP/leveling (`xp.test.js`), save/load (`save.test.js`).
+- `tests/integrity/data-integrity.test.js` — cross-checks `levels.js` ↔ `organelles.js` ↔ `minigames.js` (every organelle has a minigame in all 3 difficulties, `quiz.ans` in range, `fill.cor` in `words` or free-text `fill.a` present, etc.). Run this after adding a new cell/organelle/minigame — it catches the "organelle with no Jugador mode" class of bug before it ships.
+- `tests/e2e/smoke.spec.js` — Playwright against `py -m http.server 4173` (see `playwright.config.js`). Covers splash→menu→new game (name validation)→gameplay, Atlas→Volver, and verifies the error-banner actually renders on a thrown error.
+
 ## Critical encoding rule
 
 **NEVER use PowerShell `Set-Content` or `Out-File` on JS files that contain emojis or non-ASCII characters.** Always use Python binary write:

@@ -99,6 +99,28 @@ Para cache-busting, incrementar el número `?v=N` en los `<link>` y `<script>` d
 
 ---
 
+## 🧪 Tests
+
+Suite de tests automatizados (Node/npm, no afecta el runtime del juego):
+
+```bash
+npm install          # una sola vez
+npm test             # unit + integridad de datos (Vitest)
+npm run test:e2e     # end-to-end en navegador (Playwright, requiere `npx playwright install chromium` una vez)
+npm run test:all     # ambos
+```
+
+| Suite | Qué cubre |
+|-------|-----------|
+| `tests/unit/xp.test.js` | Sistema de XP: niveles, umbrales, `addXP`, desbloqueos de células |
+| `tests/unit/save.test.js` | Guardado/carga en `localStorage`, merge de saves viejos, manejo de JSON corrupto |
+| `tests/integrity/data-integrity.test.js` | Consistencia cruzada `levels.js` ↔ `organelles.js` ↔ `minigames.js`: ids únicos, toda organela tiene minijuego en las 3 dificultades, `quiz.ans` dentro de rango, `fill.cor` en `words`, etc. |
+| `tests/e2e/smoke.spec.js` | Flujo real en Chromium: splash → menú → nueva partida (con validación de nombre) → juego, Atlas Celular → Volver, y que el error-banner (`js/dev/error-banner.js`) atrape excepciones reales |
+
+`tests/helpers/load-game.js` carga los scripts window-global del juego (sin módulos ES) dentro de un jsdom para poder testear su lógica desde Node.
+
+---
+
 ## 📁 Estructura del proyecto
 
 ```
