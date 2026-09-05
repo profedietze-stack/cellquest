@@ -23,3 +23,12 @@ Thumbs.db
 # Editor
 .vscode/
 *.swp
+
+# Secretos / credenciales - nunca commitear
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+secrets.json
