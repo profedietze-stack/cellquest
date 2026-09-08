@@ -1,0 +1,105 @@
+<h2>Diseño final — Grid 2 columnas fijas</h2>
+<p class="subtitle">Así se vería en PC (≥640px). En mobile sigue siendo lista vertical. ¿Te parece bien este nivel de detalle?</p>
+
+<div class="mockup">
+  <div class="mockup-header">Vista PC — Célula en Acción › Modo Cine</div>
+  <div class="mockup-body">
+    <div style="background:#0a0f1e;border-radius:10px;padding:16px;font-family:'Segoe UI',sans-serif;display:flex;flex-direction:column;gap:10px;max-width:640px;margin:0 auto">
+
+      <!-- header -->
+      <div style="display:flex;align-items:center;gap:8px;background:rgba(0,0,0,0.4);border-radius:8px;padding:7px 12px">
+        <span style="color:#8eaec0;font-size:12px;cursor:pointer">← Volver</span>
+        <span style="flex:1;text-align:center;color:#e8f4f8;font-weight:700;font-size:14px">⚡ Célula en Acción</span>
+        <span style="width:40px"></span>
+      </div>
+
+      <!-- tabs -->
+      <div style="display:flex;gap:6px">
+        <div style="flex:1;background:rgba(0,229,255,0.12);border:1.5px solid #00e5ff;border-radius:8px;padding:6px;text-align:center;color:#00e5ff;font-size:12px;font-weight:700">🎬 Modo Cine</div>
+        <div style="flex:1;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:6px;text-align:center;color:#8eaec0;font-size:12px">🎮 Modo Jugador</div>
+      </div>
+
+      <!-- intro -->
+      <div style="text-align:center;padding:4px 0">
+        <div style="color:#e8f4f8;font-size:14px;font-weight:700;margin-bottom:3px">🎬 Modo Cine</div>
+        <div style="color:#8eaec0;font-size:11px">Observá cómo funcionan las células, paso a paso.</div>
+      </div>
+
+      <!-- 2-col grid -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(239,68,68,0.35);border-radius:12px;padding:14px 12px;cursor:pointer;transition:all .2s;display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:28px">⚡</div>
+          <div style="color:#e8f4f8;font-size:13px;font-weight:700">Respiración Celular</div>
+          <div style="color:#8eaec0;font-size:11px">Glucosa → ATP</div>
+          <div style="margin-top:6px">
+            <span style="background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.35);color:#34d399;border-radius:10px;padding:2px 8px;font-size:11px;font-weight:700">+15 XP</span>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(16,185,129,0.35);border-radius:12px;padding:14px 12px;cursor:pointer;display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:28px">🍎</div>
+          <div style="color:#e8f4f8;font-size:13px;font-weight:700">Alimentación</div>
+          <div style="color:#8eaec0;font-size:11px">Endocitosis y digestión</div>
+          <div style="margin-top:6px">
+            <span style="background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.35);color:#34d399;border-radius:10px;padding:2px 8px;font-size:11px;font-weight:700">✅ +15 XP</span>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(124,58,237,0.35);border-radius:12px;padding:14px 12px;cursor:pointer;display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:28px">🔁</div>
+          <div style="color:#e8f4f8;font-size:13px;font-weight:700">Reproducción</div>
+          <div style="color:#8eaec0;font-size:11px">Mitosis celular</div>
+          <div style="margin-top:6px">
+            <span style="background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.35);color:#34d399;border-radius:10px;padding:2px 8px;font-size:11px;font-weight:700">+15 XP</span>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(245,158,11,0.35);border-radius:12px;padding:14px 12px;cursor:pointer;display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:28px">🛡️</div>
+          <div style="color:#e8f4f8;font-size:13px;font-weight:700">Defensa Inmune</div>
+          <div style="color:#8eaec0;font-size:11px">Respuesta inmunológica</div>
+          <div style="margin-top:6px">
+            <span style="background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.35);color:#34d399;border-radius:10px;padding:2px 8px;font-size:11px;font-weight:700">+15 XP</span>
+          </div>
+        </div>
+
+        <!-- 5ta card centrada -->
+        <div style="grid-column:1/-1;display:flex;justify-content:center">
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(6,182,212,0.35);border-radius:12px;padding:14px 12px;cursor:pointer;display:flex;flex-direction:column;gap:6px;width:calc(50% - 5px)">
+            <div style="font-size:28px">🧬</div>
+            <div style="color:#e8f4f8;font-size:13px;font-weight:700">Síntesis de Proteínas</div>
+            <div style="color:#8eaec0;font-size:11px">Del ADN a la proteína</div>
+            <div style="margin-top:6px">
+              <span style="background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.35);color:#34d399;border-radius:10px;padding:2px 8px;font-size:11px;font-weight:700">+15 XP</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top:16px">
+  <h3>Cambios técnicos (solo CSS)</h3>
+  <ul style="color:#8eaec0;font-size:14px;line-height:2;padding-left:20px">
+    <li><code>.proc-card-grid</code> → <code>display:grid; grid-template-columns: repeat(2,1fr)</code> en ≥640px</li>
+    <li><code>.proc-card</code> → layout vertical (flex-direction:column) en PC, horizontal en mobile</li>
+    <li><code>.proc-card-emoji</code> → tamaño 2rem→1.75rem en mobile, 2.5rem en PC</li>
+    <li>5ta card centrada con <code>grid-column: span 2</code> + max-width 50%</li>
+    <li>Colores de borde por proceso (variable ya existe en <code>PROCESOS_META</code>)</li>
+    <li>Mobile: sin cambios — sigue siendo lista horizontal</li>
+  </ul>
+</div>
+
+<div class="options" style="margin-top:12px">
+  <div class="option" data-choice="ok" onclick="toggleSelect(this)">
+    <div class="letter">✓</div>
+    <div class="content"><h3>Aprobado — implementar</h3><p>Este diseño está bien, procedé con el código.</p></div>
+  </div>
+  <div class="option" data-choice="tweaks" onclick="toggleSelect(this)">
+    <div class="letter">✎</div>
+    <div class="content"><h3>Ajustar algo</h3><p>Me gusta la dirección pero quiero cambiar algún detalle.</p></div>
+  </div>
+</div>

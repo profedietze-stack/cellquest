@@ -1,0 +1,158 @@
+<h2>¿Qué layout para "Célula en Acción" en PC?</h2>
+<p class="subtitle">El diseño actual es mobile-first (lista vertical). En pantallas anchas queda mucho espacio vacío. Elegí el enfoque que mejor se adapta.</p>
+
+<div class="cards">
+
+  <!-- OPCIÓN A -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background:#0a0f1e;border-radius:8px;padding:12px;font-family:sans-serif;min-height:180px;display:flex;flex-direction:column;gap:8px">
+        <!-- Header -->
+        <div style="display:flex;align-items:center;background:rgba(0,0,0,0.4);border-radius:6px;padding:6px 10px;gap:8px">
+          <span style="color:#888;font-size:11px">← Volver</span>
+          <span style="flex:1;text-align:center;color:#e8f4f8;font-weight:700;font-size:12px">⚡ Célula en Acción</span>
+        </div>
+        <!-- Tabs -->
+        <div style="display:flex;gap:6px">
+          <div style="flex:1;background:rgba(0,229,255,0.12);border:1px solid #00e5ff;border-radius:6px;padding:4px 8px;text-align:center;color:#00e5ff;font-size:10px;font-weight:700">🎬 Modo Cine</div>
+          <div style="flex:1;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:6px;padding:4px 8px;text-align:center;color:#8eaec0;font-size:10px">🎮 Modo Jugador</div>
+        </div>
+        <!-- 2-col grid -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;flex:1">
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(239,68,68,0.3);border-radius:8px;padding:8px;display:flex;flex-direction:column;gap:4px">
+            <div style="font-size:18px">⚡</div>
+            <div style="color:#e8f4f8;font-size:10px;font-weight:700">Respiración Celular</div>
+            <div style="color:#8eaec0;font-size:9px">Glucosa → ATP</div>
+            <div style="margin-top:auto;background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.3);color:#34d399;border-radius:8px;padding:2px 6px;font-size:9px;font-weight:700;align-self:flex-start">+15 XP</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(16,185,129,0.3);border-radius:8px;padding:8px;display:flex;flex-direction:column;gap:4px">
+            <div style="font-size:18px">🍎</div>
+            <div style="color:#e8f4f8;font-size:10px;font-weight:700">Alimentación</div>
+            <div style="color:#8eaec0;font-size:9px">Endocitosis y digestión</div>
+            <div style="margin-top:auto;background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.3);color:#34d399;border-radius:8px;padding:2px 6px;font-size:9px;font-weight:700;align-self:flex-start">+15 XP</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(124,58,237,0.3);border-radius:8px;padding:8px;display:flex;flex-direction:column;gap:4px">
+            <div style="font-size:18px">🔁</div>
+            <div style="color:#e8f4f8;font-size:10px;font-weight:700">Reproducción</div>
+            <div style="color:#8eaec0;font-size:9px">Mitosis celular</div>
+            <div style="margin-top:auto;background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.3);color:#34d399;border-radius:8px;padding:2px 6px;font-size:9px;font-weight:700;align-self:flex-start">+15 XP</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(245,158,11,0.3);border-radius:8px;padding:8px;display:flex;flex-direction:column;gap:4px">
+            <div style="font-size:18px">🛡️</div>
+            <div style="color:#e8f4f8;font-size:10px;font-weight:700">Defensa Inmune</div>
+            <div style="color:#8eaec0;font-size:9px">Respuesta inmunológica</div>
+            <div style="margin-top:auto;background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.3);color:#34d399;border-radius:8px;padding:2px 6px;font-size:9px;font-weight:700;align-self:flex-start">+15 XP</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Grid de tarjetas 2×2</h3>
+      <p>Cards visuales en grilla. En PC usa 2 columnas; en mobile sigue siendo 1. Mayor impacto visual, más fácil de escanear. <strong>Recomendada.</strong></p>
+    </div>
+  </div>
+
+  <!-- OPCIÓN B -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background:#0a0f1e;border-radius:8px;padding:12px;font-family:sans-serif;min-height:180px;display:flex;flex-direction:column;gap:8px">
+        <!-- Header -->
+        <div style="display:flex;align-items:center;background:rgba(0,0,0,0.4);border-radius:6px;padding:6px 10px;gap:8px">
+          <span style="color:#888;font-size:11px">← Volver</span>
+          <span style="flex:1;text-align:center;color:#e8f4f8;font-weight:700;font-size:12px">⚡ Célula en Acción</span>
+        </div>
+        <!-- 2-panel layout -->
+        <div style="display:grid;grid-template-columns:220px 1fr;gap:8px;flex:1">
+          <!-- sidebar -->
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <div style="color:#8eaec0;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:0 4px">Procesos</div>
+            <div style="background:rgba(0,229,255,0.1);border:1px solid #00e5ff;border-radius:6px;padding:6px 8px;cursor:pointer">
+              <div style="font-size:14px">⚡</div>
+              <div style="color:#00e5ff;font-size:10px;font-weight:700">Respiración</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:6px 8px">
+              <div style="font-size:14px">🍎</div>
+              <div style="color:#8eaec0;font-size:10px">Alimentación</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:6px 8px">
+              <div style="font-size:14px">🔁</div>
+              <div style="color:#8eaec0;font-size:10px">Reproducción</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:6px 8px">
+              <div style="font-size:14px">🛡️</div>
+              <div style="color:#8eaec0;font-size:10px">Defensa Inmune</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:6px 8px">
+              <div style="font-size:14px">🧬</div>
+              <div style="color:#8eaec0;font-size:10px">Síntesis</div>
+            </div>
+          </div>
+          <!-- preview panel -->
+          <div style="background:rgba(0,229,255,0.04);border:1px solid rgba(0,229,255,0.15);border-radius:8px;padding:10px;display:flex;flex-direction:column;gap:6px">
+            <div style="color:#e8f4f8;font-size:12px;font-weight:700">⚡ Respiración Celular</div>
+            <div style="color:#8eaec0;font-size:10px;line-height:1.5">La célula convierte glucosa en ATP mediante tres etapas: glucólisis, ciclo de Krebs y cadena respiratoria.</div>
+            <div style="display:flex;gap:4px;margin-top:auto">
+              <div style="background:rgba(0,229,255,0.12);border:1px solid rgba(0,229,255,0.3);color:#00e5ff;border-radius:6px;padding:3px 8px;font-size:9px;font-weight:700">🎬 Ver Cine</div>
+              <div style="background:rgba(124,58,237,0.12);border:1px solid rgba(124,58,237,0.3);color:#a78bfa;border-radius:6px;padding:3px 8px;font-size:9px;font-weight:700">🎮 Jugar</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Sidebar + panel de detalle</h3>
+      <p>Lista lateral con preview del proceso seleccionado a la derecha. Acceso directo a Cine o Jugador desde el panel. Más complejo de implementar.</p>
+    </div>
+  </div>
+
+  <!-- OPCIÓN C -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background:#0a0f1e;border-radius:8px;padding:12px;font-family:sans-serif;min-height:180px;display:flex;flex-direction:column;gap:8px">
+        <!-- Header -->
+        <div style="display:flex;align-items:center;background:rgba(0,0,0,0.4);border-radius:6px;padding:6px 10px;gap:8px">
+          <span style="color:#888;font-size:11px">← Volver</span>
+          <span style="flex:1;text-align:center;color:#e8f4f8;font-weight:700;font-size:12px">⚡ Célula en Acción</span>
+        </div>
+        <!-- Tabs -->
+        <div style="display:flex;gap:6px">
+          <div style="flex:1;background:rgba(0,229,255,0.12);border:1px solid #00e5ff;border-radius:6px;padding:4px 8px;text-align:center;color:#00e5ff;font-size:10px;font-weight:700">🎬 Modo Cine</div>
+          <div style="flex:1;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:6px;padding:4px 8px;text-align:center;color:#8eaec0;font-size:10px">🎮 Modo Jugador</div>
+        </div>
+        <!-- horizontal scroll -->
+        <div style="display:flex;gap:8px;overflow-x:auto;padding:2px 0;flex:1">
+          <div style="min-width:100px;background:linear-gradient(135deg,rgba(239,68,68,0.15),rgba(239,68,68,0.05));border:1px solid rgba(239,68,68,0.4);border-radius:10px;padding:10px 8px;display:flex;flex-direction:column;align-items:center;gap:5px;cursor:pointer">
+            <div style="font-size:22px">⚡</div>
+            <div style="color:#e8f4f8;font-size:9px;font-weight:700;text-align:center">Respiración Celular</div>
+            <div style="background:rgba(16,185,129,0.15);color:#34d399;border-radius:8px;padding:1px 6px;font-size:9px;font-weight:700">+15 XP</div>
+          </div>
+          <div style="min-width:100px;background:linear-gradient(135deg,rgba(16,185,129,0.15),rgba(16,185,129,0.05));border:1px solid rgba(16,185,129,0.4);border-radius:10px;padding:10px 8px;display:flex;flex-direction:column;align-items:center;gap:5px;cursor:pointer">
+            <div style="font-size:22px">🍎</div>
+            <div style="color:#e8f4f8;font-size:9px;font-weight:700;text-align:center">Alimentación</div>
+            <div style="background:rgba(16,185,129,0.15);color:#34d399;border-radius:8px;padding:1px 6px;font-size:9px;font-weight:700">+15 XP</div>
+          </div>
+          <div style="min-width:100px;background:linear-gradient(135deg,rgba(124,58,237,0.15),rgba(124,58,237,0.05));border:1px solid rgba(124,58,237,0.4);border-radius:10px;padding:10px 8px;display:flex;flex-direction:column;align-items:center;gap:5px;cursor:pointer">
+            <div style="font-size:22px">🔁</div>
+            <div style="color:#e8f4f8;font-size:9px;font-weight:700;text-align:center">Reproducción</div>
+            <div style="background:rgba(16,185,129,0.15);color:#34d399;border-radius:8px;padding:1px 6px;font-size:9px;font-weight:700">+15 XP</div>
+          </div>
+          <div style="min-width:100px;background:linear-gradient(135deg,rgba(245,158,11,0.15),rgba(245,158,11,0.05));border:1px solid rgba(245,158,11,0.4);border-radius:10px;padding:10px 8px;display:flex;flex-direction:column;align-items:center;gap:5px;cursor:pointer">
+            <div style="font-size:22px">🛡️</div>
+            <div style="color:#e8f4f8;font-size:9px;font-weight:700;text-align:center">Defensa Inmune</div>
+            <div style="background:rgba(16,185,129,0.15);color:#34d399;border-radius:8px;padding:1px 6px;font-size:9px;font-weight:700">+15 XP</div>
+          </div>
+          <div style="min-width:100px;background:linear-gradient(135deg,rgba(6,182,212,0.15),rgba(6,182,212,0.05));border:1px solid rgba(6,182,212,0.4);border-radius:10px;padding:10px 8px;display:flex;flex-direction:column;align-items:center;gap:5px;cursor:pointer">
+            <div style="font-size:22px">🧬</div>
+            <div style="color:#e8f4f8;font-size:9px;font-weight:700;text-align:center">Síntesis</div>
+            <div style="background:rgba(16,185,129,0.15);color:#34d399;border-radius:8px;padding:1px 6px;font-size:9px;font-weight:700">+15 XP</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Cards horizontales con color por proceso</h3>
+      <p>Scroll horizontal en mobile, se expanden en PC. Cada proceso tiene su color accent propio. Minimal, muy visual.</p>
+    </div>
+  </div>
+
+</div>
