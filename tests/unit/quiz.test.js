@@ -125,3 +125,47 @@ describe('barajado de las opciones, en el motor real', () => {
     expect(w.document.body.innerHTML).not.toContain('quizOrden');
   });
 });
+
+describe('secuencias: ordenar de verdad', () => {
+  function prepararSecuencia() {
+    w.document.body.innerHTML = '<div id="mgArea"></div>';
+    w.GS.difficulty = 'hard';
+    w.GS.completed = {};
+    w.GS.introduced = {};
+  }
+
+  // Se busca una organela que tenga un minijuego de ordenar.
+  function primeraSecuencia() {
+    for (const orgId of Object.keys(MINIGAMES_ALL)) {
+      const lista = w.getMG(orgId);
+      const i = lista.findIndex((mg) => mg.type === 'sequence');
+      if (i >= 0) return { orgId, indice: i, mg: lista[i] };
+    }
+    return null;
+  }
+
+  it('hay minijuegos de ordenar que revisar', () => {
+    prepararSecuencia();
+    expect(primeraSecuencia(), 'ninguna organela tiene minijuego de secuencia').not.toBeNull();
+  });
+
+  it('la secuencia nunca se entrega ya ordenada', () => {
+    // Con el comparador viejo y cinco pasos, salía servida casi el 9% de las
+    // veces: el chico tocaba "Verificar Orden" sin mover nada y el juego se lo
+    // daba por aprendido.
+    prepararSecuencia();
+    const objetivo = primeraSecuencia();
+    w.GS.mgIndex = objetivo.indice;
+    w.GS.introduced = { ['animal.' + objetivo.orgId]: true };
+    for (let i = 0; i < 400; i++) {
+      w.loadMG(objetivo.orgId, 'animal');
+      const orden = [...w.document.querySelectorAll('.seq-item')]
+        .map((el) => Number(el.dataset.orig));
+      expect(orden.length, 'la secuencia no se pintó').toBe(objetivo.mg.items.length);
+      expect([...orden].sort((a, b) => a - b), 'se perdió o duplicó un paso')
+        .toEqual(objetivo.mg.items.map((_, k) => k));
+      const yaOrdenada = orden.every((v, k) => v === k);
+      expect(yaOrdenada, `salió ya ordenada: ${orden.join(',')}`).toBe(false);
+    }
+  });
+});

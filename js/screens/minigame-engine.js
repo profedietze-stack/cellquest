@@ -1,4 +1,22 @@
 // CellQuest — Organelle Selection + Minigame Engine
+
+// Fisher-Yates. Todo el archivo usaba `sort(()=>Math.random()-.5)`, que es un
+// comparador inconsistente y reparte mal: deja las piezas cerca de donde
+// estaban. En un puzzle de ordenar eso se nota — con cinco items el orden
+// correcto salia servido casi el 9% de las veces.
+function _barajar(arr){
+  const a=[...arr];
+  for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}
+  return a;
+}
+
+// Baraja hasta que no coincida con la solucion. Se rinde despues de unos
+// intentos: si todos los items son iguales no hay otro orden posible.
+function _barajarDesordenado(arr, estaResuelto){
+  let orden=_barajar(arr);
+  for(let i=0;i<12&&estaResuelto(orden);i++)orden=_barajar(arr);
+  return orden;
+}
 // ═══════════════ SELECT ORGANELLE ═══════════════
 function selectOrg(orgId,levelId){
   const org=(ORGANELLES[levelId]||[]).find(o=>o.id===orgId);
@@ -89,14 +107,13 @@ function loadMG(orgId,levelId){
     // Fisher-Yates, no `sort(()=>Math.random()-.5)`: ese comparador es
     // inconsistente y reparte mal — deja la primera opcion en su lugar mas
     // seguido de lo que deberia, que es justo el sesgo que hay que romper.
-    GS.quizOrden=mg.opts.map((_,i)=>i);
-    for(let i=GS.quizOrden.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[GS.quizOrden[i],GS.quizOrden[j]]=[GS.quizOrden[j],GS.quizOrden[i]];}
+    GS.quizOrden=_barajar(mg.opts.map((_,i)=>i));
     h+=`<div class="mg-question">${mg.q}</div><div class="mg-options">`;
     GS.quizOrden.forEach((orig,i)=>{h+=`<button class="mg-opt" onclick="pickOpt(this,${i})">${String.fromCharCode(65+i)}. ${mg.opts[orig]}</button>`;});
     h+=`</div><button class="btn btn-cyan mg-submit" id="mgBtn" onclick="submitQuiz('${orgId}','${levelId}')" disabled>Enviar Respuesta</button>`;
   } else if(mg.type==='fill'){
     const parts=mg.s.split('___');
-    const ws=[...mg.words].sort(()=>Math.random()-.5);
+    const ws=_barajar(mg.words);
     h+=`<div class="fill-sentence">${parts[0]}<span class="fill-blank" id="fillBlank">___</span>${parts[1]||''}</div>`;
     h+=`<div class="fill-words">`;ws.forEach(w=>{h+=`<button class="fill-word" onclick="pickWord(this,'${w}','${mg.cor}')">${w}</button>`;});h+=`</div>`;
     h+=`<button class="btn btn-cyan mg-submit" id="mgBtn" onclick="submitFill('${orgId}','${levelId}','${mg.cor}',${mg.pts})" disabled>Enviar Respuesta</button>`;
@@ -107,7 +124,9 @@ function loadMG(orgId,levelId){
     mg.items.forEach((item,i)=>{h+=`<div class="tf-item"><div class="tf-text">${i+1}. ${item.t}</div><div class="tf-btns"><button class="tf-btn tf-true" onclick="pickTF(this,${i},true)">✓ Verdadero</button><button class="tf-btn tf-false" onclick="pickTF(this,${i},false)">✗ Falso</button></div></div>`;});
     h+=`</div><button class="btn btn-cyan mg-submit" id="tfSubmitBtn" onclick="submitTF('${orgId}','${levelId}',${mg.pts})">Enviar Respuestas</button>`;
   } else if(mg.type==='sequence'){
-    const sh=[...mg.items.map((t,i)=>({t,i}))].sort(()=>Math.random()-.5);
+    // Nunca se entrega la secuencia ya armada: el chico tocaria "Verificar"
+    // sin ordenar nada y el puzzle le daria por aprendido.
+    const sh=_barajarDesordenado(mg.items.map((t,i)=>({t,i})),o=>o.every((x,k)=>x.i===k));
     h+=`<div class="mg-question">Presioná y arrastrá para ordenar:</div><div class="seq-items" id="seqItems">`;
     sh.forEach((item,idx)=>{h+=`<div class="seq-item" data-orig="${item.i}"><span class="seq-handle">⠿</span><span class="seq-num">${idx+1}</span>${item.t}</div>`;});
     h+=`</div><button class="btn btn-cyan mg-submit" onclick="submitSeq('${orgId}','${levelId}',${mg.pts})">Verificar Orden</button>`;
