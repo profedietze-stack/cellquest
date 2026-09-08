@@ -76,8 +76,23 @@ function loadMG(orgId,levelId){
   const _reviewBanner=_inReviewSession?`<div class="review-mode-banner">🔄 Modo Repaso</div>`:'';
   let h=_reviewBanner+`<span class="mg-type-badge">${labels[mg.type]||'🧩 Mini-juego'}</span><span class="mg-progress-counter">Puzzle ${puzzleNum} / ${puzzleTotal}</span>`;
   if(mg.type==='quiz'){
+    // Las opciones se barajan al mostrarlas.
+    //
+    // Los 323 quizzes tienen la respuesta correcta en `ans:0`, y antes se
+    // pintaban en el orden del dato: la correcta era SIEMPRE la A. Un chico lo
+    // nota en diez minutos y a partir de ahi contesta A sin leer, que es
+    // exactamente lo contrario de lo que el quiz quiere ejercitar.
+    //
+    // `GS.quizOrden[posicion] = indice original`, igual que `GS.tfCorrect`
+    // guarda las respuestas del verdadero/falso: la correspondencia no puede
+    // vivir en el HTML porque ahi la puede leer cualquiera.
+    // Fisher-Yates, no `sort(()=>Math.random()-.5)`: ese comparador es
+    // inconsistente y reparte mal — deja la primera opcion en su lugar mas
+    // seguido de lo que deberia, que es justo el sesgo que hay que romper.
+    GS.quizOrden=mg.opts.map((_,i)=>i);
+    for(let i=GS.quizOrden.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[GS.quizOrden[i],GS.quizOrden[j]]=[GS.quizOrden[j],GS.quizOrden[i]];}
     h+=`<div class="mg-question">${mg.q}</div><div class="mg-options">`;
-    mg.opts.forEach((o,i)=>{h+=`<button class="mg-opt" onclick="pickOpt(this,${i})">${String.fromCharCode(65+i)}. ${o}</button>`;});
+    GS.quizOrden.forEach((orig,i)=>{h+=`<button class="mg-opt" onclick="pickOpt(this,${i})">${String.fromCharCode(65+i)}. ${mg.opts[orig]}</button>`;});
     h+=`</div><button class="btn btn-cyan mg-submit" id="mgBtn" onclick="submitQuiz('${orgId}','${levelId}')" disabled>Enviar Respuesta</button>`;
   } else if(mg.type==='fill'){
     const parts=mg.s.split('___');
@@ -106,8 +121,14 @@ function submitQuiz(orgId,levelId){
   const mgs=getMG(orgId);const mg=mgs[GS.mgIndex]||mgs[0];
   const sel=document.querySelector('.mg-opt.selected');
   if(!sel)return;
-  const correct=parseInt(sel.dataset.sel)===mg.ans;
-  document.querySelectorAll('.mg-opt').forEach((b,i)=>{if(i===mg.ans)b.classList.add('correct');else if(b.classList.contains('selected'))b.classList.add('wrong');b.classList.add('disabled');});
+  // Lo que se toco es una POSICION en pantalla; hay que traducirla al indice
+  // original para compararla con `mg.ans`. Si por lo que sea no hay orden
+  // guardado, se cae al orden natural.
+  const orden=(GS.quizOrden&&GS.quizOrden.length===mg.opts.length)?GS.quizOrden:mg.opts.map((_,i)=>i);
+  const elegida=orden[parseInt(sel.dataset.sel)];
+  const correct=elegida===mg.ans;
+  const posCorrecta=orden.indexOf(mg.ans);
+  document.querySelectorAll('.mg-opt').forEach((b,i)=>{if(i===posCorrecta)b.classList.add('correct');else if(b.classList.contains('selected'))b.classList.add('wrong');b.classList.add('disabled');});
   document.getElementById('mgBtn')&&(document.getElementById('mgBtn').disabled=true);
   handleResult(correct,mg.pts,mg.opts[mg.ans],orgId,levelId);
 }
