@@ -14,7 +14,9 @@ module.exports = defineConfig({
     { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
   ],
   webServer: {
-    command: 'py -m http.server 4173',
+    // Servidor propio: el del modulo estandar rechaza conexiones bajo la concurrencia
+    // de esta suite y los ECONNREFUSED se leian como errores del juego. Ver tests/servidor.py.
+    command: 'py tests/servidor.py 4173',
     url: 'http://127.0.0.1:4173',
     reuseExistingServer: !process.env.CI,
     timeout: 20000,
