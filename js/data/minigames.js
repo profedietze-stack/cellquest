@@ -206,7 +206,7 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'Los peroxisomas oxidan ácidos grasos de cadena muy larga',a:true},{t:'Los peroxisomas contienen ADN propio',a:false},{t:'Los peroxisomas tanto producen como destruyen H₂O₂',a:true}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué secuencia señal (PTS) dirige proteínas al interior del peroxisoma?',opts:['PTS1: tripéptido C-terminal SKL (Ser-Lys-Leu) reconocido por Pex5p','PTS2: secuencia N-terminal reconocida por Pex7p','Señal de manosa-6-fosfato','Secuencia señal de RE con SRP'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué secuencia señal dirige al peroxisoma a la gran mayoría de sus proteínas de matriz?',opts:['PTS1: tripéptido C-terminal SKL (Ser-Lys-Leu) reconocido por Pex5p','Señal de manosa-6-fosfato como la de las hidrolasas lisosomales','Señal de manosa-6-fosfato','Secuencia señal de RE con SRP'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'La β-oxidación peroxisomal de ácidos grasos de cadena muy larga (VLCFA) no produce ATP directamente',a:true},{t:'El síndrome de Zellweger es causado por defectos en genes PEX',a:true},{t:'Los peroxisomas se forman únicamente por gemación del RE',a:false}],pts:15},
       {type:'fill',s:'Las proteínas que ensamblan el peroxisoma se llaman ___, codificadas por genes PEX.',words:['peroxinas','porinas','peroxidinas'],cor:'peroxinas',pts:20},
     ],
@@ -555,7 +555,7 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'La cápsula es un factor de virulencia bacteriana',a:true},{t:'Todas las bacterias poseen cápsula obligatoriamente',a:false},{t:'La cápsula está formada principalmente por polisacáridos',a:true},{t:'El experimento de Griffith usó cápsula para demostrar la transformación bacteriana',a:true}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Por qué la cápsula de Streptococcus pneumoniae tipo 3 (ácido hialurónico) evade el sistema inmune eficientemente?',opts:['El ácido hialurónico mimetiza el tejido conectivo del hospedero evitando el reconocimiento como extraño','Produce una proteasa que degrada anticuerpos IgG','Activa el complemento vía alternativa para consumirlo','Inhibe la maduración de células dendríticas'],ans:0,pts:30},
+      {type:'quiz',q:'¿Por qué la cápsula de ácido hialurónico de Streptococcus pyogenes evade el sistema inmune eficientemente?',opts:['El ácido hialurónico mimetiza el tejido conectivo del hospedero evitando el reconocimiento como extraño','Produce una proteasa que degrada anticuerpos IgG','Activa el complemento vía alternativa para consumirlo','Inhibe la maduración de células dendríticas'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'Las vacunas antineumocócicas (PCV13) contienen polisacáridos capsulares conjugados a proteínas carrier',a:true},{t:'La cápsula del anthrax de Bacillus anthracis está compuesta de poli-D-ácido glutámico (no polisacárido)',a:true},{t:'La opsonización con IgG y C3b supera la evasión capsular facilitando la fagocitosis',a:true}],pts:15},
       {type:'fill',s:'La cápsula bacteriana está compuesta principalmente de ___, que la protege de la fagocitosis.',words:['polisacáridos','proteínas D-glutámicas','peptidoglicano'],cor:'polisacáridos',pts:20},
 
@@ -833,7 +833,7 @@ const MINIGAMES_ALL={
   axon:{
     easy:[
       {type:'quiz',q:'¿Cuál es la función principal del axón de una neurona?',opts:['Llevar el impulso nervioso desde el soma hasta el siguiente destino','Recibir señales de otras neuronas','Producir energía para la neurona','Almacenar los neurotransmisores'],ans:0,pts:15},
-      {type:'fill',s:'El axón puede medir hasta ___ metro de longitud en las neuronas motoras del ser humano.',words:['1','0.01','100'],cor:'1',pts:12},
+      {type:'fill',s:'El axón de una motoneurona humana puede superar ___ metro de longitud.',words:['1','0.01','100'],cor:'1',pts:12},
       {type:'trueFalse',items:[{t:'El axón conduce el impulso nervioso',a:true},{t:'Una neurona puede tener varios axones',a:false},{t:'El axón puede medir más de un metro en neuronas motoras',a:true}],pts:8},
     ],
     normal:[
@@ -1162,13 +1162,13 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'Las punteaduras areoladas actúan como válvulas en el xilema',a:true},{t:'Las punteaduras areoladas son exclusivas de las angiospermas',a:false},{t:'Si hay una burbuja en el xilema, la punteadura se sella para que no se propague',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué son el toro y el márgum de una punteadura areolada?',opts:['Toro: parte central rígida de celulosa. Márgum: parte flexible que controla el flujo según la presión','Toro: la cámara exterior. Márgum: la membrana de punteadura','Toro: el canal de agua. Márgum: la pared secundaria alrededor','Toro: el tapón de Woronin. Márgum: la proteína HEX-1'],ans:0,pts:20},
-      {type:'fill',s:'El ___ puede desplazarse hacia un lado y sellar la punteadura cuando hay embolia en el xilema.',words:['toro','márgum','lumen'],cor:'toro',pts:15},
+      {type:'quiz',q:'¿Qué son el toro y el margo de una punteadura areolada?',opts:['Toro: parte central rígida de celulosa. Margo: parte flexible que controla el flujo según la presión','Toro: la cámara exterior. Margo: la membrana de punteadura','Toro: el canal de agua. Margo: la pared secundaria alrededor','Toro: el tapón de Woronin. Margo: la proteína HEX-1'],ans:0,pts:20},
+      {type:'fill',s:'El ___ puede desplazarse hacia un lado y sellar la punteadura cuando hay embolia en el xilema.',words:['toro','margo','lumen'],cor:'toro',pts:15},
     ],
     hard:[
       {type:'quiz',q:'¿Por qué las punteaduras areoladas de coníferas tienen toro pero las de angiospermas no?',opts:['En coníferas el transporte es por traqueidas: el toro es una adaptación para bloquear embolias sin perder conductividad. Las angiospermas tienen vasos y pueden aislar la pérdida más fácilmente','Las angiospermas tienen toro pero es microscópico e indetectable','Las angiospermas tienen mayor presión de turgor que impide la necesidad de toro','El toro es una estructura ancestral que las angiospermas perdieron evolutivamente sin consecuencias'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'El aspirado del toro (torus aspiration) es irreversible y reduce permanentemente la conductividad',a:true},{t:'Las coníferas pueden sobrevivir con hasta el 50% de sus punteaduras aspiradas sin marchitarse',a:true},{t:'La presión de aspiración del toro es mayor en maderas más resistentes a la sequía',a:true}],pts:15},
-      {type:'fill',s:'En las punteaduras areoladas de gimnospermas, el ___ central puede sellar el poro previniendo embolias.',words:['toro','margum','lumen'],cor:'toro',pts:20},
+      {type:'fill',s:'En las punteaduras areoladas de gimnospermas, el ___ central puede sellar el poro previniendo embolias.',words:['toro','margo','lumen'],cor:'toro',pts:20},
     ],
   },
   bordered_pit2:{
@@ -1286,7 +1286,7 @@ const MINIGAMES_ALL={
   nucleolus_h:{
     easy:[
       {type:'quiz',q:'¿Por qué el nucléolo del hepatocito es especialmente grande?',opts:['Necesita muchos ribosomas para sintetizar albúmina y factores de coagulación','El hígado tiene más ADN que otras células','Los hepatocitos son más grandes que otras células','El hígado es el órgano más activo en dividirse'],ans:0,pts:15},
-      {type:'trueFalse',items:[{t:'El nucléolo sintetiza el ARN ribosmico (ARNr) que forma parte de los ribosomas',a:true},{t:'El nucléolo tiene su propia membrana que lo aísla del nucleoplasma',a:false},{t:'El hepatocito sintetiza la albúmina, la proteína más abundante del plasma humano',a:true}],pts:8},
+      {type:'trueFalse',items:[{t:'El nucléolo sintetiza el ARN ribosómico (ARNr) que forma parte de los ribosomas',a:true},{t:'El nucléolo tiene su propia membrana que lo aísla del nucleoplasma',a:false},{t:'El hepatocito sintetiza la albúmina, la proteína más abundante del plasma humano',a:true}],pts:8},
     ],
     normal:[
       {type:'fill',s:'El hepatocito sintetiza ___ gramos de albúmina por día, la proteína de mayor concentración en el plasma.',words:['12','2','50'],cor:'12',pts:15},
@@ -1424,7 +1424,7 @@ const MINIGAMES_ALL={
   lipid_drop_h:{
     easy:[
       {type:'quiz',q:'¿Qué enfermedad se produce cuando los hepatocitos acumulan más del 5% de su peso en gotas lipídicas?',opts:['Esteatosis hepática (hígado graso)','Cirrosis hepática avanzada','Hepatitis viral aguda','Colelitiasis (cálculos biliares)'],ans:0,pts:15},
-      {type:'trueFalse',items:[{t:'El NAFLD (hígado graso no alcohólico) afecta al 25% de la población adulta mundial',a:true},{t:'Las gotas lipídicas hepáticas están rodeadas por una bicapa de fosfolipídos',a:false},{t:'La proteína PLIN2 (perilinina 2) recubre las gotas lipídicas hepáticas',a:true}],pts:8},
+      {type:'trueFalse',items:[{t:'El NAFLD (hígado graso no alcohólico) afecta al 25% de la población adulta mundial',a:true},{t:'Las gotas lipídicas hepáticas están rodeadas por una bicapa de fosfolipídos',a:false},{t:'La proteína PLIN2 (perilipina 2) recubre las gotas lipídicas hepáticas',a:true}],pts:8},
     ],
     normal:[
       {type:'fill',s:'La progresión del NAFLD de esteatosis simple a ___ (NASH) implica inflamación, estrés oxidativo y daño hepatocítico.',words:['esteatohepatitis','cirrosis','hepatitis'],cor:'esteatohepatitis',pts:15},
@@ -1478,7 +1478,7 @@ const MINIGAMES_ALL={
     ],
     normal:[
       {type:'quiz',q:'¿Cuántos núcleos puede tener una sola fibra muscular esquelética larga (~10 cm)?',opts:['Cientos (100-300)','1-5','10-20','Miles'],ans:0,pts:20},
-      {type:'fill',s:'El dominio ___ es el volumen de citoplasma controlado por cada núcleo periférico en la fibra muscular (~37.500 µm³).',words:['miconuclear','sarcomérico','mitocondrial'],cor:'miconuclear',pts:15},
+      {type:'fill',s:'El dominio ___ es el volumen de citoplasma controlado por cada núcleo periférico en la fibra muscular (~37.500 µm³).',words:['mionuclear','sarcomérico','mitocondrial'],cor:'mionuclear',pts:15},
     ],
     hard:[
       {type:'quiz',q:'¿Qué gen codifica la distrofina y en qué cromosoma se encuentra?',opts:['DMD en el cromosoma X','MYH7 en cromosoma 14','ACTA1 en cromosoma 1','LMNA en cromosoma 1'],ans:0,pts:30},
@@ -1702,7 +1702,7 @@ const MINIGAMES_ALL={
     easy:[
       {type:'quiz',q:'¿Qué cambio ocurre en el nucléolo del linfocito T cuando se activa?',opts:['Se agranda por aumento de síntesis de ribosomas','Desaparece por condensación de la cromatina','Se fragmenta en múltiples nucléolos pequeños','No cambia de tamaño'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'El nucléolo es el sitio de síntesis de ARN ribosómico (ARNr) y ensamblado de subunidades ribosómicas',a:true},{t:'El oncogén c-Myc activa la transcripción del ARNr y la nucleologénesis',a:true},{t:'El nucléolo tiene una membrana propia que lo separa del nucleoplasma',a:false}],pts:8},
-      {type:'fill',s:'El ___ activa la transcripción de ARNr (ARN polimerasa I) cuando el linfocito T se activa, enlargeciendo el nucléolo.',words:['c-Myc','p53','PTEN'],cor:'c-Myc',pts:12},
+      {type:'fill',s:'El ___ activa la transcripción de ARNr (ARN polimerasa I) cuando el linfocito T se activa, agrandando el nucléolo.',words:['c-Myc','p53','PTEN'],cor:'c-Myc',pts:12},
     ],
     normal:[
       {type:'quiz',q:'¿Por qué el tamaño del nucléolo es un criterio diagnóstico en linfomas T?',opts:['Los linfomas agresivos tienen alta síntesis proteica con nucléolos prominentes','El nucléolo se fusiona con la membrana nuclear en tumores','El nucléolo expresa CD20 detectable por IHQ','Los linfomas indolentes tienen nucleolos gigantes'],ans:0,pts:20},
@@ -1717,7 +1717,7 @@ const MINIGAMES_ALL={
   tcr_cd3:{
     easy:[
       {type:'quiz',q:'¿Cuántos ITAMs (immunoreceptor tyrosine-based activation motifs) tienen las cadenas CD3ζ del complejo TCR-CD3?',opts:['3 ITAMs por cadena (6 tirosinas activadoras)','1 ITAM','6 ITAMs','Solo 2 tirosinas totales'],ans:0,pts:15},
-      {type:'trueFalse',items:[{t:'El complejo CD3 transsduce la señal del TCR porque las cadenas CD3 tienen colas citosólicas largas con ITAMs, a diferencia del TCR',a:true},{t:'El TCR puede reconocer antígenos solubles en plasma sin presentación por MHC',a:false},{t:'Los linfocitos T citotóxicos (CTL) expresan TCR + CD8 (reconocen pMHC-I) mientras que los T helper expresan TCR + CD4 (pMHC-II)',a:true}],pts:8},
+      {type:'trueFalse',items:[{t:'El complejo CD3 transduce la señal del TCR porque las cadenas CD3 tienen colas citosólicas largas con ITAMs, a diferencia del TCR',a:true},{t:'El TCR puede reconocer antígenos solubles en plasma sin presentación por MHC',a:false},{t:'Los linfocitos T citotóxicos (CTL) expresan TCR + CD8 (reconocen pMHC-I) mientras que los T helper expresan TCR + CD4 (pMHC-II)',a:true}],pts:8},
       {type:'fill',s:'El TCR αβ reconoce ___ (péptido unido a MHC) presentados en la superficie de células presentadoras de antígeno.',words:['complejos pMHC','antígenos libres','glicoproteínas'],cor:'complejos pMHC',pts:12},
     ],
     normal:[
@@ -1782,7 +1782,7 @@ const MINIGAMES_ALL={
   er_t:{
     easy:[
       {type:'quiz',q:'¿Qué segundo mensajero liberado del RE del linfocito T activa la calcineurina → NFAT → IL-2?',opts:['Ca²⁺ (liberado por IP3 del RE)','DAG (activa PKC)','PIP3','cAMP'],ans:0,pts:15},
-      {type:'trueFalse',items:[{t:'El RE del linfocito T almacena Ca²⁺ que se libera al citoplasma cuando el TCR se activa',a:true},{t:'STIM1 detecta el vaciamiento del RE y activa los canales Orai1 en el sarcolema para entrada sostenida de Ca²⁺',a:true},{t:'La señalización de Ca²⁺ del RE es innecesaria para la activación del linfocito T si está la señal de CD28',a:false}],pts:8},
+      {type:'trueFalse',items:[{t:'El RE del linfocito T almacena Ca²⁺ que se libera al citoplasma cuando el TCR se activa',a:true},{t:'STIM1 detecta el vaciamiento del RE y activa los canales Orai1 de la membrana plasmática para entrada sostenida de Ca²⁺',a:true},{t:'La señalización de Ca²⁺ del RE es innecesaria para la activación del linfocito T si está la señal de CD28',a:false}],pts:8},
       {type:'fill',s:'La ___ es la fosfatasa que desfosforila NFAT después de que el Ca²⁺ del RE sube en el citoplasma del linfocito T activado.',words:['calcineurina','calmodulina quinasa','caspasa-3'],cor:'calcineurina',pts:12},
     ],
     normal:[
