@@ -22,6 +22,7 @@ const EXPOSE_NAMES = [
   'PLAYER_LEVELS', 'CELL_XP_UNLOCK', 'DIFF_XP', 'REVIEW_XP',
   'getPlayerLevel', 'getNextLevel', 'addXP', 'checkXPUnlocks', 'updateXPDisplay',
   'saveGame', 'loadSave',
+  'checkAch', 'showToast', 'PROCESOS_IDS', 'metaDeJuego',
 ];
 
 function loadGame(scripts = CORE_SCRIPTS) {

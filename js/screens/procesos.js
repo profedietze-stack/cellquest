@@ -58,6 +58,28 @@
     {id:'fotosintesis', title:'Fotosíntesis',       emoji:'🌿',sub:'Luz solar → Glucosa + O₂',color:'#22c55e',xp:15,steps:null},
   ];
 
+  // Los ids son la lista única de procesos del juego. La publica para progress.js,
+  // que antes comprobaba el logro "Biólogo Completo" contra una copia escrita a mano:
+  // se quedó en cinco cuando se agregó la fotosíntesis, y el logro se desbloqueaba sin ella.
+  window.PROCESOS_IDS = PROCESOS_META.map(p=>p.id);
+
+  // Lo único propio del Modo Jugador: el subtítulo de la tarjeta. Título, emoji y color
+  // salen de PROCESOS_META, así un proceso nuevo no puede faltar en una lista y estar en la otra.
+  const JUEGO_SUBS={
+    respiracion:'Arrastrá moléculas al orgánulo correcto',
+    alimentacion:'Endocitosis · Lisosoma · Exocitosis',
+    reproduccion:'Mitosis · Huso mitótico · Citocinesis',
+    defensa:'Macrófagos · Anticuerpos · Memoria',
+    sintesis:'ADN · ARNm · Ribosoma · Golgi',
+    fotosintesis:'Luz solar · Tilacoides · Ciclo Calvin',
+  };
+  const JUEGO_XP=50;
+  window.metaDeJuego = function(id){
+    const p=PROCESOS_META.find(m=>m.id===id);
+    if(!p) return null;
+    return {id:p.id,title:p.title,emoji:p.emoji,color:p.color,sub:JUEGO_SUBS[id]||p.sub,xp:JUEGO_XP};
+  };
+
   // ══════════════════════════════════════════════
   // CINE MENU
   // ══════════════════════════════════════════════
@@ -423,13 +445,7 @@
       </div>
       <div class="proc-card-grid" id="juegoCardGrid"></div>`;
     const grid=document.getElementById('juegoCardGrid');
-    [{id:'respiracion',title:'Respiración Celular',emoji:'⚡',sub:'Arrastrá moléculas al orgánulo correcto',color:'#ef4444',xp:50},
-     {id:'alimentacion',title:'Alimentación',emoji:'🍎',sub:'Endocitosis · Lisosoma · Exocitosis',color:'#10b981',xp:50},
-     {id:'reproduccion',title:'Reproducción',emoji:'🔁',sub:'Mitosis · Huso mitótico · Citocinesis',color:'#7c3aed',xp:50},
-     {id:'defensa',title:'Defensa Inmune',emoji:'🛡️',sub:'Macrófagos · Anticuerpos · Memoria',color:'#f59e0b',xp:50},
-     {id:'sintesis',title:'Síntesis de Proteínas',emoji:'🧬',sub:'ADN · ARNm · Ribosoma · Golgi',color:'#06b6d4',xp:50},
-     {id:'fotosintesis',title:'Fotosíntesis',emoji:'🌿',sub:'Luz solar · Tilacoides · Ciclo Calvin',color:'#22c55e',xp:50},
-    ].forEach(j=>{
+    PROCESOS_META.map(p=>metaDeJuego(p.id)).forEach(j=>{
       const done=seen['j_'+j.id];
       const card=document.createElement('div');
       card.className='proc-card'+(j.locked?' proc-card-locked':'');
@@ -1593,18 +1609,11 @@
     _renderJugadorIntro();
   }
 
-  const JUEGO_META_MAP={
-    respiracion:{title:'Respiración Celular',emoji:'⚡',color:'#ef4444'},
-    alimentacion:{title:'Alimentación Celular',emoji:'🍎',color:'#10b981'},
-    reproduccion:{title:'Reproducción Celular',emoji:'🔁',color:'#7c3aed'},
-    defensa:{title:'Defensa Inmune',emoji:'🛡️',color:'#f59e0b'},
-    sintesis:{title:'Síntesis de Proteínas',emoji:'🧬',color:'#06b6d4'},
-  };
   function _renderJugadorIntro(){
     const body=document.getElementById('procesosBody'); if(!body) return;
     const total=_game.rounds.length;
     const totalXp=_game.rounds.reduce((s,r)=>s+r.xp,0);
-    const jm=JUEGO_META_MAP[_game.id]||{title:_game.id,emoji:'🧬',color:'#00e5ff'};
+    const jm=metaDeJuego(_game.id)||{title:_game.id,emoji:'🧬',color:'#00e5ff'};
     body.innerHTML=`
       <div class="juego-intro">
         <div class="juego-intro-header">
@@ -1650,7 +1659,7 @@
       <div class="juego-player" id="juegoPlayer">
         <div class="cine-header">
           <button class="btn btn-ghost btn-sm cine-back-btn" id="juegoBack">← Volver</button>
-          <div class="cine-title">🎮 ${(JUEGO_META_MAP[_game.id]||{title:_game.id}).title}</div>
+          <div class="cine-title">🎮 ${(metaDeJuego(_game.id)||{title:_game.id}).title}</div>
           <div class="cine-header-right"><span class="cine-stepcount" id="juegoStep">1/${total}</span></div>
         </div>
         <div class="juego-instruction" id="juegoInstr"></div>
@@ -1909,7 +1918,7 @@
     body.innerHTML=`
       <div class="juego-complete">
         <div class="juego-complete-emoji">🏆</div>
-        <div class="juego-complete-title">¡${(JUEGO_META_MAP[_game.id]||{title:_game.id}).title} completada!</div>
+        <div class="juego-complete-title">¡${(metaDeJuego(_game.id)||{title:_game.id}).title} completada!</div>
         <div class="juego-complete-score">
           <span class="juego-xp-big">+${totalXp} XP</span>
           <span class="juego-xp-sub">¡Excelente trabajo!</span>

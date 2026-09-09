@@ -14,11 +14,14 @@ function checkAch(){
   const avail=GS.levels.filter(l=>ORGANELLES[l.id]?.length);
   if(avail.length&&avail.every(l=>done3.find(d=>d.id===l.id)))u('mastery');
   if(GS.levels.every(l=>l.unlocked))u('secret');
-  // all_procesos: all 5 Cine + all 5 Jugador seen
+  // all_procesos: todos los procesos vistos en Cine Y jugados en Modo Jugador.
+  // La lista sale de procesos.js (PROCESOS_IDS). Antes estaba copiada aca con cinco ids,
+  // y al agregarse la fotosintesis el logro empezo a desbloquearse sin ella. Si por lo que
+  // fuera la lista no estuviera cargada, no se otorga: un logro de mas no se puede deshacer.
   try{
-    const proc_ids=['respiracion','alimentacion','reproduccion','defensa','sintesis'];
+    const proc_ids=(typeof PROCESOS_IDS!=='undefined'&&PROCESOS_IDS.length)?PROCESOS_IDS:null;
     const seen=JSON.parse(localStorage.getItem('cq3_proc_seen')||'{}');
-    if(proc_ids.every(id=>seen[id])&&proc_ids.every(id=>seen['j_'+id]))u('all_procesos');
+    if(proc_ids&&proc_ids.every(id=>seen[id])&&proc_ids.every(id=>seen['j_'+id]))u('all_procesos');
   }catch(e){};
 }
 function showToast(a){
