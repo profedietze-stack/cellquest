@@ -269,9 +269,15 @@
 
 })(); // end Atlas IIFE
 
+// Hay un guardado en el navegador? Si `localStorage` no esta disponible (modo privado,
+// cookies de sitio bloqueadas) tirar la pregunta entera no sirve de nada: sin almacenamiento
+// no hay progreso que perder, asi que la respuesta correcta es "no hay".
+function hayGuardado(){
+  try{ return !!localStorage.getItem('cq3'); }catch(e){ return false; }
+}
 function confirmNewGame(){
   // BUG-08 fix: check xp/score/currentLevel too, not only totalDone
-  const hasSave=!!localStorage.getItem('cq3');
+  const hasSave=hayGuardado();
   const hasProgress=hasSave&&(GS.totalDone>0||GS.score>0||(GS.xp||0)>0||!!GS.currentLevel);
   if(!hasProgress)startNewGame();
   else openModal('resetModal');

@@ -76,9 +76,24 @@
     return n;
   }
 
+  // El guardado, o nada.
+  //
+  // `localStorage` no siempre esta: en modo privado y con las cookies de sitio bloqueadas
+  // TIRA al tocarlo, no devuelve null. Y el JSON puede estar cortado a la mitad si se cerro
+  // la pestana mientras se guardaba. Cualquiera de las dos cosas cortaba initSplash antes de
+  // dibujar el saludo, la frase, los orbes y las particulas: la portada quedaba vacia.
+  function leerGuardado(){
+    try{
+      const raw=localStorage.getItem('cq3');
+      return raw?JSON.parse(raw):null;
+    }catch(e){
+      console.warn('[splash] no se pudo leer el guardado, se abre como partida nueva', e);
+      return null;
+    }
+  }
+
   function initSplash(){
-    const raw=localStorage.getItem('cq3');
-    const save=raw?JSON.parse(raw):null;
+    const save=leerGuardado();
 
     // Welcome text
     const wEl=document.getElementById('splashWelcome');
