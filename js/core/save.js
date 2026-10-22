@@ -32,7 +32,16 @@ function loadSave(){
       const saved=(s.levels||[]).find(l=>l.id===baseLv.id);
       return saved?{...baseLv,...saved,unlocked:saved.unlocked||baseLv.unlocked}:baseLv;
     });
-    Object.assign(GS,{name:s.name||'Jugador',avatar:s.avatar||'scientist',difficulty:s.difficulty||'normal',score:s.score||0,xp:s.xp||0,totalTime:s.totalTime||0,levels:mergedLevels,completed:s.completed||{},achievements:s.achievements||GS.achievements,speedRuns:s.speedRuns||0,perfectRuns:s.perfectRuns||0,totalDone:s.totalDone||0,completedAt:s.completedAt||{},lastSession:s.lastSession||0});
+    // Igual que con los niveles: mergear por id, no reemplazar el array entero.
+    // Un save viejo guardado antes de agregar un logro nuevo (p.ej. "all_procesos")
+    // tenía menos logros que GS.achievements; `s.achievements||GS.achievements`
+    // reemplazaba el array completo y el logro nuevo desaparecía para siempre en
+    // esa cuenta, porque progress.js busca por id y no encontraba nada que marcar.
+    const mergedAchievements=JSON.parse(JSON.stringify(GS.achievements)).map(baseAch=>{
+      const saved=(s.achievements||[]).find(a=>a.id===baseAch.id);
+      return saved?{...baseAch,...saved}:baseAch;
+    });
+    Object.assign(GS,{name:s.name||'Jugador',avatar:s.avatar||'scientist',difficulty:s.difficulty||'normal',score:s.score||0,xp:s.xp||0,totalTime:s.totalTime||0,levels:mergedLevels,completed:s.completed||{},achievements:mergedAchievements,speedRuns:s.speedRuns||0,perfectRuns:s.perfectRuns||0,totalDone:s.totalDone||0,completedAt:s.completedAt||{},lastSession:s.lastSession||0});
     return true;
   }catch(e){return false;}
 }

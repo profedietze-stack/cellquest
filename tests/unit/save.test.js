@@ -62,6 +62,27 @@ describe('guardado / carga (localStorage)', () => {
     expect(plant.unlocked).toBe(true);
   });
 
+  it('mergea logros guardados por id: un logro nuevo agregado después del save sigue presente y bloqueado', () => {
+    const totalActual = w.GS.achievements.length;
+    // Simula un save viejo (sin "all_procesos", que se agregó después) con un logro desbloqueado
+    const logrosViejos = w.GS.achievements
+      .filter((a) => a.id !== 'all_procesos')
+      .map((a) => ({ id: a.id, unlocked: a.id === 'first_step' }));
+    w.localStorage.setItem('cq3', JSON.stringify({
+      name: 'Viejo', xp: 500, score: 10,
+      achievements: logrosViejos,
+    }));
+    const ok = w.loadSave();
+    expect(ok).toBe(true);
+    // Todos los logros actuales (incluido el agregado después del save) deben seguir presentes
+    expect(w.GS.achievements.length, 'el logro agregado después del save del alumno desapareció').toBe(totalActual);
+    const nuevo = w.GS.achievements.find((a) => a.id === 'all_procesos');
+    expect(nuevo).toBeDefined();
+    expect(nuevo.unlocked).toBe(false);
+    const viejo = w.GS.achievements.find((a) => a.id === 'first_step');
+    expect(viejo.unlocked).toBe(true);
+  });
+
   it('saveGame con debounce no escribe sincrónicamente', () => {
     w.GS.xp = 999;
     w.saveGame(); // sin "immediate" -> debounced
