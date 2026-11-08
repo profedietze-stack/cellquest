@@ -77,6 +77,7 @@ describe('lo que el service worker guarda para el modo offline', () => {
     // v31: la musica atrapa los errores de Tone en vez de mandarlos al banner.
     // v32: distractores del quiz con largo parejo, tanda 1.
     // v33: tanda 2 (incluye glicoforina C: la proteina es de P. falciparum).
-    expect(sw).toMatch(/const CACHE = 'cellquest-v33'/);
+    // v34: tanda 3 (MFA: la pregunta ahora pregunta el efecto; cohesion-tension sin el dato de -13 MPa).
+    expect(sw).toMatch(/const CACHE = 'cellquest-v34'/);
   });
 });

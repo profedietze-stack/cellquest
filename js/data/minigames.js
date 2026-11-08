@@ -1120,18 +1120,18 @@ const MINIGAMES_ALL={
       {type:'fill',s:'Las microfibrillas de celulosa de la pared primaria se orientan al ___, permitiendo el crecimiento de la célula en todas las direcciones.',words:['azar','norte','eje longitudinal'],cor:'azar',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué enzimas relajan la pared primaria durante el crecimiento xilematoso?',opts:['Expansinas: rompen puentes de H entre celulosa y xiloglucano sin actividad hidrolítica → creep ácido','Celulasas: degradan la celulosa durante la expansión reversiblemente','Pectato liasas: degradan pectinas para reducir la rigidez de la pared','Xiloglucanasas: cortan el xiloglucano para desvincular microfibrillas de celulosa'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué enzimas relajan la pared primaria durante el crecimiento xilematoso?',opts:['Expansinas: rompen puentes de H entre celulosa y xiloglucano, sin hidrólisis','Celulasas: degradan la celulosa durante la expansión de forma reversible y localizada','Pectato liasas: degradan las pectinas de la pared para reducir su rigidez','Ligninasas: degradan la lignina para aflojar las microfibrillas de celulosa de la pared'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'Las expansinas promueven el creep ácido de la pared: pH bajo activa expansinas que relajan la pared',a:true},{t:'La auxina promueve la expansión celular activando la ATPasa de protones que acidifica la pared',a:true},{t:'La pared primaria de traqueidas de coníferas es más gruesa que la de vasos de angiospermas',a:false}],pts:15},
       {type:'fill',s:'La pared primaria del xilema persiste en las zonas de ___, permitiendo el flujo de agua entre vasos.',words:['punteaduras','bandas espirales','tilosis'],cor:'punteaduras',pts:20},
     ],
   },
   pit_membrane:{
     easy:[
-      {type:'quiz',q:'¿Cuál es la función de la membrana de punteadura en el xilema?',opts:['Permite que el agua pase entre células del xilema mientras filtra burbujas y patógenos','Produce la celulosa de la pared','Controla la entrada de luz al xilema','Es solo un separador mecánico sin función de filtro'],ans:0,pts:15},
+      {type:'quiz',q:'¿Cuál es la función de la membrana de punteadura en el xilema?',opts:['Deja pasar el agua entre células y filtra burbujas y patógenos','Produce la celulosa de la pared secundaria y la deposita en el vaso','Controla la entrada de luz y de CO₂ al interior del xilema','Es solo un separador mecánico entre vasos, sin función de filtro'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'La membrana de punteadura permite el flujo de agua entre células del xilema',a:true},{t:'La membrana de punteadura puede bloquear el paso de burbujas de aire (cavitación)',a:true},{t:'La membrana de punteadura está hecha de lignina como la pared secundaria',a:false}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué es la cavitación xilémica y cómo la previene la membrana de punteadura?',opts:['La cavitación es la formación de burbujas en el xilema. La membrana actúa como barrera para que no se propaguen','La cavitación es el depósito de sales que obstruyen el xilema','La cavitación es la apertura excesiva de punteaduras que se previene con toro','La cavitación es la entrada de hongos que la membrana impide'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué es la cavitación xilémica y cómo la previene la membrana de punteadura?',opts:['Cavitación: formación de burbujas en el xilema; la membrana evita que se propaguen','Cavitación: depósito de sales que obstruyen el xilema; la membrana las filtra','Cavitación: apertura excesiva de las punteaduras, que se previene con un toro más grueso','Cavitación: entrada de hongos al interior del vaso, que la membrana de punteadura impide'],ans:0,pts:20},
       {type:'fill',s:'La resistencia de la membrana de punteadura a la ___ determina la eficiencia hidráulica del árbol.',words:['cavitación','fotosíntesis','respiración'],cor:'cavitación',pts:15},
     ],
     hard:[
@@ -1142,16 +1142,16 @@ const MINIGAMES_ALL={
   },
   lumen:{
     easy:[
-      {type:'quiz',q:'¿Qué es el lumen del xilema?',opts:['El espacio hueco dentro de los vasos muertos por donde fluye el agua hacia las hojas','Es la pared celular del xilema','Es el lugar donde se produce la fotosíntesis','Es el canal por donde circula el azúcar de las hojas'],ans:0,pts:15},
+      {type:'quiz',q:'¿Qué es el lumen del xilema?',opts:['El espacio hueco de los vasos muertos por donde sube el agua','Es la pared celular del xilema, hecha de celulosa y lignina','Es el lugar donde se produce la fotosíntesis dentro de la hoja','Es el canal por donde circula el azúcar que producen las hojas'],ans:0,pts:15},
       {type:'fill',s:'El agua sube por el xilema porque la evapotranspiración de las hojas crea una ___ que jala el agua desde las raíces.',words:['tensión','presión','gravedad'],cor:'tensión',pts:12},
       {type:'trueFalse',items:[{t:'El lumen del xilema es el canal hueco por donde circula el agua',a:true},{t:'El agua sube por el xilema gastando energía metabólica del árbol',a:false},{t:'Las células del lumen están muertas para facilitar el flujo de agua',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuál es la teoría que explica cómo asciende el agua por el xilema de árboles altos?',opts:['Teoría de cohesión-tensión: la evapotranspiración genera tensión negativa que arrastra una columna continua de agua','Teoría de presión radicular: las raíces bombean activamente el agua hacia arriba','Teoría capilar: la capilaridad es suficiente para árboles de hasta 100 m','Teoría osmótica: la alta concentración de sales en las hojas absorbe el agua'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es la teoría que explica cómo asciende el agua por el xilema de árboles altos?',opts:['Cohesión-tensión: la transpiración tira de una columna continua de agua','Presión radicular: las raíces empujan activamente el agua hacia arriba por el xilema','Capilaridad: alcanza por sí sola para subir agua en árboles de 100 m','Osmótica: la alta concentración de sales en las hojas absorbe el agua del suelo'],ans:0,pts:20},
       {type:'fill',s:'La presión en el xilema de un árbol bajo estrés hídrico puede llegar a ___ MPa (presión negativa).',words:['-5','+10','-0.1'],cor:'-5',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuál es el límite teórico de altura de un árbol basado en la teoría de cohesión-tensión?',opts:['~130 m (presión de -13 MPa = límite de cavitación del agua); el árbol más alto mide ~116 m','~50 m, limitado por la presión osmótica de las raíces','~200 m, sin límite práctico si la cohesión del agua es suficiente','~30 m, determinado por la resistencia gravitacional solamente'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es el límite teórico de altura de un árbol basado en la teoría de cohesión-tensión?',opts:['~130 m (límite por cavitación); el árbol más alto mide ~116 m','~50 m, límite impuesto por la presión osmótica de las raíces','~200 m, sin límite práctico si la cohesión del agua es suficiente','~30 m, determinado únicamente por la resistencia gravitacional'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'El agua puede soportar tensiones de hasta -30 MPa en tubos capilares puros antes de cavitar',a:true},{t:'La teoría de cohesión-tensión fue propuesta por Böhm, Askenasy y Dixon/Joly a finales del siglo XIX',a:true},{t:'Los vasos del xilema secundario son más eficientes que las traqueidas para transportar agua',a:true}],pts:15},
       {type:'fill',s:'La ___ xilem atica fluye bajo presion negativa a traves del lumen de los vasos conductores muertos.',words:['savia','linfa','solucion apoplastica'],cor:'savia',pts:20},
     ],
@@ -1162,11 +1162,11 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'Las punteaduras areoladas actúan como válvulas en el xilema',a:true},{t:'Las punteaduras areoladas son exclusivas de las angiospermas',a:false},{t:'Si hay una burbuja en el xilema, la punteadura se sella para que no se propague',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué son el toro y el margo de una punteadura areolada?',opts:['Toro: parte central rígida de celulosa. Margo: parte flexible que controla el flujo según la presión','Toro: la cámara exterior. Margo: la membrana de punteadura','Toro: el canal de agua. Margo: la pared secundaria alrededor','Toro: el tapón de Woronin. Margo: la proteína HEX-1'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué son el toro y el margo de una punteadura areolada?',opts:['Toro: parte central rígida. Margo: parte flexible que regula el flujo','Toro: la cámara exterior de la punteadura. Margo: la membrana central del par','Toro: el canal de agua del vaso. Margo: la pared secundaria que lo rodea','Toro: la abertura exterior de la punteadura. Margo: el reborde de la pared'],ans:0,pts:20},
       {type:'fill',s:'El ___ puede desplazarse hacia un lado y sellar la punteadura cuando hay embolia en el xilema.',words:['toro','margo','lumen'],cor:'toro',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Por qué las punteaduras areoladas de coníferas tienen toro pero las de angiospermas no?',opts:['En coníferas el transporte es por traqueidas: el toro es una adaptación para bloquear embolias sin perder conductividad. Las angiospermas tienen vasos y pueden aislar la pérdida más fácilmente','Las angiospermas tienen toro pero es microscópico e indetectable','Las angiospermas tienen mayor presión de turgor que impide la necesidad de toro','El toro es una estructura ancestral que las angiospermas perdieron evolutivamente sin consecuencias'],ans:0,pts:30},
+      {type:'quiz',q:'¿Por qué las punteaduras areoladas de coníferas tienen toro pero las de angiospermas no?',opts:['En coníferas el toro bloquea embolias sin perder conductividad; las angiospermas tienen vasos','Las angiospermas tienen toro, pero es microscópico e indetectable al microscopio','Las angiospermas tienen mayor presión de turgor, que impide la necesidad de toro','El toro es una estructura ancestral que las angiospermas perdieron evolutivamente sin ninguna consecuencia'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'El aspirado del toro (torus aspiration) es irreversible y reduce permanentemente la conductividad',a:true},{t:'Las coníferas pueden sobrevivir con hasta el 50% de sus punteaduras aspiradas sin marchitarse',a:true},{t:'La presión de aspiración del toro es mayor en maderas más resistentes a la sequía',a:true}],pts:15},
       {type:'fill',s:'En las punteaduras areoladas de gimnospermas, el ___ central puede sellar el poro previniendo embolias.',words:['toro','margo','lumen'],cor:'toro',pts:20},
     ],
@@ -1181,22 +1181,22 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'El compromiso entre conductividad y seguridad es la base de la "hydraulic safety-efficiency tradeoff"',a:true},{t:'Coníferas de climas áridos tienen menos punteaduras y lúmenes más pequeños que las de climas húmedos',a:true},{t:'Todas las punteaduras areoladas de un árbol tienen la misma probabilidad de aspirarse',a:false}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuáles son los mecanismos de la degradación de punteaduras por hongos Ophiostoma en el azulado de la madera?',opts:['Producción de celulasas y xilanasas que degradan la membrana de punteadura → pérdida de conductividad','Solo degradación de lignina por lacasas específicas del hongo','Bloqueo mecánico de punteaduras por hifas sin degradación enzimática','Producción de ácido oxálico que disuelve los carbonatos de la membrana'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuáles son los mecanismos de la degradación de punteaduras por hongos Ophiostoma en el azulado de la madera?',opts:['Celulasas y xilanasas que degradan la membrana de punteadura y cortan la conducción','Solo degradación de la lignina por lacasas específicas del hongo azulador','Bloqueo mecánico de punteaduras por las hifas, sin que haya degradación enzimática de la membrana','Producción de ácido oxálico que disuelve los carbonatos de la membrana de punteadura'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'Los hongos de azulado de la madera colonizan el xilema a través de las punteaduras naturales',a:true},{t:'El azulado de la madera no afecta la resistencia mecánica pero sí reduce la conductividad hidráulica',a:true},{t:'Los fungicidas azoles inhiben la síntesis de ergosterol del hongo previniendo el azulado',a:true}],pts:15},
       {type:'fill',s:'Las punteaduras areoladas funcionan en pares para garantizar ___ hidraulica cuando una de ellas se sella.',words:['redundancia','conductividad','elasticidad'],cor:'redundancia',pts:20},
     ],
   },
   spiral_band:{
     easy:[
-      {type:'quiz',q:'¿Por qué algunos vasos del xilema tienen engrosamiento en espiral?',opts:['Porque el xilema joven necesita ser flexible mientras el órgano todavía crece y se estira','Porque la espiral produce el color oscuro de la madera','Porque la espiral ayuda a la célula a dividirse','Porque la forma helicoidal aumenta la velocidad del agua'],ans:0,pts:15},
+      {type:'quiz',q:'¿Por qué algunos vasos del xilema tienen engrosamiento en espiral?',opts:['Porque el xilema joven debe ser flexible mientras el órgano crece','Porque la espiral produce el color oscuro de la madera del tronco viejo','Porque la espiral ayuda a la célula a dividirse','Porque la forma helicoidal aumenta la velocidad del agua'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'Las bandas espirales de lignina permiten que el vaso se estire mientras crece el tallo',a:true},{t:'El xilema maduro también tiene vasos en espiral como el joven',a:false},{t:'Las bandas espirales son las primeras estructuras que se forman en el xilema',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuáles son los tipos de engrosamiento de la pared interna del xilema según su madurez?',opts:['Anular → helicoidal → escalariforme → reticulado → punteado (del más joven al más maduro)','Solo helicoidal en el protoxilema y solo punteado en el metaxilema','Punteado primero y luego helicoidal al envejecer el xilema','Todos los tipos se forman al mismo tiempo según la especie'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuáles son los tipos de engrosamiento de la pared interna del xilema según su madurez?',opts:['Anular → helicoidal → escalariforme → reticulado → punteado','Solo helicoidal en el protoxilema y solo punteado en el metaxilema','Punteado primero y luego helicoidal, a medida que envejece el xilema','Todos los tipos se forman al mismo tiempo, según la especie vegetal'],ans:0,pts:20},
       {type:'fill',s:'El xilema primario joven (protoxilema) tiene vasos con engrosamiento ___ y helicoidal que le dan flexibilidad.',words:['anular','punteado','escalariforme'],cor:'anular',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué determina el ángulo de las microfibrillas de celulosa (MFA) en la capa S2 de la pared secundaria?',opts:['El MFA determina las propiedades mecánicas: bajo ángulo (~5-30°) → alta rigidez axial; alto ángulo → mayor flexibilidad','El MFA no afecta las propiedades mecánicas de la madera','Solo la lignina determina la rigidez: las microfibrillas son pasivas','El ángulo es siempre 45° en todas las especies de angiospermas'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué efecto tiene el ángulo de las microfibrillas de celulosa (MFA) de la capa S2 sobre las propiedades de la madera?',opts:['Bajo ángulo (~5-30°) → alta rigidez axial; alto ángulo → mayor flexibilidad','El MFA no afecta las propiedades mecánicas de la madera, que dependen solo de su peso','Solo la lignina determina la rigidez: las microfibrillas son pasivas','El ángulo es siempre 45° en todas las especies de angiospermas'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'La madera de reacción (tension wood en angiospermas, compression wood en coníferas) tiene MFA alterado',a:true},{t:'La madera de tensión tiene una capa G (gelatinosa) de celulosa casi pura en S3 en lugar de lignina',a:true},{t:'El ángulo de microfibrillas puede modificarse mediante regulación de la deposición de celulosa',a:true}],pts:15},
       {type:'fill',s:'Las bandas espirales de lignina permiten que el vaso xilemico se ___ sin perder su funcion conductora.',words:['elongue','comprima','tabique'],cor:'elongue',pts:20},
     ],
@@ -1207,22 +1207,22 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'Los vasos en espiral conducen agua hacia las hojas',a:true},{t:'El engrosamiento espiral aumenta la fuerza necesaria para romper el vaso',a:true},{t:'El xilema más joven (protoxilema) tiene punteaduras como el xilema maduro',a:false}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Por qué el protoxilema con vasos en espiral se rompe durante el crecimiento del órgano?',opts:['Los vasos jóvenes son desechables: se estiran y rompen al crecer el tejido; el metaxilema los reemplaza','Los vasos espirales se regeneran solos cuando se rompen','La rotura de vasos activa la síntesis de tílosis que los repara','El protoxilema en espiral nunca se rompe gracias a su flexibilidad'],ans:0,pts:20},
+      {type:'quiz',q:'¿Por qué el protoxilema con vasos en espiral se rompe durante el crecimiento del órgano?',opts:['Los vasos jóvenes son desechables: se estiran y se rompen; el metaxilema los reemplaza','Los vasos espirales se regeneran solos cuando se rompen, sin ayuda de las células vecinas del xilema','La rotura de vasos activa la síntesis de tílosis, que los repara y los sella del aire','El protoxilema en espiral nunca se rompe gracias a su flexibilidad'],ans:0,pts:20},
       {type:'trueFalse',items:[{t:'La rotura del protoxilema durante el crecimiento es un proceso programado y normal en el desarrollo vegetal',a:true},{t:'El metaxilema tiene vasos punteados más resistentes que reemplazan al protoxilema roto',a:true},{t:'Las plantas C4 tienen más protoxilema en sus hojas que las C3',a:false}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Cómo determina el citoesqueleto cortical la orientación de los engrosamientos en espiral del xilema?',opts:['Microtúbulos corticales guían la trayectoria de los complejos CesA → depósito helicoidal de celulosa → la lignificación sigue el mismo patrón','La actina cortical determina el ángulo de las microfibrillas','Los microtúbulos no participan en la orientación de los engrosamientos del xilema','Solo las enzimas de síntesis de lignina determinan el patrón espiral'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cómo determina el citoesqueleto cortical la orientación de los engrosamientos en espiral del xilema?',opts:['Microtúbulos corticales guían los complejos CesA y la celulosa se deposita en hélice','La actina cortical determina por sí sola el ángulo de las microfibrillas de celulosa en la pared','Los microtúbulos no participan en la orientación de los engrosamientos del xilema','Solo las enzimas de síntesis de lignina determinan el patrón espiral'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'Mutaciones en tubulina alteran el patrón de engrosamiento y la conductividad del xilema',a:true},{t:'La depolimerización de microtúbulos con oryzalin produce vasos con engrosamientos desordenados',a:true},{t:'Los complejos CesA se mueven por la membrana siguiendo los microtúbulos corticales durante la síntesis de pared secundaria',a:true}],pts:15},
       {type:'fill',s:'El patron de enrrollamiento de las bandas espirales puede ser dextrogiro o ___, segun la especie.',words:['levogiro','isotrop ico','anisotropo'],cor:'levogiro',pts:20},
     ],
   },
   plasmalemma_x:{
     easy:[
-      {type:'quiz',q:'¿Existen células vivas dentro del xilema además de los vasos muertos?',opts:['Sí, las células de parénquima xilemático están vivas y controlan el transporte de minerales','No, todas las células del xilema mueren al madurar','Solo las células de la corteza están vivas','Los vasos se reviven periódicamente para intercambiar minerales'],ans:0,pts:15},
+      {type:'quiz',q:'¿Existen células vivas dentro del xilema además de los vasos muertos?',opts:['Sí, el parénquima xilemático está vivo y regula el transporte de minerales','No, todas las células del xilema mueren al madurar y quedan sin contenido ni núcleo','Solo las células de la corteza del tallo están vivas','Los vasos muertos se reviven cada primavera para intercambiar minerales con la savia'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'El xilema tiene células vivas llamadas parénquima que trabajan con los vasos',a:true},{t:'El plasmalema del parénquima xilemático controla el paso de minerales al agua del xilema',a:true},{t:'Las células de parénquima xilemático viven solo unos pocos días',a:false}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuál es la función del parénquima xilemático con respecto a la savia?',opts:['Carga y descarga de iones (K⁺, Mg²⁺, Ca²⁺, nutrientes) al agua xilémica; almacenamiento de almidón','Solo función estructural de soporte mecánico a los vasos','Producción de lignina para la pared secundaria','Síntesis de agua metabólica que complementa el flujo transpiratorio'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es la función del parénquima xilemático con respecto a la savia?',opts:['Carga y descarga de iones (K⁺, Mg²⁺, Ca²⁺) en el agua del xilema; almacena almidón','Solo función estructural, como soporte mecánico de los vasos conductores','Producción de lignina para la pared secundaria de los vasos vecinos','Síntesis de agua metabólica que complementa el flujo transpiratorio de toda la planta'],ans:0,pts:20},
       {type:'fill',s:'Las células vivas del parénquima xilemático almacenan ___, que se hidroliza en glucosa cuando el árbol necesita energía.',words:['almidón','lignina','celulosa'],cor:'almidón',pts:15},
     ],
     hard:[
@@ -1233,7 +1233,7 @@ const MINIGAMES_ALL={
   },
   tylosis:{
     easy:[
-      {type:'quiz',q:'¿Qué son las tílosis y cómo ayudan al árbol?',opts:['Son células que se hinchan hacia el interior del vaso xilémico para bloquear patógenos y crear la madera de corazón','Son las esporas de los hongos que infectan el xilema','Son los tapones de lignina que se forman cuando el árbol envejece','Son un tipo de bacteria que vive en el xilema'],ans:0,pts:15},
+      {type:'quiz',q:'¿Qué son las tílosis y cómo ayudan al árbol?',opts:['Células que se hinchan dentro del vaso y lo bloquean contra patógenos','Son las esporas de los hongos que infectan el xilema de los árboles viejos','Son los tapones de lignina que se forman cuando el árbol envejece','Son un tipo de bacteria que vive en el xilema'],ans:0,pts:15},
       {type:'fill',s:'La madera de ___ (duramen) es la zona oscura central del árbol, formada por vasos obstruidos con tílosis.',words:['corazón','albura','floema'],cor:'corazón',pts:12},
       {type:'trueFalse',items:[{t:'Las tílosis bloquean los vasos del xilema impidiendo el paso de patógenos',a:true},{t:'El duramen o madera de corazón está formado por vasos con tílosis',a:true},{t:'Las tílosis hacen el xilema menos resistente a los hongos',a:false}],pts:8},
     ],
@@ -1273,7 +1273,7 @@ const MINIGAMES_ALL={
       {type:'fill',s:'El hígado puede regenerar porque los hepatocitos conservan capacidad ___ excepcional para células diferenciadas.',words:['proliferativa','mitocondrial','secretora'],cor:'proliferativa',pts:12},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué proceso convierte a un hepatocito de 2n en 4n (tetraploide)?',opts:['Mitosis sin citocinesis (sin división del citoplasma)','Meiosis incompleta','Fusión de dos hepatocitos diploides','Duplicación del ADN sin fase S'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué proceso convierte a un hepatocito de 2n en 4n (tetraploide)?',opts:['Mitosis sin citocinesis (sin división del citoplasma)','Meiosis incompleta, que deja un solo juego extra de cromosomas','Fusión de dos hepatocitos diploides vecinos en el lobulillo','Duplicación del ADN sin pasar por la fase S del ciclo celular'],ans:0,pts:20},
       {type:'fill',s:'La ploidia progresiva de los hepatocitos (2n→4n→8n) aumenta la ___ biosintética de la célula.',words:['capacidad','actividad','eficiencia'],cor:'capacidad',pts:15},
     ],
     hard:[
@@ -1285,7 +1285,7 @@ const MINIGAMES_ALL={
 
   nucleolus_h:{
     easy:[
-      {type:'quiz',q:'¿Por qué el nucléolo del hepatocito es especialmente grande?',opts:['Necesita muchos ribosomas para sintetizar albúmina y factores de coagulación','El hígado tiene más ADN que otras células','Los hepatocitos son más grandes que otras células','El hígado es el órgano más activo en dividirse'],ans:0,pts:15},
+      {type:'quiz',q:'¿Por qué el nucléolo del hepatocito es especialmente grande?',opts:['Necesita muchos ribosomas para fabricar albúmina y factores de coagulación','El hígado tiene más ADN por célula que las demás células del cuerpo','Los hepatocitos son mucho más grandes que cualquier otra célula del cuerpo humano','El hígado es el órgano que más se divide durante toda la vida adulta'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'El nucléolo sintetiza el ARN ribosómico (ARNr) que forma parte de los ribosomas',a:true},{t:'El nucléolo tiene su propia membrana que lo aísla del nucleoplasma',a:false},{t:'El hepatocito sintetiza la albúmina, la proteína más abundante del plasma humano',a:true}],pts:8},
     ],
     normal:[
@@ -1366,7 +1366,7 @@ const MINIGAMES_ALL={
     ],
     normal:[
       {type:'fill',s:'La ___ es la proteína estructural indispensable del VLDL hepático; sin ella no se pueden ensamblar las partículas.',words:['apoB-100','apoA-I','apoC-II'],cor:'apoB-100',pts:15},
-      {type:'quiz',q:'¿Qué ocurre cuando el Golgi no puede procesar la apoB-100 correctamente?',opts:['Se acumula grasa en el hígado (esteatosis) porque no puede exportar lípidos como VLDL','Aumenta la secreción de HDL compensatoria','El colesterol se deposita en la vesícula biliar','Los fosfolipídos no pueden sintetizarse'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué ocurre cuando el Golgi no puede procesar la apoB-100 correctamente?',opts:['Se acumula grasa en el hígado (esteatosis) por no exportar VLDL','Aumenta la secreción compensatoria de HDL hacia la sangre','El colesterol se deposita en la vesícula biliar y forma cálculos biliares','Los fosfolípidos de membrana no pueden sintetizarse en el hepatocito'],ans:0,pts:20},
     ],
     hard:[
       {type:'fill',q:'La proteína ___ (MTP) en el RER y Golgi transfiere lípidos a la apoB-100 naciente durante el ensamblado del VLDL.',a:'MTP',pts:22},
@@ -1381,7 +1381,7 @@ const MINIGAMES_ALL={
     ],
     normal:[
       {type:'fill',s:'La enfermedad de ___ se debe a déficit de α-glucosidasa lisosomal → acumulación de glucógeno en hígado y músculo.',words:['Pompe','Gaucher','Fabry'],cor:'Pompe',pts:15},
-      {type:'quiz',q:'¿Cuál es la función de la lipofagia lisosomal en el hepatocito en ayuno?',opts:['Degradar gotas lipídicas → liberar ácidos grasos para β-oxidación y VLDL','Sintetizar nuevas gotas lipídicas para reserva','Exportar lípidos al exterior','Transferir lípidos a las mitocondrias directamente'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es la función de la lipofagia lisosomal en el hepatocito en ayuno?',opts:['Degradar gotas lipídicas y liberar ácidos grasos para β-oxidación','Sintetizar nuevas gotas lipídicas para reserva de energía en el ayuno','Exportar los lípidos al exterior de la célula sin degradarlos','Transferir los lípidos a las mitocondrias directamente, sin degradarlos'],ans:0,pts:20},
     ],
     hard:[
       {type:'fill',q:'La bilirrubina no conjugada tóxica es conjugada con glicurónico en el hepatocito y excretada por ___ en el canalículo.',a:'MRP2',pts:22},
@@ -1396,7 +1396,7 @@ const MINIGAMES_ALL={
     ],
     normal:[
       {type:'fill',s:'El síndrome de ___ es una enfermedad neonatal grave causada por déficit en la biogénesis de peroxisomas.',words:['Zellweger','Pompe','Gaucher'],cor:'Zellweger',pts:15},
-      {type:'quiz',q:'¿Cuál es la diferencia entre la β-oxidación peroxisomal y la mitocondrial?',opts:['La peroxisomal oxida AGCML y transfiere el resultado a la mitocondria; no produce ATP directamente','La peroxisomal produce más ATP por molécula de ácido graso','Son idénticas en función y localización subcelular','La peroxisomal usa NADH y la mitocondrial FADH₂ como cofactores'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es la diferencia entre la β-oxidación peroxisomal y la mitocondrial?',opts:['La peroxisomal oxida AGCML y pasa el resultado a la mitocondria; no produce ATP','La peroxisomal produce más ATP por molécula de ácido graso que la mitocondrial en las células hepáticas','Son idénticas en función y localización subcelular','La peroxisomal usa NADH y la mitocondrial FADH₂ como únicos cofactores de la oxidación'],ans:0,pts:20},
     ],
     hard:[
       {type:'fill',q:'Los plasmalógenos (éter-fosfolipídos importantes en el cerebro y el corazón) se sintetizan exclusivamente en los ___ hepáticos.',a:'peroxisomas',pts:22},
@@ -1428,7 +1428,7 @@ const MINIGAMES_ALL={
     ],
     normal:[
       {type:'fill',s:'La progresión del NAFLD de esteatosis simple a ___ (NASH) implica inflamación, estrés oxidativo y daño hepatocítico.',words:['esteatohepatitis','cirrosis','hepatitis'],cor:'esteatohepatitis',pts:15},
-      {type:'quiz',q:'¿Cuál es el mecanismo principal de eliminación de gotas lipídicas en el hepatocito durante el ayuno?',opts:['Lipofagia: las gotas son engullidas por autofagosomas y degradadas en lisosomas','Exocitosis directa al espacio de Disse','Transferencia directa a la mitocondria','Conversión en glucógeno por gluconeogénesis inversa'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es el mecanismo principal de eliminación de gotas lipídicas en el hepatocito durante el ayuno?',opts:['Lipofagia: las gotas son degradadas por autofagosomas y lisosomas','Exocitosis directa de las gotas al espacio de Disse','Transferencia directa de las gotas completas a la mitocondria','Conversión en glucógeno por gluconeogénesis inversa en el citosol del hepatocito'],ans:0,pts:20},
     ],
     hard:[
       {type:'fill',q:'La lipogénesis de novo en el hepatocito está regulada por el factor de transcripción ___, activado por insulina y carbohidratos en exceso.',a:'SREBP-1c',pts:22},
@@ -1444,7 +1444,7 @@ const MINIGAMES_ALL={
     ],
     normal:[
       {type:'fill',s:'La ___ (detención del flujo biliar) puede ocurrir por defectos en transportadores canaliculares, embarazo o fármacos.',words:['colestasis','cirrosis','hepatitis'],cor:'colestasis',pts:15},
-      {type:'quiz',q:'¿Qué sucede con las sales biliares una vez que llegan al intestino delgado?',opts:['Son reabsorbidas en el íleon terminal y regresan al hígado (circulación enterohepatica)','Se excretan completamente por las heces','Son convertidas en colesterol y absorbidas directamente','Son destruidas por la microbiota del colon'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué sucede con las sales biliares una vez que llegan al intestino delgado?',opts:['Se reabsorben en el íleon y vuelven al hígado (circulación enterohepática)','Se excretan casi por completo por las heces sin reabsorberse nunca en el intestino','Son convertidas en colesterol y absorbidas directamente en el yeyuno','Son destruidas por la microbiota del colon'],ans:0,pts:20},
     ],
     hard:[
       {type:'fill',q:'La colestasis intrahepática familiar progresiva tipo 2 (PFIC2) se debe a mutaciones en ___, el principal transportador canalicular de sales biliares.',a:'BSEP',pts:22},
@@ -1493,13 +1493,13 @@ const MINIGAMES_ALL={
       {type:'fill',s:'Las ___ son células mononucleadas quiescentes situadas entre el sarcolema y la lámina basal, que se activan para regenerar el músculo.',words:['células satélite','células de Schwann','células intersticiales'],cor:'células satélite',pts:12},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué ocurre con los núcleos musculares en la miopatía centronuclear (MTM1)?',opts:['Migran al centro de la fibra en lugar de permanecer periféricos','Se fragmentan y causan apoptosis','Se fusionan formando un núcleo gigante','Desaparecen por necrosis'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué ocurre con los núcleos musculares en la miopatía centronuclear (MTM1)?',opts:['Migran al centro de la fibra en lugar de permanecer periféricos','Se fragmentan y causan la apoptosis de toda la fibra muscular esquelética','Se fusionan entre sí y forman un único núcleo gigante central','Desaparecen por necrosis y la fibra queda sin núcleos periféricos'],ans:0,pts:20},
       {type:'fill',s:'La ___ de proteínas miofibrilares (miosina, actina) está controlada localmente por los núcleos periféricos más cercanos al sarcómero.',words:['síntesis','degradación','importación'],cor:'síntesis',pts:15},
     ],
     hard:[
       {type:'fill',q:'Proteína de lámina nuclear cuyas mutaciones (LMNA) causan distrofia muscular de Emery-Dreifuss, cardiomiopatía dilatada y progeria',a:'lamina A/C',pts:22},
       {type:'trueFalse',items:[{t:'La terapia con células satélite autólogas modificadas genéticamente es un enfoque en desarrollo para distrofias musculares',a:true},{t:'El envejecimiento reduce el número de células satélite y su capacidad de activación, contribuyendo a la sarcopenia',a:true},{t:'Los núcleos periféricos en el extremo de la fibra expresan los mismos genes que los de la zona media',a:false}],pts:28},
-      {type:'quiz',q:'¿Cuál es la diferencia funcional entre núcleos "sinápticos" y "extrasinápticos" de la fibra muscular?',opts:['Los sinápticos expresan subunidades específicas de AChR (ε) inducidas por neuregulina/agruina','Los sinápticos producen más ATP','Los extrasinápticos expresan más actina','No hay diferencia funcional'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es la diferencia funcional entre núcleos "sinápticos" y "extrasinápticos" de la fibra muscular?',opts:['Los sinápticos expresan subunidades específicas de AChR (ε), inducidas por agrina','Los sinápticos producen más ATP que los extrasinápticos para sostener la placa','Los extrasinápticos expresan más actina que los sinápticos en toda la longitud de la fibra','No hay diferencia funcional: todos los núcleos expresan los mismos genes'],ans:0,pts:30},
     ],
   },
   sarcomere:{
@@ -1514,7 +1514,7 @@ const MINIGAMES_ALL={
       {type:'sequence',items:['Ca²⁺ liberado del RS une troponina C','Tropomiosina se desplaza → sitios de actina expuestos','Cabeza de miosina (con ADP+Pi) se une a actina','Power stroke: pivoteo de cabeza → filamentos deslizan ~10 nm','ATP une la cabeza de miosina → despegue del puente cruzado','Hidrólisis de ATP recarga la cabeza de miosina'],pts:25},
     ],
     hard:[
-      {type:'quiz',q:'La curva fuerza-longitud del músculo muestra fuerza máxima a 2.2 µm de sarcómero porque...',opts:['El solapamiento actina-miosina es máximo (todos los puentes cruzados pueden formarse)','La titina está en su longitud natural','Las tropomiosinas se liberan completamente','El disco Z activa la troponina'],ans:0,pts:30},
+      {type:'quiz',q:'La curva fuerza-longitud del músculo muestra fuerza máxima a 2.2 µm de sarcómero porque...',opts:['El solapamiento actina-miosina es máximo y se forman todos los puentes','La titina está en su longitud natural y no genera fuerza pasiva','Las tropomiosinas se liberan por completo y exponen los sitios de unión','El disco Z activa directamente la troponina de cada filamento fino'],ans:0,pts:30},
       {type:'fill',q:'Miopatía congénita causada por mutaciones en α-actina, tropomiosina o troponina que forman cuerpos en bastón en el sarcómero',a:'miopatía nemalínica',pts:22},
       {type:'trueFalse',items:[{t:'La cardiomiopatía hipertrófica (MCH) es la cardiopatía hereditaria más frecuente y suele deberse a mutaciones en β-miosina (MYH7)',a:true},{t:'Durante la tetania, el [Ca²⁺] citosólico permanece elevado, impidiendo la relajación y causando el espasmo',a:true},{t:'La zona H del sarcómero contiene actina y miosina en igual proporción',a:false}],pts:28},
     ],
@@ -1530,14 +1530,14 @@ const MINIGAMES_ALL={
       {type:'fill',s:'La ___ es la proteína más grande conocida (~4 MDa), actúa como resorte elástico y define la longitud de sarcómero en reposo.',words:['titina','nebulina','actinina'],cor:'titina',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué distingue a las isoformas de miosina en fibras tipo I vs IIa vs IIx/IIb?',opts:['Velocidad de ciclo de la ATPasa y potencia generada','Número de cabezas de miosina','Longitud del filamento grueso','Capacidad de unión a titina'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué distingue a las isoformas de miosina en fibras tipo I vs IIa vs IIx/IIb?',opts:['Velocidad de ciclo de la ATPasa y potencia generada','Número de cabezas de miosina por molécula de filamento grueso','Longitud del filamento grueso en cada sarcómero','Capacidad de unión a titina en la banda M'],ans:0,pts:30},
       {type:'fill',q:'Proceso de degradación proteica muscular mediado por ubiquitinación y el proteasoma 26S, que predomina en atrofia por desuso o ayuno',a:'proteólisis ubiquitina-proteasoma',pts:22},
       {type:'trueFalse',items:[{t:'La nebulina actúa como "regla molecular" que determina la longitud exacta (~1 µm) de los filamentos delgados',a:true},{t:'La contracción isométrica genera fuerza sin cambiar la longitud del sarcómero',a:true},{t:'La actinina-α es la principal proteína del disco Z que ancla los filamentos de actina entre sarcómeros',a:true}],pts:28},
     ],
   },
   t_tubule:{
     easy:[
-      {type:'quiz',q:'¿Cuál es la función principal del túbulo T?',opts:['Transmitir el potencial de acción al interior de la fibra para activar el RS','Sintetizar proteínas contráctiles','Almacenar ATP para la contracción','Degradar el glucógeno muscular'],ans:0,pts:15},
+      {type:'quiz',q:'¿Cuál es la función principal del túbulo T?',opts:['Llevar el potencial de acción al interior de la fibra para activar el RS','Sintetizar las proteínas contráctiles que forman las miofibrillas','Almacenar ATP para la contracción y liberarlo a las miofibrillas durante el ejercicio','Degradar el glucógeno muscular y liberar glucosa a la sangre'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'Los túbulos T son invaginaciones del sarcolema hacia el interior de la fibra',a:true},{t:'En músculo esquelético los túbulos T se ubican en la unión de las bandas A e I',a:true},{t:'El receptor de rianodina (RyR1) está localizado en la membrana del túbulo T',a:false}],pts:8},
       {type:'fill',s:'El conjunto formado por un túbulo T flanqueado por dos cisternas terminales del RS se llama ___.',words:['tríada','díada','cúpula'],cor:'tríada',pts:12},
     ],
@@ -1546,14 +1546,14 @@ const MINIGAMES_ALL={
       {type:'fill',s:'El acoplamiento ___ une el potencial de acción del sarcolema con la liberación de Ca²⁺ del retículo sarcoplasmático.',words:['excitación-contracción','voltaje-corriente','membrana-retículo'],cor:'excitación-contracción',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Cómo difiere el mecanismo de activación de RyR en músculo esquelético vs cardíaco?',opts:['Esquelético: acoplamiento mecánico DHPR→RyR1 (sin Ca²⁺ extracelular); cardíaco: CICR (Ca²⁺ entra por Cav1.2 y dispara RyR2)','Esquelético: CICR; cardíaco: acoplamiento mecánico','Ambos usan CICR con distintas isoformas de RyR','No hay diferencia funcional'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cómo difiere el mecanismo de activación de RyR en músculo esquelético vs cardíaco?',opts:['Esquelético: acoplamiento mecánico DHPR→RyR1; cardíaco: Ca²⁺ dispara RyR2 (CICR)','Esquelético: CICR con Ca²⁺ extracelular; cardíaco: acoplamiento mecánico DHPR→RyR','Ambos usan CICR con distintas isoformas de RyR y distinta sensibilidad al calcio','No hay diferencia funcional; solo cambia el nombre de la isoforma de RyR'],ans:0,pts:30},
       {type:'fill',q:'Fármaco que bloquea el receptor de rianodina (RyR1) usado en el tratamiento de urgencia de la hipertermia maligna',a:'dantroleno',pts:22},
       {type:'trueFalse',items:[{t:'En músculo cardíaco los túbulos T están en los discos Z (no en la unión A-I como en esquelético)',a:true},{t:'Los túbulos T cardíacos forman díadas con el RS (1 cisterna terminal, no 2)',a:true},{t:'La ausencia de túbulos T impediría completamente la contracción muscular',a:true}],pts:28},
     ],
   },
   sr:{
     easy:[
-      {type:'quiz',q:'¿Cuál es la función principal del retículo sarcoplasmático?',opts:['Almacenar y liberar Ca²⁺ para controlar la contracción','Sintetizar proteínas contráctiles','Producir ATP por glucólisis','Degradar organelos dañados'],ans:0,pts:15},
+      {type:'quiz',q:'¿Cuál es la función principal del retículo sarcoplasmático?',opts:['Almacenar y liberar Ca²⁺ para controlar la contracción','Sintetizar las proteínas contráctiles de la miofibrilla','Producir ATP por glucólisis para sostener la contracción','Degradar los organelos dañados de la fibra muscular'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'El retículo sarcoplasmático es una forma especializada del RE liso',a:true},{t:'La bomba SERCA recapta Ca²⁺ del citoplasma al RS gastando ATP durante la relajación',a:true},{t:'El RS libera Ca²⁺ durante la relajación muscular',a:false}],pts:8},
       {type:'fill',s:'La bomba ___ (Ca²⁺-ATPasa del RS) bombea Ca²⁺ de regreso al lumen del RS gastando ATP, permitiendo la relajación.',words:['SERCA','RyR1','DHPR'],cor:'SERCA',pts:12},
     ],
@@ -1562,7 +1562,7 @@ const MINIGAMES_ALL={
       {type:'fill',s:'La ___ es la proteína de unión a Ca²⁺ del lumen del RS, con alta capacidad y baja afinidad, que actúa como tampón y reserva de Ca²⁺.',words:['calsecuestrina','calmodulina','calreticulina'],cor:'calsecuestrina',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'En insuficiencia cardíaca crónica, ¿qué ocurre con la función de SERCA2a?',opts:['Su actividad está reducida → sobrecarga de Ca²⁺ citosólico → disfunción diastólica','Su actividad aumenta causando relajación excesiva','Se convierte en la isoforma SERCA1a','Es sustituida por RyR2'],ans:0,pts:30},
+      {type:'quiz',q:'En insuficiencia cardíaca crónica, ¿qué ocurre con la función de SERCA2a?',opts:['Su actividad está reducida: sobrecarga de Ca²⁺ citosólico y disfunción diastólica','Su actividad aumenta y causa una relajación diastólica excesiva con falta de llenado','Se convierte en la isoforma SERCA1a, propia del músculo esquelético rápido','Es sustituida por RyR2'],ans:0,pts:30},
       {type:'fill',q:'Inhibidor endógeno de SERCA2a en el miocito cardíaco, cuya fosforilación por PKA (receptor β-adrenérgico) activa la bomba durante el ejercicio',a:'fosfolamban',pts:22},
       {type:'trueFalse',items:[{t:'SERCA1a es la isoforma predominante en músculo esquelético rápido; SERCA2a en cardíaco y músculo lento',a:true},{t:'La terapia génica AAV-SERCA2a fue evaluada en ensayos de fase II/III para insuficiencia cardíaca (CUPID)',a:true},{t:'El calcio del RS muscular se repone desde el calcio extracelular en cada contracción del músculo esquelético',a:false}],pts:28},
     ],
@@ -1574,11 +1574,11 @@ const MINIGAMES_ALL={
       {type:'fill',s:'En músculo ___, las tríadas se reemplazan por díadas (1 cisterna + 1 túbulo T) y la liberación de Ca²⁺ es por CICR.',words:['cardíaco','liso','esquelético lento'],cor:'cardíaco',pts:12},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué proteína de la cisterna terminal interactúa físicamente con el DHPR del túbulo T para liberar Ca²⁺?',opts:['RyR1 (receptor de rianodina tipo 1)','SERCA1a','Calsecuestrina','Triadin'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué proteína de la cisterna terminal interactúa físicamente con el DHPR del túbulo T para liberar Ca²⁺?',opts:['RyR1, el receptor de rianodina tipo 1 del retículo','SERCA1a, la bomba que recaptura Ca²⁺ al retículo','Calsecuestrina, que almacena Ca²⁺ dentro de la cisterna','Triadin, que ancla la calsecuestrina al RyR1'],ans:0,pts:20},
       {type:'fill',s:'La ___ interactúa con RyR1 y calsecuestrina en la cisterna terminal para modular la liberación luminal de Ca²⁺.',words:['triadin','ankirin','distrofina'],cor:'triadin',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuál es la diferencia clave entre la activación de RyR1 (esquelético) y RyR2 (cardíaco)?',opts:['RyR1: activación mecánica directa por DHPR (sin Ca²⁺ extracelular); RyR2: activación por Ca²⁺ (CICR)','RyR1 usa Ca²⁺ extracelular; RyR2 es mecánico','Ambos son mecánicos pero con distinta isoforma','No hay diferencia funcional'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es la diferencia clave entre la activación de RyR1 (esquelético) y RyR2 (cardíaco)?',opts:['RyR1: activación mecánica directa por DHPR; RyR2: activación por Ca²⁺ (CICR)','RyR1 usa Ca²⁺ extracelular para abrirse; RyR2 se activa por acoplamiento mecánico','Ambos son mecánicos y solo cambia la isoforma de RyR y su ubicación','No hay diferencia funcional entre RyR1 y RyR2 en la señalización'],ans:0,pts:30},
       {type:'fill',q:'Síndrome de urgencia anestésica causado por mutaciones en RyR1 que producen liberación masiva de Ca²⁺ del RS con hipertermia y rigidez',a:'hipertermia maligna',pts:22},
       {type:'trueFalse',items:[{t:'Las moléculas S107 (rycal) estabilizan RyR1 reduciendo la liberación espontánea de Ca²⁺ en miopatías RyR1',a:true},{t:'La enfermedad de central core (defectos en el centro de la fibra) se debe a mutaciones en RyR1',a:true},{t:'En el músculo esquelético, la contracción requiere Ca²⁺ extracelular en condiciones normales',a:false}],pts:28},
     ],
