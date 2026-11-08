@@ -65,20 +65,28 @@ describe('sesgo de tamano (lo que no arregla el barajado)', () => {
   const unicaMasLarga = QUIZ.filter(({ mg }) => rangoPorLargo(mg).esUnicaMasLarga).length;
   const pct = (unicaMasLarga / QUIZ.length) * 100;
 
-  // DEUDA MEDIDA, no resuelta: hoy la correcta es la UNICA mas larga en ~84 % de los quiz
-  // (272 de 323), asi que elegir siempre la opcion mas larga acierta 4 de cada 5 sin leer.
-  // Arreglarlo es editar los distractores de cientos de preguntas (alargarlos con informacion
-  // plausible, no rellenar). Este umbral es un tope para que no EMPEORE; hay que irlo bajando
-  // a medida que se arregla el banco, hasta la meta (~35 %, azar = 25 %).
-  const TOPE_ACTUAL = 86;
-  const META = 35;
+  // Antes de la reescritura de distractores la correcta era la UNICA mas larga en 84,2 % de los quiz
+  // (272 de 323): elegir siempre la opcion mas larga acertaba 4 de cada 5 sin leer. Hoy son 102 de 323
+  // (31,6 %; el azar es 25 %). Las que quedan son diferencias chicas (<= 17 caracteres). El tope deja
+  // margen para agregar preguntas, pero no para volver a escribirlas con la correcta inflada.
+  const TOPE_ACTUAL = 36;
 
-  it('la correcta no es mas larga que las demas mas seguido que el tope actual (no empeorar)', () => {
+  it('la correcta no es la unica mas larga mas seguido que el tope (elegir siempre la mas larga no gana)', () => {
     expect(
       pct,
-      `la correcta es la unica mas larga en ${pct.toFixed(1)} % de ${QUIZ.length} quiz (meta ${META} %). ` +
-        'Un alumno que elija siempre la mas larga acierta casi todo sin leer.',
+      `la correcta es la unica mas larga en ${pct.toFixed(1)} % de ${QUIZ.length} quiz (tope ${TOPE_ACTUAL} %, azar 25 %). ` +
+        'Un alumno que elija siempre la mas larga acierta casi todo sin leer: alarga los distractores con detalle plausible.',
     ).toBeLessThanOrEqual(TOPE_ACTUAL);
+  });
+
+  it('ninguna correcta le saca mas de 17 caracteres a la segunda mas larga', () => {
+    const pasadas = QUIZ.filter(({ mg }) => {
+      const largos = mg.opts.map((o) => String(o).length);
+      const c = largos[mg.ans];
+      const otras = largos.filter((_, i) => i !== mg.ans);
+      return c - Math.max(...otras) > 17;
+    }).map(({ orgId, dif, mg }) => `${orgId}.${dif}: ${mg.q}`);
+    expect(pasadas, `la correcta es notoriamente la mas larga en: ${pasadas.slice(0, 5).join(' | ')}`).toEqual([]);
   });
 
   it('la correcta casi nunca es la mas corta: tambien es un patron (informativo)', () => {

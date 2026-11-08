@@ -12,7 +12,7 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'El núcleo controla la síntesis de proteínas mediante el ARNm',a:true},{t:'El núcleo fabrica ATP directamente',a:false},{t:'La envoltura nuclear tiene poros nucleares',a:true},{t:'Los procariotas tienen núcleo con membrana',a:false}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué proteínas forman los nucleosomas que compactan el ADN en la cromatina?',opts:['Histonas (H2A, H2B, H3, H4 + H1 de unión)','Tubulinas α y β','Actina y miosina','Lamininas A, B y C'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué proteínas forman los nucleosomas que compactan el ADN en la cromatina?',opts:['Histonas (H2A, H2B, H3, H4 + H1 de unión)','Tubulinas α y β, que forman los microtúbulos del huso mitótico','Actina y miosina, las proteínas de los filamentos musculares','Lamininas A, B y C de la matriz extracelular'],ans:0,pts:30},
       {type:'fill',s:'El complejo del poro nuclear permite el transporte selectivo de ___ del núcleo al citoplasma.',words:['ARNm','glucosa','lípidos'],cor:'ARNm',pts:20},
       {type:'trueFalse',items:[{t:'La heterocromatina es transcripcionalmente inactiva',a:true},{t:'La eucromatina está altamente condensada',a:false},{t:'La lámina nuclear es una red de filamentos intermedios',a:true},{t:'El ADN mitocondrial se replica en el núcleo',a:false}],pts:15},
       {type:'sequence',items:['Interfase: duplicación del ADN (fase S)','Profase: condensación de cromátidas y desaparición del nucléolo','Metafase: alineación de cromosomas en el ecuador','Anafase: separación de cromátidas hacia los polos','Telofase y citocinesis: formación de dos células hijas'],pts:25},
@@ -26,7 +26,7 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'El nucléolo ayuda a fabricar ribosomas',a:true},{t:'El nucléolo tiene su propia membrana',a:false},{t:'El nucléolo desaparece cuando la célula se divide',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuál es la principal función del nucléolo?',opts:['Sintetizar ARN ribosómico (ARNr) y ensamblar subunidades ribosómicas','Producir ATP por fosforilación oxidativa','Sintetizar lípidos de membrana','Almacenar glucógeno'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es la principal función del nucléolo?',opts:['Sintetizar ARN ribosómico (ARNr) y ensamblar subunidades ribosómicas','Producir ATP por fosforilación oxidativa en sus crestas internas','Sintetizar lípidos de membrana y detoxificar fármacos con enzimas propias','Almacenar glucógeno y liberarlo cuando la célula necesita energía'],ans:0,pts:20},
       {type:'trueFalse',items:[{t:'El nucléolo tiene membrana propia',a:false},{t:'El nucléolo desaparece durante la mitosis',a:true},{t:'El nucléolo produce subunidades ribosómicas',a:true}],pts:10},
     ],
     hard:[
@@ -42,12 +42,12 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'La mitocondria produce energía para la célula',a:true},{t:'Las mitocondrias provienen de una bacteria ancestral',a:true},{t:'La mitocondria produce oxígeno',a:false}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Dónde ocurre exactamente la síntesis de ATP en la mitocondria?',opts:['En la ATP sintasa (complejo F₀F₁) de la membrana interna','En la membrana externa','En el espacio intermembrana','En el ribosoma mitocondrial'],ans:0,pts:20},
+      {type:'quiz',q:'¿Dónde ocurre exactamente la síntesis de ATP en la mitocondria?',opts:['En la ATP sintasa (complejo F₀F₁) de la membrana interna','En los poros de la membrana externa, donde entran los nutrientes','En el espacio intermembrana, donde se acumulan protones','En el ribosoma mitocondrial, junto a las proteínas de la matriz'],ans:0,pts:20},
       {type:'fill',s:'Las mitocondrias producen ___ mediante la fosforilación oxidativa.',words:['ATP','glucosa','ARNm'],cor:'ATP',pts:15},
       {type:'trueFalse',items:[{t:'Las mitocondrias tienen ADN propio',a:true},{t:'El ADN mitocondrial es lineal',a:false},{t:'Las mitocondrias se heredan por línea materna',a:true},{t:'Las mitocondrias realizan el ciclo de Krebs en la matriz',a:true}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuál es el gradiente electroquímico que impulsa la ATP sintasa mitocondrial?',opts:['Gradiente de H⁺ (protones) entre espacio intermembrana y matriz','Gradiente de Na⁺/K⁺ como en neuronas','Gradiente de Ca²⁺ desde el retículo','Gradiente de glucosa transmembrana'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es el gradiente electroquímico que impulsa la ATP sintasa mitocondrial?',opts:['Gradiente de H⁺ (protones) entre espacio intermembrana y matriz','Gradiente de Na⁺/K⁺ entre la matriz y el citoplasma, como en neuronas','Gradiente de Ca²⁺ entre la matriz mitocondrial y el retículo','Gradiente de glucosa a través de la membrana mitocondrial interna'],ans:0,pts:30},
       {type:'fill',s:'La β-oxidación de ácidos grasos ocurre en la ___ mitocondrial.',words:['matriz','membrana interna','espacio intermembrana'],cor:'matriz',pts:20},
       {type:'trueFalse',items:[{t:'El complejo I de la cadena respiratoria es la NADH deshidrogenasa',a:true},{t:'La fosforilación oxidativa ocurre en la membrana externa',a:false},{t:'La teoría endosimbiótica postula origen en una α-proteobacteria',a:true},{t:'Las mitocondrias tienen ribosomas 70S como los procariotas',a:true}],pts:15},
       {type:'sequence',items:['NADH entrega e⁻ al Complejo I','Ubiquinol (CoQ) transporta e⁻ al Complejo III','Citocromo c transfiere e⁻ al Complejo IV','O₂ acepta e⁻ → se forma H₂O','Gradiente de H⁺ impulsa la ATP sintasa → ATP'],pts:25},
@@ -74,7 +74,7 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'La mitocondria tiene su propio ADN',a:true},{t:'Las células vegetales no tienen mitocondrias',a:false},{t:'La mitocondria produce ATP',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Por qué la mitocondria tiene su propia información genética (ADN)?',opts:['Porque desciende de una bacteria que vivió dentro de la célula hace millones de años','Porque la célula le dio una copia de reserva','Porque sintetiza proteínas para el núcleo','Porque controla la división celular'],ans:0,pts:20},
+      {type:'quiz',q:'¿Por qué la mitocondria tiene su propia información genética (ADN)?',opts:['Porque desciende de una bacteria que fue incorporada por la célula','Porque la célula le entregó una copia de reserva de su ADN para emergencias','Porque sintetiza todas las proteínas que necesita el núcleo para dividirse','Porque controla la división celular y necesita sus propias instrucciones'],ans:0,pts:20},
       {type:'trueFalse',items:[{t:'Las mitocondrias tienen ribosomas 70S',a:true},{t:'Las células vegetales no tienen mitocondrias',a:false},{t:'Las mitocondrias se heredan por vía materna',a:true}],pts:10},
     ],
     hard:[
@@ -94,7 +94,7 @@ const MINIGAMES_ALL={
       {type:'sequence',items:['ARNm se asocia al ribosoma del RER','La proteína ingresa al lumen del RER','N-glicosilación inicial en el RER','Formación de vesícula de transporte','Envío al aparato de Golgi'],pts:25},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué secuencia dirige un polipéptido naciente hacia el lumen del RE rugoso?',opts:['Secuencia señal N-terminal reconocida por el SRP (partícula reconocedora de señal)','Secuencia KDEL de retención en RE','Señal de localización nuclear (NLS)','Secuencia de importación mitocondrial'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué secuencia dirige un polipéptido naciente hacia el lumen del RE rugoso?',opts:['Secuencia señal N-terminal reconocida por la partícula SRP','Secuencia KDEL C-terminal, que retiene proteínas dentro del RE','Señal de localización nuclear (NLS) reconocida por las importinas','Secuencia de importación mitocondrial reconocida por el complejo TOM'],ans:0,pts:30},
       {type:'fill',s:'La N-glicosilación en el RE transfiere el oligosacárido desde el ___ al residuo de asparagina de la proteína.',words:['dolicol-fosfato','UDP-glucosa','GDP-manosa'],cor:'dolicol-fosfato',pts:20},
       {type:'trueFalse',items:[{t:'Las chaperoninas Hsp70 (BiP) asisten el plegamiento en el lumen del RER',a:true},{t:'La vía ERAD degrada proteínas mal plegadas retrotranslocándolas al citosol',a:true},{t:'El SRP detiene la traducción hasta que el ribosoma se acopla al RER',a:true},{t:'Todas las proteínas sintetizadas en ribosomas libres van al núcleo',a:false}],pts:15},
     ],
@@ -109,7 +109,7 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'El RE Liso sintetiza esteroides',a:true},{t:'El RE Liso tiene ribosomas adheridos',a:false},{t:'El retículo sarcoplasmático muscular es una forma de RE Liso',a:true}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué sistema enzimático del RE liso hepático realiza la detoxificación de xenobióticos?',opts:['Sistema del citocromo P450 (CYP450) con NADPH-citocromo P450 reductasa','Complejo piruvato deshidrogenasa','Sistema de la xantina oxidasa','Complejo III de la cadena respiratoria'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué sistema enzimático del RE liso hepático realiza la detoxificación de xenobióticos?',opts:['Sistema del citocromo P450 con su NADPH-citocromo P450 reductasa','Complejo piruvato deshidrogenasa de la matriz mitocondrial','Sistema de la xantina oxidasa, que degrada las purinas en el citosol','Complejo III de la cadena respiratoria, en la membrana mitocondrial interna'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'La síntesis de fosfolípidos ocurre principalmente en la cara citosólica del REL',a:true},{t:'La SERCA (Ca²⁺-ATPasa) bombea Ca²⁺ hacia el lumen del RE',a:true},{t:'El RE Liso en células esteroidogénicas contiene colesterol desmolasa',a:true}],pts:15},
       {type:'fill',s:'El sistema del ___ en el RE liso hepático metaboliza fármacos y toxinas.',words:['citocromo P450','citocromo c','ubiquinol'],cor:'citocromo P450',pts:20},
     ],
@@ -142,14 +142,14 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'Los lisosomas contienen hidrolasas ácidas',a:true},{t:'Los lisosomas están presentes en células vegetales',a:false},{t:'La autofagia ocurre en los lisosomas',a:true},{t:'Los lisosomas tienen ADN propio',a:false}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué bomba mantiene el pH ácido del lisosoma?',opts:['V-ATPasa (ATPasa vacuolar que bombea H⁺)','Na⁺/K⁺-ATPasa','Ca²⁺-ATPasa (SERCA)','H⁺/K⁺-ATPasa gástrica'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué bomba mantiene el pH ácido del lisosoma?',opts:['V-ATPasa (ATPasa vacuolar que bombea H⁺ al lumen)','Na⁺/K⁺-ATPasa, que mantiene el potencial de la membrana plasmática','Ca²⁺-ATPasa (SERCA), que carga de calcio al retículo','H⁺/K⁺-ATPasa gástrica, la bomba de las células del estómago'],ans:0,pts:30},
       {type:'fill',s:'La enfermedad de Gaucher se debe al déficit de la enzima lisosomal ___.',words:['glucocerebrosidasa','α-galactosidasa','esfingomielinasa'],cor:'glucocerebrosidasa',pts:20},
       {type:'trueFalse',items:[{t:'La autofagia selectiva de mitocondrias se denomina mitofagia',a:true},{t:'Las LAMP (proteínas de membrana lisosomal) están altamente glicosiladas para protegerse de las hidrolasas',a:true},{t:'El receptor de manosa-6-fosfato reutiliza en el trans-Golgi para captar hidrolasas',a:true}],pts:15},
     ],
   },
   lysosome2:{
     easy:[
-      {type:'quiz',q:'¿Qué pasa cuando el lisosoma digiere partes dañadas de la propia célula?',opts:['Se llama autofagia y ayuda a reciclar componentes','Se llama digestión externa','La célula muere inmediatamente','Produce más ATP'],ans:0,pts:15},
+      {type:'quiz',q:'¿Qué pasa cuando el lisosoma digiere partes dañadas de la propia célula?',opts:['Se llama autofagia y ayuda a reciclar componentes','Se llama digestión externa y elimina bacterias de afuera','La célula muere inmediatamente porque se disuelve por completo','Produce más ATP porque quema las partes dañadas'],ans:0,pts:15},
       {type:'fill',s:'Los lisosomas son producidos por el ___.',words:['aparato de Golgi','núcleo','cloroplasto'],cor:'aparato de Golgi',pts:12},
     ],
     normal:[
@@ -157,7 +157,7 @@ const MINIGAMES_ALL={
       {type:'fill',s:'Los lisosomas son producidos y secretados por el ___.',words:['aparato de Golgi','núcleo','cloroplasto'],cor:'aparato de Golgi',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuál es la diferencia entre macroautofagia y microautofagia?',opts:['La macroautofagia usa autofagosomas de doble membrana; la micro involucra invaginación directa del lisosoma','Son sinónimos del mismo proceso','La microautofagia requiere la proteína Beclin-1','Solo la macroautofagia ocurre en mamíferos'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es la diferencia entre macroautofagia y microautofagia?',opts:['La macro usa autofagosomas de doble membrana; la micro, invaginación directa del lisosoma','Son sinónimos del mismo proceso: ambas usan autofagosomas de doble membrana','La microautofagia requiere la proteína Beclin-1 para formar el autofagosoma','Solo la macroautofagia ocurre en mamíferos; la microautofagia es exclusiva de levaduras y plantas'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'La autofagia mediada por chaperonas (CMA) requiere LAMP-2A',a:true},{t:'mTORC1 activo promueve la autofagia',a:false},{t:'LC3-II es un marcador de membrana del autofagosoma',a:true}],pts:15},
       {type:'fill',s:'En la enfermedad de Tay-Sachs falta la enzima lisosomal ___.',words:['hexosaminidasa A','glucocerebrosidasa','alfa-galactosidasa A'],cor:'hexosaminidasa A',pts:20},
     ],
@@ -175,7 +175,7 @@ const MINIGAMES_ALL={
       {type:'sequence',items:['ARN polimerasa transcribe el ADN → ARNm en el núcleo','ARNm sale por los poros nucleares al citoplasma','El ribosoma se ensambla en el codón de inicio AUG','ARNt traen aminoácidos al ribosoma → elongación de la cadena','Codón de stop → liberación de la proteína terminada'],pts:20},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué actividad enzimática tiene la subunidad grande del ribosoma (60S en eucariotas)?',opts:['Peptidil transferasa (ribozima, catalizada por el ARNr 28S)','Helicasa para desenrollar el ARNm','Kinasa para fosforilar el factor eIF2','ATPasa para translocar el ARNm'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué actividad enzimática tiene la subunidad grande del ribosoma (60S en eucariotas)?',opts:['Peptidil transferasa (ribozima, catalizada por el ARNr 28S)','Helicasa que desenrolla el ARNm antes de la traducción','Kinasa que fosforila el factor eIF2 y frena la iniciación de la síntesis','ATPasa que transloca el ARNm a lo largo de la subunidad pequeña'],ans:0,pts:30},
       {type:'fill',s:'El sitio ___ del ribosoma aloja el ARNt con el aminoácido que se está añadiendo a la cadena.',words:['A (aceptor)','P (peptidil)','E (salida)'],cor:'A (aceptor)',pts:20},
       {type:'trueFalse',items:[{t:'La traducción comienza en el codón AUG (metionina)',a:true},{t:'El factor EF-Tu lleva el aminoacil-ARNt al sitio A en eucariotas',a:false},{t:'La terminación de la traducción requiere factores de liberación (eRF)',a:true}],pts:15},
     ],
@@ -186,11 +186,11 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'El centrosoma ayuda en la división celular',a:true},{t:'El centrosoma está en células vegetales superiores',a:false},{t:'El centrosoma tiene dos centriolos',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuál es la función principal del centrosoma?',opts:['Organizar el huso mitótico durante la división celular','Producir ATP por respiración','Sintetizar lípidos de membrana','Almacenar iones de calcio'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es la función principal del centrosoma?',opts:['Organizar el huso mitótico durante la división celular','Producir el ATP que alimenta la respiración celular durante la mitosis','Sintetizar lípidos de membrana para las dos células hijas','Almacenar iones de calcio y liberarlos al citoplasma'],ans:0,pts:20},
       {type:'trueFalse',items:[{t:'El centrosoma está presente en células vegetales superiores',a:false},{t:'Cada centrosoma contiene dos centriolos',a:true},{t:'El centrosoma organiza microtúbulos',a:true}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué proteínas del material pericentriolar (PCM) nuclean los microtúbulos del huso?',opts:['γ-tubulina y el complejo γ-TuRC (γ-tubulin ring complex)','α y β-tubulina directamente','Dinamina y quinesina','Cofilina y profilina'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué proteínas del material pericentriolar (PCM) nuclean los microtúbulos del huso?',opts:['γ-tubulina y el complejo γ-TuRC (γ-tubulin ring complex)','α y β-tubulina polimerizadas directamente en el citosol','Dinamina y quinesina, que transportan vesículas por el microtúbulo','Cofilina y profilina, que regulan la polimerización de actina'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'La duplicación del centrosoma ocurre durante la fase S del ciclo celular',a:true},{t:'La PLK4 (polo-like kinase 4) regula la biogénesis del centriolo',a:true},{t:'Los centriolos tienen una estructura de 9 tripletes de microtúbulos',a:true},{t:'Las células vegetales superiores tienen centrosomas funcionales',a:false}],pts:15},
       {type:'fill',s:'El centrosoma se duplica durante la fase ___ del ciclo celular.',words:['S','G1','M'],cor:'S',pts:20},
       {type:'sequence',items:['G1: crecimiento celular, síntesis de ciclina D, checkpoint G1/S (Rb-E2F)','S: replicación completa del ADN y duplicación del centrosoma','G2: checkpoint G2/M, activación del complejo MPF (CDK1-ciclina B)','Mitosis (PMAT): condensación, alineación y segregación de cromátidas hermanas','Citocinesis: formación del anillo de actomiosina y sección del citoplasma'],pts:28},
@@ -213,7 +213,7 @@ const MINIGAMES_ALL={
   },
   cytoskeleton:{
     easy:[
-      {type:'quiz',q:'¿Para qué sirve el citoesqueleto de la célula?',opts:['Da forma a la célula y permite que se mueva','Fabrica las proteínas','Produce energía','Guarda el ADN'],ans:0,pts:15},
+      {type:'quiz',q:'¿Para qué sirve el citoesqueleto de la célula?',opts:['Da forma a la célula y permite que se mueva','Fabrica las proteínas que la célula necesita para vivir','Produce la energía que la célula usa para moverse','Guarda el ADN dentro de una membrana protectora'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'El citoesqueleto da forma a la célula',a:true},{t:'El citoesqueleto es solo una membrana rígida',a:false},{t:'El citoesqueleto participa en la división celular',a:true}],pts:8},
     ],
     normal:[
@@ -228,7 +228,7 @@ const MINIGAMES_ALL={
   },
   membrane:{
     easy:[
-      {type:'quiz',q:'¿Cuál es la función principal de la membrana plasmática?',opts:['Proteger la célula y controlar qué entra y sale','Producir energía','Sintetizar proteínas','Guardar el ADN'],ans:0,pts:15},
+      {type:'quiz',q:'¿Cuál es la función principal de la membrana plasmática?',opts:['Proteger la célula y controlar qué entra y sale','Producir la energía que necesita la célula para vivir','Sintetizar todas las proteínas que necesita la célula','Guardar el ADN y dirigir las actividades de la célula'],ans:0,pts:15},
       {type:'fill',s:'La membrana plasmática deja pasar algunas cosas y otras no, se dice que es ___ permeable.',words:['selectivamente','totalmente','nada'],cor:'selectivamente',pts:12},
       {type:'trueFalse',items:[{t:'La membrana plasmática rodea a todas las células',a:true},{t:'Todo puede atravesar la membrana libremente',a:false},{t:'La membrana tiene proteínas que ayudan al transporte',a:true}],pts:8},
     ],
@@ -238,7 +238,7 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'El colesterol estabiliza la fluidez de la membrana',a:true},{t:'Todas las proteínas de membrana son externas (periféricas)',a:false},{t:'La membrana es selectivamente permeable',a:true},{t:'El agua no puede cruzar la membrana por ningún mecanismo',a:false}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué son las balsas lipídicas (lipid rafts) y cuál es su relevancia funcional?',opts:['Microdominios ricos en colesterol y esfingolípidos que concentran receptores y proteínas de señalización','Regiones de bicapa con exceso de fosfolípidos insaturados','Áreas de la membrana sin proteínas integrales','Zonas de endocitosis mediada por clatrina'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué son las balsas lipídicas (lipid rafts) y cuál es su relevancia funcional?',opts:['Microdominios ricos en colesterol y esfingolípidos que concentran proteínas de señalización','Regiones de la bicapa con exceso de fosfolípidos insaturados que aumentan la fluidez de la membrana','Áreas de la membrana sin proteínas integrales, formadas solo por fosfolípidos y agua','Zonas de endocitosis mediada por clatrina donde se forman las vesículas cubiertas'],ans:0,pts:30},
       {type:'fill',s:'El potencial de membrana en reposo de una neurona es de aproximadamente ___ mV.',words:['-70','+40','-90'],cor:'-70',pts:20},
       {type:'trueFalse',items:[{t:'La asimetría de la bicapa lipídica es mantenida por flipasas y flopasas',a:true},{t:'La fosfatidilserina se expone en el exterior durante la apoptosis',a:true},{t:'Las proteínas GPI-ancladas tienen dominios transmembrana',a:false}],pts:15},
       {type:'sequence',items:['Ligando (EGF/insulin) se une al dominio extracelular del receptor RTK','Dimeralización del RTK y trans-autofosforilación en tirosinas intracitoplasmáticas','GRB2-SOS recluta RAS-GDP → RAS-GTP (forma activa)','RAF activa MEK, que activa ERK (cascada MAPK): tres fosforilaciones en serie','ERK nuclear fosforila factores de transcripción (Elk-1, c-Fos) → expresión génica'],pts:28},
@@ -257,7 +257,7 @@ const MINIGAMES_ALL={
       {type:'sequence',items:['Luz solar incide sobre la clorofila','Fotólisis del agua → O₂ + H⁺ + e⁻','Fotofosforilación → ATP y NADPH','Ciclo de Calvin en el estroma','Síntesis de glucosa (G3P)'],pts:25},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué complejo proteico realiza la fotólisis del agua en el fotosistema II?',opts:['Complejo de evolución de oxígeno (OEC) con clúster de Mn₄CaO₅','Centro de reacción P700 del fotosistema I','Plastoquinona (PQ) como aceptor primario','Ferredoxina como donante de electrones'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué complejo proteico realiza la fotólisis del agua en el fotosistema II?',opts:['Complejo de evolución de oxígeno (OEC) con clúster de Mn₄CaO₅','Centro de reacción P700 del fotosistema I, que reduce NADP⁺','Plastoquinona (PQ), aceptor móvil de electrones entre fotosistemas','Ferredoxina, que dona electrones al NADP⁺ reductasa'],ans:0,pts:30},
       {type:'fill',s:'En el ciclo de Calvin, la enzima ___ cataliza la fijación del CO₂ al RuBP.',words:['RuBisCO','PEP carboxilasa','piruvato carboxilasa'],cor:'RuBisCO',pts:20},
       {type:'trueFalse',items:[{t:'En C4, la PEP carboxilasa fija CO₂ en el mesófilo y la decarboxilación en la vaina lo libera al ciclo de Calvin',a:true},{t:'El ciclo de Calvin es un proceso dependiente de la luz indirectamente (necesita ATP y NADPH)',a:true},{t:'El gradiente de H⁺ en el tilacoide impulsa la ATP sintasa cloroplástica (CF₁CF₀)',a:true}],pts:15},
     ],
@@ -272,7 +272,7 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'El cloroplasto tiene ADN propio',a:true},{t:'Los cloroplastos provienen de una cianobacteria ancestral',a:true},{t:'Los cloroplastos están presentes en células animales',a:false},{t:'El ciclo de Calvin ocurre en el estroma',a:true}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué pigmentos accesorios transfieren energía de excitación a la clorofila a en los complejos antena?',opts:['Clorofila b, carotenoides (β-caroteno, xantofilas) y ficobiliproteínas en algas','Solo clorofila b en todos los organismos','Únicamente carotenoides en plantas superiores','Feofitina como pigmento accesorio principal'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué pigmentos accesorios transfieren energía de excitación a la clorofila a en los complejos antena?',opts:['Clorofila b, carotenoides (β-caroteno, xantofilas) y ficobiliproteínas','Solo la clorofila b, presente en todos los organismos fotosintéticos','Únicamente los carotenoides, que son los únicos pigmentos accesorios en plantas superiores','Feofitina, pigmento accesorio principal de los complejos antena'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'La plastocianina (PC) transfiere electrones del citocromo b6f al fotosistema I',a:true},{t:'El NADPH producido en el fotosistema I es usado en el ciclo de Calvin',a:true},{t:'La fotorespiración ocurre cuando RuBisCO fija O₂ en lugar de CO₂',a:true}],pts:15},
     ],
   },
@@ -282,17 +282,17 @@ const MINIGAMES_ALL={
       {type:'fill',s:'El cloroplasto fija el CO₂ del aire durante el ciclo de ___.',words:['Calvin','Krebs','digestión'],cor:'Calvin',pts:12},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuál es la diferencia entre las reacciones luminosas y el ciclo de Calvin?',opts:['Las luminosas capturan energía y producen ATP/NADPH; el ciclo de Calvin fija CO₂ usando esa energía','Las luminosas ocurren en el estroma y el ciclo de Calvin en el tilacoide','Las luminosas producen glucosa directamente','No hay diferencia, son el mismo proceso'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es la diferencia entre las reacciones luminosas y el ciclo de Calvin?',opts:['Las luminosas producen ATP y NADPH; el ciclo de Calvin los usa para fijar CO₂','Las luminosas ocurren en el estroma y el ciclo de Calvin en la membrana del tilacoide','Las luminosas producen glucosa directamente y el ciclo de Calvin solo libera oxígeno','No hay diferencia, son el mismo proceso en dos momentos del día'],ans:0,pts:20},
       {type:'fill',s:'El cloroplasto fija el CO₂ durante el ciclo de ___.',words:['Calvin','Krebs','Cori'],cor:'Calvin',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Por qué la clorofila a refleja luz verde (~550 nm) y absorbe principalmente rojo e azul?',opts:['Por la estructura del anillo porfirínico con Mg²⁺ central y la cola fitol que determina los estados electrónicos','Porque el Mg²⁺ central absorbe toda la luz visible excepto verde','Porque las xantofilas convierten luz verde en otras longitudes de onda','Por efecto de la proteína de unión a clorofila (LHCII)'],ans:0,pts:30},
+      {type:'quiz',q:'¿Por qué la clorofila a refleja luz verde (~550 nm) y absorbe principalmente rojo y azul?',opts:['Por el anillo porfirínico con Mg²⁺ central, que determina los estados electrónicos','Porque el Mg²⁺ central absorbe toda la luz visible y solo deja pasar la verde por reflexión','Porque las xantofilas convierten la luz verde en otras longitudes de onda antes de reflejarla','Por efecto de la proteína de unión a clorofila (LHCII), que filtra el espectro visible'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'La clorofila a tiene máximos de absorción ~430 nm (azul-violeta) y ~680 nm (rojo)',a:true},{t:'Los carotenoides protegen al cloroplasto de la fotoinhibición por exceso de luz',a:true},{t:'La clorofila b tiene un grupo aldehído en C7 en lugar del metilo de la clorofila a',a:true}],pts:15},
     ],
   },
   vacuole:{
     easy:[
-      {type:'quiz',q:'¿Para qué sirve la vacuola central de las plantas?',opts:['Almacena agua y mantiene la firmeza de la célula','Produce energía','Sintetiza proteínas','Controla la división celular'],ans:0,pts:15},
+      {type:'quiz',q:'¿Para qué sirve la vacuola central de las plantas?',opts:['Almacena agua y mantiene la firmeza de la célula','Produce la energía que la planta necesita para crecer','Sintetiza las proteínas que forman la pared de la célula','Controla la división celular y el crecimiento de la planta'],ans:0,pts:15},
       {type:'fill',s:'La vacuola mantiene la ___ celular al absorber agua, lo que mantiene la planta erguida.',words:['turgencia','temperatura','forma esférica'],cor:'turgencia',pts:12},
       {type:'trueFalse',items:[{t:'La vacuola vegetal puede ocupar la mayor parte del volumen celular',a:true},{t:'Las células animales tienen una gran vacuola central',a:false},{t:'La vacuola almacena agua y pigmentos',a:true}],pts:8},
     ],
@@ -302,21 +302,21 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'La vacuola central puede ocupar el 90% del volumen celular vegetal',a:true},{t:'Las vacuolas almacenan pigmentos antocianinas',a:true},{t:'Las células animales tienen una gran vacuola central',a:false},{t:'La vacuola cumple función lisosomal en plantas',a:true}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué transportadores del tonoplasto regulan el pH vacuolar y el almacenamiento de malato en plantas CAM?',opts:['V-ATPasa y pirofosfatasa vacuolar (V-PPasa) junto a canales de malato (ALMT)',  'Solo acuaporinas TIP','Bombas Na⁺/H⁺ como en animales','Canales CFTR adaptados al vegetal'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué transportadores del tonoplasto regulan el pH vacuolar y el almacenamiento de malato en plantas CAM?',opts:['V-ATPasa y V-PPasa del tonoplasto, junto a canales de malato (ALMT)','Solo acuaporinas TIP, que controlan únicamente el paso de agua y solutos pequeños','Bombas Na⁺/K⁺-ATPasa idénticas a las de las células animales','Canales CFTR adaptados al vegetal, que transportan cloruro y bicarbonato'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'Las acuaporinas TIP (tonoplast intrinsic proteins) facilitan el flujo de agua al interior vacuolar',a:true},{t:'Las antocianinas son flavonoides solubles en agua almacenados en el lumen vacuolar',a:true},{t:'La presión de turgor es generada por la entrada de agua desde apoplasto al simplasto',a:true}],pts:15},
     ],
   },
   plasmodesmata:{
     easy:[
-      {type:'quiz',q:'¿Para qué sirven los plasmodesmos entre células vegetales?',opts:['Son canales que conectan células vecinas para que puedan comunicarse','Son poros de la membrana nuclear','Son los lugares donde se fabrica la celulosa','Son los puntos de unión al suelo'],ans:0,pts:15},
+      {type:'quiz',q:'¿Para qué sirven los plasmodesmos entre células vegetales?',opts:['Son canales que conectan células vecinas y las dejan comunicarse','Son poros de la membrana nuclear por donde sale el ARN','Son los lugares donde se fabrica la celulosa de la pared','Son los puntos donde la raíz se une al suelo y absorbe agua del terreno'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'Los plasmodesmos conectan células vegetales vecinas',a:true},{t:'Los plasmodesmos son exclusivos de células animales',a:false},{t:'Los virus pueden moverse entre células usando plasmodesmos',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuál es la función de los plasmodesmos?',opts:['Comunicar el citoplasma de células vegetales vecinas','Absorber luz solar','Sintetizar celulosa para la pared','Almacenar agua y pigmentos'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es la función de los plasmodesmos?',opts:['Comunicar el citoplasma de células vegetales vecinas','Absorber la luz solar y transformarla en energía química','Sintetizar celulosa para reforzar la pared de la célula','Almacenar agua y pigmentos dentro de la célula vegetal'],ans:0,pts:20},
       {type:'trueFalse',items:[{t:'Los plasmodesmos son exclusivos de células vegetales',a:true},{t:'Los virus vegetales se propagan a través de plasmodesmos',a:true},{t:'Los plasmodesmos son equivalentes a las gap junctions animales',a:true}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué estructura del RE atraviesa el canal del plasmodesmo conectando células adyacentes?',opts:['El desmotúbulo (tubo de membrana del RE apprimé)','Una extensión del tonoplasto','Un filamento de actina hueco','Una rama del aparato de Golgi'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué estructura del RE atraviesa el canal del plasmodesmo conectando células adyacentes?',opts:['El desmotúbulo (tubo de membrana del RE comprimido)','Una extensión del tonoplasto que cruza la pared celular','Un filamento de actina hueco que une los dos citoplasmas','Una rama del aparato de Golgi que atraviesa la laminilla media'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'El tamaño de exclusión molecular (SEL) del plasmodesmo puede regularse durante infección viral',a:true},{t:'La proteína viral de movimiento (MP) dilata el SEL para facilitar la propagación',a:true},{t:'Los plasmodesmos secundarios se forman durante el desarrollo; los primarios solo post-división',a:false}],pts:15},
     ],
   },
@@ -332,14 +332,14 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'La pared celular rodea la membrana plasmática en plantas',a:true},{t:'Las células animales tienen pared celular',a:false},{t:'La lignina refuerza la pared celular secundaria',a:true},{t:'Los hongos tienen pared de celulosa igual que las plantas',a:false}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Cómo se organiza la celulosa en la pared primaria de células en expansión?',opts:['Microfibrillas orientadas perpendicularmente al eje de crecimiento (crecimiento anisótropo)','Microfibrillas al azar en una matriz de pectina únicamente','Capas paralelas de lignina entrecruzadas con xilano','Red de calosa con microfibrillas de quitina'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cómo se organiza la celulosa en la pared primaria de células en expansión?',opts:['Microfibrillas orientadas perpendicularmente al eje de crecimiento','Microfibrillas dispuestas al azar en una matriz de pectina únicamente','Capas paralelas de lignina entrecruzadas con xilano y suberina','Red de calosa con microfibrillas de quitina, como en los hongos'],ans:0,pts:30},
       {type:'fill',s:'La enzima ___ sintetiza microfibrillas de celulosa moviéndose en la membrana plasmática.',words:['celulosa sintasa (CesA)','quitina sintasa','pectato liasa'],cor:'celulosa sintasa (CesA)',pts:20},
       {type:'trueFalse',items:[{t:'Las expansinas relajan la pared celular rompiendo puentes de hidrógeno entre celulosa y xiloglucano',a:true},{t:'La laminarina (β-1,3-glucano) forma la pared primaria en plantas superiores',a:false},{t:'La subrina es un polímero lipídico que impermeabiliza la banda de Caspari en la endodermis',a:true}],pts:15},
     ],
   },
   nucleoid:{
     easy:[
-      {type:'quiz',q:'¿Qué es el nucleoide de una bacteria?',opts:['La zona donde está concentrado su ADN (sin membrana que lo rodee)','El núcleo de la bacteria con membrana','La mitocondria de la bacteria','El lugar donde fabrica proteínas'],ans:0,pts:15},
+      {type:'quiz',q:'¿Qué es el nucleoide de una bacteria?',opts:['La zona donde está concentrado su ADN (sin membrana que lo rodee)','El núcleo de la bacteria, rodeado por una membrana propia','El lugar donde la bacteria fabrica todas sus proteínas y las empaqueta','La mitocondria de la bacteria, donde produce energía'],ans:0,pts:15},
       {type:'fill',s:'El ADN del nucleoide es ___, no lineal como en células eucariotas.',words:['circular','cuadrado','fragmentado'],cor:'circular',pts:12},
       {type:'trueFalse',items:[{t:'El nucleoide no tiene membrana propia',a:true},{t:'El nucleoide tiene la misma función que el núcleo eucariota',a:true},{t:'Las bacterias tienen varios nucleoides siempre',a:false}],pts:8},
     ],
@@ -367,15 +367,15 @@ const MINIGAMES_ALL={
   },
   plasmid:{
     easy:[
-      {type:'quiz',q:'¿Para qué sirven los plásmidos de las bacterias?',opts:['Dan ventajas extra como resistir antibióticos o digerir nuevos alimentos','Son el cromosoma principal de la bacteria','Producen energía extra','Forman la pared celular'],ans:0,pts:15},
+      {type:'quiz',q:'¿Para qué sirven los plásmidos de las bacterias?',opts:['Dan ventajas extra, como resistir antibióticos o digerir alimentos nuevos','Son el cromosoma principal de la bacteria y contienen todos sus genes esenciales','Producen la energía extra que la bacteria necesita para dividirse','Forman la pared celular que protege a la bacteria del medio'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'Los plásmidos son ADN extra de las bacterias',a:true},{t:'Los plásmidos son ARN mensajero',a:false},{t:'Los plásmidos se usan en biotecnología para insertar genes',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Para qué se usan los plásmidos en biotecnología moderna?',opts:['Como vectores para insertar y expresar genes de interés en bacterias','Para producir ATP extra en fermentación','Para degradar proteínas dañadas','Para síntesis de lípidos estructurales'],ans:0,pts:20},
+      {type:'quiz',q:'¿Para qué se usan los plásmidos en biotecnología moderna?',opts:['Como vectores para insertar y expresar genes en bacterias','Para producir ATP extra durante la fermentación de la bacteria','Para degradar proteínas dañadas','Para sintetizar los lípidos estructurales de la membrana bacteriana'],ans:0,pts:20},
       {type:'trueFalse',items:[{t:'Los plásmidos se replican independientemente del cromosoma',a:true},{t:'Los plásmidos son moléculas de ADN lineal',a:false},{t:'Los plásmidos pueden conferir resistencia a antibióticos',a:true}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué es el origen de replicación (ori) de un plásmido y cómo determina el número de copias?',opts:['Secuencia donde se inicia la replicación; ori de alto número de copias como pUC produce ~500 copias vs oriP15A ~15','La región promotora del gen de resistencia','El sitio de restricción múltiple (MCS)','El gen rep que codifica la helicasa replicativa'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué es el origen de replicación (ori) de un plásmido y cómo determina el número de copias?',opts:['Secuencia donde empieza la replicación; pUC da ~500 copias y p15A solo ~15','La región promotora del gen de resistencia, que fija cuántas copias hay por célula','El sitio de clonación múltiple (MCS), que determina cuántas copias hay','El gen rep, que codifica la helicasa replicativa del plásmido'],ans:0,pts:30},
       {type:'fill',s:'La conjugación bacteriana transfiere plásmidos a través de un ___ formado por pili sexual.',words:['poro de conjugación','flagelo','plasmodesmo'],cor:'poro de conjugación',pts:20},
       {type:'trueFalse',items:[{t:'Los plásmidos Ti de Agrobacterium se usan para transformar plantas genéticamente',a:true},{t:'El sistema CRISPR-Cas9 se puede entregar en células mediante plásmidos',a:true},{t:'Los plásmidos R (de resistencia) solo se transmiten verticalmente',a:false}],pts:15},
       {type:'fill',s:'Los plasmidos de resistencia se transfieren entre bacterias mediante ___, un tipo de transferencia genica horizontal.',words:['conjugacion','transduccion','transformacion'],cor:'conjugacion',pts:20},
@@ -418,15 +418,15 @@ const MINIGAMES_ALL={
   },
   ribosome70s2:{
     easy:[
-      {type:'quiz',q:'¿Por qué los antibióticos pueden matar bacterias sin hacernos daño a nosotros?',opts:['Porque los ribosomas bacterianos son distintos a los nuestros y el antibiótico solo encaja en los bacterianos','Porque las bacterias son más pequeñas','Porque nuestras células digieren los antibióticos','Porque los antibióticos solo actúan fuera de las células'],ans:0,pts:15},
+      {type:'quiz',q:'¿Por qué los antibióticos pueden matar bacterias sin hacernos daño a nosotros?',opts:['Porque los ribosomas bacterianos son distintos a los nuestros y el antibiótico solo encaja en ellos','Porque las bacterias son mucho más pequeñas y el antibiótico las alcanza antes que a las células nuestras','Porque nuestras células digieren los antibióticos antes de que lleguen a hacernos daño','Porque los antibióticos solo actúan fuera de las células, donde viven las bacterias'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'Los ribosomas bacterianos son 70S y los humanos son 80S',a:true},{t:'Los antibióticos dañan por igual ribosomas bacterianos y humanos',a:false},{t:'Las mitocondrias tienen ribosomas 70S como las bacterias',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Por qué los antibióticos pueden inhibir ribosomas bacterianos sin dañar células humanas?',opts:['Los ribosomas bacterianos (70S) son distintos a los humanos (80S)','Las bacterias no tienen ribosomas en realidad','Los antibióticos solo actúan fuera de la célula','Los ribosomas humanos son más lentos'],ans:0,pts:20},
+      {type:'quiz',q:'¿Por qué los antibióticos pueden inhibir ribosomas bacterianos sin dañar células humanas?',opts:['Los ribosomas bacterianos (70S) son distintos a los humanos (80S)','Las bacterias no tienen ribosomas, por eso se las ataca por otra vía','Los antibióticos solo actúan fuera de la célula, sin entrar a ella','Los ribosomas humanos son más lentos y los antibióticos los evitan'],ans:0,pts:20},
       {type:'trueFalse',items:[{t:'Los ribosomas mitocondriales son 70S',a:true},{t:'Inhibir el ribosoma 70S no afecta células eucariotas normales',a:true},{t:'Los ribosomas 80S son más pequeños que los 70S',a:false}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué mecanismo de resistencia bacteriana modifica químicamente al antibiótico aminoglucósido?',opts:['Enzimas modificadoras (acetiltransferasas, fosfotransferasas, nucleotidiltransferasas)','Bombas de eflujo que expulsan el aminoglucósido','Mutaciones en el ARNr 16S que reducen la afinidad','Plásmidos que secuestran el aminoglucósido en el periplasma'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué mecanismo de resistencia bacteriana modifica químicamente al antibiótico aminoglucósido?',opts:['Enzimas modificadoras (acetil-, fosfo- y nucleotidiltransferasas)','Bombas de eflujo que expulsan el aminoglucósido fuera de la bacteria','Mutaciones en el ARNr 16S que reducen la afinidad del ribosoma','Plásmidos que secuestran el aminoglucósido en el periplasma'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'La resistencia mediada por plásmidos al cloranfenicol usa la enzima CAT (cloranfenicol acetiltransferasa)',a:true},{t:'Los ribosomas 55S mitocondriales de mamíferos son diana de aminoglucósidos a altas dosis (ototoxicidad)',a:true},{t:'La vancomicina inhibe directamente el ribosoma bacteriano',a:false}],pts:15},
       {type:'fill',s:'El cloranfenicol inhibe la síntesis proteica uniéndose a la subunidad ___ del ribosoma bacteriano.',words:['50S','30S','70S total'],cor:'50S',pts:20},
 
@@ -441,7 +441,7 @@ const MINIGAMES_ALL={
   },
   pili:{
     easy:[
-      {type:'quiz',q:'¿Para qué usan las bacterias los pili?',opts:['Para pegarse a superficies y a otras células','Para moverse como un motor','Para producir energía','Para guardar su ADN extra'],ans:0,pts:15},
+      {type:'quiz',q:'¿Para qué usan las bacterias los pili?',opts:['Para pegarse a superficies y a otras células','Para moverse como un motor y nadar dentro del líquido','Para producir la energía que necesita la bacteria','Para guardar su ADN extra dentro de la célula'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'Los pili ayudan a las bacterias a adherirse a células del cuerpo',a:true},{t:'Los pili son visibles sin microscopio',a:false},{t:'Algunos pili sirven para transferir ADN entre bacterias',a:true}],pts:8},
     ],
     normal:[
@@ -465,17 +465,17 @@ const MINIGAMES_ALL={
   },
   flagella:{
     easy:[
-      {type:'quiz',q:'¿Para qué sirve el flagelo de las bacterias?',opts:['Para moverse, nada en el líquido para buscar alimento o huir de toxinas','Para pegarse a superficies','Para producir energía','Para transferir ADN a otra bacteria'],ans:0,pts:15},
+      {type:'quiz',q:'¿Para qué sirve el flagelo de las bacterias?',opts:['Para moverse y nadar en el líquido buscando alimento o huyendo de toxinas','Para pegarse a las superficies y formar capas protectoras con otras bacterias','Para producir la energía que necesita la bacteria al crecer','Para transferir ADN a otra bacteria durante la conjugación'],ans:0,pts:15},
       {type:'fill',s:'El flagelo bacteriano está hecho de la proteína ___.',words:['flagelina','tubulina','actina'],cor:'flagelina',pts:12},
       {type:'trueFalse',items:[{t:'El flagelo bacteriano ayuda a la bacteria a moverse',a:true},{t:'El flagelo bacteriano es igual al de las células animales',a:false},{t:'Las bacterias usan el flagelo para acercarse o alejarse de sustancias',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuál es la diferencia estructural entre el flagelo bacteriano y el eucariota?',opts:['El bacteriano rota (flagelina); el eucariota ondula con axonema 9+2 (tubulina)','Ambos tienen estructura de microtúbulos 9+2 idéntica','El eucariota rota mucho más rápido que el bacteriano','El bacteriano es siempre más largo que el eucariota'],ans:0,pts:20},
-      {type:'quiz',q:'¿Cómo se ensambla el filamento flagelar bacteriano?',opts:['Las subunidades de flagelina viajan por el canal hueco del flagelo y se añaden en el extremo distal','Se construye de la base hacia arriba añadiendo subunidades en el cuerpo basal','Se sintetiza en el ribosoma y se exporta completo al exterior','Las subunidades se insertan desde el exterior por difusión pasiva'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es la diferencia estructural entre el flagelo bacteriano y el eucariota?',opts:['El bacteriano rota (flagelina); el eucariota ondula con axonema 9+2 (tubulina)','Ambos tienen estructura de microtúbulos 9+2 idéntica y se mueven igual','El eucariota rota mucho más rápido que el bacteriano y usa flagelina','El bacteriano es siempre más largo que el eucariota y está rodeado por una membrana'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cómo se ensambla el filamento flagelar bacteriano?',opts:['La flagelina viaja por el canal hueco del flagelo y se añade en el extremo distal','Se construye desde la base, añadiendo subunidades nuevas en el cuerpo basal del flagelo','Se sintetiza en el ribosoma y se exporta completo al exterior','Las subunidades se unen desde el exterior por difusión pasiva'],ans:0,pts:20},
       {type:'trueFalse',items:[{t:'El flagelo bacteriano puede rotar hasta 1.500 rpm',a:true},{t:'El flagelo bacteriano tiene axonema 9+2 de microtúbulos',a:false},{t:'La bacteria usa el flagelo para quimiotaxis',a:true}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué componente del cuerpo basal bacteriano actúa como estator del motor flagelar?',opts:['Las proteínas MotA/MotB forman el estator que conduce protones para generar torque','El anillo L embebido en lipopolisacárido','El gancho (hook) de proteína FlgE','El filamento de flagelina polimérizada'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué componente del cuerpo basal bacteriano actúa como estator del motor flagelar?',opts:['MotA/MotB: el estator que conduce protones y genera el torque','El anillo L embebido en el lipopolisacárido de la membrana externa','El gancho (hook) de proteína FlgE que une el motor con el filamento','El filamento de flagelina polimerizada que actúa como hélice'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'El motor flagelar bacteriano convierte el gradiente de protones (pmf) en rotación mecánica',a:true},{t:'La proteína FliM del anillo C actúa como interruptor de dirección de rotación',a:true},{t:'CheY-P fosforilado promueve la rotación antihoraria del flagelo',a:false}],pts:15},
       {type:'sequence',items:['Receptor MCP detecta quimioatractor en el ambiente','Proteína CheA (histidina quinasa) se autofosforila','CheY-P migra al motor y se une al anillo FliM','Rotación antihoraria del flagelo → nado recto hacia el atractor','CheZ defosforila CheY-P → restablecimiento del estado basal'],pts:25},
       {type:'fill',s:'La rotacion ___ del flagelo bacteriano produce movimiento recto, mientras que la horaria produce tumbo.',words:['antihoraria','horaria','lateral'],cor:'antihoraria',pts:20},
@@ -493,7 +493,7 @@ const MINIGAMES_ALL={
   },
   cell_wall_p:{
     easy:[
-      {type:'quiz',q:'¿Por qué los antibióticos como la penicilina pueden matar bacterias?',opts:['Destruyen la pared celular de la bacteria, que la protege y le da forma','Destruyen el ADN de la bacteria','Bloquean la reproducción directamente','Deshidratan la bacteria'],ans:0,pts:15},
+      {type:'quiz',q:'¿Por qué los antibióticos como la penicilina pueden matar bacterias?',opts:['Destruyen la pared de la bacteria, que la protege y le da forma','Destruyen el ADN de la bacteria hasta que ya no puede dividirse ni crecer','Bloquean la reproducción directamente al frenar la copia de su ADN','Deshidratan a la bacteria hasta que se seca por completo y muere'],ans:0,pts:15},
       {type:'fill',s:'La pared de las bacterias está hecha de una sustancia llamada ___.',words:['peptidoglicano','celulosa','colágeno'],cor:'peptidoglicano',pts:12},
       {type:'trueFalse',items:[{t:'La pared celular bacteriana protege a la bacteria',a:true},{t:'La penicilina daña la pared celular bacteriana',a:true},{t:'La pared bacteriana es igual a la de las plantas',a:false}],pts:8},
     ],
@@ -503,7 +503,7 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'Gram+ tiene pared de peptidoglicano gruesa',a:true},{t:'Gram− tiene membrana externa adicional',a:true},{t:'La penicilina destruye la membrana plasmática bacteriana',a:false}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuál es el mecanismo molecular por el que la penicilina inhibe la síntesis de peptidoglicano?',opts:['Se une covalentemente a PBPs (penicillin-binding proteins, transpeptidasas) bloqueando el entrecruzamiento de cadenas peptídicas','Inhibe la MurA que sintetiza el primer precursor UDP-N-acetilmuramato','Bloquea la transferasa que añade N-acetilglucosamina al lípido II','Interfiere con el transporte del lípido II a través de la membrana'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es el mecanismo molecular por el que la penicilina inhibe la síntesis de peptidoglicano?',opts:['Se une a las PBP (transpeptidasas) y bloquea el entrecruzamiento de las cadenas peptídicas','Inhibe la MurA, enzima que sintetiza el primer precursor, el UDP-N-acetilmuramato, en el citoplasma','Bloquea la transferasa que añade N-acetilglucosamina al lípido II en la membrana','Interfiere con el transporte del lípido II a través de la membrana citoplasmática'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'Las bacterias MRSA producen una PBP2a (codificada por mecA) con baja afinidad por β-lactámicos',a:true},{t:'La vancomicina se une al dipéptido D-Ala-D-Ala del precursor del peptidoglicano',a:true},{t:'Las bacterias Gram− son naturalmente resistentes a penicilina G por su membrana externa (LPS)',a:true}],pts:15},
       {type:'fill',s:'Los antibióticos beta-lactámicos inhiben la síntesis de ___, el componente de la pared bacteriana.',words:['peptidoglicano','quitina','celulosa'],cor:'peptidoglicano',pts:20},
 
@@ -520,7 +520,7 @@ const MINIGAMES_ALL={
   },
   membrane_p:{
     easy:[
-      {type:'quiz',q:'¿Qué función extra cumple la membrana plasmática de las bacterias que en nosotros hace la mitocondria?',opts:['Produce energía (ATP) mediante la respiración celular','Fabrica proteínas','Almacena el ADN','Realiza la fotosíntesis siempre'],ans:0,pts:15},
+      {type:'quiz',q:'¿Qué función extra cumple la membrana plasmática de las bacterias que en nosotros hace la mitocondria?',opts:['Produce energía (ATP) mediante la respiración celular','Fabrica las proteínas de la bacteria en su superficie interna','Almacena el ADN dentro de un núcleo propio con membrana','Realiza la fotosíntesis siempre, aunque no haya luz'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'La membrana bacteriana produce energía como la mitocondria',a:true},{t:'La membrana bacteriana tiene colesterol como la nuestra',a:false},{t:'Algunos antibióticos dañan la membrana bacteriana directamente',a:true}],pts:8},
     ],
     normal:[
@@ -528,7 +528,7 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'La membrana bacteriana contiene colesterol como la eucariota',a:false},{t:'La membrana bacteriana cumple funciones de la mitocondria eucariota',a:true},{t:'Las polimixinas desestabilizan la membrana bacteriana',a:true}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué lípidos reemplazan al colesterol en la membrana bacteriana manteniendo la fluidez?',opts:['Hopanoides (pentacíclicos tipo hopano) en muchas bacterias; ácidos grasos ramificados en otras','Solo fosfolípidos insaturados de cadena larga','Esfingolípidos similares a los eucariotas','Cardiolipina exclusivamente en todas las bacterias'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué lípidos reemplazan al colesterol en la membrana bacteriana manteniendo la fluidez?',opts:['Hopanoides en muchas bacterias y ácidos grasos ramificados en otras','Solo fosfolípidos insaturados de cadena larga, como en los eucariotas','Esfingolípidos similares a los eucariotas','Cardiolipina, presente exclusivamente y en abundancia en todas las bacterias'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'La daptomicina se inserta en la membrana bacteriana dependiente de Ca²⁺ formando poros',a:true},{t:'Las polimixinas B y E (colistina) interaccionan con el LPS de la membrana externa de Gram−',a:true},{t:'El sistema de dos componentes PhoP/PhoQ regula modificaciones del LPS para resistir polimixinas',a:true}],pts:15},
       {type:'fill',s:'Las bacterias Gram negativas tienen una ___ adicional fuera de la delgada capa de peptidoglicano.',words:['membrana externa','capsula celulosa','vaina proteica'],cor:'membrana externa',pts:20},
 
@@ -545,7 +545,7 @@ const MINIGAMES_ALL={
   },
   capsule:{
     easy:[
-      {type:'quiz',q:'¿Para qué sirve la cápsula de algunas bacterias?',opts:['Las protege de ser destruidas por nuestro sistema inmune','Las ayuda a moverse','Les da color','Las ayuda a reproducirse más rápido'],ans:0,pts:15},
+      {type:'quiz',q:'¿Para qué sirve la cápsula de algunas bacterias?',opts:['Las protege de ser destruidas por nuestro sistema inmune','Las ayuda a moverse por el líquido como un motor','Les da color y las hace visibles al microscopio sin tinción','Las ayuda a reproducirse más rápido que las bacterias sin cápsula'],ans:0,pts:15},
       {type:'fill',s:'La cápsula bacteriana es un factor de ___ porque hace que la bacteria sea más peligrosa.',words:['virulencia','nutrición','movimiento'],cor:'virulencia',pts:12},
       {type:'trueFalse',items:[{t:'La cápsula protege a las bacterias del sistema inmune',a:true},{t:'Todas las bacterias tienen cápsula',a:false},{t:'La cápsula está hecha principalmente de azúcares (polisacáridos)',a:true}],pts:8},
     ],
@@ -555,7 +555,7 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'La cápsula es un factor de virulencia bacteriana',a:true},{t:'Todas las bacterias poseen cápsula obligatoriamente',a:false},{t:'La cápsula está formada principalmente por polisacáridos',a:true},{t:'El experimento de Griffith usó cápsula para demostrar la transformación bacteriana',a:true}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Por qué la cápsula de ácido hialurónico de Streptococcus pyogenes evade el sistema inmune eficientemente?',opts:['El ácido hialurónico mimetiza el tejido conectivo del hospedero evitando el reconocimiento como extraño','Produce una proteasa que degrada anticuerpos IgG','Activa el complemento vía alternativa para consumirlo','Inhibe la maduración de células dendríticas'],ans:0,pts:30},
+      {type:'quiz',q:'¿Por qué la cápsula de ácido hialurónico de Streptococcus pyogenes evade el sistema inmune eficientemente?',opts:['Mimetiza el tejido conectivo del hospedero y evita el reconocimiento como extraño','Produce una proteasa que degrada los anticuerpos IgG del hospedero','Activa el complemento por la vía alternativa para consumirlo y agotarlo','Inhibe la maduración de las células dendríticas y bloquea la presentación de antígenos'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'Las vacunas antineumocócicas (PCV13) contienen polisacáridos capsulares conjugados a proteínas carrier',a:true},{t:'La cápsula del anthrax de Bacillus anthracis está compuesta de poli-D-ácido glutámico (no polisacárido)',a:true},{t:'La opsonización con IgG y C3b supera la evasión capsular facilitando la fagocitosis',a:true}],pts:15},
       {type:'fill',s:'La cápsula bacteriana está compuesta principalmente de ___, que la protege de la fagocitosis.',words:['polisacáridos','proteínas D-glutámicas','peptidoglicano'],cor:'polisacáridos',pts:20},
 
@@ -578,7 +578,7 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'La pared de los hongos está hecha de quitina',a:true},{t:'La pared de los hongos es igual a la de las plantas',a:false},{t:'Los antibióticos como la penicilina destruyen la pared de los hongos',a:false}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuál es la diferencia entre la pared de quitina fúngica y la pared de celulosa vegetal?',opts:['La quitina es un polisacárido de N-acetilglucosamina; la celulosa es de glucosa','Son el mismo polímero con diferente nombre','La quitina es inorgánica; la celulosa es orgánica','Solo difieren en el grado de lignificación'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es la diferencia entre la pared de quitina fúngica y la pared de celulosa vegetal?',opts:['La quitina es un polisacárido de N-acetilglucosamina; la celulosa es de glucosa','Son el mismo polímero con distinto nombre según el reino','La quitina es un mineral inorgánico; la celulosa es orgánica','Solo difieren en el grado de lignificación y en el contenido de pectina de la pared'],ans:0,pts:20},
       {type:'trueFalse',items:[{t:'Las equinocandinas atacan la síntesis de β-glucano de la pared fúngica',a:true},{t:'La pared de quitina es idéntica a la pared de peptidoglicano bacteriano',a:false},{t:'La quitina fúngica es una diana antifúngica',a:true}],pts:10},
     ],
     hard:[
@@ -608,7 +608,7 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'Los hongos realizan mitosis cerrada sin romper la envoltura nuclear',a:true},{t:'El genoma de los hongos es mucho más grande que el humano',a:false},{t:'La levadura fue el primer eucariota en secuenciar su genoma',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuál es la diferencia entre la mitosis cerrada (hongos) y la abierta (animales)?',opts:['En la cerrada, la envoltura nuclear persiste y el huso se forma dentro del núcleo','En la cerrada, los cromosomas no se condensan','En la cerrada, el núcleo se duplica sin división celular','No hay diferencia funcional, solo terminológica'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es la diferencia entre la mitosis cerrada (hongos) y la abierta (animales)?',opts:['En la cerrada la envoltura persiste y el huso se forma dentro del núcleo','En la cerrada, los cromosomas no se condensan durante la división','En la cerrada, el núcleo se duplica sin que la célula se divida','No hay diferencia funcional, solo terminológica, entre ambos tipos de mitosis'],ans:0,pts:20},
       {type:'trueFalse',items:[{t:'Los hongos haploides y diploides existen como etapas del ciclo vital',a:true},{t:'La mitosis cerrada es exclusiva de hongos y eucariotas primitivos',a:true},{t:'El huso mitótico fúngico se forma fuera del núcleo',a:false}],pts:10},
     ],
     hard:[
@@ -634,11 +634,11 @@ const MINIGAMES_ALL={
   },
   mito_f:{
     easy:[
-      {type:'quiz',q:'¿Qué rol tienen las mitocondrias en la fermentación alcohólica de levaduras?',opts:['Pueden cambiar entre respiración y fermentación según el O₂ disponible','Realizan siempre la fermentación sin importar el O₂','No participan en la producción de etanol','Solo funcionan en la fase de crecimiento exponencial'],ans:0,pts:15},
+      {type:'quiz',q:'¿Qué rol tienen las mitocondrias en la fermentación alcohólica de levaduras?',opts:['Pueden cambiar entre respiración y fermentación según el O₂ disponible','Realizan siempre la fermentación, sin importar cuánto O₂ haya disponible','No participan en la producción de etanol','Solo funcionan durante la fase de crecimiento exponencial de la levadura'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'Las levaduras pueden producir etanol sin mitocondrias activas',a:true},{t:'Las mitocondrias fúngicas tienen ADN propio',a:true},{t:'La mitocondria fúngica tiene ribosomas 80S como el citoplasma',a:false}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué son las colonias "petite" en Saccharomyces cerevisiae?',opts:['Mutantes con ADN mitocondrial dañado que no pueden hacer respiración aeróbica','Colonias más pequeñas por cultivo a baja temperatura','Cepas que no pueden fermentar lactosa','Mutantes de pared de menor tamaño'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué son las colonias "petite" en Saccharomyces cerevisiae?',opts:['Mutantes con ADNmt dañado que no pueden respirar aeróbicamente','Colonias más pequeñas por cultivar la levadura a baja temperatura','Cepas que no pueden fermentar la lactosa del medio de cultivo','Mutantes de la pared celular que forman colonias de menor tamaño'],ans:0,pts:20},
       {type:'trueFalse',items:[{t:'Las levaduras son anaerobias facultativas y pueden vivir sin mitocondrias funcionales',a:true},{t:'El efecto Crabtree es la represión de la respiración por exceso de glucosa',a:true},{t:'Las mitocondrias fúngicas forman una red reticular dinámica',a:true}],pts:10},
     ],
     hard:[
@@ -657,14 +657,14 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'El estrés del RE en hongos patógenos aumenta su virulencia',a:true},{t:'La proteína BiP/Kar2p en levaduras es la chaperona luminal del RE',a:true},{t:'La UPR fúngica es idéntica a la de células de mamífero',a:false}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuál es el mecanismo de señalización de Ire1p en la UPR de S. cerevisiae?',opts:['Ire1p (RNasa/kinasa) splica el ARNm de HAC1 → factor de transcripción activo → genes de plegamiento','Solo fosforila PERK como en mamíferos para inhibir la traducción global','Activa ATF6 que migra al Golgi para su procesamiento proteolítico','Señaliza a través de NF-κB para activar la inflamación'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es el mecanismo de señalización de Ire1p en la UPR de S. cerevisiae?',opts:['Ire1p empalma el ARNm de HAC1 y produce un factor que activa genes de plegamiento','Solo fosforila PERK como en mamíferos para inhibir la traducción global','Activa ATF6, que migra al Golgi para su procesamiento proteolítico y luego al núcleo','Señaliza a través de NF-κB para activar la inflamación'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'Ire1p combina actividad kinasa y endorribonucleasa en la misma proteína',a:true},{t:'El splicing no convencional del ARNm de HAC1 elimina un intrón de 252 nt',a:true},{t:'La UPR de levaduras tiene las tres ramas (Ire1, PERK, ATF6) como en mamíferos',a:false}],pts:15},
       {type:'fill',s:'La chaperona ___ en el RE fungico asiste el plegamiento de proteinas (equivalente a BiP de mamiferos).',words:['Kar2p','Hsp90','calnexina'],cor:'Kar2p',pts:20},
     ],
   },
   golgi_f:{
     easy:[
-      {type:'quiz',q:'¿Qué diferencia tiene el Golgi de las levaduras respecto al de las células animales?',opts:['En levaduras no forma pilas: son cisternas sueltas dispersas por el citoplasma','El Golgi de levaduras es más grande','El Golgi de levaduras no tiene cara cis ni trans','Las levaduras no tienen aparato de Golgi'],ans:0,pts:15},
+      {type:'quiz',q:'¿Qué diferencia tiene el Golgi de las levaduras respecto al de las células animales?',opts:['En levaduras no forma pilas: son cisternas sueltas por el citoplasma','El Golgi de levaduras es más grande y tiene más cisternas','El Golgi de levaduras no tiene cara cis ni cara trans','Las levaduras no tienen aparato de Golgi y procesan sus proteínas directamente en el RE'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'El aparato de Golgi de hongos modifica proteínas para enviarlas a distintos destinos',a:true},{t:'El Golgi de las levaduras forma pilas ordenadas como en animales',a:false},{t:'Los hongos realizan O-manosilación en el Golgi',a:true}],pts:8},
     ],
     normal:[
@@ -672,23 +672,23 @@ const MINIGAMES_ALL={
       {type:'fill',s:'En el Golgi fúngico, las proteínas se recubren de ___ (azúcar), lo que las hace más antigénicas.',words:['manosa','glucosa','galactosa'],cor:'manosa',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuál es la principal diferencia en el transporte al Golgi entre levaduras y mamíferos?',opts:['En levaduras el Golgi madura de cis a trans (modelo de maduración de cisternas sin cisterna estable)','Las vesículas COPI no existen en levaduras','En levaduras las vesículas COPII transportan más carga','Las proteínas SNARE no participan en la fusión con el Golgi fúngico'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es la principal diferencia en el transporte al Golgi entre levaduras y mamíferos?',opts:['En levaduras el Golgi madura de cis a trans, por maduración de cisternas','Las vesículas COPI no existen en levaduras, que solo usan COPII','En levaduras las vesículas COPII transportan más carga','Las proteínas SNARE no participan en la fusión de vesículas con el Golgi fúngico'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'En levaduras, cada cisterna de Golgi es transitoria y madura hacia la identidad trans',a:true},{t:'Las vesículas COPII en levaduras tienen la misma composición que en mamíferos',a:false},{t:'Sec18p (NSF) y Sec17p (α-SNAP) participan en la disociación de SNARE postfusión en levaduras',a:true}],pts:15},
       {type:'fill',s:'Los hongos O-___ proteinas extensamente en el Golgi, un proceso caracteristico que produce manoproteinas.',words:['manosi lan','N-glicosilan','fosforilan'],cor:'manosi lan',pts:20},
     ],
   },
   vacuole_f:{
     easy:[
-      {type:'quiz',q:'¿Cuál es la función principal de la vacuola en las células fúngicas?',opts:['Almacena nutrientes y degrada material celular (como lisosoma + vacuola vegetal)','Solo almacena agua','Produce energía','Es el núcleo del hongo'],ans:0,pts:15},
+      {type:'quiz',q:'¿Cuál es la función principal de la vacuola en las células fúngicas?',opts:['Almacena nutrientes y degrada material celular, como un lisosoma','Solo almacena agua y mantiene la presión de la célula','Produce la energía que el hongo usa para crecer','Es el núcleo del hongo, donde guarda su ADN y dirige todas las actividades celulares'],ans:0,pts:15},
       {type:'fill',s:'La vacuola fúngica tiene un ___ ácido y contiene enzimas digestivas, como el lisosoma animal.',words:['pH','ADN','glucosa'],cor:'pH',pts:12},
       {type:'trueFalse',items:[{t:'La vacuola fúngica combina funciones del lisosoma y la vacuola vegetal',a:true},{t:'La vacuola fúngica produce ATP',a:false},{t:'La vacuola fúngica almacena polifosfato',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué papel cumple la vacuola fúngica en el estrés nutricional?',opts:['Libera aminoácidos y nutrientes almacenados mediante autofagia','Produce energía por glucólisis vacuolar','Sintetiza proteínas de emergencia','Exporta toxinas al exterior'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué papel cumple la vacuola fúngica en el estrés nutricional?',opts:['Libera aminoácidos y nutrientes almacenados mediante autofagia','Produce energía por glucólisis dentro de la propia vacuola fúngica','Sintetiza proteínas de emergencia cuando falta la glucosa del medio','Exporta toxinas al exterior de la célula para eliminar a otros hongos'],ans:0,pts:20},
       {type:'trueFalse',items:[{t:'La vacuola fúngica almacena polifosfato inorgánico como reserva de fósforo',a:true},{t:'El pH vacuolar fúngico es ~6, menos ácido que el lisosoma animal (pH 4.5)',a:true},{t:'La vacuola fúngica no cumple funciones de degradación proteica',a:false}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué vía de autofagia es más relevante en la vacuola de S. cerevisiae bajo ayuno de nitrógeno?',opts:['Macroautofagia selectiva: formación de autofagosomas dirigida por la vía Atg1-Atg13','Autofagia mediada por chaperonas (CMA) como en mamíferos','Microautofagia exclusiva: invaginación directa del tonoplasto','Mitofagia selectiva como única forma de autofagia en levaduras'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué vía de autofagia es más relevante en la vacuola de S. cerevisiae bajo ayuno de nitrógeno?',opts:['Macroautofagia (en bloque): autofagosomas formados por el complejo Atg1-Atg13','Autofagia mediada por chaperonas (CMA), igual que en los mamíferos','Microautofagia exclusiva: invaginación directa del tonoplasto sin formar autofagosomas','Mitofagia selectiva como única forma de autofagia en levaduras'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'Las proteínas ATG (autophagy-related genes) fueron descubiertas en Saccharomyces cerevisiae',a:true},{t:'Yoshinori Ohsumi recibió el Nobel 2016 por descubrir la autofagia en levaduras',a:true},{t:'La autofagia fúngica y la de mamíferos comparten las proteínas ATG esenciales',a:true}],pts:15},
       {type:'fill',s:'Las vacuolas fungicas almacenan hasta el 80% del ___ celular total, clave para el metabolismo del fosforo.',words:['polifosfato','glucogeno','calcio'],cor:'polifosfato',pts:20},
     ],
@@ -696,21 +696,21 @@ const MINIGAMES_ALL={
   ribosome_f:{
     easy:[
       {type:'quiz',q:'¿Son iguales los ribosomas de los hongos a los de las células animales?',opts:['Sí, ambos son 80S, por eso es difícil crear antifúngicos que no nos afecten','No, los hongos tienen ribosomas 70S como las bacterias','Son idénticos y todos los antibióticos actúan igual en hongos','Los hongos no tienen ribosomas'],ans:0,pts:15},
-      {type:'trueFalse',items:[{t:'Los ribosomas de los hongos son 80S como los de las células animales',a:true},{t:'Los antibióticos que atacan ribosomas 70S bacterianos también matan los hongos',a:false},{t:'La ciclohexamida inhibe ribosomas 80S tanto fúngicos como animales',a:true}],pts:8},
+      {type:'trueFalse',items:[{t:'Los ribosomas de los hongos son 80S como los de las células animales',a:true},{t:'Los antibióticos que atacan ribosomas 70S bacterianos también matan los hongos',a:false},{t:'La cicloheximida inhibe ribosomas 80S tanto fúngicos como animales',a:true}],pts:8},
     ],
     normal:[
       {type:'quiz',q:'¿Por qué es difícil crear antifúngicos que maten hongos sin dañar al paciente?',opts:['Los ribosomas 80S fúngicos son casi idénticos a los humanos → baja selectividad','Porque los hongos no tienen membrana y los fármacos no pueden entrar','Porque los hongos mutan más rápido que las bacterias','Porque los hongos producen sus propios antibióticos en respuesta'],ans:0,pts:20},
       {type:'fill',s:'Los antifúngicos preferidos atacan el ___ o la pared de quitina, para evitar dañar al paciente.',words:['ergosterol','ribosoma','ADN'],cor:'ergosterol',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuál es el mecanismo molecular de la ciclohexamida sobre el ribosoma 80S eucariota?',opts:['Se une al sitio E del ribosoma 60S bloqueando la salida del ARNt desacilado e inhibiendo la translocación','Inhibe el factor de iniciación eIF4E bloqueando el reconocimiento del cap','Bloquea la peptidil transferasa en la subunidad 60S igual que el cloranfenicol','Inhibe la GTPasa del factor eEF2 bloqueando la translocación del péptido'],ans:0,pts:30},
-      {type:'trueFalse',items:[{t:'La ciclohexamida es usada en investigación como inhibidor de la síntesis proteica eucariota',a:true},{t:'Los ARNr de la subunidad 60S fúngica y humana son >80% idénticos en secuencia',a:true},{t:'La sordarina es un antifúngico que inhibe selectivamente el factor eEF2 fúngico',a:true}],pts:15},
-      {type:'fill',s:'La ___ inhibe los ribosomas 80S eucariotas (incluyendo los fungicos) bloqueando la translocacion.',words:['ciclohexamida','estreptomicina','cloranfenicol'],cor:'ciclohexamida',pts:20},
+      {type:'quiz',q:'¿Cuál es el mecanismo molecular de la cicloheximida sobre el ribosoma 80S eucariota?',opts:['Se une al sitio E de la subunidad 60S y bloquea la translocación del ARNt','Inhibe el factor de iniciación eIF4E y bloquea el reconocimiento del cap','Bloquea la peptidil transferasa en la subunidad 60S igual que el cloranfenicol','Inhibe la formación del complejo 43S bloqueando la unión del ARNt iniciador'],ans:0,pts:30},
+      {type:'trueFalse',items:[{t:'La cicloheximida es usada en investigación como inhibidor de la síntesis proteica eucariota',a:true},{t:'Los ARNr de la subunidad 60S fúngica y humana son >80% idénticos en secuencia',a:true},{t:'La sordarina es un antifúngico que inhibe selectivamente el factor eEF2 fúngico',a:true}],pts:15},
+      {type:'fill',s:'La ___ inhibe los ribosomas 80S eucariotas (incluyendo los fungicos) bloqueando la translocacion.',words:['cicloheximida','estreptomicina','cloranfenicol'],cor:'cicloheximida',pts:20},
     ],
   },
   woronin:{
     easy:[
-      {type:'quiz',q:'¿Para qué sirven los cuerpos de Woronin en los hongos filamentosos?',opts:['Tapan el poro del septo cuando una hifa se rompe, para no perder citoplasma','Producen energía para el crecimiento de la hifa','Almacenan ADN extra del hongo','Son los orgánulos donde se produce la quitina'],ans:0,pts:15},
+      {type:'quiz',q:'¿Para qué sirven los cuerpos de Woronin en los hongos filamentosos?',opts:['Sellan el poro del septo si una hifa se rompe, evitando perder citoplasma','Producen toda la energía necesaria para el crecimiento de la punta de la hifa','Almacenan ADN extra del hongo','Son los orgánulos donde se produce la quitina de la pared del hongo filamentoso'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'Los cuerpos de Woronin son exclusivos de hongos Ascomycetes',a:true},{t:'Los cuerpos de Woronin se encuentran también en plantas',a:false},{t:'Los cuerpos de Woronin actúan como tapones de emergencia',a:true}],pts:8},
     ],
     normal:[
@@ -718,37 +718,37 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'Los cuerpos de Woronin están presentes en Basidiomycetes como las setas',a:false},{t:'Los cuerpos de Woronin protegen el micelio de pérdidas citoplasmáticas por daño',a:true},{t:'HEX-1 se autoensambla en la matriz cristalina del cuerpo de Woronin',a:true}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Cómo se anclan los cuerpos de Woronin al poro del septo en Neurospora crassa?',opts:['A través de la proteína WSC (Woronin body Sorting Complex) que los ancla a la membrana del poro','Directamente por adhesión no específica a la quitina','Mediante quitinas especiales que forman un tapón de quitina','Por atracción electrostática con la carga negativa de la membrana'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cómo se anclan los cuerpos de Woronin al poro del septo en Neurospora crassa?',opts:['Mediante la proteína WSC, que los ancla a la membrana del poro septal','Directamente por adhesión no específica a la quitina del septo','Mediante glucanos especiales que forman un tapón en el centro del poro','Por atracción electrostática con la carga negativa de la membrana'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'El gen hex-1 mutante produce cuerpos de Woronin no funcionales con morfología anormal',a:true},{t:'Los cuerpos de Woronin pueden moverse activamente hacia el poro usando motores moleculares',a:true},{t:'Los cuerpos de Woronin son equivalentes funcionales de los plasmodesmos vegetales',a:false}],pts:15},
       {type:'fill',s:'Los cuerpos de Woronin estan compuestos por una matriz proteica cristalina de la proteina ___.',words:['HEX-1','actina','tubulina'],cor:'HEX-1',pts:20},
     ],
   },
   lipid_drop:{
     easy:[
-      {type:'quiz',q:'¿Para qué almacenan los hongos gotas lipídicas en su citoplasma?',opts:['Como reserva de energía para usarla cuando no hay nutrientes disponibles','Para producir la pared de quitina','Para almacenar el ADN extra','Para lubricar la membrana plasmática'],ans:0,pts:15},
+      {type:'quiz',q:'¿Para qué almacenan los hongos gotas lipídicas en su citoplasma?',opts:['Como reserva de energía para cuando faltan nutrientes','Para producir la pared de quitina que rodea al hongo','Para almacenar copias extra del ADN cuando el hongo se divide','Para lubricar la membrana plasmática y facilitar su fluidez'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'Las gotas lipídicas son reservas de energía en los hongos',a:true},{t:'Las gotas lipídicas solo existen en células animales',a:false},{t:'Las levaduras acumulan más gotas lipídicas cuando hay exceso de nutrientes',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué tipos de lípidos se almacenan en las gotas lipídicas fúngicas?',opts:['Triacilgliceroles y ésteres de esteroles (ergosterol esterificado)','Solo fosfolípidos de membrana','Glucolípidos y ceramidas','Quitina en forma lipídica'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué tipos de lípidos se almacenan en las gotas lipídicas fúngicas?',opts:['Triacilgliceroles y ésteres de esteroles (ergosterol esterificado)','Solo fosfolípidos de membrana','Glucolípidos y ceramidas, que forman parte de la membrana plasmática y del tonoplasto','Quitina en forma lipídica, rodeada de una cubierta de glucógeno'],ans:0,pts:20},
       {type:'trueFalse',items:[{t:'Las gotas lipídicas fúngicas tienen una monolámina de fosfolípidos (no bicapa)',a:true},{t:'Las levaduras oleaginosas como Yarrowia lipolytica acumulan más del 20% de su peso en lípidos',a:true},{t:'Las gotas lipídicas fúngicas se forman en la mitocondria',a:false}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuál es la relevancia biotecnológica de las gotas lipídicas en levaduras oleaginosas?',opts:['Producción de biocombustibles y ácidos grasos de cadena larga mediante ingeniería metabólica','Solo sirven como marcador de estrés celular','Son útiles para producir antibióticos β-lactámicos','Su alto contenido en ergosterol las hace fuente de vitamina D'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es la relevancia biotecnológica de las gotas lipídicas en levaduras oleaginosas?',opts:['Producción de biocombustibles y ácidos grasos mediante ingeniería metabólica','Solo sirven como marcador de estrés celular','Son útiles para producir antibióticos β-lactámicos','Su alto contenido en ergosterol las convierte en una fuente industrial de vitamina D'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'La perilipina fúngica (Pet10p en S. cerevisiae) recubre la superficie de las gotas lipídicas',a:true},{t:'La lipólisis de gotas lipídicas en levaduras es regulada por lipasas del tipo Tgl3/4/5',a:true},{t:'Las gotas lipídicas fúngicas son estáticas y no interactúan con otros orgánulos',a:false}],pts:15},
       {type:'fill',s:'Las gotas lipidicas estan rodeadas por una ___ de fosfolipidos, no una bicapa como las membranas normales.',words:['monocapa','bicapa','tricapa'],cor:'monocapa',pts:20},
     ],
   },
   hyphal_pore:{
     easy:[
-      {type:'quiz',q:'¿Cuál es la función del poro en el septo de las hifas fúngicas?',opts:['Permite que el citoplasma y los orgánulos fluyan entre células del hongo','Impide completamente el paso entre células','Produce la quitina de la pared celular','Es el lugar donde entra el oxígeno'],ans:0,pts:15},
+      {type:'quiz',q:'¿Cuál es la función del poro en el septo de las hifas fúngicas?',opts:['Deja fluir el citoplasma y los orgánulos entre células del hongo','Impide completamente el paso entre células vecinas','Produce la quitina de la pared celular','Es el lugar por donde entra el oxígeno a toda la hifa y se distribuye'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'El poro del septo permite la comunicación entre células de una hifa',a:true},{t:'Todos los hongos tienen septos con poros',a:false},{t:'Los cuerpos de Woronin pueden tapar el poro del septo',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué diferencia hay entre el poro del septo de Ascomycetes y el de Basidiomycetes?',opts:['Ascomycetes: poro simple tapado por Woronin. Basidiomycetes: doliporo en barril con parentosoma','Son idénticos en ambos grupos fúngicos','Los Basidiomycetes tienen poro de Woronin; los Ascomycetes, doliporo','Ambos tienen doliporos pero de diferente tamaño'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué diferencia hay entre el poro del septo de Ascomycetes y el de Basidiomycetes?',opts:['Ascomycetes: poro simple con cuerpos de Woronin; Basidiomycetes: doliporo con parentosoma','Son idénticos en ambos grupos y solo varían en el tamaño del poro','Los Basidiomycetes tienen poro simple con cuerpos de Woronin; los Ascomycetes, doliporo con parentosoma','Ambos tienen doliporos pero de diferente tamaño'],ans:0,pts:20},
       {type:'trueFalse',items:[{t:'Los hongos sin septos (cenocíticos) tienen el citoplasma continuo sin divisiones',a:true},{t:'Los virus de hongos se propagan entre células a través de los poros septales',a:true},{t:'El doliporo de Basidiomycetes tiene la misma estructura que el poro de Ascomycetes',a:false}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuál es la función del parentosoma en el doliporo de Basidiomycetes?',opts:['Capa perforada de membrana que regula el paso de partículas grandes a través del doliporo','Proteína estructural que forma el toroide del doliporo','Carbohidrato que sella el poro durante esporulación','Enzima que degrada el septo durante la plasmogamia'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es la función del parentosoma en el doliporo de Basidiomycetes?',opts:['Capa perforada de membrana que regula el paso de partículas grandes por el doliporo','Proteína estructural que forma el toroide hinchado del doliporo','Carbohidrato que sella el poro del septo y lo mantiene cerrado durante la esporulación','Enzima que degrada el septo durante la plasmogamia y la fusión de hifas'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'Durante la cariogamia en Basidiomycetes, los núcleos pasan a través de los doliporos',a:true},{t:'Los septos de Ascomycetes pueden tener múltiples poros pequeños en lugar de uno central',a:false},{t:'El dikarión de Basidiomycetes tiene dos núcleos por célula que coexisten sin fusionarse',a:true}],pts:15},
       {type:'fill',s:'En Basidiomycetes, el poro del septo hifal tiene una estructura especializada denominada poro ___.',words:['dolipore','areolado','simple'],cor:'dolipore',pts:20},
     ],
@@ -791,11 +791,11 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'El nucléolo neuronal produce ribosomas',a:true},{t:'El nucléolo neuronal es el más pequeño de todas las células',a:false},{t:'Un nucléolo dañado afecta la síntesis de proteínas de la neurona',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Por qué el nucléolo neuronal es proporcionalmente grande respecto al núcleo?',opts:['Las neuronas necesitan enormes cantidades de ribosomas para sintetizar proteínas axonales','Porque las neuronas no tienen otros orgánulos que compitan','Porque almacena el genoma neuronal extra','Por la positividad de la matriz nuclear en células grandes'],ans:0,pts:20},
+      {type:'quiz',q:'¿Por qué el nucléolo neuronal es proporcionalmente grande respecto al núcleo?',opts:['Las neuronas necesitan muchísimos ribosomas para sintetizar proteínas axonales','Porque las neuronas no tienen otros orgánulos que compitan por espacio','Porque almacena una copia extra del genoma de la neurona','Porque en células de gran tamaño la matriz nuclear lo agranda por ósmosis pasiva'],ans:0,pts:20},
       {type:'trueFalse',items:[{t:'La reducción del nucléolo es marcador temprano de neurodegeneración en Parkinson',a:true},{t:'Las neuronas motoras tienen los nucléolos más grandes del cuerpo humano',a:true},{t:'El nucléolo neuronal desaparece durante la senescencia normal',a:false}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué relación existe entre la función nucleolar y las enfermedades de motoneurona (SLA)?',opts:['Déficit de biogénesis de ribosomas por alteración de nucleolina y NPM1 → estrés de traducción','Solo hay daño axonal sin afectación del nucléolo en SLA','El nucléolo se agranda en SLA por compensación','No hay relación demostrada entre el nucléolo y SLA'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué relación existe entre la función nucleolar y las enfermedades de motoneurona (SLA)?',opts:['Déficit de biogénesis de ribosomas por alteración de nucleolina y NPM1','Solo hay daño axonal en el citoplasma, sin afectación del nucléolo en la SLA','El nucléolo se agranda en SLA por compensación','No hay relación demostrada entre el nucléolo y SLA'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'Las mutaciones en proteínas de unión a ARN (TDP-43, FUS) afectan la función nucleolar en SLA',a:true},{t:'La separación de fases líquido-líquido del nucléolo neuronal es relevante para la SLA',a:true},{t:'El nucléolo produce exclusivamente ARNr y no está involucrado en respuesta al estrés',a:false}],pts:15},
       {type:'fill',s:'La reduccion del nucleolo neuronal es marcador temprano de neurodegeneracion en enfermedades como ___.',words:['Parkinson','esclerosis multiple','meningitis'],cor:'Parkinson',pts:20},
     ],
@@ -806,7 +806,7 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'Los cuerpos de Nissl son regiones de RE rugoso que sintetizan proteínas',a:true},{t:'Los cuerpos de Nissl están presentes en el axón de la neurona',a:false},{t:'Cuando una neurona se lesiona, los cuerpos de Nissl desaparecen (cromatólisis)',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué es la cromatólisis y qué indica clínicamente?',opts:['Disolución de los cuerpos de Nissl tras lesión axonal: señal de respuesta regenerativa','Fragmentación del núcleo neuronal en apoptosis','Degradación de la mielina en esclerosis múltiple','Pérdida de neurotransmisores de las vesículas sinápticas'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué es la cromatólisis y qué indica clínicamente?',opts:['Disolución de los cuerpos de Nissl tras una lesión axonal: respuesta regenerativa','Fragmentación del núcleo neuronal durante la apoptosis tardía','Degradación de la mielina en esclerosis múltiple','Pérdida de neurotransmisores de las vesículas sinápticas tras un estímulo prolongado'],ans:0,pts:20},
       {type:'fill',s:'Los cuerpos de Nissl se tiñen con colorantes ___ como el azul de toluidina porque contienen mucho ARN.',words:['basófilos','eosinófilos','neutros'],cor:'basófilos',pts:15},
     ],
     hard:[
@@ -817,7 +817,7 @@ const MINIGAMES_ALL={
   },
   mito_n:{
     easy:[
-      {type:'quiz',q:'¿Por qué las mitocondrias deben moverse desde el soma hasta el terminal sináptico?',opts:['La neurona fabrica sus mitocondrias en el soma y las transporta donde más energía se necesita','Porque las mitocondrias de la sinapsis son diferentes a las del soma','Para reproducirse en el extremo del axón','Porque el soma no puede retenerlas y las expulsa'],ans:0,pts:15},
+      {type:'quiz',q:'¿Por qué las mitocondrias deben moverse desde el soma hasta el terminal sináptico?',opts:['Se fabrican en el soma y se transportan adonde más energía se necesita','Porque las mitocondrias de la sinapsis son distintas a las del soma y no se pueden fabricar allí','Para reproducirse en el extremo del axón','Porque el soma no puede retenerlas y las expulsa hacia el axón'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'Las mitocondrias de las neuronas se mueven por el axón',a:true},{t:'El terminal sináptico necesita energía de las mitocondrias para liberar neurotransmisores',a:true},{t:'Las mitocondrias neurales son inmóviles una vez posicionadas',a:false}],pts:8},
     ],
     normal:[
@@ -825,30 +825,30 @@ const MINIGAMES_ALL={
       {type:'sequence',items:['Mitocondria sintetizada en el soma','Unión a motor de quinesina vía proteína Miro/Trak','Transporte anterógrado por microtúbulos axonales','Acumulación en terminal sináptico','Provisión de ATP para la exocitosis de neurotransmisores'],pts:25},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué proteínas del complejo Miro-Trak regulan la parada de mitocondrias en zonas de alta demanda de Ca²⁺?',opts:['Ca²⁺ se une a Miro1 → desacopla quinesina → mitocondria se detiene donde hay actividad sináptica','La fosforilación de Drp1 por CaMKII para la fusión mitocondrial','Ca²⁺ activa la dineína para retener mitocondrias en los nodos de Ranvier','La calcineurina desfosforila Trak2 permitiendo su unión a microtúbulos'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué proteínas del complejo Miro-Trak regulan la parada de mitocondrias en zonas de alta demanda de Ca²⁺?',opts:['Ca²⁺ se une a Miro1, desacopla la quinesina y la mitocondria se detiene','La fosforilación de Drp1 por CaMKII para la fusión mitocondrial','Ca²⁺ activa la dineína para retener las mitocondrias en los nodos de Ranvier del axón','La calcineurina desfosforila Trak2 permitiendo su unión a microtúbulos'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'Las mitocondrias son transportadas bidireccionalmente en el axón',a:true},{t:'La disfunción del transporte mitocondrial axonal es un mecanismo de SLA y Parkinson',a:true},{t:'Las mitocondrias del nodo de Ranvier derivan del soma sin síntesis local',a:true}],pts:15},
       {type:'fill',s:'La disfuncion mitocondrial axonal se asocia a enfermedades como ___ y Parkinson por la alta demanda energetica del axon.',words:['SLA','esclerosis multiple','meningitis bacteriana'],cor:'SLA',pts:20},
     ],
   },
   axon:{
     easy:[
-      {type:'quiz',q:'¿Cuál es la función principal del axón de una neurona?',opts:['Llevar el impulso nervioso desde el soma hasta el siguiente destino','Recibir señales de otras neuronas','Producir energía para la neurona','Almacenar los neurotransmisores'],ans:0,pts:15},
+      {type:'quiz',q:'¿Cuál es la función principal del axón de una neurona?',opts:['Llevar el impulso nervioso desde el soma hasta otras células','Recibir las señales de otras neuronas y llevarlas al soma','Producir toda la energía que la neurona necesita para funcionar','Almacenar los neurotransmisores y los pigmentos de la neurona'],ans:0,pts:15},
       {type:'fill',s:'El axón de una motoneurona humana puede superar ___ metro de longitud.',words:['1','0.01','100'],cor:'1',pts:12},
       {type:'trueFalse',items:[{t:'El axón conduce el impulso nervioso',a:true},{t:'Una neurona puede tener varios axones',a:false},{t:'El axón puede medir más de un metro en neuronas motoras',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuál es la diferencia entre conducción saltatoria y conducción continua en axones?',opts:['Mielinizado: el impulso salta entre nodos de Ranvier (más rápido). Amielínico: va continuo por toda la membrana','Saltatoria es más lenta porque el impulso "descansa" entre nodos','La conducción continua solo ocurre en el sistema nervioso central','Son términos equivalentes para el mismo proceso'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es la diferencia entre conducción saltatoria y conducción continua en axones?',opts:['Mielinizado: el impulso salta entre nodos de Ranvier (más rápido). Amielínico: va continuo','La saltatoria es más lenta porque el impulso "descansa" en cada nodo de Ranvier','La conducción continua solo ocurre en el sistema nervioso central y la saltatoria en el periférico','Son términos equivalentes para el mismo proceso'],ans:0,pts:20},
       {type:'trueFalse',items:[{t:'Los axones mielinizados conducen el impulso más rápido que los amielínicos',a:true},{t:'Los nodos de Ranvier carecen de mielina pero tienen alta densidad de canales Na⁺',a:true},{t:'El axón conduce señales en ambas direcciones con igual velocidad',a:false}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué determina la velocidad de conducción de un axón?',opts:['Velocidad ∝ raíz del diámetro (amielínico) o ∝ diámetro (mielinizado): mayor diámetro → mayor velocidad','Velocidad ∝ 1/diámetro: axones finos conducen más rápido','El diámetro no afecta la velocidad: solo la longitud del internodo importa','La velocidad es constante independientemente del diámetro'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué determina la velocidad de conducción de un axón?',opts:['Crece con el diámetro: ∝ raíz del diámetro (amielínico), ∝ diámetro (mielinizado)','Velocidad ∝ 1/diámetro: los axones finos conducen más rápido que los gruesos','El diámetro no afecta la velocidad: solo la longitud del internodo y la temperatura importan','La velocidad es constante, independientemente del diámetro y de la mielina'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'Las fibras Aα (motoras musculares) conducen a 70-120 m/s con diámetro de 13-20 µm',a:true},{t:'Las fibras C (dolor crónico) son amielínicas y conducen a 0.5-2 m/s',a:true},{t:'El transporte axonal de orgánulos usa los microtúbulos y es independiente del potencial de acción',a:true}],pts:15},
       {type:'fill',s:'Tras la seccion de un axon, el segmento distal sufre degeneracion ___, con ruptura de mielina y axon.',words:['walleriana','retrograda','anterograda'],cor:'walleriana',pts:20},
     ],
   },
   myelin:{
     easy:[
-      {type:'quiz',q:'¿Cuál es la función de la vaina de mielina que rodea el axón?',opts:['Actúa como aislante eléctrico que acelera la conducción del impulso nervioso','Produce los neurotransmisores','Conecta el axón con el soma','Protege la neurona de las bacterias'],ans:0,pts:15},
+      {type:'quiz',q:'¿Cuál es la función de la vaina de mielina que rodea el axón?',opts:['Aísla el axón y acelera el impulso nervioso','Produce los neurotransmisores que se liberan en las sinapsis','Conecta el axón con el soma y lo sostiene en su lugar','Protege la neurona de las bacterias y de los virus'],ans:0,pts:15},
       {type:'fill',s:'La esclerosis múltiple se produce cuando el sistema inmune destruye la ___ que cubre los axones.',words:['mielina','membrana','pared'],cor:'mielina',pts:12},
       {type:'trueFalse',items:[{t:'La mielina acelera la conducción nerviosa',a:true},{t:'La mielina es producida por las propias neuronas',a:false},{t:'Perder la mielina causa problemas neurológicos como en la esclerosis múltiple',a:true}],pts:8},
     ],
@@ -868,11 +868,11 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'Las dendritas reciben señales de otras neuronas',a:true},{t:'Una neurona tiene un solo dendrita como tiene un solo axón',a:false},{t:'Las espinas dendríticas son el lugar donde se forman las sinapsis',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué son las espinas dendríticas y cuál es su relevancia para la memoria?',opts:['Pequeñas protuberancias donde se forman sinapsis excitatorias; cambian de morfología en el aprendizaje','Son estructuras defensivas que protegen la dendrita','Contienen los cuerpos de Nissl para síntesis proteica local','Son los lugares donde se fabrica la mielina dendrítica'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué son las espinas dendríticas y cuál es su relevancia para la memoria?',opts:['Protuberancias donde se forman sinapsis excitatorias y que cambian al aprender','Son estructuras defensivas que protegen la dendrita de los daños','Contienen los cuerpos de Nissl y hacen la síntesis proteica local en el soma neuronal','Son los lugares donde se fabrica la mielina dendrítica'],ans:0,pts:20},
       {type:'fill',s:'Las espinas dendríticas cambian de forma durante el aprendizaje, proceso llamado ___ sináptica.',words:['plasticidad','elasticidad','rigidez'],cor:'plasticidad',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuál es el mecanismo molecular de la potenciación a largo plazo (LTP) en espinas dendríticas?',opts:['Activación de NMDAR → entrada de Ca²⁺ → CaMKII → fosforilación e inserción de AMPAR en la membrana','Solo cambios en la síntesis de AMPAR sin modificación de los existentes','Fosforilación de NMDAR por PKA que aumenta su conductancia','Reducción de la inhibición GABAérgica que permite mayor activación'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es el mecanismo molecular de la potenciación a largo plazo (LTP) en espinas dendríticas?',opts:['NMDAR → entrada de Ca²⁺ → CaMKII → fosforilación e inserción de AMPAR','Solo cambios en la síntesis de AMPAR sin modificación de los existentes','Fosforilación de NMDAR por PKA, que aumenta su conductancia y su tiempo abierto','Reducción de la inhibición GABAérgica, que permite una mayor activación'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'La LTP requiere la activación del receptor NMDA como detector de coincidencia',a:true},{t:'CaMKII autofosforilada en T286 mantiene la actividad independientemente del Ca²⁺',a:true},{t:'La LTD (depresión a largo plazo) se produce por breves estímulos de alta frecuencia',a:false}],pts:15},
       {type:'fill',s:'Los pequenos salientes de las dendritas donde se forman sinapsis excitatorias se llaman ___ dendriticas.',words:['espinas','varicosidades','cilios'],cor:'espinas',pts:20},
     ],
@@ -884,11 +884,11 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'Los neurotransmisores se liberan por exocitosis en el terminal sináptico',a:true},{t:'La sinapsis química es más rápida que la eléctrica',a:false},{t:'El calcio es necesario para liberar los neurotransmisores',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuál es el papel del calcio en la exocitosis sináptica?',opts:['Ca²⁺ entra al terminal → activa la proteína sinaptotagmina → fusión de vesículas con la membrana','Ca²⁺ bloquea los canales K⁺ para mantener la despolarización','Ca²⁺ activa la bomba Na⁺/K⁺ ATPasa para recargar el potencial','Ca²⁺ polimeriza la actina que empuja las vesículas hacia la membrana'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es el papel del calcio en la exocitosis sináptica?',opts:['Ca²⁺ entra al terminal, activa la sinaptotagmina y las vesículas se fusionan','Ca²⁺ bloquea los canales K⁺ del terminal para mantener la despolarización','Ca²⁺ activa la bomba Na⁺/K⁺ ATPasa para recargar el potencial de membrana de la neurona','Ca²⁺ polimeriza la actina, que empuja las vesículas hacia la membrana plasmática'],ans:0,pts:20},
       {type:'sequence',items:['Potencial de acción llega al terminal','Apertura de canales Ca²⁺ voltaje-dependientes','Ca²⁺ activa sinaptotagmina','Proteínas SNARE fusionan vesícula con membrana','Exocitosis: neurotransmisor al espacio sináptico'],pts:25},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuál es el mecanismo de la toxina botulínica sobre la sinapsis?',opts:['Proteasa zinc-dependiente que cleava proteínas SNARE (SNAP-25, VAMP, sintaxina) → no hay exocitosis','Bloquea los canales Ca²⁺ del terminal presináptico irreversiblemente','Compete con acetilcolina por el receptor nicotínico postsináptico','Inhibe la recaptación del neurotransmisor en el terminal'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es el mecanismo de la toxina botulínica sobre la sinapsis?',opts:['Proteasa dependiente de zinc que corta proteínas SNARE (SNAP-25, VAMP, sintaxina)','Bloquea irreversiblemente los canales Ca²⁺ del terminal presináptico','Compite con la acetilcolina por el receptor nicotínico postsináptico','Inhibe la recaptación del neurotransmisor y lo deja acumulado en la hendidura sináptica'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'VAMP/sinaptobrevina es la proteína v-SNARE de la vesícula sináptica',a:true},{t:'La toxina tetánica bloquea la liberación de GABA y glicina (inhibitorios) → convulsiones',a:true},{t:'El reciclaje de vesículas sinápticas ocurre por endocitosis mediada por clatrina',a:true}],pts:15},
       {type:'fill',s:'La exocitosis de vesiculas sinapticas es desencadenada por el ingreso de iones ___ al terminal presinaptico.',words:['Ca2+','Na+','K+'],cor:'Ca2+',pts:20},
     ],
@@ -914,7 +914,7 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'El aparato de Golgi neuronal puede extenderse hacia las dendritas',a:true},{t:'El Golgi neuronal procesa las proteínas que van a las sinapsis',a:true},{t:'La fragmentación del Golgi neuronal es señal de buena salud celular',a:false}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuál es el papel de los "outposts de Golgi" en las dendritas neuronales?',opts:['Procesan proteínas localmente en las dendritas sin necesitar envío desde el soma','Solo almacenan proteínas ya procesadas desde el soma','Son artefactos sin función biológica real','Solo aparecen durante el desarrollo embrionario'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es el papel de los "outposts de Golgi" en las dendritas neuronales?',opts:['Procesan proteínas localmente en las dendritas, sin depender del soma','Solo almacenan proteínas ya procesadas en el soma, sin modificarlas más','Son artefactos sin función biológica real, producto de la fijación','Solo aparecen durante el desarrollo embrionario y luego se pierden del todo'],ans:0,pts:20},
       {type:'trueFalse',items:[{t:'Los outposts de Golgi dendríticos procesan receptores de neurotransmisores localmente',a:true},{t:'La fragmentación del Golgi neuronal es marcador temprano de apoptosis',a:true},{t:'El Golgi neuronal es idéntico al de las células epiteliales en organización',a:false}],pts:10},
     ],
     hard:[
@@ -925,7 +925,7 @@ const MINIGAMES_ALL={
   },
   er_n:{
     easy:[
-      {type:'quiz',q:'¿Qué función especial cumple el RE liso en las dendritas durante la señalización?',opts:['Almacena calcio y lo libera como señal cuando llega un impulso sináptico','Solo produce lípidos para las membranas','Almacena glucosa para dar energía a la sinapsis','Produce neurotransmisores directamente'],ans:0,pts:15},
+      {type:'quiz',q:'¿Qué función especial cumple el RE liso en las dendritas durante la señalización?',opts:['Guarda calcio y lo libera como señal cuando llega un impulso','Solo produce lípidos para las membranas de la neurona y su mielina','Almacena glucosa para dar energía a la sinapsis cuando falta oxígeno','Produce los neurotransmisores directamente dentro de la dendrita'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'El RE neuronal almacena calcio que puede liberarse como señal',a:true},{t:'El RE neuronal solo fabrica proteínas y no tiene otras funciones',a:false},{t:'El calcio del RE puede amplificar las señales sinápticas',a:true}],pts:8},
     ],
     normal:[
@@ -941,7 +941,7 @@ const MINIGAMES_ALL={
   // ── RBC ──
   rbc_membrane:{
     easy:[
-      {type:'quiz',q:'¿Qué hace tan especial la membrana del glóbulo rojo?',opts:['Es extremadamente flexible: puede deformarse para pasar por capilares muy finos','Es la más gruesa de todas las células del cuerpo','Produce energía para transportar el oxígeno','Tiene la capacidad de dividirse para crear más glóbulos rojos'],ans:0,pts:15},
+      {type:'quiz',q:'¿Qué hace tan especial la membrana del glóbulo rojo?',opts:['Es muy flexible: se deforma para pasar por capilares finísimos','Es la más gruesa de todas las células del cuerpo humano','Produce energía para transportar el oxígeno','Tiene la capacidad de dividirse para crear más glóbulos rojos en la sangre'],ans:0,pts:15},
       {type:'fill',s:'El glóbulo rojo vive aproximadamente ___ días en circulación antes de ser destruido.',words:['120','7','365'],cor:'120',pts:12},
       {type:'trueFalse',items:[{t:'El glóbulo rojo puede deformarse para pasar por capilares estrechos',a:true},{t:'El glóbulo rojo tiene núcleo',a:false},{t:'El glóbulo rojo vive aproximadamente 120 días',a:true}],pts:8},
     ],
@@ -962,22 +962,22 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'La hemoglobina contiene hierro que se une al oxígeno',a:true},{t:'La hemoglobina fetal (HbF) es igual a la del adulto (HbA)',a:false},{t:'La drepanocitosis ocurre cuando la hemoglobina tiene una mutación',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué es el efecto Bohr y por qué es fisiológicamente importante?',opts:['El CO₂ y el H⁺ reducen la afinidad de la hemoglobina por O₂ → mejor descarga en tejidos activos','La presión aumenta la afinidad de la Hb por O₂ en pulmones','La temperatura reduce la carga de O₂ en pulmones','El CO₂ compite directamente con el O₂ por el grupo hemo'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué es el efecto Bohr y por qué es fisiológicamente importante?',opts:['CO₂ y H⁺ reducen la afinidad por el O₂ y favorecen su descarga en los tejidos','La presión aumenta la afinidad de la Hb por O₂ en pulmones','La temperatura reduce la carga de O₂ en pulmones','El CO₂ compite directamente con el O₂ por el mismo grupo hemo de la Hb en los pulmones'],ans:0,pts:20},
       {type:'fill',s:'La curva de disociación de la hemoglobina es ___, lo que permite la descarga eficiente de O₂ en tejidos.',words:['sigmoide','lineal','exponencial'],cor:'sigmoide',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuál es la base molecular de la cooperatividad en la unión de O₂ a la hemoglobina?',opts:['Cambio alostérico T→R: la unión del 1er O₂ cambia la conformación favoreciendo los siguientes','La hemoglobina une O₂ de manera independiente en las 4 subunidades','El 2,3-DPG directamente facilita la unión del primer O₂','La cooperatividad es solo cinética, sin cambio conformacional'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es la base molecular de la cooperatividad en la unión de O₂ a la hemoglobina?',opts:['Cambio alostérico T→R: unir el 1.er O₂ favorece la unión de los siguientes','La hemoglobina une O₂ de manera independiente en cada una de las 4 subunidades','El 2,3-DPG directamente facilita la unión del primer O₂ a la hemoglobina oxigenada','La cooperatividad es solo cinética, sin cambio conformacional'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'El 2,3-bisfosfoglicerato (2,3-BPG) estabiliza la forma T desoxigenada → desplaza la curva a la derecha',a:true},{t:'HbF tiene menor afinidad por 2,3-BPG que HbA, por lo que tiene mayor afinidad por O₂',a:true},{t:'La metahemoglobina (Fe³⁺) puede transportar O₂ con igual eficiencia que la HbA',a:false}],pts:15},
       {type:'fill',s:'El efecto Bohr describe como el CO2 y los H+ ___ la afinidad de la hemoglobina por el O2 en los tejidos.',words:['reducen','aumentan','no afectan'],cor:'reducen',pts:20},
     ],
   },
   spectrin:{
     easy:[
-      {type:'quiz',q:'¿Qué hace la red de espectrina en el glóbulo rojo?',opts:['Da elasticidad para que el glóbulo rojo pueda deformarse y recuperar su forma','Produce hemoglobina','Protege al glóbulo rojo de las bacterias','Lleva el oxígeno junto con la hemoglobina'],ans:0,pts:15},
+      {type:'quiz',q:'¿Qué hace la red de espectrina en el glóbulo rojo?',opts:['Da elasticidad para que el glóbulo rojo se deforme y recupere su forma','Produce la hemoglobina que llena el interior del glóbulo rojo','Protege al glóbulo rojo de las bacterias y de los virus que lo infectan','Lleva el oxígeno junto con la hemoglobina por todo el cuerpo'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'La espectrina da elasticidad al glóbulo rojo',a:true},{t:'La espectrina está dentro del glóbulo rojo pegada a la membrana',a:true},{t:'Sin espectrina, el glóbulo rojo mantiene su forma normal',a:false}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuál es la enfermedad causada por defecto en la espectrina eritrocítica?',opts:['Esferocitosis hereditaria: glóbulos rojos esféricos y frágiles que se destruyen prematuramente','Talasemia: déficit de síntesis de cadenas de globina','Anemia ferropénica: falta de hierro','Policitemia vera: sobreproducción de glóbulos rojos'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es la enfermedad causada por defecto en la espectrina eritrocítica?',opts:['Esferocitosis hereditaria: glóbulos rojos esféricos y frágiles','Talasemia: déficit de síntesis de las cadenas de globina','Anemia ferropénica: falta de hierro en la dieta o pérdida crónica de sangre','Policitemia vera: sobreproducción de glóbulos rojos en la médula'],ans:0,pts:20},
       {type:'fill',s:'La red de espectrina se organiza en una malla ___ que da forma y resistencia al eritrocito.',words:['hexagonal','triangular','cuadrada'],cor:'hexagonal',pts:15},
     ],
     hard:[
@@ -988,15 +988,15 @@ const MINIGAMES_ALL={
   },
   band3:{
     easy:[
-      {type:'quiz',q:'¿Qué transporta la proteína Banda 3 a través de la membrana del glóbulo rojo?',opts:['Bicarbonato (HCO₃⁻) a cambio de cloruro (Cl⁻): vital para transportar el CO₂','Solo oxígeno junto con la hemoglobina','Glucosa para dar energía al glóbulo rojo','Agua para mantener la hidratación celular'],ans:0,pts:15},
+      {type:'quiz',q:'¿Qué transporta la proteína Banda 3 a través de la membrana del glóbulo rojo?',opts:['Bicarbonato (HCO₃⁻) a cambio de cloruro (Cl⁻), clave para el CO₂','Solo oxígeno, que viaja unido a la hemoglobina por la sangre','Glucosa para dar energía al glóbulo rojo cuando está en los capilares','Agua, para mantener hidratada la célula y regular su volumen'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'La banda 3 intercambia bicarbonato por cloruro en el glóbulo rojo',a:true},{t:'Este intercambio ayuda a transportar el CO₂ de los tejidos a los pulmones',a:true},{t:'La banda 3 es la proteína menos abundante de la membrana eritrocítica',a:false}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuántas veces cruza la membrana la proteína Banda 3?',opts:['14 veces (14 segmentos transmembrana que forman el canal de transporte)','1 vez (proteína transmembrana simple)','4 veces (como las porinas bacterianas)','No cruza: es una proteína periférica'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuántas veces cruza la membrana la proteína Banda 3?',opts:['14 veces: 14 segmentos transmembrana que forman el canal','1 vez, como una proteína transmembrana simple','4 veces, como las porinas bacterianas de la membrana externa','No cruza la membrana: es una proteína periférica del citoesqueleto'],ans:0,pts:20},
       {type:'fill',s:'La banda 3 permite que el CO₂ viaje en la sangre en forma de ___, mucho más soluble en plasma.',words:['bicarbonato','hemoglobina','oxígeno'],cor:'bicarbonato',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Cómo utiliza Plasmodium falciparum la proteína Banda 3 para invadir el eritrocito?',opts:['La proteína EBA-175 se une a glicoforina A anclada a banda 3; banda 3 se requiere para la vacuola parasitófora','Plasmodium degrada banda 3 con proteasas antes de la invasión','Banda 3 actúa como receptor directo de la proteína MSP1 del merozoíto','El parásito compite con el bicarbonato por el sitio de transporte de banda 3'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cómo utiliza Plasmodium falciparum la proteína Banda 3 para invadir el eritrocito?',opts:['EBA-175 se une a la glicoforina A, anclada a la banda 3','Plasmodium degrada la banda 3 con proteasas antes de invadir el eritrocito','Banda 3 actúa como receptor directo de la proteína CSP del esporozoíto','El parásito compite con el bicarbonato por el sitio de transporte de banda 3'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'La oxidación de banda 3 en eritrocitos senescentes forma el antígeno reconocido por autoanticuerpos',a:true},{t:'Banda 3 forma microdominios con glicoforinas y anquirina como plataforma de señalización',a:true},{t:'Los eritrocitos de drepanocitosis tienen banda 3 con mayor afinidad por la HbS polimerizada',a:true}],pts:15},
       {type:'fill',s:'La proteina Banda 3 intercambia ___ por HCO3- a traves de la membrana eritrocitica.',words:['Cl-','Na+','K+'],cor:'Cl-',pts:20},
     ],
@@ -1011,18 +1011,18 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'La hemoglobina desoxigenada tiene mayor afinidad por banda 3 que la oxigenada',a:true},{t:'La unión de desoxiHb a banda 3 puede regular metabólicamente el eritrocito',a:true},{t:'Banda 3 actúa como ancla para el citoesqueleto de espectrina a través de la anquirina',a:true}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuál es el significado funcional del complejo metabólico de banda 3 con enzimas glicolíticas?',opts:['En desoxigenación, las enzimas glicolíticas (GAPDH, aldolasa) se disocian de banda 3 → mayor glucólisis → más ATP','Las enzimas glicolíticas usan banda 3 como sustrato para producir HCO₃⁻','El complejo favorece la vía de las pentosas fosfato sobre la glucólisis','Las enzimas glicolíticas inhiben el transporte de banda 3 en capilares pulmonares'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es el significado funcional del complejo metabólico de banda 3 con enzimas glicolíticas?',opts:['Al desoxigenarse, GAPDH y aldolasa se sueltan de la banda 3 y aumenta la glucólisis','Las enzimas glicolíticas usan la banda 3 como sustrato para producir HCO₃⁻','El complejo favorece la vía de las pentosas fosfato sobre la glucólisis','Las enzimas glicolíticas inhiben el transporte de la banda 3 en los capilares pulmonares y en los tejidos'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'La GAPDH se une al dominio citoplasmático N-terminal de banda 3 inhibiendo su actividad glicolítica',a:true},{t:'La hipoxia regula metabólicamente el eritrocito a través del complejo banda 3-enzimas glicolíticas',a:true},{t:'Este mecanismo acopla el transporte de O₂/CO₂ con la producción de ATP en el eritrocito',a:true}],pts:15},
       {type:'fill',s:'La proteina adaptadora ___ conecta la Banda 3 con la red de espectrina del citoesqueleto eritrocitico.',words:['anquirina','actina','proteina 4.1'],cor:'anquirina',pts:20},
     ],
   },
   glycophorin:{
     easy:[
-      {type:'quiz',q:'¿Para qué sirve la glicoforina A en la membrana del glóbulo rojo?',opts:['Su carga negativa (ácido siálico) evita que los glóbulos rojos se peguen entre sí','Transporta el oxígeno junto con la hemoglobina','Produce el color rojo de los glóbulos','Es la proteína que destruye bacterias en la sangre'],ans:0,pts:15},
+      {type:'quiz',q:'¿Para qué sirve la glicoforina A en la membrana del glóbulo rojo?',opts:['Su carga negativa (ácido siálico) evita que los glóbulos se peguen','Transporta el oxígeno junto con la hemoglobina por la sangre','Produce el pigmento que da el color rojo característico a los glóbulos de la sangre','Es la proteína que destruye bacterias y virus en la sangre'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'La glicoforina tiene mucha carga negativa que evita la agregación de glóbulos rojos',a:true},{t:'La glicoforina solo se encuentra en glóbulos rojos enfermos',a:false},{t:'El parásito de la malaria usa la glicoforina para entrar al glóbulo rojo',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuáles son los antígenos de grupo sanguíneo que porta la glicoforina A?',opts:['Antígenos M y N del sistema MNS (determinados por aminoácidos en las posiciones 1 y 5)','Antígenos A, B y H del sistema ABO','Antígenos Rh (D, C, E) del sistema Rhesus','Antígenos del sistema Kell y Kidd'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuáles son los antígenos de grupo sanguíneo que porta la glicoforina A?',opts:['Antígenos M y N del sistema MNS (posiciones 1 y 5 de la proteína)','Antígenos A, B y H del sistema ABO, que definen los grupos A, B, AB y O','Antígenos Rh (D, C, E) del sistema Rhesus, que causan la enfermedad hemolítica','Antígenos del sistema Kell y Kidd, que se detectan en pruebas cruzadas'],ans:0,pts:20},
       {type:'fill',s:'El ácido siálico de la glicoforina genera el ___ zeta negativo que evita la agregación de eritrocitos.',words:['potencial','gradiente','campo'],cor:'potencial',pts:15},
     ],
     hard:[
@@ -1037,50 +1037,50 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'La glicoforina C conecta la membrana con el citoesqueleto interno',a:true},{t:'La glicoforina C es igual en estructura a la glicoforina A',a:false},{t:'Sin glicoforina C, el glóbulo rojo pierde su forma normal',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuál es la diferencia funcional entre glicoforina A y glicoforina C?',opts:['GfA: antígenos MN + estabilidad superficial. GfC: ancla el citoesqueleto de espectrina','Son funcionalmente equivalentes con diferente localización','GfA transporta O₂; GfC transporta CO₂','Solo difieren en la cantidad de ácido siálico, no en función'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es la diferencia funcional entre glicoforina A y glicoforina C?',opts:['GfA: antígenos MN. GfC: ancla el citoesqueleto de espectrina','Son funcionalmente equivalentes y solo cambia su localización en la célula','GfA transporta O₂; GfC transporta CO₂','Solo difieren en la cantidad de ácido siálico, no en la función'],ans:0,pts:20},
       {type:'trueFalse',items:[{t:'La glicoforina C se une a la proteína 4.1 que conecta con la espectrina',a:true},{t:'Eritrocitos con deficiencia de GfC (fenotipo Gerbich negativo) son resistentes a Plasmodium vivax',a:true},{t:'La glicoforina C tiene la misma cantidad de ácido siálico que la glicoforina A',a:false}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuál es el mecanismo por el que Plasmodium vivax usa glicoforina C para invadir eritrocitos?',opts:['EBP (erythrocyte binding protein) de P. vivax se une a la región N-terminal de glicoforina C','P. vivax usa el mismo receptor que P. falciparum (glicoforina A)','P. vivax degrada glicoforina C para facilitar su entrada al eritrocito','EBA-140 de P. falciparum también reconoce glicoforina C'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué proteína de Plasmodium falciparum reconoce la glicoforina C para invadir eritrocitos?',opts:['EBA-140, que se une a la glicoforina C','EBA-175, que se une a la glicoforina A y no a la C','DBP (Duffy binding protein), el ligando del antígeno Duffy en P. vivax','CSP, la proteína de superficie del esporozoíto que reconoce los hepatocitos'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'EBA-140 (BAEBL) de P. falciparum se une a la glicoforina C como mecanismo alternativo de invasión',a:true},{t:'El dominio DBL (Duffy-binding-like) de las proteínas EBA media la unión a glicoforinas',a:true},{t:'La ausencia de glicoforina C protege completamente contra la malaria por P. vivax',a:false}],pts:15},
       {type:'fill',s:'La deficiencia de glicoforina C causa ___ hereditaria leve por desestabilizacion del citoesqueleto.',words:['eliptocitosis','esferocitosis','drepanocitosis'],cor:'eliptocitosis',pts:20},
     ],
   },
   ankyrin:{
     easy:[
-      {type:'quiz',q:'¿Qué hace la anquirina en el glóbulo rojo?',opts:['Conecta el citoesqueleto interno (espectrina) con la membrana (banda 3)','Transporta oxígeno junto con la hemoglobina','Produce la energía del glóbulo rojo','Determina el grupo sanguíneo'],ans:0,pts:15},
+      {type:'quiz',q:'¿Qué hace la anquirina en el glóbulo rojo?',opts:['Conecta el citoesqueleto (espectrina) con la membrana (banda 3)','Transporta oxígeno junto con la hemoglobina por los capilares del cuerpo','Produce toda la energía que el glóbulo rojo gasta al deformarse','Determina el grupo sanguíneo del donante y receptor'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'La anquirina actúa como proteína de unión entre el citoesqueleto y la membrana',a:true},{t:'Defectos en la anquirina causan esferocitosis hereditaria',a:true},{t:'La anquirina se encuentra en todas las células del cuerpo',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuál es la enfermedad más común causada por defectos en la anquirina eritrocítica?',opts:['Esferocitosis hereditaria tipo I (HS1): anemia hemolítica con glóbulos rojos esféricos y frágiles','Drepanocitosis: glóbulos en hoz por mutación en β-globina','Talasemia α: falta de cadenas α de hemoglobina','Eliptocitosis: glóbulos elípticos por defecto en espectrina'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es la enfermedad más común causada por defectos en la anquirina eritrocítica?',opts:['Esferocitosis hereditaria tipo I (HS1): anemia hemolítica con glóbulos esféricos','Drepanocitosis: glóbulos en hoz por una mutación puntual en la β-globina','Talasemia α: falta de cadenas α de hemoglobina','Eliptocitosis: glóbulos elípticos por un defecto en la espectrina y la proteína 4.1'],ans:0,pts:20},
       {type:'fill',s:'La anquirina conecta la β-espectrina del citoesqueleto con la proteína ___ integral de membrana.',words:['banda 3','glicoforina','hemoglobina'],cor:'banda 3',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuáles son los dominios funcionales de la anquirina eritrocítica (ANK1)?',opts:['Dominio ANK-repeat (une banda 3), dominio spectrin-binding, dominio regulador C-terminal','Solo dominio de unión a espectrina y dominio de membrana','Dominio RGD (integrina), dominio de unión a actina y dominio SH2','Dominio PH (pleckstrin homology) y dominio FERM de anclaje'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuáles son los dominios funcionales de la anquirina eritrocítica (ANK1)?',opts:['Repeticiones ANK (unen banda 3), unión a espectrina y dominio regulador','Solo un dominio de unión a espectrina y un dominio transmembrana','Dominio RGD (integrina), dominio de unión a actina y dominio SH2 de señalización','Dominio PH (pleckstrin homology) y dominio FERM de anclaje'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'La ANK1 es codificada por un gen de 41 exones con múltiples isoformas tisulares',a:true},{t:'En neuronas, la AnkG (anquirina G) ancla los canales Nav al segmento inicial del axón',a:true},{t:'La anquirina solo existe en eritrocitos y no tiene función en otros tejidos',a:false}],pts:15},
       {type:'fill',s:'Las mutaciones en anquirina son la causa mas comun de ___ en Europa.',words:['esferocitosis hereditaria','drepanocitosis','talasemia'],cor:'esferocitosis hereditaria',pts:20},
     ],
   },
   carbonic_anh:{
     easy:[
-      {type:'quiz',q:'¿Por qué necesitan los glóbulos rojos la anhidrasa carbónica?',opts:['Para convertir el CO₂ producido por los tejidos en bicarbonato y transportarlo a los pulmones','Para producir energía a partir del CO₂','Para destruir el CO₂ tóxico directamente','Para producir O₂ a partir del CO₂'],ans:0,pts:15},
+      {type:'quiz',q:'¿Por qué necesitan los glóbulos rojos la anhidrasa carbónica?',opts:['Para convertir el CO₂ de los tejidos en bicarbonato y llevarlo a los pulmones','Para producir energía a partir del CO₂ que llega de los tejidos','Para destruir directamente el CO₂ tóxico y eliminarlo por la orina del riñón y los pulmones','Para producir O₂ a partir del CO₂ y devolverlo a los tejidos de la sangre'],ans:0,pts:15},
       {type:'fill',s:'La anhidrasa carbónica convierte el CO₂ + H₂O en ___ + H⁺ para transportar el CO₂ en sangre.',words:['bicarbonato','glucosa','ATP'],cor:'bicarbonato',pts:12},
       {type:'trueFalse',items:[{t:'La anhidrasa carbónica transforma CO₂ en bicarbonato en los tejidos',a:true},{t:'En los pulmones, el proceso se invierte para liberar CO₂',a:true},{t:'Sin anhidrasa carbónica, la sangre no podría transportar CO₂',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Por qué la anhidrasa carbónica es esencial para el transporte de CO₂ en sangre?',opts:['Convierte CO₂ en bicarbonato soluble que puede transportarse en plasma','Transporta el CO₂ directamente unido a hierro','Elimina el CO₂ por exocitosis en el pulmón','Convierte CO₂ en O₂ en los capilares pulmonares'],ans:0,pts:20},
+      {type:'quiz',q:'¿Por qué la anhidrasa carbónica es esencial para el transporte de CO₂ en sangre?',opts:['Convierte el CO₂ en bicarbonato soluble, transportable en el plasma','Transporta el CO₂ directamente unido al hierro del grupo hemo de la hemoglobina','Elimina el CO₂ por exocitosis en los alvéolos del pulmón hacia el aire','Convierte el CO₂ en O₂ dentro de los capilares pulmonares'],ans:0,pts:20},
       {type:'trueFalse',items:[{t:'La anhidrasa carbónica II eritrocítica es la isoforma más activa de las 16 conocidas',a:true},{t:'El zinc del sitio activo de la anhidrasa carbónica es esencial para la catálisis',a:true},{t:'Los inhibidores de la anhidrasa carbónica (acetazolamida) solo actúan en los eritrocitos',a:false}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuántas reacciones por segundo puede catalizar la anhidrasa carbónica II?',opts:['1.000.000 reacciones/segundo (10⁶ s⁻¹): una de las enzimas más rápidas','100 reacciones/segundo','10.000 reacciones/segundo','Solo 10 reacciones/segundo'],ans:0,pts:25},
-      {type:'quiz',q:'¿Cuál es el mecanismo catalítico de la anhidrasa carbónica II en la hidratación del CO₂?',opts:['Zn²⁺-OH⁻ ataca el CO₂ → HCO₃⁻ se libera → agua rehidrata el Zn²⁺ → mecanismo de zinc-hidroxilo','El CO₂ se une a His64 del sitio activo y se oxida directamente a HCO₃⁻','El Zn²⁺ reduce el CO₂ por adición nucleofílica directa sin intermediarios','Un residuo Lys actúa como base general extrayendo un protón del agua activa'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuántas reacciones por segundo puede catalizar la anhidrasa carbónica II?',opts:['1.000.000 por segundo (10⁶ s⁻¹), una de las enzimas más rápidas','100 reacciones por segundo, como una enzima digestiva típica del estómago','10.000 reacciones por segundo, como la mayoría de las enzimas','Solo 10 reacciones por segundo, porque necesita zinc como cofactor'],ans:0,pts:25},
+      {type:'quiz',q:'¿Cuál es el mecanismo catalítico de la anhidrasa carbónica II en la hidratación del CO₂?',opts:['Zn²⁺-OH⁻ ataca al CO₂ y libera HCO₃⁻; luego el agua rehidrata el Zn²⁺','El CO₂ se une a la His64 del sitio activo y se oxida directamente a HCO₃⁻ sin zinc','El Zn²⁺ reduce el CO₂ por adición nucleofílica directa sin intermediarios','Un residuo Lys actúa como base general extrayendo un protón del agua activa'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'La transferencia de protones desde el sitio activo al tampón es el paso limitante de la velocidad',a:true},{t:'His64 actúa como puente de protones entre el sitio activo y el solvente en CA-II',a:true},{t:'La acetazolamida es un inhibidor competitivo que ocupa el sitio del CO₂ en el zinc',a:false}],pts:15},
       {type:'fill',s:'La anhidrasa carbonica cataliza CO2 + H2O formando ___ + H+, siendo esencial para el transporte de CO2.',words:['HCO3-','CO3 2-','H2CO3 estable'],cor:'HCO3-',pts:20},
     ],
   },
   biconcave:{
     easy:[
-      {type:'quiz',q:'¿Por qué el glóbulo rojo tiene forma de disco aplastado con los lados cóncavos?',opts:['Para tener mayor superficie de intercambio de gases y poder deformarse en capilares','Es simplemente la forma en que nacen sin función específica','Para proteger la hemoglobina de la oxidación','Porque tienen menos agua que otras células'],ans:0,pts:15},
+      {type:'quiz',q:'¿Por qué el glóbulo rojo tiene forma de disco aplastado con los lados cóncavos?',opts:['Tiene más superficie para intercambiar gases y se deforma en los capilares','Es simplemente la forma en que nacen todas las células, sin función específica','Para proteger la hemoglobina de la oxidación','Porque tienen menos agua que otras células'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'La forma bicóncava del glóbulo rojo aumenta su superficie sin aumentar su volumen',a:true},{t:'Los glóbulos rojos de las personas con drepanocitosis tienen forma de disco normal',a:false},{t:'El glóbulo rojo maduro no tiene núcleo lo que le permite ser más flexible',a:true}],pts:8},
     ],
     normal:[
@@ -1088,7 +1088,7 @@ const MINIGAMES_ALL={
       {type:'fill',s:'La forma bicóncava da un ___ 20-30% mayor que una esfera del mismo volumen, mejorando el intercambio de gases.',words:['área superficial','peso','volumen'],cor:'área superficial',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué proteínas del citoesqueleto son responsables de mantener la forma bicóncava del eritrocito?',opts:['La red de espectrina-actina-banda 4.1 conectada a la membrana via anquirina-banda 3 y proteína 4.1-glicoforina C','Solo la hemoglobina por su concentración que aplana la célula','Las proteínas de membrana band 3 que crean tensión superficial diferencial','La presión osmótica diferencial entre el citoplasma y el plasma'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué proteínas del citoesqueleto son responsables de mantener la forma bicóncava del eritrocito?',opts:['La red de espectrina-actina-banda 4.1, unida a la membrana por anquirina y banda 3','Solo la hemoglobina, cuya alta concentración aplana la célula','Las proteínas de membrana banda 3, que crean una tensión superficial diferencial en la bicapa','La presión osmótica diferencial entre el citoplasma y el plasma sanguíneo'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'La forma bicóncava se mantiene por el balance entre tensión de membrana y la red de espectrina',a:true},{t:'En la esferocitosis hereditaria, la pérdida de lípidos de membrana precede a la esferización',a:true},{t:'Los reticulocitos recién liberados de la médula ya tienen la forma bicóncava definitiva',a:false}],pts:15},
       {type:'fill',s:'El eritrocito maduro carece de ___ y organulos, maximizando el espacio para la hemoglobina.',words:['nucleo','membrana plasmatica','ribosomas'],cor:'nucleo',pts:20},
     ],
@@ -1101,37 +1101,37 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'La lignina hace la pared del xilema impermeable y muy resistente',a:true},{t:'La lignificación es reversible: la célula puede eliminar la lignina',a:false},{t:'La madera está compuesta principalmente de células muertas del xilema',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Por qué la célula del xilema muere cuando completa su pared secundaria?',opts:['La lignificación impermeabiliza y mata la célula, dejando un canal hueco para conducir agua','La célula se suicida para liberar los nutrientes del árbol','La pared secundaria bloquea el acceso al ADN e impide la función','La lignina oxida las proteínas de la célula causando su muerte'],ans:0,pts:20},
+      {type:'quiz',q:'¿Por qué la célula del xilema muere cuando completa su pared secundaria?',opts:['La lignificación impermeabiliza y mata la célula, dejando un canal hueco','La célula se suicida para liberar sus nutrientes al resto del árbol','La pared secundaria bloquea el acceso al ADN e impide la función','La lignina oxida las proteínas de la célula y causa su muerte por estrés oxidativo'],ans:0,pts:20},
       {type:'trueFalse',items:[{t:'La célula del xilema muere al terminar la lignificación de su pared',a:true},{t:'La pared secundaria tiene 3 capas (S1, S2, S3) con diferente orientación de celulosa',a:true},{t:'La lignina del xilema es el mismo polímero que la celulosa con diferente nombre',a:false}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuál es la ruta biosintética de la lignina y qué enzimas la polimerizan?',opts:['Fenilpropanoides (Phe → ácido cinámico → monolignoles) polimerizados por peroxidasas y lacasas vía radicales libres','Glucosa polimerizada directamente por lignina sintasa en la pared','Acetato → malonato → policétidos condensados en la pared secundaria','Precursores de quitina modificados por metiltransferasas'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es la ruta biosintética de la lignina y qué enzimas la polimerizan?',opts:['Fenilpropanoides (Phe → ácido cinámico → monolignoles) polimerizados por peroxidasas y lacasas','Glucosa polimerizada directamente por la lignina sintasa en la pared','Acetato → malonato → policétidos, condensados por policétido sintasas en la pared secundaria celular','Precursores de quitina modificados por metiltransferasas'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'Los monolignoles (coniferilo, p-cumarilo, sinapilo) se polimerizan de manera azimétrica → lignina heterogénea',a:true},{t:'Las lacasas (multicopper oxidasas) y peroxidasas catalizan la formación de radicales monolignol',a:true},{t:'Los hongos de podredumbre blanca degradan la lignina con ligninasa y manganeso peroxidasa',a:true}],pts:15},
       {type:'fill',s:'La madera esta compuesta principalmente de ___ de la pared celular secundaria del xilema.',words:['lignina y celulosa','quitina y proteinas','celulosa y pectinas'],cor:'lignina y celulosa',pts:20},
     ],
   },
   primary_wall_x:{
     easy:[
-      {type:'quiz',q:'¿De qué está hecha la pared primaria de la célula del xilema?',opts:['Celulosa, hemicelulosa y pectinas: los mismos componentes de otras células vegetales','Solo celulosa pura sin otros componentes','Lignina y quitina mezcladas','Peptidoglicano como en las bacterias'],ans:0,pts:15},
+      {type:'quiz',q:'¿De qué está hecha la pared primaria de la célula del xilema?',opts:['Celulosa, hemicelulosa y pectinas, como en otras células vegetales','Solo celulosa pura, sin hemicelulosa ni pectinas ni otros componentes','Lignina y quitina mezcladas en capas alternas','Peptidoglicano, igual que en la pared celular de las bacterias Gram positivas'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'La pared primaria del xilema es la primera en formarse durante el desarrollo',a:true},{t:'La pared primaria desaparece completamente cuando se forma la secundaria',a:false},{t:'La pared primaria está hecha principalmente de celulosa',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué ocurre con la pared primaria durante la diferenciación del xilema?',opts:['Persiste en las zonas de punteadura; se deposita la pared secundaria sobre el resto','Se degrada completamente para dejar solo la pared secundaria','Se convierte en pared secundaria mediante lignificación directa','Se transforma en la membrana de tílosis'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué ocurre con la pared primaria durante la diferenciación del xilema?',opts:['Persiste en las punteaduras; la pared secundaria se deposita sobre el resto','Se degrada completamente para dejar solo la pared secundaria y la laminilla media','Se convierte en pared secundaria mediante lignificación directa de su celulosa','Se transforma en la membrana de las tílosis que obstruyen el vaso'],ans:0,pts:20},
       {type:'fill',s:'Las microfibrillas de celulosa de la pared primaria se orientan al ___, permitiendo el crecimiento de la célula en todas las direcciones.',words:['azar','norte','eje longitudinal'],cor:'azar',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué enzimas relajan la pared primaria durante el crecimiento xilematoso?',opts:['Expansinas: rompen puentes de H entre celulosa y xiloglucano sin actividad hidrolítica → creep ácido','Celulasas: degradan la celulosa durante la expansión reversiblemente','Pectato liasas: degradan pectinas para reducir la rigidez de la pared','Xiloglucanasas: cortan el xiloglucano para desvincular microfibrillas de celulosa'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué enzimas relajan la pared primaria durante el crecimiento xilematoso?',opts:['Expansinas: rompen puentes de H entre celulosa y xiloglucano, sin hidrólisis','Celulasas: degradan la celulosa durante la expansión de forma reversible y localizada','Pectato liasas: degradan las pectinas de la pared para reducir su rigidez','Ligninasas: degradan la lignina para aflojar las microfibrillas de celulosa de la pared'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'Las expansinas promueven el creep ácido de la pared: pH bajo activa expansinas que relajan la pared',a:true},{t:'La auxina promueve la expansión celular activando la ATPasa de protones que acidifica la pared',a:true},{t:'La pared primaria de traqueidas de coníferas es más gruesa que la de vasos de angiospermas',a:false}],pts:15},
       {type:'fill',s:'La pared primaria del xilema persiste en las zonas de ___, permitiendo el flujo de agua entre vasos.',words:['punteaduras','bandas espirales','tilosis'],cor:'punteaduras',pts:20},
     ],
   },
   pit_membrane:{
     easy:[
-      {type:'quiz',q:'¿Cuál es la función de la membrana de punteadura en el xilema?',opts:['Permite que el agua pase entre células del xilema mientras filtra burbujas y patógenos','Produce la celulosa de la pared','Controla la entrada de luz al xilema','Es solo un separador mecánico sin función de filtro'],ans:0,pts:15},
+      {type:'quiz',q:'¿Cuál es la función de la membrana de punteadura en el xilema?',opts:['Deja pasar el agua entre células y filtra burbujas y patógenos','Produce la celulosa de la pared secundaria y la deposita en el vaso','Controla la entrada de luz y de CO₂ al interior del xilema','Es solo un separador mecánico entre vasos, sin función de filtro'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'La membrana de punteadura permite el flujo de agua entre células del xilema',a:true},{t:'La membrana de punteadura puede bloquear el paso de burbujas de aire (cavitación)',a:true},{t:'La membrana de punteadura está hecha de lignina como la pared secundaria',a:false}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué es la cavitación xilémica y cómo la previene la membrana de punteadura?',opts:['La cavitación es la formación de burbujas en el xilema. La membrana actúa como barrera para que no se propaguen','La cavitación es el depósito de sales que obstruyen el xilema','La cavitación es la apertura excesiva de punteaduras que se previene con toro','La cavitación es la entrada de hongos que la membrana impide'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué es la cavitación xilémica y cómo la previene la membrana de punteadura?',opts:['Cavitación: formación de burbujas en el xilema; la membrana evita que se propaguen','Cavitación: depósito de sales que obstruyen el xilema; la membrana las filtra','Cavitación: apertura excesiva de las punteaduras, que se previene con un toro más grueso','Cavitación: entrada de hongos al interior del vaso, que la membrana de punteadura impide'],ans:0,pts:20},
       {type:'fill',s:'La resistencia de la membrana de punteadura a la ___ determina la eficiencia hidráulica del árbol.',words:['cavitación','fotosíntesis','respiración'],cor:'cavitación',pts:15},
     ],
     hard:[
@@ -1142,16 +1142,16 @@ const MINIGAMES_ALL={
   },
   lumen:{
     easy:[
-      {type:'quiz',q:'¿Qué es el lumen del xilema?',opts:['El espacio hueco dentro de los vasos muertos por donde fluye el agua hacia las hojas','Es la pared celular del xilema','Es el lugar donde se produce la fotosíntesis','Es el canal por donde circula el azúcar de las hojas'],ans:0,pts:15},
+      {type:'quiz',q:'¿Qué es el lumen del xilema?',opts:['El espacio hueco de los vasos muertos por donde sube el agua','Es la pared celular del xilema, hecha de celulosa y lignina','Es el lugar donde se produce la fotosíntesis dentro de la hoja','Es el canal por donde circula el azúcar que producen las hojas'],ans:0,pts:15},
       {type:'fill',s:'El agua sube por el xilema porque la evapotranspiración de las hojas crea una ___ que jala el agua desde las raíces.',words:['tensión','presión','gravedad'],cor:'tensión',pts:12},
       {type:'trueFalse',items:[{t:'El lumen del xilema es el canal hueco por donde circula el agua',a:true},{t:'El agua sube por el xilema gastando energía metabólica del árbol',a:false},{t:'Las células del lumen están muertas para facilitar el flujo de agua',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuál es la teoría que explica cómo asciende el agua por el xilema de árboles altos?',opts:['Teoría de cohesión-tensión: la evapotranspiración genera tensión negativa que arrastra una columna continua de agua','Teoría de presión radicular: las raíces bombean activamente el agua hacia arriba','Teoría capilar: la capilaridad es suficiente para árboles de hasta 100 m','Teoría osmótica: la alta concentración de sales en las hojas absorbe el agua'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es la teoría que explica cómo asciende el agua por el xilema de árboles altos?',opts:['Cohesión-tensión: la transpiración tira de una columna continua de agua','Presión radicular: las raíces empujan activamente el agua hacia arriba por el xilema','Capilaridad: alcanza por sí sola para subir agua en árboles de 100 m','Osmótica: la alta concentración de sales en las hojas absorbe el agua del suelo'],ans:0,pts:20},
       {type:'fill',s:'La presión en el xilema de un árbol bajo estrés hídrico puede llegar a ___ MPa (presión negativa).',words:['-5','+10','-0.1'],cor:'-5',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuál es el límite teórico de altura de un árbol basado en la teoría de cohesión-tensión?',opts:['~130 m (presión de -13 MPa = límite de cavitación del agua); el árbol más alto mide ~116 m','~50 m, limitado por la presión osmótica de las raíces','~200 m, sin límite práctico si la cohesión del agua es suficiente','~30 m, determinado por la resistencia gravitacional solamente'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es el límite teórico de altura de un árbol basado en la teoría de cohesión-tensión?',opts:['~130 m (límite por cavitación); el árbol más alto mide ~116 m','~50 m, límite impuesto por la presión osmótica de las raíces','~200 m, sin límite práctico si la cohesión del agua es suficiente','~30 m, determinado únicamente por la resistencia gravitacional'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'El agua puede soportar tensiones de hasta -30 MPa en tubos capilares puros antes de cavitar',a:true},{t:'La teoría de cohesión-tensión fue propuesta por Böhm, Askenasy y Dixon/Joly a finales del siglo XIX',a:true},{t:'Los vasos del xilema secundario son más eficientes que las traqueidas para transportar agua',a:true}],pts:15},
       {type:'fill',s:'La ___ xilem atica fluye bajo presion negativa a traves del lumen de los vasos conductores muertos.',words:['savia','linfa','solucion apoplastica'],cor:'savia',pts:20},
     ],
@@ -1162,11 +1162,11 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'Las punteaduras areoladas actúan como válvulas en el xilema',a:true},{t:'Las punteaduras areoladas son exclusivas de las angiospermas',a:false},{t:'Si hay una burbuja en el xilema, la punteadura se sella para que no se propague',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué son el toro y el margo de una punteadura areolada?',opts:['Toro: parte central rígida de celulosa. Margo: parte flexible que controla el flujo según la presión','Toro: la cámara exterior. Margo: la membrana de punteadura','Toro: el canal de agua. Margo: la pared secundaria alrededor','Toro: el tapón de Woronin. Margo: la proteína HEX-1'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué son el toro y el margo de una punteadura areolada?',opts:['Toro: parte central rígida. Margo: parte flexible que regula el flujo','Toro: la cámara exterior de la punteadura. Margo: la membrana central del par','Toro: el canal de agua del vaso. Margo: la pared secundaria que lo rodea','Toro: la abertura exterior de la punteadura. Margo: el reborde de la pared'],ans:0,pts:20},
       {type:'fill',s:'El ___ puede desplazarse hacia un lado y sellar la punteadura cuando hay embolia en el xilema.',words:['toro','margo','lumen'],cor:'toro',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Por qué las punteaduras areoladas de coníferas tienen toro pero las de angiospermas no?',opts:['En coníferas el transporte es por traqueidas: el toro es una adaptación para bloquear embolias sin perder conductividad. Las angiospermas tienen vasos y pueden aislar la pérdida más fácilmente','Las angiospermas tienen toro pero es microscópico e indetectable','Las angiospermas tienen mayor presión de turgor que impide la necesidad de toro','El toro es una estructura ancestral que las angiospermas perdieron evolutivamente sin consecuencias'],ans:0,pts:30},
+      {type:'quiz',q:'¿Por qué las punteaduras areoladas de coníferas tienen toro pero las de angiospermas no?',opts:['En coníferas el toro bloquea embolias sin perder conductividad; las angiospermas tienen vasos','Las angiospermas tienen toro, pero es microscópico e indetectable al microscopio','Las angiospermas tienen mayor presión de turgor, que impide la necesidad de toro','El toro es una estructura ancestral que las angiospermas perdieron evolutivamente sin ninguna consecuencia'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'El aspirado del toro (torus aspiration) es irreversible y reduce permanentemente la conductividad',a:true},{t:'Las coníferas pueden sobrevivir con hasta el 50% de sus punteaduras aspiradas sin marchitarse',a:true},{t:'La presión de aspiración del toro es mayor en maderas más resistentes a la sequía',a:true}],pts:15},
       {type:'fill',s:'En las punteaduras areoladas de gimnospermas, el ___ central puede sellar el poro previniendo embolias.',words:['toro','margo','lumen'],cor:'toro',pts:20},
     ],
@@ -1181,22 +1181,22 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'El compromiso entre conductividad y seguridad es la base de la "hydraulic safety-efficiency tradeoff"',a:true},{t:'Coníferas de climas áridos tienen menos punteaduras y lúmenes más pequeños que las de climas húmedos',a:true},{t:'Todas las punteaduras areoladas de un árbol tienen la misma probabilidad de aspirarse',a:false}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuáles son los mecanismos de la degradación de punteaduras por hongos Ophiostoma en el azulado de la madera?',opts:['Producción de celulasas y xilanasas que degradan la membrana de punteadura → pérdida de conductividad','Solo degradación de lignina por lacasas específicas del hongo','Bloqueo mecánico de punteaduras por hifas sin degradación enzimática','Producción de ácido oxálico que disuelve los carbonatos de la membrana'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuáles son los mecanismos de la degradación de punteaduras por hongos Ophiostoma en el azulado de la madera?',opts:['Celulasas y xilanasas que degradan la membrana de punteadura y cortan la conducción','Solo degradación de la lignina por lacasas específicas del hongo azulador','Bloqueo mecánico de punteaduras por las hifas, sin que haya degradación enzimática de la membrana','Producción de ácido oxálico que disuelve los carbonatos de la membrana de punteadura'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'Los hongos de azulado de la madera colonizan el xilema a través de las punteaduras naturales',a:true},{t:'El azulado de la madera no afecta la resistencia mecánica pero sí reduce la conductividad hidráulica',a:true},{t:'Los fungicidas azoles inhiben la síntesis de ergosterol del hongo previniendo el azulado',a:true}],pts:15},
       {type:'fill',s:'Las punteaduras areoladas funcionan en pares para garantizar ___ hidraulica cuando una de ellas se sella.',words:['redundancia','conductividad','elasticidad'],cor:'redundancia',pts:20},
     ],
   },
   spiral_band:{
     easy:[
-      {type:'quiz',q:'¿Por qué algunos vasos del xilema tienen engrosamiento en espiral?',opts:['Porque el xilema joven necesita ser flexible mientras el órgano todavía crece y se estira','Porque la espiral produce el color oscuro de la madera','Porque la espiral ayuda a la célula a dividirse','Porque la forma helicoidal aumenta la velocidad del agua'],ans:0,pts:15},
+      {type:'quiz',q:'¿Por qué algunos vasos del xilema tienen engrosamiento en espiral?',opts:['Porque el xilema joven debe ser flexible mientras el órgano crece','Porque la espiral produce el color oscuro de la madera del tronco viejo','Porque la espiral ayuda a la célula a dividirse','Porque la forma helicoidal aumenta la velocidad del agua'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'Las bandas espirales de lignina permiten que el vaso se estire mientras crece el tallo',a:true},{t:'El xilema maduro también tiene vasos en espiral como el joven',a:false},{t:'Las bandas espirales son las primeras estructuras que se forman en el xilema',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuáles son los tipos de engrosamiento de la pared interna del xilema según su madurez?',opts:['Anular → helicoidal → escalariforme → reticulado → punteado (del más joven al más maduro)','Solo helicoidal en el protoxilema y solo punteado en el metaxilema','Punteado primero y luego helicoidal al envejecer el xilema','Todos los tipos se forman al mismo tiempo según la especie'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuáles son los tipos de engrosamiento de la pared interna del xilema según su madurez?',opts:['Anular → helicoidal → escalariforme → reticulado → punteado','Solo helicoidal en el protoxilema y solo punteado en el metaxilema','Punteado primero y luego helicoidal, a medida que envejece el xilema','Todos los tipos se forman al mismo tiempo, según la especie vegetal'],ans:0,pts:20},
       {type:'fill',s:'El xilema primario joven (protoxilema) tiene vasos con engrosamiento ___ y helicoidal que le dan flexibilidad.',words:['anular','punteado','escalariforme'],cor:'anular',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué determina el ángulo de las microfibrillas de celulosa (MFA) en la capa S2 de la pared secundaria?',opts:['El MFA determina las propiedades mecánicas: bajo ángulo (~5-30°) → alta rigidez axial; alto ángulo → mayor flexibilidad','El MFA no afecta las propiedades mecánicas de la madera','Solo la lignina determina la rigidez: las microfibrillas son pasivas','El ángulo es siempre 45° en todas las especies de angiospermas'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué efecto tiene el ángulo de las microfibrillas de celulosa (MFA) de la capa S2 sobre las propiedades de la madera?',opts:['Bajo ángulo (~5-30°) → alta rigidez axial; alto ángulo → mayor flexibilidad','El MFA no afecta las propiedades mecánicas de la madera, que dependen solo de su peso','Solo la lignina determina la rigidez: las microfibrillas son pasivas','El ángulo es siempre 45° en todas las especies de angiospermas'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'La madera de reacción (tension wood en angiospermas, compression wood en coníferas) tiene MFA alterado',a:true},{t:'La madera de tensión tiene una capa G (gelatinosa) de celulosa casi pura en S3 en lugar de lignina',a:true},{t:'El ángulo de microfibrillas puede modificarse mediante regulación de la deposición de celulosa',a:true}],pts:15},
       {type:'fill',s:'Las bandas espirales de lignina permiten que el vaso xilemico se ___ sin perder su funcion conductora.',words:['elongue','comprima','tabique'],cor:'elongue',pts:20},
     ],
@@ -1207,22 +1207,22 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'Los vasos en espiral conducen agua hacia las hojas',a:true},{t:'El engrosamiento espiral aumenta la fuerza necesaria para romper el vaso',a:true},{t:'El xilema más joven (protoxilema) tiene punteaduras como el xilema maduro',a:false}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Por qué el protoxilema con vasos en espiral se rompe durante el crecimiento del órgano?',opts:['Los vasos jóvenes son desechables: se estiran y rompen al crecer el tejido; el metaxilema los reemplaza','Los vasos espirales se regeneran solos cuando se rompen','La rotura de vasos activa la síntesis de tílosis que los repara','El protoxilema en espiral nunca se rompe gracias a su flexibilidad'],ans:0,pts:20},
+      {type:'quiz',q:'¿Por qué el protoxilema con vasos en espiral se rompe durante el crecimiento del órgano?',opts:['Los vasos jóvenes son desechables: se estiran y se rompen; el metaxilema los reemplaza','Los vasos espirales se regeneran solos cuando se rompen, sin ayuda de las células vecinas del xilema','La rotura de vasos activa la síntesis de tílosis, que los repara y los sella del aire','El protoxilema en espiral nunca se rompe gracias a su flexibilidad'],ans:0,pts:20},
       {type:'trueFalse',items:[{t:'La rotura del protoxilema durante el crecimiento es un proceso programado y normal en el desarrollo vegetal',a:true},{t:'El metaxilema tiene vasos punteados más resistentes que reemplazan al protoxilema roto',a:true},{t:'Las plantas C4 tienen más protoxilema en sus hojas que las C3',a:false}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Cómo determina el citoesqueleto cortical la orientación de los engrosamientos en espiral del xilema?',opts:['Microtúbulos corticales guían la trayectoria de los complejos CesA → depósito helicoidal de celulosa → la lignificación sigue el mismo patrón','La actina cortical determina el ángulo de las microfibrillas','Los microtúbulos no participan en la orientación de los engrosamientos del xilema','Solo las enzimas de síntesis de lignina determinan el patrón espiral'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cómo determina el citoesqueleto cortical la orientación de los engrosamientos en espiral del xilema?',opts:['Microtúbulos corticales guían los complejos CesA y la celulosa se deposita en hélice','La actina cortical determina por sí sola el ángulo de las microfibrillas de celulosa en la pared','Los microtúbulos no participan en la orientación de los engrosamientos del xilema','Solo las enzimas de síntesis de lignina determinan el patrón espiral'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'Mutaciones en tubulina alteran el patrón de engrosamiento y la conductividad del xilema',a:true},{t:'La depolimerización de microtúbulos con oryzalin produce vasos con engrosamientos desordenados',a:true},{t:'Los complejos CesA se mueven por la membrana siguiendo los microtúbulos corticales durante la síntesis de pared secundaria',a:true}],pts:15},
       {type:'fill',s:'El patron de enrrollamiento de las bandas espirales puede ser dextrogiro o ___, segun la especie.',words:['levogiro','isotrop ico','anisotropo'],cor:'levogiro',pts:20},
     ],
   },
   plasmalemma_x:{
     easy:[
-      {type:'quiz',q:'¿Existen células vivas dentro del xilema además de los vasos muertos?',opts:['Sí, las células de parénquima xilemático están vivas y controlan el transporte de minerales','No, todas las células del xilema mueren al madurar','Solo las células de la corteza están vivas','Los vasos se reviven periódicamente para intercambiar minerales'],ans:0,pts:15},
+      {type:'quiz',q:'¿Existen células vivas dentro del xilema además de los vasos muertos?',opts:['Sí, el parénquima xilemático está vivo y regula el transporte de minerales','No, todas las células del xilema mueren al madurar y quedan sin contenido ni núcleo','Solo las células de la corteza del tallo están vivas','Los vasos muertos se reviven cada primavera para intercambiar minerales con la savia'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'El xilema tiene células vivas llamadas parénquima que trabajan con los vasos',a:true},{t:'El plasmalema del parénquima xilemático controla el paso de minerales al agua del xilema',a:true},{t:'Las células de parénquima xilemático viven solo unos pocos días',a:false}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuál es la función del parénquima xilemático con respecto a la savia?',opts:['Carga y descarga de iones (K⁺, Mg²⁺, Ca²⁺, nutrientes) al agua xilémica; almacenamiento de almidón','Solo función estructural de soporte mecánico a los vasos','Producción de lignina para la pared secundaria','Síntesis de agua metabólica que complementa el flujo transpiratorio'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es la función del parénquima xilemático con respecto a la savia?',opts:['Carga y descarga de iones (K⁺, Mg²⁺, Ca²⁺) en el agua del xilema; almacena almidón','Solo función estructural, como soporte mecánico de los vasos conductores','Producción de lignina para la pared secundaria de los vasos vecinos','Síntesis de agua metabólica que complementa el flujo transpiratorio de toda la planta'],ans:0,pts:20},
       {type:'fill',s:'Las células vivas del parénquima xilemático almacenan ___, que se hidroliza en glucosa cuando el árbol necesita energía.',words:['almidón','lignina','celulosa'],cor:'almidón',pts:15},
     ],
     hard:[
@@ -1233,7 +1233,7 @@ const MINIGAMES_ALL={
   },
   tylosis:{
     easy:[
-      {type:'quiz',q:'¿Qué son las tílosis y cómo ayudan al árbol?',opts:['Son células que se hinchan hacia el interior del vaso xilémico para bloquear patógenos y crear la madera de corazón','Son las esporas de los hongos que infectan el xilema','Son los tapones de lignina que se forman cuando el árbol envejece','Son un tipo de bacteria que vive en el xilema'],ans:0,pts:15},
+      {type:'quiz',q:'¿Qué son las tílosis y cómo ayudan al árbol?',opts:['Células que se hinchan dentro del vaso y lo bloquean contra patógenos','Son las esporas de los hongos que infectan el xilema de los árboles viejos','Son los tapones de lignina que se forman cuando el árbol envejece','Son un tipo de bacteria que vive en el xilema'],ans:0,pts:15},
       {type:'fill',s:'La madera de ___ (duramen) es la zona oscura central del árbol, formada por vasos obstruidos con tílosis.',words:['corazón','albura','floema'],cor:'corazón',pts:12},
       {type:'trueFalse',items:[{t:'Las tílosis bloquean los vasos del xilema impidiendo el paso de patógenos',a:true},{t:'El duramen o madera de corazón está formado por vasos con tílosis',a:true},{t:'Las tílosis hacen el xilema menos resistente a los hongos',a:false}],pts:8},
     ],
@@ -1273,7 +1273,7 @@ const MINIGAMES_ALL={
       {type:'fill',s:'El hígado puede regenerar porque los hepatocitos conservan capacidad ___ excepcional para células diferenciadas.',words:['proliferativa','mitocondrial','secretora'],cor:'proliferativa',pts:12},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué proceso convierte a un hepatocito de 2n en 4n (tetraploide)?',opts:['Mitosis sin citocinesis (sin división del citoplasma)','Meiosis incompleta','Fusión de dos hepatocitos diploides','Duplicación del ADN sin fase S'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué proceso convierte a un hepatocito de 2n en 4n (tetraploide)?',opts:['Mitosis sin citocinesis (sin división del citoplasma)','Meiosis incompleta, que deja un solo juego extra de cromosomas','Fusión de dos hepatocitos diploides vecinos en el lobulillo','Duplicación del ADN sin pasar por la fase S del ciclo celular'],ans:0,pts:20},
       {type:'fill',s:'La ploidia progresiva de los hepatocitos (2n→4n→8n) aumenta la ___ biosintética de la célula.',words:['capacidad','actividad','eficiencia'],cor:'capacidad',pts:15},
     ],
     hard:[
@@ -1285,7 +1285,7 @@ const MINIGAMES_ALL={
 
   nucleolus_h:{
     easy:[
-      {type:'quiz',q:'¿Por qué el nucléolo del hepatocito es especialmente grande?',opts:['Necesita muchos ribosomas para sintetizar albúmina y factores de coagulación','El hígado tiene más ADN que otras células','Los hepatocitos son más grandes que otras células','El hígado es el órgano más activo en dividirse'],ans:0,pts:15},
+      {type:'quiz',q:'¿Por qué el nucléolo del hepatocito es especialmente grande?',opts:['Necesita muchos ribosomas para fabricar albúmina y factores de coagulación','El hígado tiene más ADN por célula que las demás células del cuerpo','Los hepatocitos son mucho más grandes que cualquier otra célula del cuerpo humano','El hígado es el órgano que más se divide durante toda la vida adulta'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'El nucléolo sintetiza el ARN ribosómico (ARNr) que forma parte de los ribosomas',a:true},{t:'El nucléolo tiene su propia membrana que lo aísla del nucleoplasma',a:false},{t:'El hepatocito sintetiza la albúmina, la proteína más abundante del plasma humano',a:true}],pts:8},
     ],
     normal:[
@@ -1366,7 +1366,7 @@ const MINIGAMES_ALL={
     ],
     normal:[
       {type:'fill',s:'La ___ es la proteína estructural indispensable del VLDL hepático; sin ella no se pueden ensamblar las partículas.',words:['apoB-100','apoA-I','apoC-II'],cor:'apoB-100',pts:15},
-      {type:'quiz',q:'¿Qué ocurre cuando el Golgi no puede procesar la apoB-100 correctamente?',opts:['Se acumula grasa en el hígado (esteatosis) porque no puede exportar lípidos como VLDL','Aumenta la secreción de HDL compensatoria','El colesterol se deposita en la vesícula biliar','Los fosfolipídos no pueden sintetizarse'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué ocurre cuando el Golgi no puede procesar la apoB-100 correctamente?',opts:['Se acumula grasa en el hígado (esteatosis) por no exportar VLDL','Aumenta la secreción compensatoria de HDL hacia la sangre','El colesterol se deposita en la vesícula biliar y forma cálculos biliares','Los fosfolípidos de membrana no pueden sintetizarse en el hepatocito'],ans:0,pts:20},
     ],
     hard:[
       {type:'fill',q:'La proteína ___ (MTP) en el RER y Golgi transfiere lípidos a la apoB-100 naciente durante el ensamblado del VLDL.',a:'MTP',pts:22},
@@ -1381,7 +1381,7 @@ const MINIGAMES_ALL={
     ],
     normal:[
       {type:'fill',s:'La enfermedad de ___ se debe a déficit de α-glucosidasa lisosomal → acumulación de glucógeno en hígado y músculo.',words:['Pompe','Gaucher','Fabry'],cor:'Pompe',pts:15},
-      {type:'quiz',q:'¿Cuál es la función de la lipofagia lisosomal en el hepatocito en ayuno?',opts:['Degradar gotas lipídicas → liberar ácidos grasos para β-oxidación y VLDL','Sintetizar nuevas gotas lipídicas para reserva','Exportar lípidos al exterior','Transferir lípidos a las mitocondrias directamente'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es la función de la lipofagia lisosomal en el hepatocito en ayuno?',opts:['Degradar gotas lipídicas y liberar ácidos grasos para β-oxidación','Sintetizar nuevas gotas lipídicas para reserva de energía en el ayuno','Exportar los lípidos al exterior de la célula sin degradarlos','Transferir los lípidos a las mitocondrias directamente, sin degradarlos'],ans:0,pts:20},
     ],
     hard:[
       {type:'fill',q:'La bilirrubina no conjugada tóxica es conjugada con glicurónico en el hepatocito y excretada por ___ en el canalículo.',a:'MRP2',pts:22},
@@ -1396,7 +1396,7 @@ const MINIGAMES_ALL={
     ],
     normal:[
       {type:'fill',s:'El síndrome de ___ es una enfermedad neonatal grave causada por déficit en la biogénesis de peroxisomas.',words:['Zellweger','Pompe','Gaucher'],cor:'Zellweger',pts:15},
-      {type:'quiz',q:'¿Cuál es la diferencia entre la β-oxidación peroxisomal y la mitocondrial?',opts:['La peroxisomal oxida AGCML y transfiere el resultado a la mitocondria; no produce ATP directamente','La peroxisomal produce más ATP por molécula de ácido graso','Son idénticas en función y localización subcelular','La peroxisomal usa NADH y la mitocondrial FADH₂ como cofactores'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es la diferencia entre la β-oxidación peroxisomal y la mitocondrial?',opts:['La peroxisomal oxida AGCML y pasa el resultado a la mitocondria; no produce ATP','La peroxisomal produce más ATP por molécula de ácido graso que la mitocondrial en las células hepáticas','Son idénticas en función y localización subcelular','La peroxisomal usa NADH y la mitocondrial FADH₂ como únicos cofactores de la oxidación'],ans:0,pts:20},
     ],
     hard:[
       {type:'fill',q:'Los plasmalógenos (éter-fosfolipídos importantes en el cerebro y el corazón) se sintetizan exclusivamente en los ___ hepáticos.',a:'peroxisomas',pts:22},
@@ -1428,7 +1428,7 @@ const MINIGAMES_ALL={
     ],
     normal:[
       {type:'fill',s:'La progresión del NAFLD de esteatosis simple a ___ (NASH) implica inflamación, estrés oxidativo y daño hepatocítico.',words:['esteatohepatitis','cirrosis','hepatitis'],cor:'esteatohepatitis',pts:15},
-      {type:'quiz',q:'¿Cuál es el mecanismo principal de eliminación de gotas lipídicas en el hepatocito durante el ayuno?',opts:['Lipofagia: las gotas son engullidas por autofagosomas y degradadas en lisosomas','Exocitosis directa al espacio de Disse','Transferencia directa a la mitocondria','Conversión en glucógeno por gluconeogénesis inversa'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es el mecanismo principal de eliminación de gotas lipídicas en el hepatocito durante el ayuno?',opts:['Lipofagia: las gotas son degradadas por autofagosomas y lisosomas','Exocitosis directa de las gotas al espacio de Disse','Transferencia directa de las gotas completas a la mitocondria','Conversión en glucógeno por gluconeogénesis inversa en el citosol del hepatocito'],ans:0,pts:20},
     ],
     hard:[
       {type:'fill',q:'La lipogénesis de novo en el hepatocito está regulada por el factor de transcripción ___, activado por insulina y carbohidratos en exceso.',a:'SREBP-1c',pts:22},
@@ -1444,7 +1444,7 @@ const MINIGAMES_ALL={
     ],
     normal:[
       {type:'fill',s:'La ___ (detención del flujo biliar) puede ocurrir por defectos en transportadores canaliculares, embarazo o fármacos.',words:['colestasis','cirrosis','hepatitis'],cor:'colestasis',pts:15},
-      {type:'quiz',q:'¿Qué sucede con las sales biliares una vez que llegan al intestino delgado?',opts:['Son reabsorbidas en el íleon terminal y regresan al hígado (circulación enterohepatica)','Se excretan completamente por las heces','Son convertidas en colesterol y absorbidas directamente','Son destruidas por la microbiota del colon'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué sucede con las sales biliares una vez que llegan al intestino delgado?',opts:['Se reabsorben en el íleon y vuelven al hígado (circulación enterohepática)','Se excretan casi por completo por las heces sin reabsorberse nunca en el intestino','Son convertidas en colesterol y absorbidas directamente en el yeyuno','Son destruidas por la microbiota del colon'],ans:0,pts:20},
     ],
     hard:[
       {type:'fill',q:'La colestasis intrahepática familiar progresiva tipo 2 (PFIC2) se debe a mutaciones en ___, el principal transportador canalicular de sales biliares.',a:'BSEP',pts:22},
@@ -1493,13 +1493,13 @@ const MINIGAMES_ALL={
       {type:'fill',s:'Las ___ son células mononucleadas quiescentes situadas entre el sarcolema y la lámina basal, que se activan para regenerar el músculo.',words:['células satélite','células de Schwann','células intersticiales'],cor:'células satélite',pts:12},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué ocurre con los núcleos musculares en la miopatía centronuclear (MTM1)?',opts:['Migran al centro de la fibra en lugar de permanecer periféricos','Se fragmentan y causan apoptosis','Se fusionan formando un núcleo gigante','Desaparecen por necrosis'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué ocurre con los núcleos musculares en la miopatía centronuclear (MTM1)?',opts:['Migran al centro de la fibra en lugar de permanecer periféricos','Se fragmentan y causan la apoptosis de toda la fibra muscular esquelética','Se fusionan entre sí y forman un único núcleo gigante central','Desaparecen por necrosis y la fibra queda sin núcleos periféricos'],ans:0,pts:20},
       {type:'fill',s:'La ___ de proteínas miofibrilares (miosina, actina) está controlada localmente por los núcleos periféricos más cercanos al sarcómero.',words:['síntesis','degradación','importación'],cor:'síntesis',pts:15},
     ],
     hard:[
       {type:'fill',q:'Proteína de lámina nuclear cuyas mutaciones (LMNA) causan distrofia muscular de Emery-Dreifuss, cardiomiopatía dilatada y progeria',a:'lamina A/C',pts:22},
       {type:'trueFalse',items:[{t:'La terapia con células satélite autólogas modificadas genéticamente es un enfoque en desarrollo para distrofias musculares',a:true},{t:'El envejecimiento reduce el número de células satélite y su capacidad de activación, contribuyendo a la sarcopenia',a:true},{t:'Los núcleos periféricos en el extremo de la fibra expresan los mismos genes que los de la zona media',a:false}],pts:28},
-      {type:'quiz',q:'¿Cuál es la diferencia funcional entre núcleos "sinápticos" y "extrasinápticos" de la fibra muscular?',opts:['Los sinápticos expresan subunidades específicas de AChR (ε) inducidas por neuregulina/agruina','Los sinápticos producen más ATP','Los extrasinápticos expresan más actina','No hay diferencia funcional'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es la diferencia funcional entre núcleos "sinápticos" y "extrasinápticos" de la fibra muscular?',opts:['Los sinápticos expresan subunidades específicas de AChR (ε), inducidas por agrina','Los sinápticos producen más ATP que los extrasinápticos para sostener la placa','Los extrasinápticos expresan más actina que los sinápticos en toda la longitud de la fibra','No hay diferencia funcional: todos los núcleos expresan los mismos genes'],ans:0,pts:30},
     ],
   },
   sarcomere:{
@@ -1514,7 +1514,7 @@ const MINIGAMES_ALL={
       {type:'sequence',items:['Ca²⁺ liberado del RS une troponina C','Tropomiosina se desplaza → sitios de actina expuestos','Cabeza de miosina (con ADP+Pi) se une a actina','Power stroke: pivoteo de cabeza → filamentos deslizan ~10 nm','ATP une la cabeza de miosina → despegue del puente cruzado','Hidrólisis de ATP recarga la cabeza de miosina'],pts:25},
     ],
     hard:[
-      {type:'quiz',q:'La curva fuerza-longitud del músculo muestra fuerza máxima a 2.2 µm de sarcómero porque...',opts:['El solapamiento actina-miosina es máximo (todos los puentes cruzados pueden formarse)','La titina está en su longitud natural','Las tropomiosinas se liberan completamente','El disco Z activa la troponina'],ans:0,pts:30},
+      {type:'quiz',q:'La curva fuerza-longitud del músculo muestra fuerza máxima a 2.2 µm de sarcómero porque...',opts:['El solapamiento actina-miosina es máximo y se forman todos los puentes','La titina está en su longitud natural y no genera fuerza pasiva','Las tropomiosinas se liberan por completo y exponen los sitios de unión','El disco Z activa directamente la troponina de cada filamento fino'],ans:0,pts:30},
       {type:'fill',q:'Miopatía congénita causada por mutaciones en α-actina, tropomiosina o troponina que forman cuerpos en bastón en el sarcómero',a:'miopatía nemalínica',pts:22},
       {type:'trueFalse',items:[{t:'La cardiomiopatía hipertrófica (MCH) es la cardiopatía hereditaria más frecuente y suele deberse a mutaciones en β-miosina (MYH7)',a:true},{t:'Durante la tetania, el [Ca²⁺] citosólico permanece elevado, impidiendo la relajación y causando el espasmo',a:true},{t:'La zona H del sarcómero contiene actina y miosina en igual proporción',a:false}],pts:28},
     ],
@@ -1530,14 +1530,14 @@ const MINIGAMES_ALL={
       {type:'fill',s:'La ___ es la proteína más grande conocida (~4 MDa), actúa como resorte elástico y define la longitud de sarcómero en reposo.',words:['titina','nebulina','actinina'],cor:'titina',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué distingue a las isoformas de miosina en fibras tipo I vs IIa vs IIx/IIb?',opts:['Velocidad de ciclo de la ATPasa y potencia generada','Número de cabezas de miosina','Longitud del filamento grueso','Capacidad de unión a titina'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué distingue a las isoformas de miosina en fibras tipo I vs IIa vs IIx/IIb?',opts:['Velocidad de ciclo de la ATPasa y potencia generada','Número de cabezas de miosina por molécula de filamento grueso','Longitud del filamento grueso en cada sarcómero','Capacidad de unión a titina en la banda M'],ans:0,pts:30},
       {type:'fill',q:'Proceso de degradación proteica muscular mediado por ubiquitinación y el proteasoma 26S, que predomina en atrofia por desuso o ayuno',a:'proteólisis ubiquitina-proteasoma',pts:22},
       {type:'trueFalse',items:[{t:'La nebulina actúa como "regla molecular" que determina la longitud exacta (~1 µm) de los filamentos delgados',a:true},{t:'La contracción isométrica genera fuerza sin cambiar la longitud del sarcómero',a:true},{t:'La actinina-α es la principal proteína del disco Z que ancla los filamentos de actina entre sarcómeros',a:true}],pts:28},
     ],
   },
   t_tubule:{
     easy:[
-      {type:'quiz',q:'¿Cuál es la función principal del túbulo T?',opts:['Transmitir el potencial de acción al interior de la fibra para activar el RS','Sintetizar proteínas contráctiles','Almacenar ATP para la contracción','Degradar el glucógeno muscular'],ans:0,pts:15},
+      {type:'quiz',q:'¿Cuál es la función principal del túbulo T?',opts:['Llevar el potencial de acción al interior de la fibra para activar el RS','Sintetizar las proteínas contráctiles que forman las miofibrillas','Almacenar ATP para la contracción y liberarlo a las miofibrillas durante el ejercicio','Degradar el glucógeno muscular y liberar glucosa a la sangre'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'Los túbulos T son invaginaciones del sarcolema hacia el interior de la fibra',a:true},{t:'En músculo esquelético los túbulos T se ubican en la unión de las bandas A e I',a:true},{t:'El receptor de rianodina (RyR1) está localizado en la membrana del túbulo T',a:false}],pts:8},
       {type:'fill',s:'El conjunto formado por un túbulo T flanqueado por dos cisternas terminales del RS se llama ___.',words:['tríada','díada','cúpula'],cor:'tríada',pts:12},
     ],
@@ -1546,14 +1546,14 @@ const MINIGAMES_ALL={
       {type:'fill',s:'El acoplamiento ___ une el potencial de acción del sarcolema con la liberación de Ca²⁺ del retículo sarcoplasmático.',words:['excitación-contracción','voltaje-corriente','membrana-retículo'],cor:'excitación-contracción',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Cómo difiere el mecanismo de activación de RyR en músculo esquelético vs cardíaco?',opts:['Esquelético: acoplamiento mecánico DHPR→RyR1 (sin Ca²⁺ extracelular); cardíaco: CICR (Ca²⁺ entra por Cav1.2 y dispara RyR2)','Esquelético: CICR; cardíaco: acoplamiento mecánico','Ambos usan CICR con distintas isoformas de RyR','No hay diferencia funcional'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cómo difiere el mecanismo de activación de RyR en músculo esquelético vs cardíaco?',opts:['Esquelético: acoplamiento mecánico DHPR→RyR1; cardíaco: Ca²⁺ dispara RyR2 (CICR)','Esquelético: CICR con Ca²⁺ extracelular; cardíaco: acoplamiento mecánico DHPR→RyR','Ambos usan CICR con distintas isoformas de RyR y distinta sensibilidad al calcio','No hay diferencia funcional; solo cambia el nombre de la isoforma de RyR'],ans:0,pts:30},
       {type:'fill',q:'Fármaco que bloquea el receptor de rianodina (RyR1) usado en el tratamiento de urgencia de la hipertermia maligna',a:'dantroleno',pts:22},
       {type:'trueFalse',items:[{t:'En músculo cardíaco los túbulos T están en los discos Z (no en la unión A-I como en esquelético)',a:true},{t:'Los túbulos T cardíacos forman díadas con el RS (1 cisterna terminal, no 2)',a:true},{t:'La ausencia de túbulos T impediría completamente la contracción muscular',a:true}],pts:28},
     ],
   },
   sr:{
     easy:[
-      {type:'quiz',q:'¿Cuál es la función principal del retículo sarcoplasmático?',opts:['Almacenar y liberar Ca²⁺ para controlar la contracción','Sintetizar proteínas contráctiles','Producir ATP por glucólisis','Degradar organelos dañados'],ans:0,pts:15},
+      {type:'quiz',q:'¿Cuál es la función principal del retículo sarcoplasmático?',opts:['Almacenar y liberar Ca²⁺ para controlar la contracción','Sintetizar las proteínas contráctiles de la miofibrilla','Producir ATP por glucólisis para sostener la contracción','Degradar los organelos dañados de la fibra muscular'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'El retículo sarcoplasmático es una forma especializada del RE liso',a:true},{t:'La bomba SERCA recapta Ca²⁺ del citoplasma al RS gastando ATP durante la relajación',a:true},{t:'El RS libera Ca²⁺ durante la relajación muscular',a:false}],pts:8},
       {type:'fill',s:'La bomba ___ (Ca²⁺-ATPasa del RS) bombea Ca²⁺ de regreso al lumen del RS gastando ATP, permitiendo la relajación.',words:['SERCA','RyR1','DHPR'],cor:'SERCA',pts:12},
     ],
@@ -1562,7 +1562,7 @@ const MINIGAMES_ALL={
       {type:'fill',s:'La ___ es la proteína de unión a Ca²⁺ del lumen del RS, con alta capacidad y baja afinidad, que actúa como tampón y reserva de Ca²⁺.',words:['calsecuestrina','calmodulina','calreticulina'],cor:'calsecuestrina',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'En insuficiencia cardíaca crónica, ¿qué ocurre con la función de SERCA2a?',opts:['Su actividad está reducida → sobrecarga de Ca²⁺ citosólico → disfunción diastólica','Su actividad aumenta causando relajación excesiva','Se convierte en la isoforma SERCA1a','Es sustituida por RyR2'],ans:0,pts:30},
+      {type:'quiz',q:'En insuficiencia cardíaca crónica, ¿qué ocurre con la función de SERCA2a?',opts:['Su actividad está reducida: sobrecarga de Ca²⁺ citosólico y disfunción diastólica','Su actividad aumenta y causa una relajación diastólica excesiva con falta de llenado','Se convierte en la isoforma SERCA1a, propia del músculo esquelético rápido','Es sustituida por RyR2'],ans:0,pts:30},
       {type:'fill',q:'Inhibidor endógeno de SERCA2a en el miocito cardíaco, cuya fosforilación por PKA (receptor β-adrenérgico) activa la bomba durante el ejercicio',a:'fosfolamban',pts:22},
       {type:'trueFalse',items:[{t:'SERCA1a es la isoforma predominante en músculo esquelético rápido; SERCA2a en cardíaco y músculo lento',a:true},{t:'La terapia génica AAV-SERCA2a fue evaluada en ensayos de fase II/III para insuficiencia cardíaca (CUPID)',a:true},{t:'El calcio del RS muscular se repone desde el calcio extracelular en cada contracción del músculo esquelético',a:false}],pts:28},
     ],
@@ -1574,18 +1574,18 @@ const MINIGAMES_ALL={
       {type:'fill',s:'En músculo ___, las tríadas se reemplazan por díadas (1 cisterna + 1 túbulo T) y la liberación de Ca²⁺ es por CICR.',words:['cardíaco','liso','esquelético lento'],cor:'cardíaco',pts:12},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué proteína de la cisterna terminal interactúa físicamente con el DHPR del túbulo T para liberar Ca²⁺?',opts:['RyR1 (receptor de rianodina tipo 1)','SERCA1a','Calsecuestrina','Triadin'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué proteína de la cisterna terminal interactúa físicamente con el DHPR del túbulo T para liberar Ca²⁺?',opts:['RyR1, el receptor de rianodina tipo 1 del retículo','SERCA1a, la bomba que recaptura Ca²⁺ al retículo','Calsecuestrina, que almacena Ca²⁺ dentro de la cisterna','Triadin, que ancla la calsecuestrina al RyR1'],ans:0,pts:20},
       {type:'fill',s:'La ___ interactúa con RyR1 y calsecuestrina en la cisterna terminal para modular la liberación luminal de Ca²⁺.',words:['triadin','ankirin','distrofina'],cor:'triadin',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuál es la diferencia clave entre la activación de RyR1 (esquelético) y RyR2 (cardíaco)?',opts:['RyR1: activación mecánica directa por DHPR (sin Ca²⁺ extracelular); RyR2: activación por Ca²⁺ (CICR)','RyR1 usa Ca²⁺ extracelular; RyR2 es mecánico','Ambos son mecánicos pero con distinta isoforma','No hay diferencia funcional'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es la diferencia clave entre la activación de RyR1 (esquelético) y RyR2 (cardíaco)?',opts:['RyR1: activación mecánica directa por DHPR; RyR2: activación por Ca²⁺ (CICR)','RyR1 usa Ca²⁺ extracelular para abrirse; RyR2 se activa por acoplamiento mecánico','Ambos son mecánicos y solo cambia la isoforma de RyR y su ubicación','No hay diferencia funcional entre RyR1 y RyR2 en la señalización'],ans:0,pts:30},
       {type:'fill',q:'Síndrome de urgencia anestésica causado por mutaciones en RyR1 que producen liberación masiva de Ca²⁺ del RS con hipertermia y rigidez',a:'hipertermia maligna',pts:22},
       {type:'trueFalse',items:[{t:'Las moléculas S107 (rycal) estabilizan RyR1 reduciendo la liberación espontánea de Ca²⁺ en miopatías RyR1',a:true},{t:'La enfermedad de central core (defectos en el centro de la fibra) se debe a mutaciones en RyR1',a:true},{t:'En el músculo esquelético, la contracción requiere Ca²⁺ extracelular en condiciones normales',a:false}],pts:28},
     ],
   },
   mito_m:{
     easy:[
-      {type:'quiz',q:'¿Por qué las fibras musculares tipo I (lentas) tienen más mitocondrias que las tipo IIb?',opts:['Para producir ATP aeróbicamente y resistir la fatiga durante ejercicio prolongado','Para almacenar más glucógeno','Para generar más calor corporal','Para sintetizar más proteínas contráctiles'],ans:0,pts:15},
+      {type:'quiz',q:'¿Por qué las fibras musculares tipo I (lentas) tienen más mitocondrias que las tipo IIb?',opts:['Para producir ATP con oxígeno y resistir la fatiga en esfuerzos largos','Para almacenar más glucógeno para los esfuerzos breves e intensos','Para generar más calor corporal y mantener la temperatura del cuerpo','Para sintetizar más proteínas contráctiles que las fibras rápidas y crecer más rápido'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'Las mitocondrias musculares se organizan en hileras entre las miofibrillas y bajo el sarcolema',a:true},{t:'Las mitocondrias musculares solo pueden usar glucosa como combustible energético',a:false},{t:'El ejercicio aeróbico de larga duración aumenta el número y tamaño de las mitocondrias musculares',a:true}],pts:8},
       {type:'fill',s:'El ___ es el proceso por el que el ejercicio aeróbico induce la formación de nuevas mitocondrias musculares, regulado por PGC-1α.',words:['biogénesis mitocondrial','mitofagia','fusión mitocondrial'],cor:'biogénesis mitocondrial',pts:12},
     ],
@@ -1617,16 +1617,16 @@ const MINIGAMES_ALL={
   },
   glycogen_m:{
     easy:[
-      {type:'quiz',q:'¿Por qué el músculo no puede liberar glucosa a la sangre aunque tenga glucógeno?',opts:['Carece de glucosa-6-fosfatasa (necesaria para exportar glucosa libre)','No tiene glucógeno fosforilasa','Su glucógeno es de tipo diferente','No tiene acceso a capilares sanguíneos'],ans:0,pts:15},
+      {type:'quiz',q:'¿Por qué el músculo no puede liberar glucosa a la sangre aunque tenga glucógeno?',opts:['Carece de glucosa-6-fosfatasa, que exporta la glucosa libre','No tiene glucógeno fosforilasa para liberar la glucosa del glucógeno','Su glucógeno es químicamente distinto al del hígado y no se degrada','No tiene acceso a los capilares sanguíneos que rodean la fibra'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'El glucógeno muscular es de uso exclusivamente local (no puede mantener la glucemia)',a:true},{t:'La adrenalina activa la glucógeno fosforilasa muscular durante el ejercicio o el estrés',a:true},{t:'El glucógeno muscular es la principal fuente de glucosa sanguínea durante el ayuno',a:false}],pts:8},
       {type:'fill',s:'La enfermedad de ___ (glucogenosis tipo V) causa mioglobinuria y rabdomiólisis por ejercicio por déficit de glucógeno fosforilasa muscular.',words:['McArdle','Pompe','von Gierke'],cor:'McArdle',pts:12},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuántos gramos de glucógeno puede almacenar el músculo total de un adulto (~30 kg músculo)?',opts:['~300-400 g (>>que el hígado)','~50 g','~1000 g','~100 g'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuántos gramos de glucógeno puede almacenar el músculo total de un adulto (~30 kg músculo)?',opts:['~300-400 g, mucho más que el hígado','~50 g, menos que el glucógeno del hígado','~1000 g, más de un kilo repartido en todo el músculo','~100 g, igual que el hígado del adulto'],ans:0,pts:20},
       {type:'fill',s:'El ___ es el activador alostérico de la glucógeno fosforilasa b muscular que acelera la glucogenólisis durante la contracción intensa.',words:['AMP','ATP','glucosa-6-P'],cor:'AMP',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'En el test de isquemia del antebrazo de un paciente con enfermedad de McArdle, ¿qué resultado se espera?',opts:['Ausencia de aumento de lactato venoso con elevación normal de amoniaco','Aumento de lactato y descenso de amoniaco','Ausencia de aumento de amoniaco','Aumento excesivo de glucosa venosa'],ans:0,pts:30},
+      {type:'quiz',q:'En el test de isquemia del antebrazo de un paciente con enfermedad de McArdle, ¿qué resultado se espera?',opts:['No sube el lactato venoso y el amoniaco sí aumenta normalmente','Aumento de lactato y descenso de amoniaco en la sangre venosa','Ausencia de aumento de amoniaco, con aumento normal del lactato','Aumento excesivo de glucosa venosa y de lactato tras el ejercicio'],ans:0,pts:30},
       {type:'fill',q:'Proteína que nuclea la síntesis de glucógeno, actuando como cebador glucoproteico para la glucógeno sintasa',a:'glucogenina',pts:22},
       {type:'trueFalse',items:[{t:'La glucógeno sintasa muscular es activada por insulina (desfosforilación) y alostéricamente por glucosa-6-fosfato',a:true},{t:'Durante un sprint anaeróbico máximo, el glucógeno muscular puede agotarse en 10-15 minutos',a:true},{t:'La glucosa-6-fosfatasa está presente en músculo esquelético permitiendo liberar glucosa al plasma',a:false}],pts:28},
     ],
@@ -1642,7 +1642,7 @@ const MINIGAMES_ALL={
       {type:'fill',s:'La ___ sérica es el marcador más precoz de infarto de miocardio (se detecta a las 2h del inicio), aunque tiene baja especificidad cardíaca.',words:['mioglobina','troponina I','CK-MB'],cor:'mioglobina',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuál es el P50 de la mioglobina y qué significa para su función en el músculo?',opts:['~2.8 mmHg: solo cede O₂ en hipoxia severa local → actúa como reserva, no como transportador','~26 mmHg: igual que hemoglobina','~50 mmHg: cede O₂ en condiciones normales','~1 mmHg: no cede O₂'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es el P50 de la mioglobina y qué significa para su función en el músculo?',opts:['~2.8 mmHg: solo cede O₂ en hipoxia severa; es reserva, no transportador','~26 mmHg: igual que la hemoglobina, por eso lo transporta por la sangre a los tejidos','~50 mmHg: cede O₂ en condiciones normales a las mitocondrias','~1 mmHg: no cede O₂ nunca, ni siquiera en hipoxia'],ans:0,pts:30},
       {type:'fill',q:'En cetáceos y mamíferos de buceo la concentración de mioglobina muscular es 10-30 veces mayor que en humanos, permitiendo apneas prolongadas. ¿Qué carga superficial impide la agregación de mioglobina a concentraciones tan altas?',a:'carga positiva (histidinas en la superficie)',pts:22},
       {type:'trueFalse',items:[{t:'La difusión facilitada de O₂ por mioglobina es significativa: puede duplicar el flujo de O₂ a las mitocondrias',a:true},{t:'La carboxi-mioglobina (Mb-CO) no puede ceder O₂, similar a la carboxi-hemoglobina en intoxicación por CO',a:true},{t:'La troponina I cardíaca tiene mayor sensibilidad y especificidad para IAM que la mioglobina',a:true}],pts:28},
     ],
@@ -1673,18 +1673,18 @@ const MINIGAMES_ALL={
       {type:'fill',s:'El ___ es el receptor que reconoce específicamente péptidos presentados por MHC en la superficie del linfocito T.',words:['TCR','BCR','TLR'],cor:'TCR',pts:12},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué proteína ancla constitutivamente a Lck (src quinasa) a la membrana del linfocito T helper?',opts:['CD4 (mediante motivo palmitoilado)','CD3ζ','ZAP-70','LAT'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué proteína ancla constitutivamente a Lck (src quinasa) a la membrana del linfocito T helper?',opts:['CD4, por su cola citoplasmática','CD3ζ, la cadena con los ITAMs del complejo TCR','ZAP-70, la quinasa que se recluta después de Lck','LAT, la proteína adaptadora de membrana'],ans:0,pts:20},
       {type:'fill',s:'La ___ del linfocito T es la zona organizada de contacto entre el linfocito T y la célula presentadora de antígeno.',words:['sinapsis inmunológica','hendidura sináptica','placa motora'],cor:'sinapsis inmunológica',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Por qué el superagonista anti-CD28 TGN1412 causó reacciones adversas graves en 2006?',opts:['Activó policlonalmente todos los T (sin señal TCR): tormenta de citocinas','Inhibió el TCR bloqueando la tolerancia','Activó solo CTL generando HLH','Destruyó CD4+ causando SCID transitoria'],ans:0,pts:30},
+      {type:'quiz',q:'¿Por qué el superagonista anti-CD28 TGN1412 causó reacciones adversas graves en 2006?',opts:['Activó a todos los T sin señal del TCR: tormenta de citocinas','Inhibió el TCR y bloqueó por completo la tolerancia inmunológica','Activó solo a los CTL y generó una linfohistiocitosis hemofagocítica','Destruyó los linfocitos CD4+ y causó una inmunodeficiencia transitoria'],ans:0,pts:30},
       {type:'fill',q:'Terapia que inserta un receptor quimérico (ScFv fusionado a dominios CD3ζ+CD28 o 4-1BB) en linfocitos T del paciente para tratar leucemias y linfomas',a:'CAR-T',pts:22},
       {type:'trueFalse',items:[{t:'El TCR es heterodímero αβ (o γδ) con dominios variables V generados por recombinación V(D)J',a:true},{t:'La diversidad del TCR (10^15-18 especificidades) se genera por recombinación somática + adiciones P/N en las uniones',a:true},{t:'Las células CAR-T mantienen el TCR endógeno activo para aumentar la eficacia antitumoral',a:false}],pts:28},
     ],
   },
   nucleus_t:{
     easy:[
-      {type:'quiz',q:'¿Qué factor de transcripción transloca al núcleo del linfocito T tras la señalización del TCR y activa la producción de IL-2?',opts:['NFAT (factor nuclear de células T activadas)','NF-κB','p53','STAT3'],ans:0,pts:15},
+      {type:'quiz',q:'¿Qué factor de transcripción transloca al núcleo del linfocito T tras la señalización del TCR y activa la producción de IL-2?',opts:['NFAT (factor nuclear de células T activadas)','GATA-1, el factor de transcripción de la línea eritroide','p53, el supresor tumoral que detiene el ciclo celular','STAT3, activado por interleucina 6 en el citoplasma'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'La ciclosporina A inhibe la activación de NFAT al bloquear la calcineurina',a:true},{t:'El núcleo del linfocito T ocupa la mayoría del volumen celular (~85%)',a:true},{t:'La activación del linfocito T comprime la cromatina (la hace más densa)',a:false}],pts:8},
       {type:'fill',s:'La ___ es una fosfatasa que desfosforila NFAT permitiendo su entrada al núcleo. Es inhibida por ciclosporina A y tacrolimus.',words:['calcineurina','calmodulina','caspasa-3'],cor:'calcineurina',pts:12},
     ],
@@ -1693,7 +1693,7 @@ const MINIGAMES_ALL={
       {type:'fill',s:'El factor de transcripción ___, activado por PKC (vía DAG), controla la supervivencia y la proliferación del linfocito T activado.',words:['NF-κB','NFAT','AP-1'],cor:'NF-κB',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué mecanismo molecular explica la mayor rapidez de respuesta de los linfocitos T memoria respecto a los naive?',opts:['Cromatina más abierta en loci de citocinas y mayor accesibilidad a factores de transcripción','Mayor número de TCR en membrana','Mitocondrias más numerosas','Gránulos líticos preformados en mayor cantidad'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué mecanismo molecular explica la mayor rapidez de respuesta de los linfocitos T memoria respecto a los naive?',opts:['Cromatina más abierta en los genes de citocinas','Mayor número de TCR en la membrana de cada linfocito','Mitocondrias más numerosas y activas en el citoplasma','Gránulos líticos preformados en mayor cantidad en el citoplasma'],ans:0,pts:30},
       {type:'fill',q:'Combinación de inhibidores de calcineurina usados en trasplante de órganos sólidos que bloquean NFAT impidiendo la producción de IL-2',a:'ciclosporina/tacrolimus',pts:22},
       {type:'trueFalse',items:[{t:'NFAT requiere ser desfosforilado en múltiples residuos serina para exponer su señal de localización nuclear (NLS)',a:true},{t:'AP-1 (FOS+JUN) se activa por la vía Ras-ERK downstream del TCR y coopera con NFAT para activar el promotor de IL-2',a:true},{t:'Los inhibidores BET/BRD4 (JQ1) reducen la expresión de c-Myc y bloquean la proliferación de T leucémicos',a:true}],pts:28},
     ],
@@ -1705,7 +1705,7 @@ const MINIGAMES_ALL={
       {type:'fill',s:'El ___ activa la transcripción de ARNr (ARN polimerasa I) cuando el linfocito T se activa, agrandando el nucléolo.',words:['c-Myc','p53','PTEN'],cor:'c-Myc',pts:12},
     ],
     normal:[
-      {type:'quiz',q:'¿Por qué el tamaño del nucléolo es un criterio diagnóstico en linfomas T?',opts:['Los linfomas agresivos tienen alta síntesis proteica con nucléolos prominentes','El nucléolo se fusiona con la membrana nuclear en tumores','El nucléolo expresa CD20 detectable por IHQ','Los linfomas indolentes tienen nucleolos gigantes'],ans:0,pts:20},
+      {type:'quiz',q:'¿Por qué el tamaño del nucléolo es un criterio diagnóstico en linfomas T?',opts:['Los linfomas agresivos tienen nucléolos prominentes (alta síntesis proteica)','El nucléolo se fusiona con la membrana nuclear en los tumores agresivos de células T','El nucléolo expresa CD20, detectable por inmunohistoquímica','Los linfomas indolentes tienen nucléolos gigantes y muy numerosos'],ans:0,pts:20},
       {type:'fill',s:'Los inhibidores ___ (JQ1, I-BET762) suprimen c-Myc y la transcripción de ARNr, reduciendo la nucleologénesis en linfomas T agresivos.',words:['BET/BRD4','HDAC','mTOR'],cor:'BET/BRD4',pts:15},
     ],
     hard:[
@@ -1716,24 +1716,24 @@ const MINIGAMES_ALL={
   },
   tcr_cd3:{
     easy:[
-      {type:'quiz',q:'¿Cuántos ITAMs (immunoreceptor tyrosine-based activation motifs) tienen las cadenas CD3ζ del complejo TCR-CD3?',opts:['3 ITAMs por cadena (6 tirosinas activadoras)','1 ITAM','6 ITAMs','Solo 2 tirosinas totales'],ans:0,pts:15},
+      {type:'quiz',q:'¿Cuántos ITAMs (immunoreceptor tyrosine-based activation motifs) tienen las cadenas CD3ζ del complejo TCR-CD3?',opts:['3 ITAMs por cadena (6 tirosinas activadoras)','1 ITAM por cadena, con dos tirosinas activadoras','6 ITAMs por cadena, con doce tirosinas activadoras','Solo 2 tirosinas en total, sin motivos ITAM'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'El complejo CD3 transduce la señal del TCR porque las cadenas CD3 tienen colas citosólicas largas con ITAMs, a diferencia del TCR',a:true},{t:'El TCR puede reconocer antígenos solubles en plasma sin presentación por MHC',a:false},{t:'Los linfocitos T citotóxicos (CTL) expresan TCR + CD8 (reconocen pMHC-I) mientras que los T helper expresan TCR + CD4 (pMHC-II)',a:true}],pts:8},
       {type:'fill',s:'El TCR αβ reconoce ___ (péptido unido a MHC) presentados en la superficie de células presentadoras de antígeno.',words:['complejos pMHC','antígenos libres','glicoproteínas'],cor:'complejos pMHC',pts:12},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuál es el paso inmediatamente posterior a que Lck fosforile los ITAMs de CD3ζ?',opts:['ZAP-70 se une vía tándem SH2 a los ITAMs difosforilados y se activa','CD28 se une a B7 en la CPA','NFAT entra al núcleo','Ca²⁺ entra por canales CRAC'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es el paso inmediatamente posterior a que Lck fosforile los ITAMs de CD3ζ?',opts:['ZAP-70 se une por sus dominios SH2 a los ITAMs difosforilados','CD28 se une a B7 en la célula presentadora y da la coestimulación','NFAT entra al núcleo y activa los genes de las citocinas','Ca²⁺ entra por los canales CRAC de la membrana'],ans:0,pts:20},
       {type:'fill',s:'La recombinación ___ de los genes del TCR (similar a la de las inmunoglobulinas) genera la enorme diversidad de ~10^18 especificidades distintas.',words:['V(D)J','homóloga','NHEJ'],cor:'V(D)J',pts:15},
       {type:'sequence',items:['pMHC se une al TCR αβ','Lck (unida a CD4/CD8) fosforila ITAMs de CD3ζ','ZAP-70 une ITAMs difosforilados vía tándem SH2','ZAP-70 fosforila LAT (Y136) y SLP-76','PLCγ1 reclutada a LAT → produce IP3 y DAG','IP3 → Ca²⁺ del RE → calcineurina → NFAT nuclear → IL-2'],pts:25},
     ],
     hard:[
-      {type:'quiz',q:'¿Por qué el síndrome de Omenn (mutación hipomórfica en RAG1/2) cursa con SCID autoinmune en lugar de la SCID "vacía" clásica?',opts:['RAG1/2 hipomórfico genera un repertorio TCR muy restringido que reconoce autoantígenos (autoinmunidad oligoclonal)','RAG1/2 hipomórfico impide la expresión de CD3','Bloquea solo la recombinación del BCR no del TCR','Genera TCR con alta afinidad por MHC sin péptido'],ans:0,pts:30},
+      {type:'quiz',q:'¿Por qué el síndrome de Omenn (mutación hipomórfica en RAG1/2) cursa con SCID autoinmune en lugar de la SCID "vacía" clásica?',opts:['RAG1/2 hipomórfico deja un repertorio TCR muy restringido que reconoce autoantígenos','RAG1/2 hipomórfico impide por completo la expresión de CD3 en la membrana del linfocito','Bloquea solo la recombinación del receptor del linfocito B, no la del TCR','Genera TCR con alta afinidad por el MHC aun sin péptido unido'],ans:0,pts:30},
       {type:'fill',q:'Tipo de célula terapéutica en la que se reemplaza el TCR endógeno por un receptor quimérico (ScFv-CD3ζ) para redirigir la citotoxicidad contra tumores',a:'célula CAR-T',pts:22},
       {type:'trueFalse',items:[{t:'La señal TCR sola (sin coestimulación CD28) puede inducir anergia clonal en lugar de activación',a:true},{t:'Los TCR γδ reconocen antígenos lipídicos presentados por CD1, no por MHC clásicos',a:true},{t:'El complejo TCR-CD3 es internalizado y degradado tras la activación (downregulation) como mecanismo de retroalimentación negativa',a:true}],pts:28},
     ],
   },
   immune_synapse:{
     easy:[
-      {type:'quiz',q:'¿Cómo se llama la zona central de la sinapsis inmunológica donde se concentran los complejos TCR-pMHC?',opts:['cSMAC (supramolecular activation cluster central)','pSMAC','dSMAC','zona de exclusión'],ans:0,pts:15},
+      {type:'quiz',q:'¿Cómo se llama la zona central de la sinapsis inmunológica donde se concentran los complejos TCR-pMHC?',opts:['cSMAC (supramolecular activation cluster central)','pSMAC, el anillo periférico donde se concentran las integrinas','dSMAC, la zona distal más externa con actina cortical','La zona de exclusión, donde no hay ningún receptor'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'La sinapsis inmunológica se forma entre el linfocito T y la célula presentadora de antígeno (CPA)',a:true},{t:'En el CTL, los gránulos líticos se liberan hacia el cSMAC de forma direccional (no bystander)',a:true},{t:'El pSMAC contiene los complejos TCR activos y es el anillo exterior de la sinapsis',a:false}],pts:8},
       {type:'fill',s:'En la sinapsis inmunológica, el ___ externo (pSMAC) está enriquecido en LFA-1 y actina, mientras el central (cSMAC) concentra TCR y PKCθ.',words:['anillo periférico','núcleo central','dominio flotante'],cor:'anillo periférico',pts:12},
     ],
@@ -1742,14 +1742,14 @@ const MINIGAMES_ALL={
       {type:'fill',s:'La ___ se produce cuando la maquinaria de degranulación del CTL está defectuosa, impidiendo matar células diana → acumulación de células NK y macrófagos activados → inflamación sistémica fatal.',words:['linfohistiocitosis hemofagocítica','agranulocitosis','aplasia medular'],cor:'linfohistiocitosis hemofagocítica',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué función tiene el dSMAC (zona más periférica de la IS) con respecto a la señalización del TCR?',opts:['Concentra CD45 (fosfatasa) que termina la señal: zona de atenuación','Concentra TCR activos para amplificar la señal','Es el sitio de exocitosis de gránulos líticos','No tiene función conocida'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué función tiene el dSMAC (zona más periférica de la IS) con respecto a la señalización del TCR?',opts:['Concentra CD45 (fosfatasa) que atenúa la señal del TCR','Concentra TCR activos para amplificar la señal del complejo','Es el sitio de exocitosis de los gránulos líticos hacia la diana','No tiene ninguna función conocida en la señalización'],ans:0,pts:30},
       {type:'fill',q:'Anticuerpo biespecífico anti-CD19/anti-CD3 aprobado para leucemia linfoblástica aguda B que crea una sinapsis inmunológica artificial entre CTL y célula tumoral',a:'blinatumomab',pts:22},
       {type:'trueFalse',items:[{t:'Los microclusters de TCR se forman en la periferia de la IS y se mueven centrípetamente hacia el cSMAC donde son ubiquitinados y degradados',a:true},{t:'La IS del linfocito T helper dirige IL-4 e IFN-γ hacia la célula diana de la misma forma que la IS citotóxica dirige la perforina',a:false},{t:'DOCK8 es necesario para la formación de la IS estable: su deficiencia causa inmunodeficiencia con defecto en respuesta CTL',a:true}],pts:28},
     ],
   },
   mito_t:{
     easy:[
-      {type:'quiz',q:'¿Cómo cambia el metabolismo energético del linfocito T naive cuando se activa?',opts:['Pasa de OXPHOS (eficiente) a glucólisis aeróbica (Warburg, rápida)','Pasa de glucólisis a OXPHOS','No cambia: siempre usa OXPHOS','Activa la β-oxidación de ácidos grasos'],ans:0,pts:15},
+      {type:'quiz',q:'¿Cómo cambia el metabolismo energético del linfocito T naive cuando se activa?',opts:['Pasa de OXPHOS a glucólisis aeróbica (efecto Warburg)','Pasa de la glucólisis a OXPHOS para ahorrar energía','No cambia: el linfocito siempre usa OXPHOS como fuente','Activa la β-oxidación de ácidos grasos como fuente principal'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'Los linfocitos T memoria tienen alta spare respiratory capacity (SRC) mitocondrial: responden rápido al reencuentro antigénico',a:true},{t:'La mitocondria del linfocito T regula la apoptosis intrínseca vía citocromo c → caspasa-9',a:true},{t:'Los linfocitos T activados consumen principalmente ácidos grasos como combustible energético',a:false}],pts:8},
       {type:'fill',s:'El efecto ___ describe el uso de glucólisis aeróbica (en presencia de O₂) por las células en proliferación rápida, como los linfocitos T activados.',words:['Warburg','Pasteur','Crabtree'],cor:'Warburg',pts:12},
     ],
@@ -1758,25 +1758,25 @@ const MINIGAMES_ALL={
       {type:'fill',s:'Los linfocitos T ___ en infecciones crónicas o cáncer tienen mitocondrias disfuncionales, alta expresión de PD-1 y producen poco IFN-γ e IL-2.',words:['exhausted (agotados)','naive','reguladores'],cor:'exhausted (agotados)',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Por qué los inhibidores de checkpoint (anti-PD-1) solo revierten parcialmente el agotamiento de los T exhausted?',opts:['Solo revierten el agotamiento epigenético superficial; el agotamiento profundo (disfunción mitocondrial y remodelado cromatínico) persiste','Bloquean el receptor PD-L1 en el tumor pero no en el T','Activan NK en lugar de CTL','Solo funcionan en linfomas no sólidos'],ans:0,pts:30},
+      {type:'quiz',q:'¿Por qué los inhibidores de checkpoint (anti-PD-1) solo revierten parcialmente el agotamiento de los T exhausted?',opts:['Revierten solo el agotamiento superficial; el profundo (mitocondrial y epigenético) persiste','Bloquean el receptor PD-L1 en el tumor, pero no actúan sobre el propio linfocito T ni sobre su metabolismo','Activan a las células NK en lugar de reactivar a los CTL agotados','Solo funcionan en linfomas y leucemias, nunca en tumores sólidos'],ans:0,pts:30},
       {type:'fill',q:'Factor transcripcional maestro de la biogénesis mitocondrial en linfocitos T que es activado por el ejercicio físico y la restricción calórica',a:'PGC-1α',pts:22},
       {type:'trueFalse',items:[{t:'Los linfocitos T memoria central (TCM) usan principalmente OXPHOS y β-oxidación, mientras los efectores terminales (TEFF) usan glucólisis',a:true},{t:'La metformina puede reprogramar linfocitos T hacia un fenotipo memoria al inhibir mTORC1 y promover OXPHOS',a:true},{t:'La disfunción mitocondrial en T exhausted puede revertirse completamente con anti-PD-1 en todos los pacientes',a:false}],pts:28},
     ],
   },
   mito_t2:{
     easy:[
-      {type:'quiz',q:'¿Qué función tienen las ROS mitocondriales (especies reactivas de oxígeno) en el linfocito T activado?',opts:['Actúan como segundos mensajeros que activan NF-κB y la proliferación','Solo dañan el ADN mitocondrial','Inhiben la señalización del TCR','Inducen apoptosis del linfocito T'],ans:0,pts:15},
+      {type:'quiz',q:'¿Qué función tienen las ROS mitocondriales (especies reactivas de oxígeno) en el linfocito T activado?',opts:['Son segundos mensajeros que activan NF-κB y la proliferación','Solo dañan el ADN mitocondrial y no cumplen ninguna otra función','Inhiben la señalización del TCR para evitar la activación','Inducen siempre la apoptosis del linfocito T activado y lo eliminan'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'La fisión mitocondrial (vía DRP1) favorece el metabolismo glucolítico en T efectores',a:true},{t:'Las mitocondrias de los linfocitos T forman redes dinámicas que se fusionan y fisionan según el estado de activación',a:true},{t:'Las mitocondrias del linfocito T son estáticas e independientes del estado de activación',a:false}],pts:8},
       {type:'fill',s:'La ___ mitocondrial (vía MFN1/2) favorece el metabolismo oxidativo (OXPHOS) y es característica de los linfocitos T memoria.',words:['fusión','fisión','fragmentación'],cor:'fusión',pts:12},
     ],
     normal:[
-      {type:'quiz',q:'¿Cómo contribuye la glutamina al metabolismo del linfocito T activado además de como fuente de nitrógeno?',opts:['Entra en el ciclo de Krebs como α-cetoglutarato (anaplerósis) para síntesis de nucleótidos y lípidos','Solo se usa para síntesis de proteínas','Alimenta directamente la glucólisis como piruvato','Inhibe mTORC1'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cómo contribuye la glutamina al metabolismo del linfocito T activado además de como fuente de nitrógeno?',opts:['Entra al ciclo de Krebs como α-cetoglutarato (anaplerosis)','Solo se usa para sintetizar proteínas, sin entrar al metabolismo energético','Alimenta directamente la glucólisis al convertirse en piruvato citosólico','Inhibe la vía mTORC1 y frena la proliferación'],ans:0,pts:20},
       {type:'fill',s:'La ___ (AMP quinasa) actúa como sensor energético: se activa con bajo ATP y promueve OXPHOS inhibiendo mTORC1 y la glucólisis en linfocitos T.',words:['AMPK','mTORC1','PKCθ'],cor:'AMPK',pts:15},
     ],
     hard:[
       {type:'fill',q:'Proceso de degradación selectiva de mitocondrias dañadas en linfocitos T, esencial para mantener la función CTL y evitar la acumulación de mitocondrias proinflamatorias',a:'mitofagia',pts:22},
       {type:'trueFalse',items:[{t:'IRGM es un regulador de mitofagia en linfocitos T cuyas variantes polimórficas se asocian a enfermedad de Crohn',a:true},{t:'Los linfocitos T gamma-delta (γδ) dependen más de la glucólisis que los αβ: son los primeros en responder a infecciones',a:true},{t:'El tratamiento con antioxidantes N-acetilcisteína aumenta siempre la función CTL al neutralizar las ROS señalizadoras',a:false}],pts:28},
-      {type:'quiz',q:'¿Por qué los tumores con alta demanda glucolítica (Warburg tumoral) inhiben la función de los T infiltrantes de tumor (TIL)?',opts:['Compiten por la glucosa creando un microambiente glucopénico que impide la glucólisis del CTL','Expresan PD-L1 directamente en los ribosomas','Secretan TGF-β que destruye mitocondrias del CTL','Ninguna de las anteriores'],ans:0,pts:30},
+      {type:'quiz',q:'¿Por qué los tumores con alta demanda glucolítica (Warburg tumoral) inhiben la función de los T infiltrantes de tumor (TIL)?',opts:['Compiten por la glucosa y crean un microambiente sin glucosa que frena al CTL','Expresan PD-L1 en la membrana y bloquean directamente la glucólisis del CTL infiltrante','Secretan TGF-β, que destruye las mitocondrias del CTL infiltrante','Liberan lactato que alcaliniza el medio y activa al CTL'],ans:0,pts:30},
     ],
   },
   er_t:{
@@ -1786,23 +1786,23 @@ const MINIGAMES_ALL={
       {type:'fill',s:'La ___ es la fosfatasa que desfosforila NFAT después de que el Ca²⁺ del RE sube en el citoplasma del linfocito T activado.',words:['calcineurina','calmodulina quinasa','caspasa-3'],cor:'calcineurina',pts:12},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué fenómeno ocurre cuando el RE del linfocito T se vacía de Ca²⁺ tras la señal del TCR?',opts:['SOCE (store-operated Ca²⁺ entry): STIM1 oligomeriza y activa Orai1 → entrada de Ca²⁺ extracelular sostenida','El RE se regenera inmediatamente sin necesidad de Ca²⁺ externo','La SERCA se activa y recapta todo el Ca²⁺ del citoplasma','No ocurre nada especial'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué fenómeno ocurre cuando el RE del linfocito T se vacía de Ca²⁺ tras la señal del TCR?',opts:['SOCE: STIM1 activa Orai1 y entra Ca²⁺ extracelular','El RE se regenera inmediatamente sin necesidad de Ca²⁺ externo','La SERCA se activa y recapta todo el Ca²⁺ del citoplasma','No ocurre nada especial: el RE queda vacío hasta la siguiente señal'],ans:0,pts:20},
       {type:'fill',s:'Las mutaciones en ___ o en ___ causan SCID (inmunodeficiencia combinada severa) por fallo completo en la señalización de Ca²⁺ de los linfocitos T y B.',words:['STIM1 / Orai1','IP3R / SERCA','calcineurina / NFAT'],cor:'STIM1 / Orai1',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Por qué el tacrolimus (FK506) es más potente que la ciclosporina A como inmunosupresor a pesar de actuar en el mismo punto?',opts:['FK506 tiene mayor afinidad por su inmunofilina (FKBP12) y el complejo FKBP12-FK506 inhibe calcineurina con mayor potencia','FK506 bloquea también ZAP-70','FK506 actúa upstream del Ca²⁺ bloqueando el IP3R','FK506 bloquea tanto NFAT como NF-κB'],ans:0,pts:30},
+      {type:'quiz',q:'¿Por qué el tacrolimus (FK506) es más potente que la ciclosporina A como inmunosupresor a pesar de actuar en el mismo punto?',opts:['FK506 se une con más afinidad a su inmunofilina (FKBP12) e inhibe mejor la calcineurina','FK506 bloquea también a ZAP-70, además de la calcineurina, y por eso es más potente que la ciclosporina','FK506 actúa antes de la calcineurina, bloqueando el IP3R del retículo','FK506 bloquea tanto NFAT como NF-κB y por eso inmunosuprime más'],ans:0,pts:30},
       {type:'fill',q:'Canal de Ca²⁺ altamente selectivo de la membrana del linfocito T formado por Orai1 que se activa por el vaciamiento del RE vía STIM1',a:'CRAC (canal activado por vaciamiento del RE)',pts:22},
       {type:'trueFalse',items:[{t:'El calcio del RE activa calmodulina, que activa calcineurina (fosfatasa) y también calmodulina quinasa (CaMKII)',a:true},{t:'Los bloqueadores del canal CRAC (CM4620, Synta66) se estudian para artritis reumatoide y asma severa',a:true},{t:'La señalización de Ca²⁺ en linfocitos T es idéntica a la de neuronas en cuanto a IP3R, SERCA y SOCE',a:false}],pts:28},
     ],
   },
   golgi_t:{
     easy:[
-      {type:'quiz',q:'¿Hacia dónde se polariza el aparato de Golgi del linfocito T citotóxico al formar la sinapsis inmunológica?',opts:['Hacia la sinapsis inmunológica (zona de contacto con la célula diana)','Hacia el núcleo','Hacia el polo opuesto a la diana','Se fragmenta durante la activación'],ans:0,pts:15},
+      {type:'quiz',q:'¿Hacia dónde se polariza el aparato de Golgi del linfocito T citotóxico al formar la sinapsis inmunológica?',opts:['Hacia la sinapsis inmunológica, la zona de contacto con la diana','Hacia el núcleo del linfocito, para proteger su ADN durante la activación','Hacia el polo opuesto a la célula diana, para no dañar al linfocito','Se fragmenta durante la activación y se reparte por toda la célula'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'El Golgi del CTL se reorienta hacia la IS junto con el MTOC (centrosoma) en <30 minutos tras el reconocimiento antigénico',a:true},{t:'La polarización del Golgi permite la secreción de perforina/granzimas solo hacia la célula diana (no bystander)',a:true},{t:'En linfocitos T helpers, el Golgi también se polariza hacia la sinapsis para secretar citocinas dirigidas',a:true}],pts:8},
       {type:'fill',s:'El ___ se reorienta junto con el Golgi hacia la sinapsis inmunológica, sirviendo como punto de organización del tráfico vesicular hacia la diana.',words:['MTOC (centrosoma)','núcleo','RE rugoso'],cor:'MTOC (centrosoma)',pts:12},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué proteína mediadora de la fisión vesicular del Golgi es defectuosa en el síndrome de Hermansky-Pudlak tipo 2 (HPS2)?',opts:['Complejo adaptador AP-3 (tráfico de gránulos líticos)','Clatrina','Dinamina','SNAP23'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué proteína mediadora de la fisión vesicular del Golgi es defectuosa en el síndrome de Hermansky-Pudlak tipo 2 (HPS2)?',opts:['Complejo adaptador AP-3 (tráfico de gránulos líticos)','Clatrina, la proteína de la cubierta de las vesículas endocíticas','Dinamina, la GTPasa que corta el cuello de las vesículas','SNAP23, la proteína SNARE de la membrana plasmática'],ans:0,pts:20},
       {type:'fill',s:'La ___ hemofagocítica (HLH) es una consecuencia fatal de defectos en la polarización del Golgi o degranulación: los CTL no matan y la inflamación es incontrolada.',words:['linfohistiocitosis','hemólisis','granulomatosis'],cor:'linfohistiocitosis',pts:15},
     ],
     hard:[
@@ -1822,7 +1822,7 @@ const MINIGAMES_ALL={
       {type:'fill',s:'La ___ hemofagocítica familiar tipo 2 (FHL2) se debe a mutaciones en la ___ y cursa con fiebre, hepatoesplenomegalia y pancitopenia.',words:['linfohistiocitosis / PRF1 (perforina)','neutropenia / RAG1','aplasia / GATA2'],cor:'linfohistiocitosis / PRF1 (perforina)',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Cómo se protege el propio CTL de la perforina que libera hacia la diana?',opts:['Clusterina y CD59 en la membrana del CTL inactivan la perforina antes de que forme poros en el CTL mismo','El CTL secreta inhibidores de serina proteasas','La perforina no puede actuar a temperatura fisiológica sobre el CTL','El CTL expresa un LAMP-1 que neutraliza la perforina'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cómo se protege el propio CTL de la perforina que libera hacia la diana?',opts:['La catepsina B de su membrana degrada la perforina antes de que forme poros','El CTL secreta inhibidores de serina proteasas (serpinas) que frenan la perforina','La perforina no puede actuar a temperatura fisiológica sobre el CTL','El CTL expresa un LAMP-1 de superficie que neutraliza la perforina'],ans:0,pts:30},
       {type:'fill',q:'Proteína codificada por UNC13D cuyas mutaciones causan HLH tipo 3: es necesaria para la preparación (priming) de los gránulos líticos para la exocitosis',a:'Munc13-4',pts:22},
       {type:'trueFalse',items:[{t:'Los tumores con sobreexpresión de BCL-2/BCL-XL son resistentes a la granzima B (que actúa via BID/mitocondria) pero NO a la granzima A (vía SET/DNasa)',a:true},{t:'El "serial killing" del CTL: libera gránulos hacia una diana, se separa vivo, regenera gránulos y ataca otra célula',a:true},{t:'La perforina se produce constitutivamente en CTL naive y no requiere activación para su síntesis',a:false}],pts:28},
     ],
@@ -1834,18 +1834,18 @@ const MINIGAMES_ALL={
       {type:'fill',s:'El ___ mide la degranulación del CTL expresando LAMP-1 (CD107a) en superficie; se usa para evaluar la función citotóxica en inmunoterapia y diagnóstico de HLH.',words:['test de CD107a','ELISA de perforina','test de proliferación'],cor:'test de CD107a',pts:12},
     ],
     normal:[
-      {type:'quiz',q:'¿Por qué los tumores con alta expresión de BCL-2 (como el linfoma folicular) son resistentes a los CTL pero responden a venetoclax?',opts:['BCL-2 bloquea la vía mitocondrial (apoptosis intrínseca) que usa la granzima B; venetoclax inhibe BCL-2 directamente','BCL-2 degrada la perforina extracelularmente','BCL-2 impide la formación de la IS','BCL-2 expulsa la granzima B del citoplasma'],ans:0,pts:20},
+      {type:'quiz',q:'¿Por qué los tumores con alta expresión de BCL-2 (como el linfoma folicular) son resistentes a los CTL pero responden a venetoclax?',opts:['BCL-2 bloquea la apoptosis mitocondrial que usa la granzima B; venetoclax inhibe BCL-2','BCL-2 degrada la perforina en el espacio extracelular antes de que actúe','BCL-2 impide la formación de la sinapsis inmunológica con el CTL','BCL-2 expulsa la granzima B del citoplasma de la célula tumoral con bombas de eflujo de membrana'],ans:0,pts:20},
       {type:'fill',s:'La ___ es el gen mutado en la HLH familiar tipo 5 (FHL5), codifica una proteína SNARE requerida para la fusión de los gránulos líticos con la membrana plasmática.',words:['STX11 (sintaxina-11)','RAB27A','PRF1'],cor:'STX11 (sintaxina-11)',pts:15},
     ],
     hard:[
       {type:'fill',q:'Resultado esperado al medir CD107a por citometría de flujo en CTL estimulados in vitro de un paciente con HLH familiar (FHL2 por mutación en perforina)',a:'CD107a aumentado (degranulación normal) pero muerte celular reducida',pts:22},
       {type:'trueFalse',items:[{t:'La granzima B puede activar caspasa-3 directamente (sin necesidad de la vía mitocondrial) en células con poco XIAP',a:true},{t:'La granulisina del gránulo citotóxico tiene actividad antibacteriana y antifúngica directa además de ser citotóxica',a:true},{t:'Los CTL CD8+ usan exclusivamente perforina/granzima para matar; el FasL no contribuye a la citotoxicidad T',a:false}],pts:28},
-      {type:'quiz',q:'¿Cuál es el mecanismo por el que RAB27A (mutado en HLH tipo 6 / síndrome de Griscelli) causa defecto en la degranulación del CTL?',opts:['RAB27A acopla los gránulos líticos a la red de actina subcortical para su transporte hasta la IS','RAB27A sintetiza perforina en el RE','RAB27A degrada granzimas en el lisosoma','RAB27A es un sensor de Ca²⁺ que activa la exocitosis'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es el mecanismo por el que RAB27A (mutado en HLH tipo 6 / síndrome de Griscelli) causa defecto en la degranulación del CTL?',opts:['RAB27A acopla los gránulos líticos a la actina subcortical para llevarlos a la IS','RAB27A sintetiza perforina en el RE de la célula citotóxica','RAB27A degrada granzimas en el lisosoma antes de la exocitosis','RAB27A es un sensor de Ca²⁺ que activa directamente la exocitosis de todos los gránulos'],ans:0,pts:30},
     ],
   },
   lck_signaling:{
     easy:[
-      {type:'quiz',q:'¿Cuál es el orden correcto de activación en la señalización proximal del TCR?',opts:['TCR une pMHC → Lck fosforila ITAMs → ZAP-70 se activa → LAT fosforilado → PLCγ','TCR → ZAP-70 → Lck → LAT','Lck → TCR → LAT → ZAP-70','CD28 → Lck → TCR → ZAP-70'],ans:0,pts:15},
+      {type:'quiz',q:'¿Cuál es el orden correcto de activación en la señalización proximal del TCR?',opts:['TCR + pMHC → Lck fosforila ITAMs → ZAP-70 → LAT → PLCγ','TCR → ZAP-70 fosforila ITAMs → Lck → LAT → PLCγ','Lck → TCR → LAT → ZAP-70 → fosforilación de ITAMs','CD28 activa primero a Lck → TCR → ZAP-70 → LAT → PLCγ → Ca²⁺'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'Lck es una tirosina quinasa de la familia Src que se asocia constitutivamente a CD4 o CD8',a:true},{t:'ZAP-70 tiene dos dominios SH2 en tándem que se unen al di-ITAM fosforilado de CD3ζ',a:true},{t:'La señalización del TCR puede completarse sin necesidad de Lck si hay suficiente ZAP-70',a:false}],pts:8},
       {type:'fill',s:'Lck fosforila las ___ de las cadenas CD3ζ del complejo TCR, creando sitios de unión para ZAP-70 e iniciando la cascada de activación del linfocito T.',words:['ITAMs','SH2','dominios PH'],cor:'ITAMs',pts:12},
     ],
@@ -1854,24 +1854,24 @@ const MINIGAMES_ALL={
       {type:'fill',s:'La ___ (LAT) es el adaptador transmembrana que fosforilado por ZAP-70 recluta PLCγ1, GRB2/SOS (Ras) y PI3K para ramificar la señal del TCR.',words:['proteína LAT','proteína CD28','proteína CD45'],cor:'proteína LAT',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Cómo discrimina el linfocito T entre un péptido propio (señal débil) y uno extraño (señal fuerte) usando la cinética del TCR y Lck?',opts:['Los ITAM monofosforilados (señal débil) reclutan SHP-1 → inhibición; los difosforilados (señal fuerte) reclutan ZAP-70 → activación','El TCR tiene afinidades intrínsecamente distintas por propio vs extraño','CD45 diferencia propio de extraño por fosforilación diferencial','La señal débil activa NFAT y la fuerte activa NF-κB'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cómo discrimina el linfocito T entre un péptido propio (señal débil) y uno extraño (señal fuerte) usando la cinética del TCR y Lck?',opts:['ITAM monofosforilados reclutan SHP-1 (inhiben); difosforilados reclutan ZAP-70 (activan)','El TCR tiene afinidades intrínsecamente distintas por el péptido propio y por el péptido extraño','CD45 diferencia lo propio de lo extraño por fosforilación diferencial de Lck','La señal débil activa solo NFAT y la fuerte activa NF-κB y AP-1 a la vez'],ans:0,pts:30},
       {type:'fill',q:'Inhibidor aprobado de la quinasa Syk (homóloga de ZAP-70 en plaquetas y B cells) usado para trombocitopenia inmune crónica que también afecta señalización en T',a:'fostamatinib',pts:22},
       {type:'trueFalse',items:[{t:'La ganancia de función en ZAP-70 (mutación M493V en ratones) causa artritis autoinmune por hyperactivación de linfocitos T',a:true},{t:'CD45 es una fosfatasa de membrana del T cell que desfosforila el Y505 inhibidor de Lck manteniéndola activa',a:true},{t:'Inhibidores selectivos de Lck son actualmente el estándar de tratamiento en artritis reumatoide refractaria',a:false}],pts:28},
     ],
   },
   caspase_pathway:{
     easy:[
-      {type:'quiz',q:'¿Cuál es la diferencia principal entre la citotoxicidad por perforina/granzima y la vía FasL del CTL?',opts:['Perforina/granzima: rápida (minutos), actúa aunque Fas esté ausente; FasL: más lenta (horas), requiere Fas+ en la diana','FasL es más rápida que perforina','Ambas son idénticas en cinética','FasL actúa solo en linfocitos B'],ans:0,pts:15},
+      {type:'quiz',q:'¿Cuál es la diferencia principal entre la citotoxicidad por perforina/granzima y la vía FasL del CTL?',opts:['Perforina/granzima: minutos, sin requerir Fas; FasL: horas, requiere Fas en la diana','FasL es más rápida que perforina/granzima y actúa a distancia sin contacto','Ambas son idénticas en cinética y requieren Fas en la célula diana','FasL actúa solo sobre los linfocitos B y nunca sobre las células tumorales de otro tejido'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'FasL (CD95L) expresado en el CTL se une a Fas (CD95) en la célula diana desencadenando apoptosis extrínseca',a:true},{t:'La vía FasL/Fas es importante para eliminar linfocitos T activados al final de la respuesta inmune (homeostasis)',a:true},{t:'Las mutaciones en FAS no afectan la homeostasis del sistema inmune',a:false}],pts:8},
       {type:'fill',s:'La enfermedad ___ (ALPS) se produce por mutaciones en el gen FAS, impidiendo la apoptosis de linfocitos activados → linfoproliferación y autoanticuerpos.',words:['linfoproliferativa autoinmune','granulomatosa crónica','de DiGeorge'],cor:'linfoproliferativa autoinmune',pts:12},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuál es la función de FasL en la eliminación de linfocitos T activados al final de una respuesta inmune?',opts:['Los CTL activados expresan tanto Fas como FasL: la muerte fraticida elimina el exceso de T (AICD)','"Killer" NK matan a los CTL por FasL','Los macrófagos expresan FasL para eliminar T','La apoptosis de T al final depende solo de privación de citocinas'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es la función de FasL en la eliminación de linfocitos T activados al final de una respuesta inmune?',opts:['Los CTL expresan Fas y FasL: la muerte fratricida elimina el exceso de T (AICD)','Las células NK matan a los CTL activados mediante FasL cuando termina la respuesta inmune','Los macrófagos expresan FasL para eliminar a los linfocitos T sobrantes','La apoptosis de T al final depende solo de privación de citocinas'],ans:0,pts:20},
       {type:'fill',s:'La ___ es el complejo proteico que se forma tras la trimerización de Fas + FADD + procaspasa-8, iniciando la señal de apoptosis extrínseca.',words:['DISC (death-inducing signaling complex)','apoptosoma','necrosoma'],cor:'DISC (death-inducing signaling complex)',pts:15},
       {type:'sequence',items:['FasL trimérico (CTL) se une a Fas trimérico (diana)','Fas recluta FADD vía dominio de muerte (DD)','FADD recluta procaspasa-8 vía DED','Autoclivaje → caspasa-8 activa','Caspasa-8 cliva BID → tBID (vía mitocondrial amplificadora)','tBID activa BAX/BAK → citocromo c → caspasoma → caspasa-3 → apoptosis'],pts:25},
     ],
     hard:[
-      {type:'quiz',q:'¿Por qué las células tipo II (hepatocitos, T) requieren la amplificación mitocondrial (BID/tBID) para completar la apoptosis por Fas?',opts:['En células tipo II la señal del DISC genera poco caspasa-8; necesitan amplificación via mitocondria para superar BCL-2/BCL-XL','En células tipo I el BCL-2 bloquea totalmente la vía extrínseca','La diferencia es solo cuantitativa, no cualitativa','Las células tipo II no expresan caspasa-3'],ans:0,pts:30},
+      {type:'quiz',q:'¿Por qué las células tipo II (hepatocitos, T) requieren la amplificación mitocondrial (BID/tBID) para completar la apoptosis por Fas?',opts:['En las tipo II el DISC genera poca caspasa-8 y requieren amplificación mitocondrial','En las células tipo I, BCL-2 bloquea por completo la vía extrínseca de la apoptosis en el hígado','La diferencia es solo cuantitativa y no cambia las vías que usan','Las células tipo II no expresan caspasa-3 y por eso no mueren por Fas'],ans:0,pts:30},
       {type:'fill',q:'Síndrome hereditario de linfoproliferación y autoinmunidad causado por mutaciones en FAS con herencia autosómica dominante y penetrancia variable',a:'ALPS (síndrome linfoproliferativo autoinmune)',pts:22},
       {type:'trueFalse',items:[{t:'Venetoclax (inhibidor BCL-2) puede sensibilizar tumores resistentes a FasL/perforina al desbloquear la vía mitocondrial de apoptosis',a:true},{t:'Los anticuerpos agonistas de DR4/DR5 (receptores de TRAIL) inducen apoptosis extrínseca similar a FasL en tumores DR4/DR5+',a:true},{t:'La apoptosis inducida por FasL en los propios linfocitos T activados (fraticidio) es un mecanismo de autotolerancia periférica',a:true}],pts:28},
     ],
