@@ -100,7 +100,6 @@ function _applySafariFullscreen(){
 document.addEventListener('fullscreenchange',     _onFsChange);
 document.addEventListener('webkitfullscreenchange',_onFsChange);
 function _onFsChange(){
-  const isFs = !!(document.fullscreenElement || document.webkitFullscreenElement);
   // Could update a toggle button here if needed — reserved for future use
 }
 

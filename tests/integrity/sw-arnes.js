@@ -69,7 +69,6 @@ function montar({ falla = () => false, respuesta, putCuelga = false } = {}) {
   };
   self_.self = self_;
 
-  // eslint-disable-next-line no-new-func
   new Function('self', 'caches', 'console', 'fetch', FUENTE)(
     self_, self_.caches, self_.console, self_.fetch);
 

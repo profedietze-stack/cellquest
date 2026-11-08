@@ -38,7 +38,6 @@
     levels.forEach(lv=>{
       const savedLv=savedLevels.find(l=>l.id===lv.id)||lv;
       const orgs=ORGANELLES[lv.id]||[];
-      const completedOrgs=Object.values((save?.completed||{})[lv.id]||{}).filter(Boolean).length;
       const isUnlocked=savedLv.unlocked;
       const isDone=orgs.length&&orgs.every(o=>(save?.completed||{})[lv.id]?.[o.id]);
       const el=document.createElement('div');

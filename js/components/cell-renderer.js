@@ -23,7 +23,6 @@ function drawCell(levelId, targetSvg){
   // soft glow for organelles
   const f3=svgEl('filter',{id:'glowSoft',x:'-50%',y:'-50%',width:'200%',height:'200%'});
   const fb3=svgEl('feGaussianBlur',{stdDeviation:'8',result:'b'});
-  const fco=svgEl('feComposite',{in:'SourceGraphic',in2:'b',operator:'over'});
   const fm3=svgEl('feMerge');fm3.appendChild(svgEl('feMergeNode',{in:'b'}));fm3.appendChild(svgEl('feMergeNode',{in:'SourceGraphic'}));
   f3.appendChild(fb3);f3.appendChild(fm3);defs.appendChild(f3);
   // cytoplasm radial gradient
@@ -715,7 +714,6 @@ function addOrgDetail(g,org){
     piliData.forEach(({dx,dy,a},i)=>{
       const px=cx+(dx*4);
       const rad=a*Math.PI/180;
-      const ex=px+Math.sin(rad)*ry*1.8,ey=cy-ry*.85+Math.cos(rad)*ry*1.8-ry;
       const pil=svgEl('line',{x1:px,y1:cy-ry*.85,x2:px+Math.sin(rad)*ry,y2:cy+ry*.85,stroke:hex2rgba(c,.62),'stroke-width':'2.2','stroke-linecap':'round','pointer-events':'none'});
       pil.classList.add('pili-line');pil.style.animationDelay=(i*0.3)+'s';
       g.appendChild(pil);
