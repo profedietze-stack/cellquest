@@ -547,6 +547,11 @@
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('./cellquest-sw.js')
+      .then(() => navigator.serviceWorker.ready)
+      .then(reg => {
+        // Cuando la pagina ya esta quieta: el worker guarda las tipografias que faltan.
+        setTimeout(() => { if (reg.active) reg.active.postMessage('calentar-fuentes'); }, 3000);
+      })
       .catch(err => console.warn('[CellQuest] SW no disponible:', err));
   });
 }

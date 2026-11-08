@@ -72,6 +72,7 @@ describe('lo que el service worker guarda para el modo offline', () => {
     // El número va fijo a propósito: obliga a subirlo a conciencia cada vez que cambia ASSETS.
     // v27: entran las tipografías locales, el banner de errores y la consola de depuración.
     // v28: completar de respuesta libre en Dificil (el motor tiraba TypeError con 56 puzzles).
-    expect(sw).toMatch(/const CACHE = 'cellquest-v28'/);
+    // v29: el worker guarda las tipografias que faltan cuando la pagina se lo pide.
+    expect(sw).toMatch(/const CACHE = 'cellquest-v29'/);
   });
 });

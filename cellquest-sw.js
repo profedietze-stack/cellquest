@@ -1,5 +1,5 @@
 // CellQuest Service Worker — offline cache
-const CACHE = 'cellquest-v28';
+const CACHE = 'cellquest-v29';
 const ASSETS = [
   './',
   './index.html',
@@ -41,6 +41,34 @@ const ASSETS = [
   './js/components/zoom.js',
   './js/components/drawer.js',
 ];
+
+// Las tipografias no entran en el install (compiten con la primera carga) pero tampoco
+// pueden quedar libradas a "cuando alguien las use con red": un alumno que visito solo la
+// portada y el menu se quedaba, offline, con el tipo de letra de reserva en el panel de
+// preguntas (nunito-600 solo se pide ahi). La pagina avisa cuando ya cargo y se pasaron unos
+// segundos, y aca se guardan de a una, sin ráfaga.
+const FUENTES = [
+  'nunito-400-latin', 'nunito-400-latin-ext', 'nunito-600-latin', 'nunito-600-latin-ext',
+  'nunito-700-latin', 'nunito-700-latin-ext', 'nunito-800-latin', 'nunito-800-latin-ext',
+  'space-grotesk-400-latin', 'space-grotesk-400-latin-ext', 'space-grotesk-500-latin',
+  'space-grotesk-500-latin-ext', 'space-grotesk-600-latin', 'space-grotesk-600-latin-ext',
+  'space-grotesk-700-latin', 'space-grotesk-700-latin-ext',
+].map(n => './fonts/' + n + '.woff2');
+
+async function calentarFuentes() {
+  const cache = await caches.open(CACHE);
+  for (const url of FUENTES) {
+    try {
+      if (!(await cache.match(url))) await cache.add(url);
+    } catch (err) {
+      // Sin red ahora: se reintenta la proxima vez que la pagina avise.
+    }
+  }
+}
+
+self.addEventListener('message', e => {
+  if (e.data === 'calentar-fuentes') e.waitUntil(calentarFuentes());
+});
 
 // Precarga por tandas, archivo por archivo.
 //
