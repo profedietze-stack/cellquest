@@ -1,6 +1,6 @@
 // El service worker precachea lo que el juego realmente carga.
 import { describe, it, expect } from 'vitest';
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 const { ROOT } = require('../helpers/load-game');
@@ -71,6 +71,7 @@ describe('lo que el service worker guarda para el modo offline', () => {
   it('el nombre de la caché acompaña al cambio de la lista', () => {
     // El número va fijo a propósito: obliga a subirlo a conciencia cada vez que cambia ASSETS.
     // v27: entran las tipografías locales, el banner de errores y la consola de depuración.
-    expect(sw).toMatch(/const CACHE = 'cellquest-v27'/);
+    // v28: completar de respuesta libre en Dificil (el motor tiraba TypeError con 56 puzzles).
+    expect(sw).toMatch(/const CACHE = 'cellquest-v28'/);
   });
 });

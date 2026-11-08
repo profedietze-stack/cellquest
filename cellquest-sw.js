@@ -1,5 +1,5 @@
 // CellQuest Service Worker — offline cache
-const CACHE = 'cellquest-v27';
+const CACHE = 'cellquest-v28';
 const ASSETS = [
   './',
   './index.html',

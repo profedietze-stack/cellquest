@@ -111,6 +111,15 @@ function loadMG(orgId,levelId){
     h+=`<div class="mg-question">${mg.q}</div><div class="mg-options">`;
     GS.quizOrden.forEach((orig,i)=>{h+=`<button class="mg-opt" onclick="pickOpt(this,${i})">${String.fromCharCode(65+i)}. ${mg.opts[orig]}</button>`;});
     h+=`</div><button class="btn btn-cyan mg-submit" id="mgBtn" onclick="submitQuiz('${orgId}','${levelId}')" disabled>Enviar Respuesta</button>`;
+  } else if(mg.type==='fill'&&typeof mg.s!=='string'){
+    // Respuesta libre. El banco de Dificil trae 56 completar con forma {q,a} (sin `s` ni
+    // `words`): antes `mg.s.split` tiraba TypeError y la organela no se podia terminar.
+    // La respuesta no viaja en el DOM: se lee del banco al enviar, como en el quiz.
+    const trozos=mg.q.split('___');
+    if(trozos.length>1)h+=`<div class="fill-sentence">${trozos[0]}<span class="fill-blank" id="fillBlank">___</span>${trozos.slice(1).join('___')}</div>`;
+    else h+=`<div class="mg-question">${mg.q}</div>`;
+    h+=`<input class="fill-input" id="fillInput" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="80" placeholder="Escribí tu respuesta" oninput="document.getElementById('mgBtn').disabled=!this.value.trim()" onkeydown="if(event.key==='Enter'&&!document.getElementById('mgBtn').disabled)submitFillLibre('${orgId}','${levelId}')">`;
+    h+=`<button class="btn btn-cyan mg-submit" id="mgBtn" onclick="submitFillLibre('${orgId}','${levelId}')" disabled>Enviar Respuesta</button>`;
   } else if(mg.type==='fill'){
     const parts=mg.s.split('___');
     const ws=_barajar(mg.words);
@@ -165,6 +174,29 @@ function submitFill(orgId,levelId,cor,pts){
   if(blank){blank.style.color=correct?'var(--accent3)':'var(--red)';blank.style.borderColor=correct?'var(--accent3)':'var(--red)';}
   document.getElementById('mgBtn')&&(document.getElementById('mgBtn').disabled=true);
   handleResult(correct,pts,cor,orgId,levelId);
+}
+
+// Sin tildes, mayusculas ni signos: lo que el alumno escribe no tiene que acertar la ortografia.
+function _normRespuesta(s){
+  return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^\p{L}\p{N}\s]/gu,' ').replace(/\s+/g,' ').trim();
+}
+// Acepta la respuesta completa o sin la aclaracion entre parentesis: "carga positiva".
+function respuestaLibreCorrecta(dada,esperada){
+  const d=_normRespuesta(dada);
+  if(!d)return false;
+  return d===_normRespuesta(esperada)||d===_normRespuesta(String(esperada).replace(/\([^)]*\)/g,' '));
+}
+function submitFillLibre(orgId,levelId){
+  const mgs=getMG(orgId);const mg=mgs[GS.mgIndex]||mgs[0];
+  const inp=document.getElementById('fillInput');
+  if(!inp||!inp.value.trim())return;
+  const correct=respuestaLibreCorrecta(inp.value,mg.a);
+  inp.disabled=true;
+  inp.style.borderColor=correct?'var(--accent3)':'var(--red)';
+  const blank=document.getElementById('fillBlank');
+  if(blank){blank.textContent=inp.value.trim().slice(0,40);blank.style.color=correct?'var(--accent3)':'var(--red)';blank.style.borderColor=correct?'var(--accent3)':'var(--red)';}
+  document.getElementById('mgBtn')&&(document.getElementById('mgBtn').disabled=true);
+  handleResult(correct,mg.pts,mg.a,orgId,levelId);
 }
 
 // TrueFalse
@@ -227,7 +259,7 @@ function submitTF(orgId,levelId,pts){
 // Sequence drag
 // ═══════════════ SEQUENCE DRAG (Pointer Events — desktop + mobile) ═══════════════
 (function(){
-  let ghost=null,src=null,srcIdx=-1,lastTarget=null;
+  let ghost=null,src=null,lastTarget=null;
   function getItems(){return[...document.querySelectorAll('#seqItems .seq-item')];}
   function renumber(){getItems().forEach((el,i)=>el.querySelector('.seq-num').textContent=i+1);}
   function clearDropMarkers(){getItems().forEach(el=>el.classList.remove('drop-above','drop-below'));}
@@ -254,7 +286,6 @@ function submitTF(orgId,levelId,pts){
     if(!item||!document.getElementById('seqItems'))return;
     e.preventDefault();
     src=item;
-    srcIdx=[...item.parentNode.children].indexOf(item);
     item.setPointerCapture(e.pointerId);
     item.classList.add('dragging');
     const r=item.getBoundingClientRect();
