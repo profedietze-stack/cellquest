@@ -19,7 +19,9 @@ async function completarOrganela(page) {
   for (;;) {
     const { idx, total } = await puzzleActual(page);
     tipos.push(await resolverPuzzle(page));
-    await expect(page.locator('.mg-feedback.success')).toBeVisible();
+    // El cartel de acierto dura 1,5 s y con la maquina cargada se pierde entre dos lecturas:
+    // se espera al estado del juego (avanzo el puzzle), que no desaparece.
+    await expect.poll(() => page.evaluate(() => GS.mgIndex)).toBeGreaterThan(idx);
     if (idx + 1 < total) {
       await expect(page.locator('.mg-progress-counter')).toContainText(`Puzzle ${idx + 2} / ${total}`, { timeout: 8000 });
     } else {
@@ -39,7 +41,7 @@ test.describe('jugar minijuegos desde cero', () => {
   });
   // El diario se escribe aunque el test falle: es donde aparece la causa raiz.
   test.afterEach(async () => {
-    await v.volcar();
+    if (v) await v.volcar();
   });
 
   test('normal: una organela con los cuatro tipos (quiz, completar, V/F, ordenar) se completa y da XP', async ({ page }) => {

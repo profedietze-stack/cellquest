@@ -37,7 +37,7 @@ test.describe('celular 360 x 740', () => {
     v = vigilar(page, testInfo);
   });
   test.afterEach(async () => {
-    await v.volcar();
+    if (v) await v.volcar();
   });
 
   test('portada, menu y eleccion de dificultad sin scroll horizontal y con los botones a mano', async ({ page }) => {

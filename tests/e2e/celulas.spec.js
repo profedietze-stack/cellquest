@@ -18,7 +18,7 @@ test.describe('recorrer las celulas', () => {
     v = vigilar(page, testInfo);
   });
   test.afterEach(async () => {
-    await v.volcar();
+    if (v) await v.volcar();
   });
 
   test('hay mas de una celula que recorrer', () => {
