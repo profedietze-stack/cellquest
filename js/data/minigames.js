@@ -841,14 +841,14 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'Los axones mielinizados conducen el impulso más rápido que los amielínicos',a:true},{t:'Los nodos de Ranvier carecen de mielina pero tienen alta densidad de canales Na⁺',a:true},{t:'El axón conduce señales en ambas direcciones con igual velocidad',a:false}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué determina la velocidad de conducción de un axón?',opts:['Velocidad ∝ raíz del diámetro (amielínico) o ∝ diámetro (mielinizado): mayor diámetro → mayor velocidad','Velocidad ∝ 1/diámetro: axones finos conducen más rápido','El diámetro no afecta la velocidad: solo la longitud del internodo importa','La velocidad es constante independientemente del diámetro'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué determina la velocidad de conducción de un axón?',opts:['Crece con el diámetro: ∝ raíz del diámetro (amielínico), ∝ diámetro (mielinizado)','Velocidad ∝ 1/diámetro: los axones finos conducen más rápido que los gruesos','El diámetro no afecta la velocidad: solo la longitud del internodo y la temperatura importan','La velocidad es constante, independientemente del diámetro y de la mielina'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'Las fibras Aα (motoras musculares) conducen a 70-120 m/s con diámetro de 13-20 µm',a:true},{t:'Las fibras C (dolor crónico) son amielínicas y conducen a 0.5-2 m/s',a:true},{t:'El transporte axonal de orgánulos usa los microtúbulos y es independiente del potencial de acción',a:true}],pts:15},
       {type:'fill',s:'Tras la seccion de un axon, el segmento distal sufre degeneracion ___, con ruptura de mielina y axon.',words:['walleriana','retrograda','anterograda'],cor:'walleriana',pts:20},
     ],
   },
   myelin:{
     easy:[
-      {type:'quiz',q:'¿Cuál es la función de la vaina de mielina que rodea el axón?',opts:['Actúa como aislante eléctrico que acelera la conducción del impulso nervioso','Produce los neurotransmisores','Conecta el axón con el soma','Protege la neurona de las bacterias'],ans:0,pts:15},
+      {type:'quiz',q:'¿Cuál es la función de la vaina de mielina que rodea el axón?',opts:['Aísla el axón y acelera el impulso nervioso','Produce los neurotransmisores que se liberan en las sinapsis','Conecta el axón con el soma y lo sostiene en su lugar','Protege la neurona de las bacterias y de los virus'],ans:0,pts:15},
       {type:'fill',s:'La esclerosis múltiple se produce cuando el sistema inmune destruye la ___ que cubre los axones.',words:['mielina','membrana','pared'],cor:'mielina',pts:12},
       {type:'trueFalse',items:[{t:'La mielina acelera la conducción nerviosa',a:true},{t:'La mielina es producida por las propias neuronas',a:false},{t:'Perder la mielina causa problemas neurológicos como en la esclerosis múltiple',a:true}],pts:8},
     ],
@@ -868,11 +868,11 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'Las dendritas reciben señales de otras neuronas',a:true},{t:'Una neurona tiene un solo dendrita como tiene un solo axón',a:false},{t:'Las espinas dendríticas son el lugar donde se forman las sinapsis',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué son las espinas dendríticas y cuál es su relevancia para la memoria?',opts:['Pequeñas protuberancias donde se forman sinapsis excitatorias; cambian de morfología en el aprendizaje','Son estructuras defensivas que protegen la dendrita','Contienen los cuerpos de Nissl para síntesis proteica local','Son los lugares donde se fabrica la mielina dendrítica'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué son las espinas dendríticas y cuál es su relevancia para la memoria?',opts:['Protuberancias donde se forman sinapsis excitatorias y que cambian al aprender','Son estructuras defensivas que protegen la dendrita de los daños','Contienen los cuerpos de Nissl y hacen la síntesis proteica local en el soma neuronal','Son los lugares donde se fabrica la mielina dendrítica'],ans:0,pts:20},
       {type:'fill',s:'Las espinas dendríticas cambian de forma durante el aprendizaje, proceso llamado ___ sináptica.',words:['plasticidad','elasticidad','rigidez'],cor:'plasticidad',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuál es el mecanismo molecular de la potenciación a largo plazo (LTP) en espinas dendríticas?',opts:['Activación de NMDAR → entrada de Ca²⁺ → CaMKII → fosforilación e inserción de AMPAR en la membrana','Solo cambios en la síntesis de AMPAR sin modificación de los existentes','Fosforilación de NMDAR por PKA que aumenta su conductancia','Reducción de la inhibición GABAérgica que permite mayor activación'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es el mecanismo molecular de la potenciación a largo plazo (LTP) en espinas dendríticas?',opts:['NMDAR → entrada de Ca²⁺ → CaMKII → fosforilación e inserción de AMPAR','Solo cambios en la síntesis de AMPAR sin modificación de los existentes','Fosforilación de NMDAR por PKA, que aumenta su conductancia y su tiempo abierto','Reducción de la inhibición GABAérgica, que permite una mayor activación'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'La LTP requiere la activación del receptor NMDA como detector de coincidencia',a:true},{t:'CaMKII autofosforilada en T286 mantiene la actividad independientemente del Ca²⁺',a:true},{t:'La LTD (depresión a largo plazo) se produce por breves estímulos de alta frecuencia',a:false}],pts:15},
       {type:'fill',s:'Los pequenos salientes de las dendritas donde se forman sinapsis excitatorias se llaman ___ dendriticas.',words:['espinas','varicosidades','cilios'],cor:'espinas',pts:20},
     ],
@@ -884,11 +884,11 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'Los neurotransmisores se liberan por exocitosis en el terminal sináptico',a:true},{t:'La sinapsis química es más rápida que la eléctrica',a:false},{t:'El calcio es necesario para liberar los neurotransmisores',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuál es el papel del calcio en la exocitosis sináptica?',opts:['Ca²⁺ entra al terminal → activa la proteína sinaptotagmina → fusión de vesículas con la membrana','Ca²⁺ bloquea los canales K⁺ para mantener la despolarización','Ca²⁺ activa la bomba Na⁺/K⁺ ATPasa para recargar el potencial','Ca²⁺ polimeriza la actina que empuja las vesículas hacia la membrana'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es el papel del calcio en la exocitosis sináptica?',opts:['Ca²⁺ entra al terminal, activa la sinaptotagmina y las vesículas se fusionan','Ca²⁺ bloquea los canales K⁺ del terminal para mantener la despolarización','Ca²⁺ activa la bomba Na⁺/K⁺ ATPasa para recargar el potencial de membrana de la neurona','Ca²⁺ polimeriza la actina, que empuja las vesículas hacia la membrana plasmática'],ans:0,pts:20},
       {type:'sequence',items:['Potencial de acción llega al terminal','Apertura de canales Ca²⁺ voltaje-dependientes','Ca²⁺ activa sinaptotagmina','Proteínas SNARE fusionan vesícula con membrana','Exocitosis: neurotransmisor al espacio sináptico'],pts:25},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuál es el mecanismo de la toxina botulínica sobre la sinapsis?',opts:['Proteasa zinc-dependiente que cleava proteínas SNARE (SNAP-25, VAMP, sintaxina) → no hay exocitosis','Bloquea los canales Ca²⁺ del terminal presináptico irreversiblemente','Compete con acetilcolina por el receptor nicotínico postsináptico','Inhibe la recaptación del neurotransmisor en el terminal'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es el mecanismo de la toxina botulínica sobre la sinapsis?',opts:['Proteasa dependiente de zinc que corta proteínas SNARE (SNAP-25, VAMP, sintaxina)','Bloquea irreversiblemente los canales Ca²⁺ del terminal presináptico','Compite con la acetilcolina por el receptor nicotínico postsináptico','Inhibe la recaptación del neurotransmisor y lo deja acumulado en la hendidura sináptica'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'VAMP/sinaptobrevina es la proteína v-SNARE de la vesícula sináptica',a:true},{t:'La toxina tetánica bloquea la liberación de GABA y glicina (inhibitorios) → convulsiones',a:true},{t:'El reciclaje de vesículas sinápticas ocurre por endocitosis mediada por clatrina',a:true}],pts:15},
       {type:'fill',s:'La exocitosis de vesiculas sinapticas es desencadenada por el ingreso de iones ___ al terminal presinaptico.',words:['Ca2+','Na+','K+'],cor:'Ca2+',pts:20},
     ],
@@ -914,7 +914,7 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'El aparato de Golgi neuronal puede extenderse hacia las dendritas',a:true},{t:'El Golgi neuronal procesa las proteínas que van a las sinapsis',a:true},{t:'La fragmentación del Golgi neuronal es señal de buena salud celular',a:false}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuál es el papel de los "outposts de Golgi" en las dendritas neuronales?',opts:['Procesan proteínas localmente en las dendritas sin necesitar envío desde el soma','Solo almacenan proteínas ya procesadas desde el soma','Son artefactos sin función biológica real','Solo aparecen durante el desarrollo embrionario'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es el papel de los "outposts de Golgi" en las dendritas neuronales?',opts:['Procesan proteínas localmente en las dendritas, sin depender del soma','Solo almacenan proteínas ya procesadas en el soma, sin modificarlas más','Son artefactos sin función biológica real, producto de la fijación','Solo aparecen durante el desarrollo embrionario y luego se pierden del todo'],ans:0,pts:20},
       {type:'trueFalse',items:[{t:'Los outposts de Golgi dendríticos procesan receptores de neurotransmisores localmente',a:true},{t:'La fragmentación del Golgi neuronal es marcador temprano de apoptosis',a:true},{t:'El Golgi neuronal es idéntico al de las células epiteliales en organización',a:false}],pts:10},
     ],
     hard:[
@@ -925,7 +925,7 @@ const MINIGAMES_ALL={
   },
   er_n:{
     easy:[
-      {type:'quiz',q:'¿Qué función especial cumple el RE liso en las dendritas durante la señalización?',opts:['Almacena calcio y lo libera como señal cuando llega un impulso sináptico','Solo produce lípidos para las membranas','Almacena glucosa para dar energía a la sinapsis','Produce neurotransmisores directamente'],ans:0,pts:15},
+      {type:'quiz',q:'¿Qué función especial cumple el RE liso en las dendritas durante la señalización?',opts:['Guarda calcio y lo libera como señal cuando llega un impulso','Solo produce lípidos para las membranas de la neurona y su mielina','Almacena glucosa para dar energía a la sinapsis cuando falta oxígeno','Produce los neurotransmisores directamente dentro de la dendrita'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'El RE neuronal almacena calcio que puede liberarse como señal',a:true},{t:'El RE neuronal solo fabrica proteínas y no tiene otras funciones',a:false},{t:'El calcio del RE puede amplificar las señales sinápticas',a:true}],pts:8},
     ],
     normal:[
@@ -941,7 +941,7 @@ const MINIGAMES_ALL={
   // ── RBC ──
   rbc_membrane:{
     easy:[
-      {type:'quiz',q:'¿Qué hace tan especial la membrana del glóbulo rojo?',opts:['Es extremadamente flexible: puede deformarse para pasar por capilares muy finos','Es la más gruesa de todas las células del cuerpo','Produce energía para transportar el oxígeno','Tiene la capacidad de dividirse para crear más glóbulos rojos'],ans:0,pts:15},
+      {type:'quiz',q:'¿Qué hace tan especial la membrana del glóbulo rojo?',opts:['Es muy flexible: se deforma para pasar por capilares finísimos','Es la más gruesa de todas las células del cuerpo humano','Produce energía para transportar el oxígeno','Tiene la capacidad de dividirse para crear más glóbulos rojos en la sangre'],ans:0,pts:15},
       {type:'fill',s:'El glóbulo rojo vive aproximadamente ___ días en circulación antes de ser destruido.',words:['120','7','365'],cor:'120',pts:12},
       {type:'trueFalse',items:[{t:'El glóbulo rojo puede deformarse para pasar por capilares estrechos',a:true},{t:'El glóbulo rojo tiene núcleo',a:false},{t:'El glóbulo rojo vive aproximadamente 120 días',a:true}],pts:8},
     ],
@@ -962,22 +962,22 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'La hemoglobina contiene hierro que se une al oxígeno',a:true},{t:'La hemoglobina fetal (HbF) es igual a la del adulto (HbA)',a:false},{t:'La drepanocitosis ocurre cuando la hemoglobina tiene una mutación',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué es el efecto Bohr y por qué es fisiológicamente importante?',opts:['El CO₂ y el H⁺ reducen la afinidad de la hemoglobina por O₂ → mejor descarga en tejidos activos','La presión aumenta la afinidad de la Hb por O₂ en pulmones','La temperatura reduce la carga de O₂ en pulmones','El CO₂ compite directamente con el O₂ por el grupo hemo'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué es el efecto Bohr y por qué es fisiológicamente importante?',opts:['CO₂ y H⁺ reducen la afinidad por el O₂ y favorecen su descarga en los tejidos','La presión aumenta la afinidad de la Hb por O₂ en pulmones','La temperatura reduce la carga de O₂ en pulmones','El CO₂ compite directamente con el O₂ por el mismo grupo hemo de la Hb en los pulmones'],ans:0,pts:20},
       {type:'fill',s:'La curva de disociación de la hemoglobina es ___, lo que permite la descarga eficiente de O₂ en tejidos.',words:['sigmoide','lineal','exponencial'],cor:'sigmoide',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuál es la base molecular de la cooperatividad en la unión de O₂ a la hemoglobina?',opts:['Cambio alostérico T→R: la unión del 1er O₂ cambia la conformación favoreciendo los siguientes','La hemoglobina une O₂ de manera independiente en las 4 subunidades','El 2,3-DPG directamente facilita la unión del primer O₂','La cooperatividad es solo cinética, sin cambio conformacional'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es la base molecular de la cooperatividad en la unión de O₂ a la hemoglobina?',opts:['Cambio alostérico T→R: unir el 1.er O₂ favorece la unión de los siguientes','La hemoglobina une O₂ de manera independiente en cada una de las 4 subunidades','El 2,3-DPG directamente facilita la unión del primer O₂ a la hemoglobina oxigenada','La cooperatividad es solo cinética, sin cambio conformacional'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'El 2,3-bisfosfoglicerato (2,3-BPG) estabiliza la forma T desoxigenada → desplaza la curva a la derecha',a:true},{t:'HbF tiene menor afinidad por 2,3-BPG que HbA, por lo que tiene mayor afinidad por O₂',a:true},{t:'La metahemoglobina (Fe³⁺) puede transportar O₂ con igual eficiencia que la HbA',a:false}],pts:15},
       {type:'fill',s:'El efecto Bohr describe como el CO2 y los H+ ___ la afinidad de la hemoglobina por el O2 en los tejidos.',words:['reducen','aumentan','no afectan'],cor:'reducen',pts:20},
     ],
   },
   spectrin:{
     easy:[
-      {type:'quiz',q:'¿Qué hace la red de espectrina en el glóbulo rojo?',opts:['Da elasticidad para que el glóbulo rojo pueda deformarse y recuperar su forma','Produce hemoglobina','Protege al glóbulo rojo de las bacterias','Lleva el oxígeno junto con la hemoglobina'],ans:0,pts:15},
+      {type:'quiz',q:'¿Qué hace la red de espectrina en el glóbulo rojo?',opts:['Da elasticidad para que el glóbulo rojo se deforme y recupere su forma','Produce la hemoglobina que llena el interior del glóbulo rojo','Protege al glóbulo rojo de las bacterias y de los virus que lo infectan','Lleva el oxígeno junto con la hemoglobina por todo el cuerpo'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'La espectrina da elasticidad al glóbulo rojo',a:true},{t:'La espectrina está dentro del glóbulo rojo pegada a la membrana',a:true},{t:'Sin espectrina, el glóbulo rojo mantiene su forma normal',a:false}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuál es la enfermedad causada por defecto en la espectrina eritrocítica?',opts:['Esferocitosis hereditaria: glóbulos rojos esféricos y frágiles que se destruyen prematuramente','Talasemia: déficit de síntesis de cadenas de globina','Anemia ferropénica: falta de hierro','Policitemia vera: sobreproducción de glóbulos rojos'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es la enfermedad causada por defecto en la espectrina eritrocítica?',opts:['Esferocitosis hereditaria: glóbulos rojos esféricos y frágiles','Talasemia: déficit de síntesis de las cadenas de globina','Anemia ferropénica: falta de hierro en la dieta o pérdida crónica de sangre','Policitemia vera: sobreproducción de glóbulos rojos en la médula'],ans:0,pts:20},
       {type:'fill',s:'La red de espectrina se organiza en una malla ___ que da forma y resistencia al eritrocito.',words:['hexagonal','triangular','cuadrada'],cor:'hexagonal',pts:15},
     ],
     hard:[
@@ -988,15 +988,15 @@ const MINIGAMES_ALL={
   },
   band3:{
     easy:[
-      {type:'quiz',q:'¿Qué transporta la proteína Banda 3 a través de la membrana del glóbulo rojo?',opts:['Bicarbonato (HCO₃⁻) a cambio de cloruro (Cl⁻): vital para transportar el CO₂','Solo oxígeno junto con la hemoglobina','Glucosa para dar energía al glóbulo rojo','Agua para mantener la hidratación celular'],ans:0,pts:15},
+      {type:'quiz',q:'¿Qué transporta la proteína Banda 3 a través de la membrana del glóbulo rojo?',opts:['Bicarbonato (HCO₃⁻) a cambio de cloruro (Cl⁻), clave para el CO₂','Solo oxígeno, que viaja unido a la hemoglobina por la sangre','Glucosa para dar energía al glóbulo rojo cuando está en los capilares','Agua, para mantener hidratada la célula y regular su volumen'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'La banda 3 intercambia bicarbonato por cloruro en el glóbulo rojo',a:true},{t:'Este intercambio ayuda a transportar el CO₂ de los tejidos a los pulmones',a:true},{t:'La banda 3 es la proteína menos abundante de la membrana eritrocítica',a:false}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuántas veces cruza la membrana la proteína Banda 3?',opts:['14 veces (14 segmentos transmembrana que forman el canal de transporte)','1 vez (proteína transmembrana simple)','4 veces (como las porinas bacterianas)','No cruza: es una proteína periférica'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuántas veces cruza la membrana la proteína Banda 3?',opts:['14 veces: 14 segmentos transmembrana que forman el canal','1 vez, como una proteína transmembrana simple','4 veces, como las porinas bacterianas de la membrana externa','No cruza la membrana: es una proteína periférica del citoesqueleto'],ans:0,pts:20},
       {type:'fill',s:'La banda 3 permite que el CO₂ viaje en la sangre en forma de ___, mucho más soluble en plasma.',words:['bicarbonato','hemoglobina','oxígeno'],cor:'bicarbonato',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Cómo utiliza Plasmodium falciparum la proteína Banda 3 para invadir el eritrocito?',opts:['La proteína EBA-175 se une a glicoforina A anclada a banda 3; banda 3 se requiere para la vacuola parasitófora','Plasmodium degrada banda 3 con proteasas antes de la invasión','Banda 3 actúa como receptor directo de la proteína MSP1 del merozoíto','El parásito compite con el bicarbonato por el sitio de transporte de banda 3'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cómo utiliza Plasmodium falciparum la proteína Banda 3 para invadir el eritrocito?',opts:['EBA-175 se une a la glicoforina A, anclada a la banda 3','Plasmodium degrada la banda 3 con proteasas antes de invadir el eritrocito','Banda 3 actúa como receptor directo de la proteína CSP del esporozoíto','El parásito compite con el bicarbonato por el sitio de transporte de banda 3'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'La oxidación de banda 3 en eritrocitos senescentes forma el antígeno reconocido por autoanticuerpos',a:true},{t:'Banda 3 forma microdominios con glicoforinas y anquirina como plataforma de señalización',a:true},{t:'Los eritrocitos de drepanocitosis tienen banda 3 con mayor afinidad por la HbS polimerizada',a:true}],pts:15},
       {type:'fill',s:'La proteina Banda 3 intercambia ___ por HCO3- a traves de la membrana eritrocitica.',words:['Cl-','Na+','K+'],cor:'Cl-',pts:20},
     ],
@@ -1011,18 +1011,18 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'La hemoglobina desoxigenada tiene mayor afinidad por banda 3 que la oxigenada',a:true},{t:'La unión de desoxiHb a banda 3 puede regular metabólicamente el eritrocito',a:true},{t:'Banda 3 actúa como ancla para el citoesqueleto de espectrina a través de la anquirina',a:true}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuál es el significado funcional del complejo metabólico de banda 3 con enzimas glicolíticas?',opts:['En desoxigenación, las enzimas glicolíticas (GAPDH, aldolasa) se disocian de banda 3 → mayor glucólisis → más ATP','Las enzimas glicolíticas usan banda 3 como sustrato para producir HCO₃⁻','El complejo favorece la vía de las pentosas fosfato sobre la glucólisis','Las enzimas glicolíticas inhiben el transporte de banda 3 en capilares pulmonares'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es el significado funcional del complejo metabólico de banda 3 con enzimas glicolíticas?',opts:['Al desoxigenarse, GAPDH y aldolasa se sueltan de la banda 3 y aumenta la glucólisis','Las enzimas glicolíticas usan la banda 3 como sustrato para producir HCO₃⁻','El complejo favorece la vía de las pentosas fosfato sobre la glucólisis','Las enzimas glicolíticas inhiben el transporte de la banda 3 en los capilares pulmonares y en los tejidos'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'La GAPDH se une al dominio citoplasmático N-terminal de banda 3 inhibiendo su actividad glicolítica',a:true},{t:'La hipoxia regula metabólicamente el eritrocito a través del complejo banda 3-enzimas glicolíticas',a:true},{t:'Este mecanismo acopla el transporte de O₂/CO₂ con la producción de ATP en el eritrocito',a:true}],pts:15},
       {type:'fill',s:'La proteina adaptadora ___ conecta la Banda 3 con la red de espectrina del citoesqueleto eritrocitico.',words:['anquirina','actina','proteina 4.1'],cor:'anquirina',pts:20},
     ],
   },
   glycophorin:{
     easy:[
-      {type:'quiz',q:'¿Para qué sirve la glicoforina A en la membrana del glóbulo rojo?',opts:['Su carga negativa (ácido siálico) evita que los glóbulos rojos se peguen entre sí','Transporta el oxígeno junto con la hemoglobina','Produce el color rojo de los glóbulos','Es la proteína que destruye bacterias en la sangre'],ans:0,pts:15},
+      {type:'quiz',q:'¿Para qué sirve la glicoforina A en la membrana del glóbulo rojo?',opts:['Su carga negativa (ácido siálico) evita que los glóbulos se peguen','Transporta el oxígeno junto con la hemoglobina por la sangre','Produce el pigmento que da el color rojo característico a los glóbulos de la sangre','Es la proteína que destruye bacterias y virus en la sangre'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'La glicoforina tiene mucha carga negativa que evita la agregación de glóbulos rojos',a:true},{t:'La glicoforina solo se encuentra en glóbulos rojos enfermos',a:false},{t:'El parásito de la malaria usa la glicoforina para entrar al glóbulo rojo',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuáles son los antígenos de grupo sanguíneo que porta la glicoforina A?',opts:['Antígenos M y N del sistema MNS (determinados por aminoácidos en las posiciones 1 y 5)','Antígenos A, B y H del sistema ABO','Antígenos Rh (D, C, E) del sistema Rhesus','Antígenos del sistema Kell y Kidd'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuáles son los antígenos de grupo sanguíneo que porta la glicoforina A?',opts:['Antígenos M y N del sistema MNS (posiciones 1 y 5 de la proteína)','Antígenos A, B y H del sistema ABO, que definen los grupos A, B, AB y O','Antígenos Rh (D, C, E) del sistema Rhesus, que causan la enfermedad hemolítica','Antígenos del sistema Kell y Kidd, que se detectan en pruebas cruzadas'],ans:0,pts:20},
       {type:'fill',s:'El ácido siálico de la glicoforina genera el ___ zeta negativo que evita la agregación de eritrocitos.',words:['potencial','gradiente','campo'],cor:'potencial',pts:15},
     ],
     hard:[
@@ -1037,50 +1037,50 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'La glicoforina C conecta la membrana con el citoesqueleto interno',a:true},{t:'La glicoforina C es igual en estructura a la glicoforina A',a:false},{t:'Sin glicoforina C, el glóbulo rojo pierde su forma normal',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuál es la diferencia funcional entre glicoforina A y glicoforina C?',opts:['GfA: antígenos MN + estabilidad superficial. GfC: ancla el citoesqueleto de espectrina','Son funcionalmente equivalentes con diferente localización','GfA transporta O₂; GfC transporta CO₂','Solo difieren en la cantidad de ácido siálico, no en función'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es la diferencia funcional entre glicoforina A y glicoforina C?',opts:['GfA: antígenos MN. GfC: ancla el citoesqueleto de espectrina','Son funcionalmente equivalentes y solo cambia su localización en la célula','GfA transporta O₂; GfC transporta CO₂','Solo difieren en la cantidad de ácido siálico, no en la función'],ans:0,pts:20},
       {type:'trueFalse',items:[{t:'La glicoforina C se une a la proteína 4.1 que conecta con la espectrina',a:true},{t:'Eritrocitos con deficiencia de GfC (fenotipo Gerbich negativo) son resistentes a Plasmodium vivax',a:true},{t:'La glicoforina C tiene la misma cantidad de ácido siálico que la glicoforina A',a:false}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuál es el mecanismo por el que Plasmodium vivax usa glicoforina C para invadir eritrocitos?',opts:['EBP (erythrocyte binding protein) de P. vivax se une a la región N-terminal de glicoforina C','P. vivax usa el mismo receptor que P. falciparum (glicoforina A)','P. vivax degrada glicoforina C para facilitar su entrada al eritrocito','EBA-140 de P. falciparum también reconoce glicoforina C'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué proteína de Plasmodium falciparum reconoce la glicoforina C para invadir eritrocitos?',opts:['EBA-140, que se une a la glicoforina C','EBA-175, que se une a la glicoforina A y no a la C','DBP (Duffy binding protein), el ligando del antígeno Duffy en P. vivax','CSP, la proteína de superficie del esporozoíto que reconoce los hepatocitos'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'EBA-140 (BAEBL) de P. falciparum se une a la glicoforina C como mecanismo alternativo de invasión',a:true},{t:'El dominio DBL (Duffy-binding-like) de las proteínas EBA media la unión a glicoforinas',a:true},{t:'La ausencia de glicoforina C protege completamente contra la malaria por P. vivax',a:false}],pts:15},
       {type:'fill',s:'La deficiencia de glicoforina C causa ___ hereditaria leve por desestabilizacion del citoesqueleto.',words:['eliptocitosis','esferocitosis','drepanocitosis'],cor:'eliptocitosis',pts:20},
     ],
   },
   ankyrin:{
     easy:[
-      {type:'quiz',q:'¿Qué hace la anquirina en el glóbulo rojo?',opts:['Conecta el citoesqueleto interno (espectrina) con la membrana (banda 3)','Transporta oxígeno junto con la hemoglobina','Produce la energía del glóbulo rojo','Determina el grupo sanguíneo'],ans:0,pts:15},
+      {type:'quiz',q:'¿Qué hace la anquirina en el glóbulo rojo?',opts:['Conecta el citoesqueleto (espectrina) con la membrana (banda 3)','Transporta oxígeno junto con la hemoglobina por los capilares del cuerpo','Produce toda la energía que el glóbulo rojo gasta al deformarse','Determina el grupo sanguíneo del donante y receptor'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'La anquirina actúa como proteína de unión entre el citoesqueleto y la membrana',a:true},{t:'Defectos en la anquirina causan esferocitosis hereditaria',a:true},{t:'La anquirina se encuentra en todas las células del cuerpo',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuál es la enfermedad más común causada por defectos en la anquirina eritrocítica?',opts:['Esferocitosis hereditaria tipo I (HS1): anemia hemolítica con glóbulos rojos esféricos y frágiles','Drepanocitosis: glóbulos en hoz por mutación en β-globina','Talasemia α: falta de cadenas α de hemoglobina','Eliptocitosis: glóbulos elípticos por defecto en espectrina'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es la enfermedad más común causada por defectos en la anquirina eritrocítica?',opts:['Esferocitosis hereditaria tipo I (HS1): anemia hemolítica con glóbulos esféricos','Drepanocitosis: glóbulos en hoz por una mutación puntual en la β-globina','Talasemia α: falta de cadenas α de hemoglobina','Eliptocitosis: glóbulos elípticos por un defecto en la espectrina y la proteína 4.1'],ans:0,pts:20},
       {type:'fill',s:'La anquirina conecta la β-espectrina del citoesqueleto con la proteína ___ integral de membrana.',words:['banda 3','glicoforina','hemoglobina'],cor:'banda 3',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuáles son los dominios funcionales de la anquirina eritrocítica (ANK1)?',opts:['Dominio ANK-repeat (une banda 3), dominio spectrin-binding, dominio regulador C-terminal','Solo dominio de unión a espectrina y dominio de membrana','Dominio RGD (integrina), dominio de unión a actina y dominio SH2','Dominio PH (pleckstrin homology) y dominio FERM de anclaje'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuáles son los dominios funcionales de la anquirina eritrocítica (ANK1)?',opts:['Repeticiones ANK (unen banda 3), unión a espectrina y dominio regulador','Solo un dominio de unión a espectrina y un dominio transmembrana','Dominio RGD (integrina), dominio de unión a actina y dominio SH2 de señalización','Dominio PH (pleckstrin homology) y dominio FERM de anclaje'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'La ANK1 es codificada por un gen de 41 exones con múltiples isoformas tisulares',a:true},{t:'En neuronas, la AnkG (anquirina G) ancla los canales Nav al segmento inicial del axón',a:true},{t:'La anquirina solo existe en eritrocitos y no tiene función en otros tejidos',a:false}],pts:15},
       {type:'fill',s:'Las mutaciones en anquirina son la causa mas comun de ___ en Europa.',words:['esferocitosis hereditaria','drepanocitosis','talasemia'],cor:'esferocitosis hereditaria',pts:20},
     ],
   },
   carbonic_anh:{
     easy:[
-      {type:'quiz',q:'¿Por qué necesitan los glóbulos rojos la anhidrasa carbónica?',opts:['Para convertir el CO₂ producido por los tejidos en bicarbonato y transportarlo a los pulmones','Para producir energía a partir del CO₂','Para destruir el CO₂ tóxico directamente','Para producir O₂ a partir del CO₂'],ans:0,pts:15},
+      {type:'quiz',q:'¿Por qué necesitan los glóbulos rojos la anhidrasa carbónica?',opts:['Para convertir el CO₂ de los tejidos en bicarbonato y llevarlo a los pulmones','Para producir energía a partir del CO₂ que llega de los tejidos','Para destruir directamente el CO₂ tóxico y eliminarlo por la orina del riñón y los pulmones','Para producir O₂ a partir del CO₂ y devolverlo a los tejidos de la sangre'],ans:0,pts:15},
       {type:'fill',s:'La anhidrasa carbónica convierte el CO₂ + H₂O en ___ + H⁺ para transportar el CO₂ en sangre.',words:['bicarbonato','glucosa','ATP'],cor:'bicarbonato',pts:12},
       {type:'trueFalse',items:[{t:'La anhidrasa carbónica transforma CO₂ en bicarbonato en los tejidos',a:true},{t:'En los pulmones, el proceso se invierte para liberar CO₂',a:true},{t:'Sin anhidrasa carbónica, la sangre no podría transportar CO₂',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Por qué la anhidrasa carbónica es esencial para el transporte de CO₂ en sangre?',opts:['Convierte CO₂ en bicarbonato soluble que puede transportarse en plasma','Transporta el CO₂ directamente unido a hierro','Elimina el CO₂ por exocitosis en el pulmón','Convierte CO₂ en O₂ en los capilares pulmonares'],ans:0,pts:20},
+      {type:'quiz',q:'¿Por qué la anhidrasa carbónica es esencial para el transporte de CO₂ en sangre?',opts:['Convierte el CO₂ en bicarbonato soluble, transportable en el plasma','Transporta el CO₂ directamente unido al hierro del grupo hemo de la hemoglobina','Elimina el CO₂ por exocitosis en los alvéolos del pulmón hacia el aire','Convierte el CO₂ en O₂ dentro de los capilares pulmonares'],ans:0,pts:20},
       {type:'trueFalse',items:[{t:'La anhidrasa carbónica II eritrocítica es la isoforma más activa de las 16 conocidas',a:true},{t:'El zinc del sitio activo de la anhidrasa carbónica es esencial para la catálisis',a:true},{t:'Los inhibidores de la anhidrasa carbónica (acetazolamida) solo actúan en los eritrocitos',a:false}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuántas reacciones por segundo puede catalizar la anhidrasa carbónica II?',opts:['1.000.000 reacciones/segundo (10⁶ s⁻¹): una de las enzimas más rápidas','100 reacciones/segundo','10.000 reacciones/segundo','Solo 10 reacciones/segundo'],ans:0,pts:25},
-      {type:'quiz',q:'¿Cuál es el mecanismo catalítico de la anhidrasa carbónica II en la hidratación del CO₂?',opts:['Zn²⁺-OH⁻ ataca el CO₂ → HCO₃⁻ se libera → agua rehidrata el Zn²⁺ → mecanismo de zinc-hidroxilo','El CO₂ se une a His64 del sitio activo y se oxida directamente a HCO₃⁻','El Zn²⁺ reduce el CO₂ por adición nucleofílica directa sin intermediarios','Un residuo Lys actúa como base general extrayendo un protón del agua activa'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuántas reacciones por segundo puede catalizar la anhidrasa carbónica II?',opts:['1.000.000 por segundo (10⁶ s⁻¹), una de las enzimas más rápidas','100 reacciones por segundo, como una enzima digestiva típica del estómago','10.000 reacciones por segundo, como la mayoría de las enzimas','Solo 10 reacciones por segundo, porque necesita zinc como cofactor'],ans:0,pts:25},
+      {type:'quiz',q:'¿Cuál es el mecanismo catalítico de la anhidrasa carbónica II en la hidratación del CO₂?',opts:['Zn²⁺-OH⁻ ataca al CO₂ y libera HCO₃⁻; luego el agua rehidrata el Zn²⁺','El CO₂ se une a la His64 del sitio activo y se oxida directamente a HCO₃⁻ sin zinc','El Zn²⁺ reduce el CO₂ por adición nucleofílica directa sin intermediarios','Un residuo Lys actúa como base general extrayendo un protón del agua activa'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'La transferencia de protones desde el sitio activo al tampón es el paso limitante de la velocidad',a:true},{t:'His64 actúa como puente de protones entre el sitio activo y el solvente en CA-II',a:true},{t:'La acetazolamida es un inhibidor competitivo que ocupa el sitio del CO₂ en el zinc',a:false}],pts:15},
       {type:'fill',s:'La anhidrasa carbonica cataliza CO2 + H2O formando ___ + H+, siendo esencial para el transporte de CO2.',words:['HCO3-','CO3 2-','H2CO3 estable'],cor:'HCO3-',pts:20},
     ],
   },
   biconcave:{
     easy:[
-      {type:'quiz',q:'¿Por qué el glóbulo rojo tiene forma de disco aplastado con los lados cóncavos?',opts:['Para tener mayor superficie de intercambio de gases y poder deformarse en capilares','Es simplemente la forma en que nacen sin función específica','Para proteger la hemoglobina de la oxidación','Porque tienen menos agua que otras células'],ans:0,pts:15},
+      {type:'quiz',q:'¿Por qué el glóbulo rojo tiene forma de disco aplastado con los lados cóncavos?',opts:['Tiene más superficie para intercambiar gases y se deforma en los capilares','Es simplemente la forma en que nacen todas las células, sin función específica','Para proteger la hemoglobina de la oxidación','Porque tienen menos agua que otras células'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'La forma bicóncava del glóbulo rojo aumenta su superficie sin aumentar su volumen',a:true},{t:'Los glóbulos rojos de las personas con drepanocitosis tienen forma de disco normal',a:false},{t:'El glóbulo rojo maduro no tiene núcleo lo que le permite ser más flexible',a:true}],pts:8},
     ],
     normal:[
@@ -1088,7 +1088,7 @@ const MINIGAMES_ALL={
       {type:'fill',s:'La forma bicóncava da un ___ 20-30% mayor que una esfera del mismo volumen, mejorando el intercambio de gases.',words:['área superficial','peso','volumen'],cor:'área superficial',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué proteínas del citoesqueleto son responsables de mantener la forma bicóncava del eritrocito?',opts:['La red de espectrina-actina-banda 4.1 conectada a la membrana via anquirina-banda 3 y proteína 4.1-glicoforina C','Solo la hemoglobina por su concentración que aplana la célula','Las proteínas de membrana band 3 que crean tensión superficial diferencial','La presión osmótica diferencial entre el citoplasma y el plasma'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué proteínas del citoesqueleto son responsables de mantener la forma bicóncava del eritrocito?',opts:['La red de espectrina-actina-banda 4.1, unida a la membrana por anquirina y banda 3','Solo la hemoglobina, cuya alta concentración aplana la célula','Las proteínas de membrana banda 3, que crean una tensión superficial diferencial en la bicapa','La presión osmótica diferencial entre el citoplasma y el plasma sanguíneo'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'La forma bicóncava se mantiene por el balance entre tensión de membrana y la red de espectrina',a:true},{t:'En la esferocitosis hereditaria, la pérdida de lípidos de membrana precede a la esferización',a:true},{t:'Los reticulocitos recién liberados de la médula ya tienen la forma bicóncava definitiva',a:false}],pts:15},
       {type:'fill',s:'El eritrocito maduro carece de ___ y organulos, maximizando el espacio para la hemoglobina.',words:['nucleo','membrana plasmatica','ribosomas'],cor:'nucleo',pts:20},
     ],
@@ -1101,22 +1101,22 @@ const MINIGAMES_ALL={
       {type:'trueFalse',items:[{t:'La lignina hace la pared del xilema impermeable y muy resistente',a:true},{t:'La lignificación es reversible: la célula puede eliminar la lignina',a:false},{t:'La madera está compuesta principalmente de células muertas del xilema',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Por qué la célula del xilema muere cuando completa su pared secundaria?',opts:['La lignificación impermeabiliza y mata la célula, dejando un canal hueco para conducir agua','La célula se suicida para liberar los nutrientes del árbol','La pared secundaria bloquea el acceso al ADN e impide la función','La lignina oxida las proteínas de la célula causando su muerte'],ans:0,pts:20},
+      {type:'quiz',q:'¿Por qué la célula del xilema muere cuando completa su pared secundaria?',opts:['La lignificación impermeabiliza y mata la célula, dejando un canal hueco','La célula se suicida para liberar sus nutrientes al resto del árbol','La pared secundaria bloquea el acceso al ADN e impide la función','La lignina oxida las proteínas de la célula y causa su muerte por estrés oxidativo'],ans:0,pts:20},
       {type:'trueFalse',items:[{t:'La célula del xilema muere al terminar la lignificación de su pared',a:true},{t:'La pared secundaria tiene 3 capas (S1, S2, S3) con diferente orientación de celulosa',a:true},{t:'La lignina del xilema es el mismo polímero que la celulosa con diferente nombre',a:false}],pts:10},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuál es la ruta biosintética de la lignina y qué enzimas la polimerizan?',opts:['Fenilpropanoides (Phe → ácido cinámico → monolignoles) polimerizados por peroxidasas y lacasas vía radicales libres','Glucosa polimerizada directamente por lignina sintasa en la pared','Acetato → malonato → policétidos condensados en la pared secundaria','Precursores de quitina modificados por metiltransferasas'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es la ruta biosintética de la lignina y qué enzimas la polimerizan?',opts:['Fenilpropanoides (Phe → ácido cinámico → monolignoles) polimerizados por peroxidasas y lacasas','Glucosa polimerizada directamente por la lignina sintasa en la pared','Acetato → malonato → policétidos, condensados por policétido sintasas en la pared secundaria celular','Precursores de quitina modificados por metiltransferasas'],ans:0,pts:30},
       {type:'trueFalse',items:[{t:'Los monolignoles (coniferilo, p-cumarilo, sinapilo) se polimerizan de manera azimétrica → lignina heterogénea',a:true},{t:'Las lacasas (multicopper oxidasas) y peroxidasas catalizan la formación de radicales monolignol',a:true},{t:'Los hongos de podredumbre blanca degradan la lignina con ligninasa y manganeso peroxidasa',a:true}],pts:15},
       {type:'fill',s:'La madera esta compuesta principalmente de ___ de la pared celular secundaria del xilema.',words:['lignina y celulosa','quitina y proteinas','celulosa y pectinas'],cor:'lignina y celulosa',pts:20},
     ],
   },
   primary_wall_x:{
     easy:[
-      {type:'quiz',q:'¿De qué está hecha la pared primaria de la célula del xilema?',opts:['Celulosa, hemicelulosa y pectinas: los mismos componentes de otras células vegetales','Solo celulosa pura sin otros componentes','Lignina y quitina mezcladas','Peptidoglicano como en las bacterias'],ans:0,pts:15},
+      {type:'quiz',q:'¿De qué está hecha la pared primaria de la célula del xilema?',opts:['Celulosa, hemicelulosa y pectinas, como en otras células vegetales','Solo celulosa pura, sin hemicelulosa ni pectinas ni otros componentes','Lignina y quitina mezcladas en capas alternas','Peptidoglicano, igual que en la pared celular de las bacterias Gram positivas'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'La pared primaria del xilema es la primera en formarse durante el desarrollo',a:true},{t:'La pared primaria desaparece completamente cuando se forma la secundaria',a:false},{t:'La pared primaria está hecha principalmente de celulosa',a:true}],pts:8},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué ocurre con la pared primaria durante la diferenciación del xilema?',opts:['Persiste en las zonas de punteadura; se deposita la pared secundaria sobre el resto','Se degrada completamente para dejar solo la pared secundaria','Se convierte en pared secundaria mediante lignificación directa','Se transforma en la membrana de tílosis'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué ocurre con la pared primaria durante la diferenciación del xilema?',opts:['Persiste en las punteaduras; la pared secundaria se deposita sobre el resto','Se degrada completamente para dejar solo la pared secundaria y la laminilla media','Se convierte en pared secundaria mediante lignificación directa de su celulosa','Se transforma en la membrana de las tílosis que obstruyen el vaso'],ans:0,pts:20},
       {type:'fill',s:'Las microfibrillas de celulosa de la pared primaria se orientan al ___, permitiendo el crecimiento de la célula en todas las direcciones.',words:['azar','norte','eje longitudinal'],cor:'azar',pts:15},
     ],
     hard:[

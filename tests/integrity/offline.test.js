@@ -76,6 +76,7 @@ describe('lo que el service worker guarda para el modo offline', () => {
     // v30: la carga del guardado verifica el tipo de cada campo.
     // v31: la musica atrapa los errores de Tone en vez de mandarlos al banner.
     // v32: distractores del quiz con largo parejo, tanda 1.
-    expect(sw).toMatch(/const CACHE = 'cellquest-v32'/);
+    // v33: tanda 2 (incluye glicoforina C: la proteina es de P. falciparum).
+    expect(sw).toMatch(/const CACHE = 'cellquest-v33'/);
   });
 });
