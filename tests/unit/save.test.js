@@ -83,6 +83,61 @@ describe('guardado / carga (localStorage)', () => {
     expect(viejo.unlocked).toBe(true);
   });
 
+  describe('un guardado con campos de otro tipo no rompe ni contamina el estado', () => {
+    const cargar = (obj) => {
+      w.localStorage.setItem('cq3', JSON.stringify(obj));
+      return w.loadSave();
+    };
+
+    it('numeros que no son numeros caen al valor por defecto (no "abc10" al sumar)', () => {
+      expect(cargar({ score: 'abc', xp: '100', totalTime: -5, speedRuns: null, totalDone: {} })).toBe(true);
+      expect(w.GS.score).toBe(0);
+      expect(w.GS.xp).toBe(0);
+      expect(w.GS.totalTime).toBe(0);
+      expect(w.GS.speedRuns).toBe(0);
+      expect(w.GS.totalDone).toBe(0);
+      w.GS.score += 10;
+      expect(w.GS.score).toBe(10);
+    });
+
+    it('dificultad y avatar fuera de lo conocido vuelven a los valores por defecto', () => {
+      cargar({ difficulty: 'imposible', avatar: 'robot' });
+      expect(w.GS.difficulty).toBe('normal');
+      expect(w.GS.avatar).toBe('scientist');
+    });
+
+    it('levels y achievements que no son listas no tiran TypeError ni pierden el save', () => {
+      expect(cargar({ name: 'Ana', xp: 300, levels: 'hola', achievements: { a: 1 } })).toBe(true);
+      expect(w.GS.xp).toBe(300);
+      expect(w.GS.levels.length).toBe(w.LEVELS.length);
+      expect(w.GS.achievements.length).toBeGreaterThan(5);
+    });
+
+    it('completed con basura queda con la forma {nivel:{organela:true}}', () => {
+      cargar({ completed: { animal: { nucleus: true, golgi: 'si' }, plant: 'x', fungi: [1] }, completedAt: { animal: { nucleus: 'ayer' } } });
+      expect(w.GS.completed).toEqual({ animal: { nucleus: true } });
+      expect(w.GS.completedAt).toEqual({ animal: {} });
+      expect(() => { w.GS.completed.animal.nucleus = true; }).not.toThrow();
+    });
+
+    it('un save que es una lista o un numero se descarta sin romper', () => {
+      expect(cargar([1, 2, 3])).toBe(false);
+      w.localStorage.setItem('cq3', '42');
+      expect(w.loadSave()).toBe(false);
+      w.localStorage.setItem('cq3', 'null');
+      expect(w.loadSave()).toBe(false);
+    });
+
+    it('el nombre se recorta y un nombre vacio vuelve a Jugador', () => {
+      cargar({ name: 'x'.repeat(500) });
+      expect(w.GS.name.length).toBe(40);
+      cargar({ name: '   ' });
+      expect(w.GS.name).toBe('Jugador');
+      cargar({ name: 42 });
+      expect(w.GS.name).toBe('Jugador');
+    });
+  });
+
   it('saveGame con debounce no escribe sincrónicamente', () => {
     w.GS.xp = 999;
     w.saveGame(); // sin "immediate" -> debounced

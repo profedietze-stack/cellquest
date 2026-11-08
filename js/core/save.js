@@ -22,14 +22,33 @@ function saveGame(immediate){
   if(immediate){_doSave();return;}
   _saveTimer=setTimeout(_doSave,800);
 }
+// Un guardado se lee campo por campo y con el tipo verificado: `s.score||0` deja pasar
+// "abc" (y despues `score+10` da "abc10"), y `(s.levels||[]).find` tira TypeError si
+// `levels` es un string. No hace falta un alumno editando el localStorage: alcanza con que
+// una version futura cambie un tipo. Lo que no tiene la forma esperada cae al valor por defecto.
+function _numSeguro(v,d){return typeof v==='number'&&isFinite(v)&&v>=0?v:d;}
+function _arrSeguro(v){return Array.isArray(v)?v.filter(x=>x&&typeof x==='object'):[];}
+function _objSeguro(v){return v&&typeof v==='object'&&!Array.isArray(v)?v:{};}
+// {nivel:{organela:valor}} -> solo los niveles que son objetos; el resto se descarta.
+function _mapaSeguro(v,validoValor){
+  const out={};
+  Object.entries(_objSeguro(v)).forEach(([lv,orgs])=>{
+    if(!orgs||typeof orgs!=='object'||Array.isArray(orgs))return;
+    out[lv]={};
+    Object.entries(orgs).forEach(([o,val])=>{if(validoValor(val))out[lv][o]=val;});
+  });
+  return out;
+}
 function loadSave(){
   try{
     const r=localStorage.getItem('cq3');
     if(!r)return false;
-    const s=JSON.parse(r);
+    const parsed=JSON.parse(r);
+    if(!parsed||typeof parsed!=='object'||Array.isArray(parsed))return false;
+    const s=parsed;
     // BUG-02 fix: merge by id (not index) so new levels added between versions are handled correctly
     const mergedLevels=JSON.parse(JSON.stringify(LEVELS)).map(baseLv=>{
-      const saved=(s.levels||[]).find(l=>l.id===baseLv.id);
+      const saved=_arrSeguro(s.levels).find(l=>l.id===baseLv.id);
       return saved?{...baseLv,...saved,unlocked:saved.unlocked||baseLv.unlocked}:baseLv;
     });
     // Igual que con los niveles: mergear por id, no reemplazar el array entero.
@@ -38,10 +57,10 @@ function loadSave(){
     // reemplazaba el array completo y el logro nuevo desaparecía para siempre en
     // esa cuenta, porque progress.js busca por id y no encontraba nada que marcar.
     const mergedAchievements=JSON.parse(JSON.stringify(GS.achievements)).map(baseAch=>{
-      const saved=(s.achievements||[]).find(a=>a.id===baseAch.id);
+      const saved=_arrSeguro(s.achievements).find(a=>a.id===baseAch.id);
       return saved?{...baseAch,...saved}:baseAch;
     });
-    Object.assign(GS,{name:s.name||'Jugador',avatar:s.avatar||'scientist',difficulty:s.difficulty||'normal',score:s.score||0,xp:s.xp||0,totalTime:s.totalTime||0,levels:mergedLevels,completed:s.completed||{},achievements:mergedAchievements,speedRuns:s.speedRuns||0,perfectRuns:s.perfectRuns||0,totalDone:s.totalDone||0,completedAt:s.completedAt||{},lastSession:s.lastSession||0});
+    Object.assign(GS,{name:(typeof s.name==='string'&&s.name.trim()?s.name.trim().slice(0,40):'Jugador'),avatar:(typeof s.avatar==='string'&&AV_EMOJI[s.avatar]?s.avatar:'scientist'),difficulty:(['easy','normal','hard'].includes(s.difficulty)?s.difficulty:'normal'),score:_numSeguro(s.score,0),xp:_numSeguro(s.xp,0),totalTime:_numSeguro(s.totalTime,0),levels:mergedLevels,completed:_mapaSeguro(s.completed,v=>v===true),achievements:mergedAchievements,speedRuns:_numSeguro(s.speedRuns,0),perfectRuns:_numSeguro(s.perfectRuns,0),totalDone:_numSeguro(s.totalDone,0),completedAt:_mapaSeguro(s.completedAt,v=>typeof v==='number'&&isFinite(v)),lastSession:_numSeguro(s.lastSession,0)});
     return true;
   }catch(e){return false;}
 }

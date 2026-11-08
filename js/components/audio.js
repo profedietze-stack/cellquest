@@ -201,23 +201,30 @@ document.addEventListener('click',e=>{
     const bassNotes=['A1','F1','C1','G1'];
     const melody=['E4','—','C4','D4','E4','—','A3','—','C4','D4','E4','—','F4','E4','D4','C4'];
 
-    const padSeq=new Tone.Sequence((time,chordIdx)=>{
+    // La musica es de adorno: si Tone rechaza una nota se pierde esa nota y nada mas.
+    // Con la maquina cargada (una tablet vieja, treinta alumnos) el transporte se atrasa y
+    // dos disparos caen en el mismo instante: Tone tira "Start time must be strictly greater
+    // than previous start time", y como sale de un callback de audio llega a window.onerror
+    // y el banner rojo de errores le tapaba la pantalla al alumno.
+    const _nota=fn=>(time,v)=>{try{fn(time,v);}catch(e){}};
+
+    const padSeq=new Tone.Sequence(_nota((time,chordIdx)=>{
       pad.releaseAll(time);
       pad.triggerAttackRelease(chords[chordIdx],'2n',time,.5);
-    },[0,1,2,3],'1n');
+    }),[0,1,2,3],'1n');
 
-    const bassSeq=new Tone.Sequence((time,chordIdx)=>{
+    const bassSeq=new Tone.Sequence(_nota((time,chordIdx)=>{
       bass.triggerAttackRelease(bassNotes[chordIdx],'8n',time,.65);
-    },[0,0,1,1,2,2,3,3],'2n');
+    }),[0,0,1,1,2,2,3,3],'2n');
 
     const melSteps=melody.map(n=>n==='—'?null:n);
-    const melSeq=new Tone.Sequence((time,note)=>{
+    const melSeq=new Tone.Sequence(_nota((time,note)=>{
       if(note)lead.triggerAttackRelease(note,'8n',time,.45);
-    },melSteps,'8n');
+    }),melSteps,'8n');
 
-    const hatSeq=new Tone.Sequence((time,vel)=>{
+    const hatSeq=new Tone.Sequence(_nota((time,vel)=>{
       hat.triggerAttackRelease('16n',time,vel);
-    },[.85,.3,.85,.3],'4n');
+    }),[.85,.3,.85,.3],'4n');
 
     masterReverb.ready.then(()=>{
       padSeq.start(0);bassSeq.start(0);melSeq.start(0);hatSeq.start(0);

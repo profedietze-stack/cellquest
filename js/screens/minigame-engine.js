@@ -477,7 +477,7 @@ function _renderStats(body){
     <div class="prog-player-card">
       <div class="prog-avatar">${av}</div>
       <div class="prog-player-info">
-        <div class="prog-player-name">${GS.name||'Jugador'}</div>
+        <div class="prog-player-name">${String(GS.name||'Jugador').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}</div>
         <div class="prog-player-meta">
           <span>🎯 ${diff}</span>
           <span>⭐ ${GS.score} pts</span>
