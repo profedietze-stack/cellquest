@@ -1585,7 +1585,7 @@ const MINIGAMES_ALL={
   },
   mito_m:{
     easy:[
-      {type:'quiz',q:'¿Por qué las fibras musculares tipo I (lentas) tienen más mitocondrias que las tipo IIb?',opts:['Para producir ATP aeróbicamente y resistir la fatiga durante ejercicio prolongado','Para almacenar más glucógeno','Para generar más calor corporal','Para sintetizar más proteínas contráctiles'],ans:0,pts:15},
+      {type:'quiz',q:'¿Por qué las fibras musculares tipo I (lentas) tienen más mitocondrias que las tipo IIb?',opts:['Para producir ATP con oxígeno y resistir la fatiga en esfuerzos largos','Para almacenar más glucógeno para los esfuerzos breves e intensos','Para generar más calor corporal y mantener la temperatura del cuerpo','Para sintetizar más proteínas contráctiles que las fibras rápidas y crecer más rápido'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'Las mitocondrias musculares se organizan en hileras entre las miofibrillas y bajo el sarcolema',a:true},{t:'Las mitocondrias musculares solo pueden usar glucosa como combustible energético',a:false},{t:'El ejercicio aeróbico de larga duración aumenta el número y tamaño de las mitocondrias musculares',a:true}],pts:8},
       {type:'fill',s:'El ___ es el proceso por el que el ejercicio aeróbico induce la formación de nuevas mitocondrias musculares, regulado por PGC-1α.',words:['biogénesis mitocondrial','mitofagia','fusión mitocondrial'],cor:'biogénesis mitocondrial',pts:12},
     ],
@@ -1617,16 +1617,16 @@ const MINIGAMES_ALL={
   },
   glycogen_m:{
     easy:[
-      {type:'quiz',q:'¿Por qué el músculo no puede liberar glucosa a la sangre aunque tenga glucógeno?',opts:['Carece de glucosa-6-fosfatasa (necesaria para exportar glucosa libre)','No tiene glucógeno fosforilasa','Su glucógeno es de tipo diferente','No tiene acceso a capilares sanguíneos'],ans:0,pts:15},
+      {type:'quiz',q:'¿Por qué el músculo no puede liberar glucosa a la sangre aunque tenga glucógeno?',opts:['Carece de glucosa-6-fosfatasa, que exporta la glucosa libre','No tiene glucógeno fosforilasa para liberar la glucosa del glucógeno','Su glucógeno es químicamente distinto al del hígado y no se degrada','No tiene acceso a los capilares sanguíneos que rodean la fibra'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'El glucógeno muscular es de uso exclusivamente local (no puede mantener la glucemia)',a:true},{t:'La adrenalina activa la glucógeno fosforilasa muscular durante el ejercicio o el estrés',a:true},{t:'El glucógeno muscular es la principal fuente de glucosa sanguínea durante el ayuno',a:false}],pts:8},
       {type:'fill',s:'La enfermedad de ___ (glucogenosis tipo V) causa mioglobinuria y rabdomiólisis por ejercicio por déficit de glucógeno fosforilasa muscular.',words:['McArdle','Pompe','von Gierke'],cor:'McArdle',pts:12},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuántos gramos de glucógeno puede almacenar el músculo total de un adulto (~30 kg músculo)?',opts:['~300-400 g (>>que el hígado)','~50 g','~1000 g','~100 g'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuántos gramos de glucógeno puede almacenar el músculo total de un adulto (~30 kg músculo)?',opts:['~300-400 g, mucho más que el hígado','~50 g, menos que el glucógeno del hígado','~1000 g, más de un kilo repartido en todo el músculo','~100 g, igual que el hígado del adulto'],ans:0,pts:20},
       {type:'fill',s:'El ___ es el activador alostérico de la glucógeno fosforilasa b muscular que acelera la glucogenólisis durante la contracción intensa.',words:['AMP','ATP','glucosa-6-P'],cor:'AMP',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'En el test de isquemia del antebrazo de un paciente con enfermedad de McArdle, ¿qué resultado se espera?',opts:['Ausencia de aumento de lactato venoso con elevación normal de amoniaco','Aumento de lactato y descenso de amoniaco','Ausencia de aumento de amoniaco','Aumento excesivo de glucosa venosa'],ans:0,pts:30},
+      {type:'quiz',q:'En el test de isquemia del antebrazo de un paciente con enfermedad de McArdle, ¿qué resultado se espera?',opts:['No sube el lactato venoso y el amoniaco sí aumenta normalmente','Aumento de lactato y descenso de amoniaco en la sangre venosa','Ausencia de aumento de amoniaco, con aumento normal del lactato','Aumento excesivo de glucosa venosa y de lactato tras el ejercicio'],ans:0,pts:30},
       {type:'fill',q:'Proteína que nuclea la síntesis de glucógeno, actuando como cebador glucoproteico para la glucógeno sintasa',a:'glucogenina',pts:22},
       {type:'trueFalse',items:[{t:'La glucógeno sintasa muscular es activada por insulina (desfosforilación) y alostéricamente por glucosa-6-fosfato',a:true},{t:'Durante un sprint anaeróbico máximo, el glucógeno muscular puede agotarse en 10-15 minutos',a:true},{t:'La glucosa-6-fosfatasa está presente en músculo esquelético permitiendo liberar glucosa al plasma',a:false}],pts:28},
     ],
@@ -1642,7 +1642,7 @@ const MINIGAMES_ALL={
       {type:'fill',s:'La ___ sérica es el marcador más precoz de infarto de miocardio (se detecta a las 2h del inicio), aunque tiene baja especificidad cardíaca.',words:['mioglobina','troponina I','CK-MB'],cor:'mioglobina',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Cuál es el P50 de la mioglobina y qué significa para su función en el músculo?',opts:['~2.8 mmHg: solo cede O₂ en hipoxia severa local → actúa como reserva, no como transportador','~26 mmHg: igual que hemoglobina','~50 mmHg: cede O₂ en condiciones normales','~1 mmHg: no cede O₂'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es el P50 de la mioglobina y qué significa para su función en el músculo?',opts:['~2.8 mmHg: solo cede O₂ en hipoxia severa; es reserva, no transportador','~26 mmHg: igual que la hemoglobina, por eso lo transporta por la sangre a los tejidos','~50 mmHg: cede O₂ en condiciones normales a las mitocondrias','~1 mmHg: no cede O₂ nunca, ni siquiera en hipoxia'],ans:0,pts:30},
       {type:'fill',q:'En cetáceos y mamíferos de buceo la concentración de mioglobina muscular es 10-30 veces mayor que en humanos, permitiendo apneas prolongadas. ¿Qué carga superficial impide la agregación de mioglobina a concentraciones tan altas?',a:'carga positiva (histidinas en la superficie)',pts:22},
       {type:'trueFalse',items:[{t:'La difusión facilitada de O₂ por mioglobina es significativa: puede duplicar el flujo de O₂ a las mitocondrias',a:true},{t:'La carboxi-mioglobina (Mb-CO) no puede ceder O₂, similar a la carboxi-hemoglobina en intoxicación por CO',a:true},{t:'La troponina I cardíaca tiene mayor sensibilidad y especificidad para IAM que la mioglobina',a:true}],pts:28},
     ],
@@ -1673,18 +1673,18 @@ const MINIGAMES_ALL={
       {type:'fill',s:'El ___ es el receptor que reconoce específicamente péptidos presentados por MHC en la superficie del linfocito T.',words:['TCR','BCR','TLR'],cor:'TCR',pts:12},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué proteína ancla constitutivamente a Lck (src quinasa) a la membrana del linfocito T helper?',opts:['CD4 (mediante motivo palmitoilado)','CD3ζ','ZAP-70','LAT'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué proteína ancla constitutivamente a Lck (src quinasa) a la membrana del linfocito T helper?',opts:['CD4, por su cola citoplasmática','CD3ζ, la cadena con los ITAMs del complejo TCR','ZAP-70, la quinasa que se recluta después de Lck','LAT, la proteína adaptadora de membrana'],ans:0,pts:20},
       {type:'fill',s:'La ___ del linfocito T es la zona organizada de contacto entre el linfocito T y la célula presentadora de antígeno.',words:['sinapsis inmunológica','hendidura sináptica','placa motora'],cor:'sinapsis inmunológica',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Por qué el superagonista anti-CD28 TGN1412 causó reacciones adversas graves en 2006?',opts:['Activó policlonalmente todos los T (sin señal TCR): tormenta de citocinas','Inhibió el TCR bloqueando la tolerancia','Activó solo CTL generando HLH','Destruyó CD4+ causando SCID transitoria'],ans:0,pts:30},
+      {type:'quiz',q:'¿Por qué el superagonista anti-CD28 TGN1412 causó reacciones adversas graves en 2006?',opts:['Activó a todos los T sin señal del TCR: tormenta de citocinas','Inhibió el TCR y bloqueó por completo la tolerancia inmunológica','Activó solo a los CTL y generó una linfohistiocitosis hemofagocítica','Destruyó los linfocitos CD4+ y causó una inmunodeficiencia transitoria'],ans:0,pts:30},
       {type:'fill',q:'Terapia que inserta un receptor quimérico (ScFv fusionado a dominios CD3ζ+CD28 o 4-1BB) en linfocitos T del paciente para tratar leucemias y linfomas',a:'CAR-T',pts:22},
       {type:'trueFalse',items:[{t:'El TCR es heterodímero αβ (o γδ) con dominios variables V generados por recombinación V(D)J',a:true},{t:'La diversidad del TCR (10^15-18 especificidades) se genera por recombinación somática + adiciones P/N en las uniones',a:true},{t:'Las células CAR-T mantienen el TCR endógeno activo para aumentar la eficacia antitumoral',a:false}],pts:28},
     ],
   },
   nucleus_t:{
     easy:[
-      {type:'quiz',q:'¿Qué factor de transcripción transloca al núcleo del linfocito T tras la señalización del TCR y activa la producción de IL-2?',opts:['NFAT (factor nuclear de células T activadas)','NF-κB','p53','STAT3'],ans:0,pts:15},
+      {type:'quiz',q:'¿Qué factor de transcripción transloca al núcleo del linfocito T tras la señalización del TCR y activa la producción de IL-2?',opts:['NFAT (factor nuclear de células T activadas)','GATA-1, el factor de transcripción de la línea eritroide','p53, el supresor tumoral que detiene el ciclo celular','STAT3, activado por interleucina 6 en el citoplasma'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'La ciclosporina A inhibe la activación de NFAT al bloquear la calcineurina',a:true},{t:'El núcleo del linfocito T ocupa la mayoría del volumen celular (~85%)',a:true},{t:'La activación del linfocito T comprime la cromatina (la hace más densa)',a:false}],pts:8},
       {type:'fill',s:'La ___ es una fosfatasa que desfosforila NFAT permitiendo su entrada al núcleo. Es inhibida por ciclosporina A y tacrolimus.',words:['calcineurina','calmodulina','caspasa-3'],cor:'calcineurina',pts:12},
     ],
@@ -1693,7 +1693,7 @@ const MINIGAMES_ALL={
       {type:'fill',s:'El factor de transcripción ___, activado por PKC (vía DAG), controla la supervivencia y la proliferación del linfocito T activado.',words:['NF-κB','NFAT','AP-1'],cor:'NF-κB',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué mecanismo molecular explica la mayor rapidez de respuesta de los linfocitos T memoria respecto a los naive?',opts:['Cromatina más abierta en loci de citocinas y mayor accesibilidad a factores de transcripción','Mayor número de TCR en membrana','Mitocondrias más numerosas','Gránulos líticos preformados en mayor cantidad'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué mecanismo molecular explica la mayor rapidez de respuesta de los linfocitos T memoria respecto a los naive?',opts:['Cromatina más abierta en los genes de citocinas','Mayor número de TCR en la membrana de cada linfocito','Mitocondrias más numerosas y activas en el citoplasma','Gránulos líticos preformados en mayor cantidad en el citoplasma'],ans:0,pts:30},
       {type:'fill',q:'Combinación de inhibidores de calcineurina usados en trasplante de órganos sólidos que bloquean NFAT impidiendo la producción de IL-2',a:'ciclosporina/tacrolimus',pts:22},
       {type:'trueFalse',items:[{t:'NFAT requiere ser desfosforilado en múltiples residuos serina para exponer su señal de localización nuclear (NLS)',a:true},{t:'AP-1 (FOS+JUN) se activa por la vía Ras-ERK downstream del TCR y coopera con NFAT para activar el promotor de IL-2',a:true},{t:'Los inhibidores BET/BRD4 (JQ1) reducen la expresión de c-Myc y bloquean la proliferación de T leucémicos',a:true}],pts:28},
     ],
@@ -1705,7 +1705,7 @@ const MINIGAMES_ALL={
       {type:'fill',s:'El ___ activa la transcripción de ARNr (ARN polimerasa I) cuando el linfocito T se activa, agrandando el nucléolo.',words:['c-Myc','p53','PTEN'],cor:'c-Myc',pts:12},
     ],
     normal:[
-      {type:'quiz',q:'¿Por qué el tamaño del nucléolo es un criterio diagnóstico en linfomas T?',opts:['Los linfomas agresivos tienen alta síntesis proteica con nucléolos prominentes','El nucléolo se fusiona con la membrana nuclear en tumores','El nucléolo expresa CD20 detectable por IHQ','Los linfomas indolentes tienen nucleolos gigantes'],ans:0,pts:20},
+      {type:'quiz',q:'¿Por qué el tamaño del nucléolo es un criterio diagnóstico en linfomas T?',opts:['Los linfomas agresivos tienen nucléolos prominentes (alta síntesis proteica)','El nucléolo se fusiona con la membrana nuclear en los tumores agresivos de células T','El nucléolo expresa CD20, detectable por inmunohistoquímica','Los linfomas indolentes tienen nucléolos gigantes y muy numerosos'],ans:0,pts:20},
       {type:'fill',s:'Los inhibidores ___ (JQ1, I-BET762) suprimen c-Myc y la transcripción de ARNr, reduciendo la nucleologénesis en linfomas T agresivos.',words:['BET/BRD4','HDAC','mTOR'],cor:'BET/BRD4',pts:15},
     ],
     hard:[
@@ -1716,24 +1716,24 @@ const MINIGAMES_ALL={
   },
   tcr_cd3:{
     easy:[
-      {type:'quiz',q:'¿Cuántos ITAMs (immunoreceptor tyrosine-based activation motifs) tienen las cadenas CD3ζ del complejo TCR-CD3?',opts:['3 ITAMs por cadena (6 tirosinas activadoras)','1 ITAM','6 ITAMs','Solo 2 tirosinas totales'],ans:0,pts:15},
+      {type:'quiz',q:'¿Cuántos ITAMs (immunoreceptor tyrosine-based activation motifs) tienen las cadenas CD3ζ del complejo TCR-CD3?',opts:['3 ITAMs por cadena (6 tirosinas activadoras)','1 ITAM por cadena, con dos tirosinas activadoras','6 ITAMs por cadena, con doce tirosinas activadoras','Solo 2 tirosinas en total, sin motivos ITAM'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'El complejo CD3 transduce la señal del TCR porque las cadenas CD3 tienen colas citosólicas largas con ITAMs, a diferencia del TCR',a:true},{t:'El TCR puede reconocer antígenos solubles en plasma sin presentación por MHC',a:false},{t:'Los linfocitos T citotóxicos (CTL) expresan TCR + CD8 (reconocen pMHC-I) mientras que los T helper expresan TCR + CD4 (pMHC-II)',a:true}],pts:8},
       {type:'fill',s:'El TCR αβ reconoce ___ (péptido unido a MHC) presentados en la superficie de células presentadoras de antígeno.',words:['complejos pMHC','antígenos libres','glicoproteínas'],cor:'complejos pMHC',pts:12},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuál es el paso inmediatamente posterior a que Lck fosforile los ITAMs de CD3ζ?',opts:['ZAP-70 se une vía tándem SH2 a los ITAMs difosforilados y se activa','CD28 se une a B7 en la CPA','NFAT entra al núcleo','Ca²⁺ entra por canales CRAC'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es el paso inmediatamente posterior a que Lck fosforile los ITAMs de CD3ζ?',opts:['ZAP-70 se une por sus dominios SH2 a los ITAMs difosforilados','CD28 se une a B7 en la célula presentadora y da la coestimulación','NFAT entra al núcleo y activa los genes de las citocinas','Ca²⁺ entra por los canales CRAC de la membrana'],ans:0,pts:20},
       {type:'fill',s:'La recombinación ___ de los genes del TCR (similar a la de las inmunoglobulinas) genera la enorme diversidad de ~10^18 especificidades distintas.',words:['V(D)J','homóloga','NHEJ'],cor:'V(D)J',pts:15},
       {type:'sequence',items:['pMHC se une al TCR αβ','Lck (unida a CD4/CD8) fosforila ITAMs de CD3ζ','ZAP-70 une ITAMs difosforilados vía tándem SH2','ZAP-70 fosforila LAT (Y136) y SLP-76','PLCγ1 reclutada a LAT → produce IP3 y DAG','IP3 → Ca²⁺ del RE → calcineurina → NFAT nuclear → IL-2'],pts:25},
     ],
     hard:[
-      {type:'quiz',q:'¿Por qué el síndrome de Omenn (mutación hipomórfica en RAG1/2) cursa con SCID autoinmune en lugar de la SCID "vacía" clásica?',opts:['RAG1/2 hipomórfico genera un repertorio TCR muy restringido que reconoce autoantígenos (autoinmunidad oligoclonal)','RAG1/2 hipomórfico impide la expresión de CD3','Bloquea solo la recombinación del BCR no del TCR','Genera TCR con alta afinidad por MHC sin péptido'],ans:0,pts:30},
+      {type:'quiz',q:'¿Por qué el síndrome de Omenn (mutación hipomórfica en RAG1/2) cursa con SCID autoinmune en lugar de la SCID "vacía" clásica?',opts:['RAG1/2 hipomórfico deja un repertorio TCR muy restringido que reconoce autoantígenos','RAG1/2 hipomórfico impide por completo la expresión de CD3 en la membrana del linfocito','Bloquea solo la recombinación del receptor del linfocito B, no la del TCR','Genera TCR con alta afinidad por el MHC aun sin péptido unido'],ans:0,pts:30},
       {type:'fill',q:'Tipo de célula terapéutica en la que se reemplaza el TCR endógeno por un receptor quimérico (ScFv-CD3ζ) para redirigir la citotoxicidad contra tumores',a:'célula CAR-T',pts:22},
       {type:'trueFalse',items:[{t:'La señal TCR sola (sin coestimulación CD28) puede inducir anergia clonal en lugar de activación',a:true},{t:'Los TCR γδ reconocen antígenos lipídicos presentados por CD1, no por MHC clásicos',a:true},{t:'El complejo TCR-CD3 es internalizado y degradado tras la activación (downregulation) como mecanismo de retroalimentación negativa',a:true}],pts:28},
     ],
   },
   immune_synapse:{
     easy:[
-      {type:'quiz',q:'¿Cómo se llama la zona central de la sinapsis inmunológica donde se concentran los complejos TCR-pMHC?',opts:['cSMAC (supramolecular activation cluster central)','pSMAC','dSMAC','zona de exclusión'],ans:0,pts:15},
+      {type:'quiz',q:'¿Cómo se llama la zona central de la sinapsis inmunológica donde se concentran los complejos TCR-pMHC?',opts:['cSMAC (supramolecular activation cluster central)','pSMAC, el anillo periférico donde se concentran las integrinas','dSMAC, la zona distal más externa con actina cortical','La zona de exclusión, donde no hay ningún receptor'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'La sinapsis inmunológica se forma entre el linfocito T y la célula presentadora de antígeno (CPA)',a:true},{t:'En el CTL, los gránulos líticos se liberan hacia el cSMAC de forma direccional (no bystander)',a:true},{t:'El pSMAC contiene los complejos TCR activos y es el anillo exterior de la sinapsis',a:false}],pts:8},
       {type:'fill',s:'En la sinapsis inmunológica, el ___ externo (pSMAC) está enriquecido en LFA-1 y actina, mientras el central (cSMAC) concentra TCR y PKCθ.',words:['anillo periférico','núcleo central','dominio flotante'],cor:'anillo periférico',pts:12},
     ],
@@ -1742,14 +1742,14 @@ const MINIGAMES_ALL={
       {type:'fill',s:'La ___ se produce cuando la maquinaria de degranulación del CTL está defectuosa, impidiendo matar células diana → acumulación de células NK y macrófagos activados → inflamación sistémica fatal.',words:['linfohistiocitosis hemofagocítica','agranulocitosis','aplasia medular'],cor:'linfohistiocitosis hemofagocítica',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Qué función tiene el dSMAC (zona más periférica de la IS) con respecto a la señalización del TCR?',opts:['Concentra CD45 (fosfatasa) que termina la señal: zona de atenuación','Concentra TCR activos para amplificar la señal','Es el sitio de exocitosis de gránulos líticos','No tiene función conocida'],ans:0,pts:30},
+      {type:'quiz',q:'¿Qué función tiene el dSMAC (zona más periférica de la IS) con respecto a la señalización del TCR?',opts:['Concentra CD45 (fosfatasa) que atenúa la señal del TCR','Concentra TCR activos para amplificar la señal del complejo','Es el sitio de exocitosis de los gránulos líticos hacia la diana','No tiene ninguna función conocida en la señalización'],ans:0,pts:30},
       {type:'fill',q:'Anticuerpo biespecífico anti-CD19/anti-CD3 aprobado para leucemia linfoblástica aguda B que crea una sinapsis inmunológica artificial entre CTL y célula tumoral',a:'blinatumomab',pts:22},
       {type:'trueFalse',items:[{t:'Los microclusters de TCR se forman en la periferia de la IS y se mueven centrípetamente hacia el cSMAC donde son ubiquitinados y degradados',a:true},{t:'La IS del linfocito T helper dirige IL-4 e IFN-γ hacia la célula diana de la misma forma que la IS citotóxica dirige la perforina',a:false},{t:'DOCK8 es necesario para la formación de la IS estable: su deficiencia causa inmunodeficiencia con defecto en respuesta CTL',a:true}],pts:28},
     ],
   },
   mito_t:{
     easy:[
-      {type:'quiz',q:'¿Cómo cambia el metabolismo energético del linfocito T naive cuando se activa?',opts:['Pasa de OXPHOS (eficiente) a glucólisis aeróbica (Warburg, rápida)','Pasa de glucólisis a OXPHOS','No cambia: siempre usa OXPHOS','Activa la β-oxidación de ácidos grasos'],ans:0,pts:15},
+      {type:'quiz',q:'¿Cómo cambia el metabolismo energético del linfocito T naive cuando se activa?',opts:['Pasa de OXPHOS a glucólisis aeróbica (efecto Warburg)','Pasa de la glucólisis a OXPHOS para ahorrar energía','No cambia: el linfocito siempre usa OXPHOS como fuente','Activa la β-oxidación de ácidos grasos como fuente principal'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'Los linfocitos T memoria tienen alta spare respiratory capacity (SRC) mitocondrial: responden rápido al reencuentro antigénico',a:true},{t:'La mitocondria del linfocito T regula la apoptosis intrínseca vía citocromo c → caspasa-9',a:true},{t:'Los linfocitos T activados consumen principalmente ácidos grasos como combustible energético',a:false}],pts:8},
       {type:'fill',s:'El efecto ___ describe el uso de glucólisis aeróbica (en presencia de O₂) por las células en proliferación rápida, como los linfocitos T activados.',words:['Warburg','Pasteur','Crabtree'],cor:'Warburg',pts:12},
     ],
@@ -1758,25 +1758,25 @@ const MINIGAMES_ALL={
       {type:'fill',s:'Los linfocitos T ___ en infecciones crónicas o cáncer tienen mitocondrias disfuncionales, alta expresión de PD-1 y producen poco IFN-γ e IL-2.',words:['exhausted (agotados)','naive','reguladores'],cor:'exhausted (agotados)',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Por qué los inhibidores de checkpoint (anti-PD-1) solo revierten parcialmente el agotamiento de los T exhausted?',opts:['Solo revierten el agotamiento epigenético superficial; el agotamiento profundo (disfunción mitocondrial y remodelado cromatínico) persiste','Bloquean el receptor PD-L1 en el tumor pero no en el T','Activan NK en lugar de CTL','Solo funcionan en linfomas no sólidos'],ans:0,pts:30},
+      {type:'quiz',q:'¿Por qué los inhibidores de checkpoint (anti-PD-1) solo revierten parcialmente el agotamiento de los T exhausted?',opts:['Revierten solo el agotamiento superficial; el profundo (mitocondrial y epigenético) persiste','Bloquean el receptor PD-L1 en el tumor, pero no actúan sobre el propio linfocito T ni sobre su metabolismo','Activan a las células NK en lugar de reactivar a los CTL agotados','Solo funcionan en linfomas y leucemias, nunca en tumores sólidos'],ans:0,pts:30},
       {type:'fill',q:'Factor transcripcional maestro de la biogénesis mitocondrial en linfocitos T que es activado por el ejercicio físico y la restricción calórica',a:'PGC-1α',pts:22},
       {type:'trueFalse',items:[{t:'Los linfocitos T memoria central (TCM) usan principalmente OXPHOS y β-oxidación, mientras los efectores terminales (TEFF) usan glucólisis',a:true},{t:'La metformina puede reprogramar linfocitos T hacia un fenotipo memoria al inhibir mTORC1 y promover OXPHOS',a:true},{t:'La disfunción mitocondrial en T exhausted puede revertirse completamente con anti-PD-1 en todos los pacientes',a:false}],pts:28},
     ],
   },
   mito_t2:{
     easy:[
-      {type:'quiz',q:'¿Qué función tienen las ROS mitocondriales (especies reactivas de oxígeno) en el linfocito T activado?',opts:['Actúan como segundos mensajeros que activan NF-κB y la proliferación','Solo dañan el ADN mitocondrial','Inhiben la señalización del TCR','Inducen apoptosis del linfocito T'],ans:0,pts:15},
+      {type:'quiz',q:'¿Qué función tienen las ROS mitocondriales (especies reactivas de oxígeno) en el linfocito T activado?',opts:['Son segundos mensajeros que activan NF-κB y la proliferación','Solo dañan el ADN mitocondrial y no cumplen ninguna otra función','Inhiben la señalización del TCR para evitar la activación','Inducen siempre la apoptosis del linfocito T activado y lo eliminan'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'La fisión mitocondrial (vía DRP1) favorece el metabolismo glucolítico en T efectores',a:true},{t:'Las mitocondrias de los linfocitos T forman redes dinámicas que se fusionan y fisionan según el estado de activación',a:true},{t:'Las mitocondrias del linfocito T son estáticas e independientes del estado de activación',a:false}],pts:8},
       {type:'fill',s:'La ___ mitocondrial (vía MFN1/2) favorece el metabolismo oxidativo (OXPHOS) y es característica de los linfocitos T memoria.',words:['fusión','fisión','fragmentación'],cor:'fusión',pts:12},
     ],
     normal:[
-      {type:'quiz',q:'¿Cómo contribuye la glutamina al metabolismo del linfocito T activado además de como fuente de nitrógeno?',opts:['Entra en el ciclo de Krebs como α-cetoglutarato (anaplerósis) para síntesis de nucleótidos y lípidos','Solo se usa para síntesis de proteínas','Alimenta directamente la glucólisis como piruvato','Inhibe mTORC1'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cómo contribuye la glutamina al metabolismo del linfocito T activado además de como fuente de nitrógeno?',opts:['Entra al ciclo de Krebs como α-cetoglutarato (anaplerosis)','Solo se usa para sintetizar proteínas, sin entrar al metabolismo energético','Alimenta directamente la glucólisis al convertirse en piruvato citosólico','Inhibe la vía mTORC1 y frena la proliferación'],ans:0,pts:20},
       {type:'fill',s:'La ___ (AMP quinasa) actúa como sensor energético: se activa con bajo ATP y promueve OXPHOS inhibiendo mTORC1 y la glucólisis en linfocitos T.',words:['AMPK','mTORC1','PKCθ'],cor:'AMPK',pts:15},
     ],
     hard:[
       {type:'fill',q:'Proceso de degradación selectiva de mitocondrias dañadas en linfocitos T, esencial para mantener la función CTL y evitar la acumulación de mitocondrias proinflamatorias',a:'mitofagia',pts:22},
       {type:'trueFalse',items:[{t:'IRGM es un regulador de mitofagia en linfocitos T cuyas variantes polimórficas se asocian a enfermedad de Crohn',a:true},{t:'Los linfocitos T gamma-delta (γδ) dependen más de la glucólisis que los αβ: son los primeros en responder a infecciones',a:true},{t:'El tratamiento con antioxidantes N-acetilcisteína aumenta siempre la función CTL al neutralizar las ROS señalizadoras',a:false}],pts:28},
-      {type:'quiz',q:'¿Por qué los tumores con alta demanda glucolítica (Warburg tumoral) inhiben la función de los T infiltrantes de tumor (TIL)?',opts:['Compiten por la glucosa creando un microambiente glucopénico que impide la glucólisis del CTL','Expresan PD-L1 directamente en los ribosomas','Secretan TGF-β que destruye mitocondrias del CTL','Ninguna de las anteriores'],ans:0,pts:30},
+      {type:'quiz',q:'¿Por qué los tumores con alta demanda glucolítica (Warburg tumoral) inhiben la función de los T infiltrantes de tumor (TIL)?',opts:['Compiten por la glucosa y crean un microambiente sin glucosa que frena al CTL','Expresan PD-L1 en la membrana y bloquean directamente la glucólisis del CTL infiltrante','Secretan TGF-β, que destruye las mitocondrias del CTL infiltrante','Liberan lactato que alcaliniza el medio y activa al CTL'],ans:0,pts:30},
     ],
   },
   er_t:{
@@ -1786,23 +1786,23 @@ const MINIGAMES_ALL={
       {type:'fill',s:'La ___ es la fosfatasa que desfosforila NFAT después de que el Ca²⁺ del RE sube en el citoplasma del linfocito T activado.',words:['calcineurina','calmodulina quinasa','caspasa-3'],cor:'calcineurina',pts:12},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué fenómeno ocurre cuando el RE del linfocito T se vacía de Ca²⁺ tras la señal del TCR?',opts:['SOCE (store-operated Ca²⁺ entry): STIM1 oligomeriza y activa Orai1 → entrada de Ca²⁺ extracelular sostenida','El RE se regenera inmediatamente sin necesidad de Ca²⁺ externo','La SERCA se activa y recapta todo el Ca²⁺ del citoplasma','No ocurre nada especial'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué fenómeno ocurre cuando el RE del linfocito T se vacía de Ca²⁺ tras la señal del TCR?',opts:['SOCE: STIM1 activa Orai1 y entra Ca²⁺ extracelular','El RE se regenera inmediatamente sin necesidad de Ca²⁺ externo','La SERCA se activa y recapta todo el Ca²⁺ del citoplasma','No ocurre nada especial: el RE queda vacío hasta la siguiente señal'],ans:0,pts:20},
       {type:'fill',s:'Las mutaciones en ___ o en ___ causan SCID (inmunodeficiencia combinada severa) por fallo completo en la señalización de Ca²⁺ de los linfocitos T y B.',words:['STIM1 / Orai1','IP3R / SERCA','calcineurina / NFAT'],cor:'STIM1 / Orai1',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Por qué el tacrolimus (FK506) es más potente que la ciclosporina A como inmunosupresor a pesar de actuar en el mismo punto?',opts:['FK506 tiene mayor afinidad por su inmunofilina (FKBP12) y el complejo FKBP12-FK506 inhibe calcineurina con mayor potencia','FK506 bloquea también ZAP-70','FK506 actúa upstream del Ca²⁺ bloqueando el IP3R','FK506 bloquea tanto NFAT como NF-κB'],ans:0,pts:30},
+      {type:'quiz',q:'¿Por qué el tacrolimus (FK506) es más potente que la ciclosporina A como inmunosupresor a pesar de actuar en el mismo punto?',opts:['FK506 se une con más afinidad a su inmunofilina (FKBP12) e inhibe mejor la calcineurina','FK506 bloquea también a ZAP-70, además de la calcineurina, y por eso es más potente que la ciclosporina','FK506 actúa antes de la calcineurina, bloqueando el IP3R del retículo','FK506 bloquea tanto NFAT como NF-κB y por eso inmunosuprime más'],ans:0,pts:30},
       {type:'fill',q:'Canal de Ca²⁺ altamente selectivo de la membrana del linfocito T formado por Orai1 que se activa por el vaciamiento del RE vía STIM1',a:'CRAC (canal activado por vaciamiento del RE)',pts:22},
       {type:'trueFalse',items:[{t:'El calcio del RE activa calmodulina, que activa calcineurina (fosfatasa) y también calmodulina quinasa (CaMKII)',a:true},{t:'Los bloqueadores del canal CRAC (CM4620, Synta66) se estudian para artritis reumatoide y asma severa',a:true},{t:'La señalización de Ca²⁺ en linfocitos T es idéntica a la de neuronas en cuanto a IP3R, SERCA y SOCE',a:false}],pts:28},
     ],
   },
   golgi_t:{
     easy:[
-      {type:'quiz',q:'¿Hacia dónde se polariza el aparato de Golgi del linfocito T citotóxico al formar la sinapsis inmunológica?',opts:['Hacia la sinapsis inmunológica (zona de contacto con la célula diana)','Hacia el núcleo','Hacia el polo opuesto a la diana','Se fragmenta durante la activación'],ans:0,pts:15},
+      {type:'quiz',q:'¿Hacia dónde se polariza el aparato de Golgi del linfocito T citotóxico al formar la sinapsis inmunológica?',opts:['Hacia la sinapsis inmunológica, la zona de contacto con la diana','Hacia el núcleo del linfocito, para proteger su ADN durante la activación','Hacia el polo opuesto a la célula diana, para no dañar al linfocito','Se fragmenta durante la activación y se reparte por toda la célula'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'El Golgi del CTL se reorienta hacia la IS junto con el MTOC (centrosoma) en <30 minutos tras el reconocimiento antigénico',a:true},{t:'La polarización del Golgi permite la secreción de perforina/granzimas solo hacia la célula diana (no bystander)',a:true},{t:'En linfocitos T helpers, el Golgi también se polariza hacia la sinapsis para secretar citocinas dirigidas',a:true}],pts:8},
       {type:'fill',s:'El ___ se reorienta junto con el Golgi hacia la sinapsis inmunológica, sirviendo como punto de organización del tráfico vesicular hacia la diana.',words:['MTOC (centrosoma)','núcleo','RE rugoso'],cor:'MTOC (centrosoma)',pts:12},
     ],
     normal:[
-      {type:'quiz',q:'¿Qué proteína mediadora de la fisión vesicular del Golgi es defectuosa en el síndrome de Hermansky-Pudlak tipo 2 (HPS2)?',opts:['Complejo adaptador AP-3 (tráfico de gránulos líticos)','Clatrina','Dinamina','SNAP23'],ans:0,pts:20},
+      {type:'quiz',q:'¿Qué proteína mediadora de la fisión vesicular del Golgi es defectuosa en el síndrome de Hermansky-Pudlak tipo 2 (HPS2)?',opts:['Complejo adaptador AP-3 (tráfico de gránulos líticos)','Clatrina, la proteína de la cubierta de las vesículas endocíticas','Dinamina, la GTPasa que corta el cuello de las vesículas','SNAP23, la proteína SNARE de la membrana plasmática'],ans:0,pts:20},
       {type:'fill',s:'La ___ hemofagocítica (HLH) es una consecuencia fatal de defectos en la polarización del Golgi o degranulación: los CTL no matan y la inflamación es incontrolada.',words:['linfohistiocitosis','hemólisis','granulomatosis'],cor:'linfohistiocitosis',pts:15},
     ],
     hard:[
@@ -1822,7 +1822,7 @@ const MINIGAMES_ALL={
       {type:'fill',s:'La ___ hemofagocítica familiar tipo 2 (FHL2) se debe a mutaciones en la ___ y cursa con fiebre, hepatoesplenomegalia y pancitopenia.',words:['linfohistiocitosis / PRF1 (perforina)','neutropenia / RAG1','aplasia / GATA2'],cor:'linfohistiocitosis / PRF1 (perforina)',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Cómo se protege el propio CTL de la perforina que libera hacia la diana?',opts:['Clusterina y CD59 en la membrana del CTL inactivan la perforina antes de que forme poros en el CTL mismo','El CTL secreta inhibidores de serina proteasas','La perforina no puede actuar a temperatura fisiológica sobre el CTL','El CTL expresa un LAMP-1 que neutraliza la perforina'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cómo se protege el propio CTL de la perforina que libera hacia la diana?',opts:['La catepsina B de su membrana degrada la perforina antes de que forme poros','El CTL secreta inhibidores de serina proteasas (serpinas) que frenan la perforina','La perforina no puede actuar a temperatura fisiológica sobre el CTL','El CTL expresa un LAMP-1 de superficie que neutraliza la perforina'],ans:0,pts:30},
       {type:'fill',q:'Proteína codificada por UNC13D cuyas mutaciones causan HLH tipo 3: es necesaria para la preparación (priming) de los gránulos líticos para la exocitosis',a:'Munc13-4',pts:22},
       {type:'trueFalse',items:[{t:'Los tumores con sobreexpresión de BCL-2/BCL-XL son resistentes a la granzima B (que actúa via BID/mitocondria) pero NO a la granzima A (vía SET/DNasa)',a:true},{t:'El "serial killing" del CTL: libera gránulos hacia una diana, se separa vivo, regenera gránulos y ataca otra célula',a:true},{t:'La perforina se produce constitutivamente en CTL naive y no requiere activación para su síntesis',a:false}],pts:28},
     ],
@@ -1834,18 +1834,18 @@ const MINIGAMES_ALL={
       {type:'fill',s:'El ___ mide la degranulación del CTL expresando LAMP-1 (CD107a) en superficie; se usa para evaluar la función citotóxica en inmunoterapia y diagnóstico de HLH.',words:['test de CD107a','ELISA de perforina','test de proliferación'],cor:'test de CD107a',pts:12},
     ],
     normal:[
-      {type:'quiz',q:'¿Por qué los tumores con alta expresión de BCL-2 (como el linfoma folicular) son resistentes a los CTL pero responden a venetoclax?',opts:['BCL-2 bloquea la vía mitocondrial (apoptosis intrínseca) que usa la granzima B; venetoclax inhibe BCL-2 directamente','BCL-2 degrada la perforina extracelularmente','BCL-2 impide la formación de la IS','BCL-2 expulsa la granzima B del citoplasma'],ans:0,pts:20},
+      {type:'quiz',q:'¿Por qué los tumores con alta expresión de BCL-2 (como el linfoma folicular) son resistentes a los CTL pero responden a venetoclax?',opts:['BCL-2 bloquea la apoptosis mitocondrial que usa la granzima B; venetoclax inhibe BCL-2','BCL-2 degrada la perforina en el espacio extracelular antes de que actúe','BCL-2 impide la formación de la sinapsis inmunológica con el CTL','BCL-2 expulsa la granzima B del citoplasma de la célula tumoral con bombas de eflujo de membrana'],ans:0,pts:20},
       {type:'fill',s:'La ___ es el gen mutado en la HLH familiar tipo 5 (FHL5), codifica una proteína SNARE requerida para la fusión de los gránulos líticos con la membrana plasmática.',words:['STX11 (sintaxina-11)','RAB27A','PRF1'],cor:'STX11 (sintaxina-11)',pts:15},
     ],
     hard:[
       {type:'fill',q:'Resultado esperado al medir CD107a por citometría de flujo en CTL estimulados in vitro de un paciente con HLH familiar (FHL2 por mutación en perforina)',a:'CD107a aumentado (degranulación normal) pero muerte celular reducida',pts:22},
       {type:'trueFalse',items:[{t:'La granzima B puede activar caspasa-3 directamente (sin necesidad de la vía mitocondrial) en células con poco XIAP',a:true},{t:'La granulisina del gránulo citotóxico tiene actividad antibacteriana y antifúngica directa además de ser citotóxica',a:true},{t:'Los CTL CD8+ usan exclusivamente perforina/granzima para matar; el FasL no contribuye a la citotoxicidad T',a:false}],pts:28},
-      {type:'quiz',q:'¿Cuál es el mecanismo por el que RAB27A (mutado en HLH tipo 6 / síndrome de Griscelli) causa defecto en la degranulación del CTL?',opts:['RAB27A acopla los gránulos líticos a la red de actina subcortical para su transporte hasta la IS','RAB27A sintetiza perforina en el RE','RAB27A degrada granzimas en el lisosoma','RAB27A es un sensor de Ca²⁺ que activa la exocitosis'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cuál es el mecanismo por el que RAB27A (mutado en HLH tipo 6 / síndrome de Griscelli) causa defecto en la degranulación del CTL?',opts:['RAB27A acopla los gránulos líticos a la actina subcortical para llevarlos a la IS','RAB27A sintetiza perforina en el RE de la célula citotóxica','RAB27A degrada granzimas en el lisosoma antes de la exocitosis','RAB27A es un sensor de Ca²⁺ que activa directamente la exocitosis de todos los gránulos'],ans:0,pts:30},
     ],
   },
   lck_signaling:{
     easy:[
-      {type:'quiz',q:'¿Cuál es el orden correcto de activación en la señalización proximal del TCR?',opts:['TCR une pMHC → Lck fosforila ITAMs → ZAP-70 se activa → LAT fosforilado → PLCγ','TCR → ZAP-70 → Lck → LAT','Lck → TCR → LAT → ZAP-70','CD28 → Lck → TCR → ZAP-70'],ans:0,pts:15},
+      {type:'quiz',q:'¿Cuál es el orden correcto de activación en la señalización proximal del TCR?',opts:['TCR + pMHC → Lck fosforila ITAMs → ZAP-70 → LAT → PLCγ','TCR → ZAP-70 fosforila ITAMs → Lck → LAT → PLCγ','Lck → TCR → LAT → ZAP-70 → fosforilación de ITAMs','CD28 activa primero a Lck → TCR → ZAP-70 → LAT → PLCγ → Ca²⁺'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'Lck es una tirosina quinasa de la familia Src que se asocia constitutivamente a CD4 o CD8',a:true},{t:'ZAP-70 tiene dos dominios SH2 en tándem que se unen al di-ITAM fosforilado de CD3ζ',a:true},{t:'La señalización del TCR puede completarse sin necesidad de Lck si hay suficiente ZAP-70',a:false}],pts:8},
       {type:'fill',s:'Lck fosforila las ___ de las cadenas CD3ζ del complejo TCR, creando sitios de unión para ZAP-70 e iniciando la cascada de activación del linfocito T.',words:['ITAMs','SH2','dominios PH'],cor:'ITAMs',pts:12},
     ],
@@ -1854,24 +1854,24 @@ const MINIGAMES_ALL={
       {type:'fill',s:'La ___ (LAT) es el adaptador transmembrana que fosforilado por ZAP-70 recluta PLCγ1, GRB2/SOS (Ras) y PI3K para ramificar la señal del TCR.',words:['proteína LAT','proteína CD28','proteína CD45'],cor:'proteína LAT',pts:15},
     ],
     hard:[
-      {type:'quiz',q:'¿Cómo discrimina el linfocito T entre un péptido propio (señal débil) y uno extraño (señal fuerte) usando la cinética del TCR y Lck?',opts:['Los ITAM monofosforilados (señal débil) reclutan SHP-1 → inhibición; los difosforilados (señal fuerte) reclutan ZAP-70 → activación','El TCR tiene afinidades intrínsecamente distintas por propio vs extraño','CD45 diferencia propio de extraño por fosforilación diferencial','La señal débil activa NFAT y la fuerte activa NF-κB'],ans:0,pts:30},
+      {type:'quiz',q:'¿Cómo discrimina el linfocito T entre un péptido propio (señal débil) y uno extraño (señal fuerte) usando la cinética del TCR y Lck?',opts:['ITAM monofosforilados reclutan SHP-1 (inhiben); difosforilados reclutan ZAP-70 (activan)','El TCR tiene afinidades intrínsecamente distintas por el péptido propio y por el péptido extraño','CD45 diferencia lo propio de lo extraño por fosforilación diferencial de Lck','La señal débil activa solo NFAT y la fuerte activa NF-κB y AP-1 a la vez'],ans:0,pts:30},
       {type:'fill',q:'Inhibidor aprobado de la quinasa Syk (homóloga de ZAP-70 en plaquetas y B cells) usado para trombocitopenia inmune crónica que también afecta señalización en T',a:'fostamatinib',pts:22},
       {type:'trueFalse',items:[{t:'La ganancia de función en ZAP-70 (mutación M493V en ratones) causa artritis autoinmune por hyperactivación de linfocitos T',a:true},{t:'CD45 es una fosfatasa de membrana del T cell que desfosforila el Y505 inhibidor de Lck manteniéndola activa',a:true},{t:'Inhibidores selectivos de Lck son actualmente el estándar de tratamiento en artritis reumatoide refractaria',a:false}],pts:28},
     ],
   },
   caspase_pathway:{
     easy:[
-      {type:'quiz',q:'¿Cuál es la diferencia principal entre la citotoxicidad por perforina/granzima y la vía FasL del CTL?',opts:['Perforina/granzima: rápida (minutos), actúa aunque Fas esté ausente; FasL: más lenta (horas), requiere Fas+ en la diana','FasL es más rápida que perforina','Ambas son idénticas en cinética','FasL actúa solo en linfocitos B'],ans:0,pts:15},
+      {type:'quiz',q:'¿Cuál es la diferencia principal entre la citotoxicidad por perforina/granzima y la vía FasL del CTL?',opts:['Perforina/granzima: minutos, sin requerir Fas; FasL: horas, requiere Fas en la diana','FasL es más rápida que perforina/granzima y actúa a distancia sin contacto','Ambas son idénticas en cinética y requieren Fas en la célula diana','FasL actúa solo sobre los linfocitos B y nunca sobre las células tumorales de otro tejido'],ans:0,pts:15},
       {type:'trueFalse',items:[{t:'FasL (CD95L) expresado en el CTL se une a Fas (CD95) en la célula diana desencadenando apoptosis extrínseca',a:true},{t:'La vía FasL/Fas es importante para eliminar linfocitos T activados al final de la respuesta inmune (homeostasis)',a:true},{t:'Las mutaciones en FAS no afectan la homeostasis del sistema inmune',a:false}],pts:8},
       {type:'fill',s:'La enfermedad ___ (ALPS) se produce por mutaciones en el gen FAS, impidiendo la apoptosis de linfocitos activados → linfoproliferación y autoanticuerpos.',words:['linfoproliferativa autoinmune','granulomatosa crónica','de DiGeorge'],cor:'linfoproliferativa autoinmune',pts:12},
     ],
     normal:[
-      {type:'quiz',q:'¿Cuál es la función de FasL en la eliminación de linfocitos T activados al final de una respuesta inmune?',opts:['Los CTL activados expresan tanto Fas como FasL: la muerte fraticida elimina el exceso de T (AICD)','"Killer" NK matan a los CTL por FasL','Los macrófagos expresan FasL para eliminar T','La apoptosis de T al final depende solo de privación de citocinas'],ans:0,pts:20},
+      {type:'quiz',q:'¿Cuál es la función de FasL en la eliminación de linfocitos T activados al final de una respuesta inmune?',opts:['Los CTL expresan Fas y FasL: la muerte fratricida elimina el exceso de T (AICD)','Las células NK matan a los CTL activados mediante FasL cuando termina la respuesta inmune','Los macrófagos expresan FasL para eliminar a los linfocitos T sobrantes','La apoptosis de T al final depende solo de privación de citocinas'],ans:0,pts:20},
       {type:'fill',s:'La ___ es el complejo proteico que se forma tras la trimerización de Fas + FADD + procaspasa-8, iniciando la señal de apoptosis extrínseca.',words:['DISC (death-inducing signaling complex)','apoptosoma','necrosoma'],cor:'DISC (death-inducing signaling complex)',pts:15},
       {type:'sequence',items:['FasL trimérico (CTL) se une a Fas trimérico (diana)','Fas recluta FADD vía dominio de muerte (DD)','FADD recluta procaspasa-8 vía DED','Autoclivaje → caspasa-8 activa','Caspasa-8 cliva BID → tBID (vía mitocondrial amplificadora)','tBID activa BAX/BAK → citocromo c → caspasoma → caspasa-3 → apoptosis'],pts:25},
     ],
     hard:[
-      {type:'quiz',q:'¿Por qué las células tipo II (hepatocitos, T) requieren la amplificación mitocondrial (BID/tBID) para completar la apoptosis por Fas?',opts:['En células tipo II la señal del DISC genera poco caspasa-8; necesitan amplificación via mitocondria para superar BCL-2/BCL-XL','En células tipo I el BCL-2 bloquea totalmente la vía extrínseca','La diferencia es solo cuantitativa, no cualitativa','Las células tipo II no expresan caspasa-3'],ans:0,pts:30},
+      {type:'quiz',q:'¿Por qué las células tipo II (hepatocitos, T) requieren la amplificación mitocondrial (BID/tBID) para completar la apoptosis por Fas?',opts:['En las tipo II el DISC genera poca caspasa-8 y requieren amplificación mitocondrial','En las células tipo I, BCL-2 bloquea por completo la vía extrínseca de la apoptosis en el hígado','La diferencia es solo cuantitativa y no cambia las vías que usan','Las células tipo II no expresan caspasa-3 y por eso no mueren por Fas'],ans:0,pts:30},
       {type:'fill',q:'Síndrome hereditario de linfoproliferación y autoinmunidad causado por mutaciones en FAS con herencia autosómica dominante y penetrancia variable',a:'ALPS (síndrome linfoproliferativo autoinmune)',pts:22},
       {type:'trueFalse',items:[{t:'Venetoclax (inhibidor BCL-2) puede sensibilizar tumores resistentes a FasL/perforina al desbloquear la vía mitocondrial de apoptosis',a:true},{t:'Los anticuerpos agonistas de DR4/DR5 (receptores de TRAIL) inducen apoptosis extrínseca similar a FasL en tumores DR4/DR5+',a:true},{t:'La apoptosis inducida por FasL en los propios linfocitos T activados (fraticidio) es un mecanismo de autotolerancia periférica',a:true}],pts:28},
     ],

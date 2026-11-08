@@ -78,6 +78,7 @@ describe('lo que el service worker guarda para el modo offline', () => {
     // v32: distractores del quiz con largo parejo, tanda 1.
     // v33: tanda 2 (incluye glicoforina C: la proteina es de P. falciparum).
     // v34: tanda 3 (MFA: la pregunta ahora pregunta el efecto; cohesion-tension sin el dato de -13 MPa).
-    expect(sw).toMatch(/const CACHE = 'cellquest-v34'/);
+    // v35: tanda 4 (T-linfocito, musculo, xilema) + tope del test de sesgo de tamano en 36 %.
+    expect(sw).toMatch(/const CACHE = 'cellquest-v35'/);
   });
 });
