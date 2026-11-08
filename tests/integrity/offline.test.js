@@ -75,6 +75,7 @@ describe('lo que el service worker guarda para el modo offline', () => {
     // v29: el worker guarda las tipografias que faltan cuando la pagina se lo pide.
     // v30: la carga del guardado verifica el tipo de cada campo.
     // v31: la musica atrapa los errores de Tone en vez de mandarlos al banner.
-    expect(sw).toMatch(/const CACHE = 'cellquest-v31'/);
+    // v32: distractores del quiz con largo parejo, tanda 1.
+    expect(sw).toMatch(/const CACHE = 'cellquest-v32'/);
   });
 });
